@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7F5E508D27EA03680076FCD5 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5E508C27EA03680076FCD5 /* OnboardingCollectionViewCell.swift */; };
+		7F5E509627EC61350076FCD5 /* LandingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5E509527EC61350076FCD5 /* LandingPageViewController.swift */; };
+		7F5E509B27EC67E90076FCD5 /* ImportFromSeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5E509A27EC67E90076FCD5 /* ImportFromSeedViewController.swift */; };
+		7F5E50A027EC68020076FCD5 /* CreateNewWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5E509F27EC68020076FCD5 /* CreateNewWalletViewController.swift */; };
 		7F62784D27E8DC7900782EE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F62784C27E8DC7900782EE0 /* AppDelegate.swift */; };
 		7F62784F27E8DC7900782EE0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F62784E27E8DC7900782EE0 /* SceneDelegate.swift */; };
 		7F62785427E8DC7900782EE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F62785227E8DC7900782EE0 /* Main.storyboard */; };
@@ -39,6 +42,9 @@
 
 /* Begin PBXFileReference section */
 		7F5E508C27EA03680076FCD5 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		7F5E509527EC61350076FCD5 /* LandingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageViewController.swift; sourceTree = "<group>"; };
+		7F5E509A27EC67E90076FCD5 /* ImportFromSeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportFromSeedViewController.swift; sourceTree = "<group>"; };
+		7F5E509F27EC68020076FCD5 /* CreateNewWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewWalletViewController.swift; sourceTree = "<group>"; };
 		7F62784927E8DC7900782EE0 /* XDCPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XDCPay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F62784C27E8DC7900782EE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F62784E27E8DC7900782EE0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +89,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F5E509427EC60DB0076FCD5 /* WalletSetup */ = {
+			isa = PBXGroup;
+			children = (
+				7F5E509527EC61350076FCD5 /* LandingPageViewController.swift */,
+				7F5E509A27EC67E90076FCD5 /* ImportFromSeedViewController.swift */,
+				7F5E509F27EC68020076FCD5 /* CreateNewWalletViewController.swift */,
+			);
+			path = WalletSetup;
+			sourceTree = "<group>";
+		};
 		7F62784027E8DC7900782EE0 = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +165,7 @@
 		7F62788027E8DCDC00782EE0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7F5E509427EC60DB0076FCD5 /* WalletSetup */,
 				7F62788127E8DCDC00782EE0 /* Onboarding */,
 			);
 			path = Views;
@@ -311,10 +328,13 @@
 			files = (
 				7F6278AF27E9000E00782EE0 /* OnboardingSlide.swift in Sources */,
 				7F62784D27E8DC7900782EE0 /* AppDelegate.swift in Sources */,
+				7F5E509627EC61350076FCD5 /* LandingPageViewController.swift in Sources */,
 				7F6278A127E8FB6500782EE0 /* OnboardingViewController.swift in Sources */,
+				7F5E509B27EC67E90076FCD5 /* ImportFromSeedViewController.swift in Sources */,
 				7F62784F27E8DC7900782EE0 /* SceneDelegate.swift in Sources */,
 				7F6278A727E8FBDA00782EE0 /* UIView+Extention.swift in Sources */,
 				7F5E508D27EA03680076FCD5 /* OnboardingCollectionViewCell.swift in Sources */,
+				7F5E50A027EC68020076FCD5 /* CreateNewWalletViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
