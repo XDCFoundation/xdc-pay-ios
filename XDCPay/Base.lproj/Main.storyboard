@@ -188,25 +188,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="N8L-gT-Olw">
-                                <rect key="frame" x="0.0" y="44" width="414" height="551"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="549.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="puI-Xj-8gg">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="107"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wallet Setup" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YbS-Bd-CoC">
-                                        <rect key="frame" x="0.0" y="150" width="414" height="27"/>
+                                        <rect key="frame" x="0.0" y="150" width="414" height="26"/>
                                         <fontDescription key="fontDescription" name="Inter-Regular_Medium" family="Inter" pointSize="22"/>
                                         <color key="textColor" red="0.1647058824" green="0.1647058824" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Import existing or create new one" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="296" translatesAutoresizingMaskIntoConstraints="NO" id="mP4-ww-Hiu">
-                                        <rect key="frame" x="0.0" y="220" width="414" height="17"/>
+                                        <rect key="frame" x="0.0" y="219" width="414" height="16.5"/>
                                         <fontDescription key="fontDescription" name="Inter-Regular_Medium" family="Inter" pointSize="14"/>
                                         <color key="textColor" red="0.1647058824" green="0.1647058824" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HCq-m0-z3C">
-                                        <rect key="frame" x="0.0" y="280" width="414" height="271"/>
+                                        <rect key="frame" x="0.0" y="278.5" width="414" height="271"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -214,7 +214,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zmm-1d-mQK">
-                                <rect key="frame" x="16" y="652" width="382" height="32"/>
+                                <rect key="frame" x="16" y="654" width="382" height="31"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular_Medium" family="Inter" pointSize="16"/>
                                 <state key="normal" title="Import using secret recovery phrase">
                                     <color key="titleColor" red="0.12941176469999999" green="0.28627450980000002" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -236,7 +236,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lG0-k0-geY">
-                                <rect key="frame" x="16" y="715" width="382" height="32"/>
+                                <rect key="frame" x="16" y="716" width="382" height="31"/>
                                 <color key="backgroundColor" red="0.011764705882352941" green="0.74509803921568629" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular_Medium" family="Inter" pointSize="16"/>
                                 <state key="normal" title="Create new wallet">
@@ -258,14 +258,23 @@
                                     <action selector="getStartedClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3C9-d3-GZp"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCk-WH-02f">
+                                <rect key="frame" x="357" y="777" width="41" height="30"/>
+                                <state key="normal" title="Home"/>
+                                <connections>
+                                    <action selector="onHome:" destination="6vf-eb-B5d" eventType="touchUpInside" id="YEh-eB-9eq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gz5-GN-OdU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="N8L-gT-Olw" firstAttribute="centerX" secondItem="LK2-aV-yvJ" secondAttribute="centerX" id="5hO-l0-H7f"/>
+                            <constraint firstItem="WCk-WH-02f" firstAttribute="top" secondItem="lG0-k0-geY" secondAttribute="bottom" constant="30" id="Ase-hD-So3"/>
                             <constraint firstItem="zmm-1d-mQK" firstAttribute="leading" secondItem="gz5-GN-OdU" secondAttribute="leading" constant="16" id="Gk8-Jn-eEx"/>
                             <constraint firstItem="N8L-gT-Olw" firstAttribute="leading" secondItem="gz5-GN-OdU" secondAttribute="leading" id="LIE-WH-nDm"/>
                             <constraint firstItem="zmm-1d-mQK" firstAttribute="centerX" secondItem="LK2-aV-yvJ" secondAttribute="centerX" id="OnU-LR-aSg"/>
+                            <constraint firstItem="WCk-WH-02f" firstAttribute="trailing" secondItem="lG0-k0-geY" secondAttribute="trailing" id="Rr4-4f-qjt"/>
                             <constraint firstItem="gz5-GN-OdU" firstAttribute="trailing" secondItem="lG0-k0-geY" secondAttribute="trailing" constant="16" id="Uf6-WF-iDG"/>
                             <constraint firstItem="gz5-GN-OdU" firstAttribute="bottom" secondItem="lG0-k0-geY" secondAttribute="bottom" constant="115" id="caD-xf-oGY"/>
                             <constraint firstItem="gz5-GN-OdU" firstAttribute="trailing" secondItem="N8L-gT-Olw" secondAttribute="trailing" id="dn8-ob-xjB"/>
@@ -1016,7 +1025,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WQ7-EI-Ceh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="747"/>
+            <point key="canvasLocation" x="132" y="1001"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="FeD-x5-PEn">
@@ -1061,7 +1070,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in with Face ID?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4R-0Y-m11">
-                                <rect key="frame" x="20" y="390" width="137.5" height="17"/>
+                                <rect key="frame" x="20" y="390" width="132.5" height="17"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
                                 <color key="textColor" red="0.1647058824" green="0.1647058824" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
