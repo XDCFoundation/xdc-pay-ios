@@ -19,7 +19,9 @@ class ImportFromSeedViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = false
-        self.navigationItem.title = " "
+        self.title = "Import from seed"
+        self.navigationController?.navigationBar.topItem?.backButtonTitle = ""
+
     }
    
 

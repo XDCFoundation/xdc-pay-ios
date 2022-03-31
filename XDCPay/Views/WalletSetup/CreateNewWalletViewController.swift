@@ -18,7 +18,9 @@ class CreateNewWalletViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = false
-        self.navigationItem.backButtonTitle = " "
+        self.title = "Create new wallet"
+        self.navigationController?.navigationBar.topItem?.backButtonTitle = ""
+
     }
    
 
