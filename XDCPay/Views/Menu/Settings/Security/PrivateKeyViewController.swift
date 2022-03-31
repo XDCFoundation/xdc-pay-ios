@@ -1,13 +1,13 @@
 //
-//  LandingPageViewController.swift
+//  PrivateKeyViewController.swift
 //  XDCPay
 //
-//  Created by Chhaya Singh Parihar on 24/03/22.
+//  Created by Admin on 31/03/22.
 //
 
 import UIKit
 
-class LandingPageViewController: UIViewController {
+class PrivateKeyViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,6 +15,6 @@ class LandingPageViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+ 
 
 }

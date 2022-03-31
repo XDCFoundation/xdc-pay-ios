@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -117,7 +117,7 @@
                                 </connections>
                             </collectionView>
                             <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="K0p-jF-QpT">
-                                <rect key="frame" x="155.5" y="603.5" width="103.5" height="27.5"/>
+                                <rect key="frame" x="156" y="603.5" width="102.5" height="27.5"/>
                                 <color key="pageIndicatorTintColor" systemColor="opaqueSeparatorColor"/>
                                 <color key="currentPageIndicatorTintColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
@@ -256,14 +256,23 @@
                                     <action selector="getStartedClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3C9-d3-GZp"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCk-WH-02f">
+                                <rect key="frame" x="357" y="777" width="41" height="30"/>
+                                <state key="normal" title="Home"/>
+                                <connections>
+                                    <action selector="onHome:" destination="6vf-eb-B5d" eventType="touchUpInside" id="YEh-eB-9eq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gz5-GN-OdU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="N8L-gT-Olw" firstAttribute="centerX" secondItem="LK2-aV-yvJ" secondAttribute="centerX" id="5hO-l0-H7f"/>
+                            <constraint firstItem="WCk-WH-02f" firstAttribute="top" secondItem="lG0-k0-geY" secondAttribute="bottom" constant="30" id="Ase-hD-So3"/>
                             <constraint firstItem="zmm-1d-mQK" firstAttribute="leading" secondItem="gz5-GN-OdU" secondAttribute="leading" constant="16" id="Gk8-Jn-eEx"/>
                             <constraint firstItem="N8L-gT-Olw" firstAttribute="leading" secondItem="gz5-GN-OdU" secondAttribute="leading" id="LIE-WH-nDm"/>
                             <constraint firstItem="zmm-1d-mQK" firstAttribute="centerX" secondItem="LK2-aV-yvJ" secondAttribute="centerX" id="OnU-LR-aSg"/>
+                            <constraint firstItem="WCk-WH-02f" firstAttribute="trailing" secondItem="lG0-k0-geY" secondAttribute="trailing" id="Rr4-4f-qjt"/>
                             <constraint firstItem="gz5-GN-OdU" firstAttribute="trailing" secondItem="lG0-k0-geY" secondAttribute="trailing" constant="16" id="Uf6-WF-iDG"/>
                             <constraint firstItem="gz5-GN-OdU" firstAttribute="bottom" secondItem="lG0-k0-geY" secondAttribute="bottom" constant="115" id="caD-xf-oGY"/>
                             <constraint firstItem="gz5-GN-OdU" firstAttribute="trailing" secondItem="N8L-gT-Olw" secondAttribute="trailing" id="dn8-ob-xjB"/>
@@ -635,19 +644,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Secure wallet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xsh-vX-bVL">
-                                <rect key="frame" x="165" y="64" width="84" height="17"/>
+                                <rect key="frame" x="162.5" y="64" width="89.5" height="17"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="These 12 words are the only way to restore your XDCPay accounts. Save them somewhere safe and secret." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F30-PU-W09">
-                                <rect key="frame" x="25" y="111" width="364" height="33"/>
+                                <rect key="frame" x="25" y="111" width="364" height="51"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
                                 <color key="textColor" red="0.51764705879999995" green="0.51764705879999995" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" red="0.51764705879999995" green="0.51764705879999995" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0zz-oY-TkQ">
-                                <rect key="frame" x="25" y="154" width="364" height="200"/>
+                                <rect key="frame" x="25" y="172" width="364" height="200"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="5BO-dt-NSs"/>
@@ -769,19 +778,19 @@
                                 </cells>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copy to clipboard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hF4-Cr-Jf1">
-                                <rect key="frame" x="151" y="374" width="112.5" height="17"/>
+                                <rect key="frame" x="147.5" y="392" width="119" height="17"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular_Medium" family="Inter" pointSize="14"/>
                                 <color key="textColor" red="0.12941176469999999" green="0.28627450980000002" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write down these 12 words down, or copy them to a password manager" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6g-hM-bhc">
-                                <rect key="frame" x="25" y="411" width="364" height="14"/>
+                                <rect key="frame" x="25" y="429" width="364" height="15"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="12"/>
                                 <color key="textColor" red="0.51764705879999995" green="0.51764705879999995" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tz5-Ft-V8s">
-                                <rect key="frame" x="16" y="475" width="382" height="42"/>
+                                <rect key="frame" x="16" y="494" width="382" height="42"/>
                                 <color key="backgroundColor" red="0.01176470588" green="0.74509803919999995" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="382" id="ib4-kO-hBl"/>
@@ -846,13 +855,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Recovery Phrase" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uEK-eF-jxv">
-                                <rect key="frame" x="115.5" y="54.5" width="183" height="19"/>
+                                <rect key="frame" x="110" y="54.5" width="194.5" height="19"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular_Medium" family="Inter" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AoI-Wr-gFF">
-                                <rect key="frame" x="20" y="130" width="45" height="17"/>
+                                <rect key="frame" x="20" y="130" width="46" height="17"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular_Medium" family="Inter" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -905,7 +914,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word 8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Udn-2w-iKt">
-                                <rect key="frame" x="20" y="212" width="45" height="17"/>
+                                <rect key="frame" x="20" y="212" width="48" height="17"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular_Medium" family="Inter" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -918,7 +927,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word 12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1L-9C-sws">
-                                <rect key="frame" x="20" y="294" width="52.5" height="17"/>
+                                <rect key="frame" x="20" y="294" width="54.5" height="17"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular_Medium" family="Inter" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1009,7 +1018,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WQ7-EI-Ceh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="747"/>
+            <point key="canvasLocation" x="132" y="1001"/>
         </scene>
     </scenes>
     <resources>
