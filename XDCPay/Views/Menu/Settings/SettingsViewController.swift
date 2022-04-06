@@ -37,8 +37,6 @@ class SettingsViewController : UIViewController, UITableViewDelegate , UITableVi
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-         
-       
         
         switch indexPath.row {
         
@@ -55,8 +53,8 @@ class SettingsViewController : UIViewController, UITableViewDelegate , UITableVi
             
         case 3:
             viewController = self.storyboard?.instantiateViewController(withIdentifier: "NetworkViewController") as! NetworkViewController
-            
-            
+        case 4:
+            viewController = self.storyboard?.instantiateViewController(withIdentifier: "ContactsViewController") as! ContactsViewController
             
         default:
             print("")

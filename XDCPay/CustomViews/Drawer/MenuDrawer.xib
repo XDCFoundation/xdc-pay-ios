@@ -61,11 +61,24 @@
                                     </constraints>
                                     <state key="normal" image="Arrow"/>
                                 </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fiz-0V-gNC">
+                                    <rect key="frame" x="80" y="80" width="46" height="30"/>
+                                    <connections>
+                                        <action selector="onAccount:" destination="iN0-l3-epB" eventType="touchUpInside" id="04b-by-8sq"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BPJ-eM-RXm">
+                                    <rect key="frame" x="138" y="80" width="30" height="30"/>
+                                    <connections>
+                                        <action selector="onAccount:" destination="iN0-l3-epB" eventType="touchUpInside" id="CVl-3o-fTv"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstItem="hRi-9s-26K" firstAttribute="top" secondItem="skr-c7-MgG" secondAttribute="bottom" constant="14" id="1KZ-KA-4XU"/>
                                 <constraint firstItem="fuH-YB-Sul" firstAttribute="leading" secondItem="tsi-U4-Xfc" secondAttribute="leading" id="9xm-gy-CSD"/>
+                                <constraint firstItem="fiz-0V-gNC" firstAttribute="width" secondItem="tsi-U4-Xfc" secondAttribute="width" multiplier="0.605263" id="CLI-AK-DWJ"/>
                                 <constraint firstItem="skr-c7-MgG" firstAttribute="leading" secondItem="zTd-9G-fS0" secondAttribute="leading" constant="15" id="CLk-up-3ch"/>
                                 <constraint firstAttribute="height" constant="161" id="Djs-Jq-oAu"/>
                                 <constraint firstItem="QwR-mt-eF8" firstAttribute="centerY" secondItem="tsi-U4-Xfc" secondAttribute="centerY" id="Isa-08-x5Y"/>
@@ -73,8 +86,12 @@
                                 <constraint firstItem="fuH-YB-Sul" firstAttribute="top" secondItem="tsi-U4-Xfc" secondAttribute="bottom" constant="-1.5" id="NdG-U3-NWZ"/>
                                 <constraint firstItem="hRi-9s-26K" firstAttribute="leading" secondItem="zTd-9G-fS0" secondAttribute="leading" id="PTW-Hh-6A9"/>
                                 <constraint firstItem="skr-c7-MgG" firstAttribute="top" secondItem="zTd-9G-fS0" secondAttribute="top" constant="85" id="RsA-RU-hIJ"/>
+                                <constraint firstItem="fiz-0V-gNC" firstAttribute="centerX" secondItem="tsi-U4-Xfc" secondAttribute="centerX" id="YH6-55-RQq"/>
                                 <constraint firstAttribute="trailing" secondItem="hRi-9s-26K" secondAttribute="trailing" id="gQd-RE-L08"/>
+                                <constraint firstItem="BPJ-eM-RXm" firstAttribute="centerX" secondItem="QwR-mt-eF8" secondAttribute="centerX" id="gsJ-oh-1l2"/>
                                 <constraint firstItem="tsi-U4-Xfc" firstAttribute="leading" secondItem="skr-c7-MgG" secondAttribute="trailing" constant="8" id="hcf-S4-5Pf"/>
+                                <constraint firstItem="fiz-0V-gNC" firstAttribute="centerY" secondItem="tsi-U4-Xfc" secondAttribute="centerY" id="jul-F5-uwZ"/>
+                                <constraint firstItem="BPJ-eM-RXm" firstAttribute="centerY" secondItem="QwR-mt-eF8" secondAttribute="centerY" id="ljl-ni-G5T"/>
                                 <constraint firstItem="QwR-mt-eF8" firstAttribute="leading" secondItem="tsi-U4-Xfc" secondAttribute="trailing" constant="5" id="qDt-es-v69"/>
                             </constraints>
                         </view>

@@ -13,6 +13,7 @@ let menuDrawer = MenuDrawer().loadNib() as! MenuDrawer
 var delegateMenuDrawer :MenuDrawerProtocol?
 protocol MenuDrawerProtocol {
     func onSelectRow(row:Int)
+    func onAccount()
 }
 
 
@@ -28,6 +29,12 @@ class MenuDrawer: UIView , UITableViewDelegate , UITableViewDataSource {
     override func awakeFromNib() {
        self.setupViews()
     }
+    
+    @IBAction func onAccount(_ sender: Any) {
+        self.hideDrawer()
+        delegateMenuDrawer?.onAccount()
+    }
+    
     
     func initialize(view:UIView){
         
@@ -138,7 +145,14 @@ extension MenuDrawer {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-         self.hideDrawer()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            self.hideDrawer()
+         }
+        
+        
          delegateMenuDrawer?.onSelectRow(row: indexPath.row)
     }
+    
+    
 }

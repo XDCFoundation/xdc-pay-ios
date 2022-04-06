@@ -21,9 +21,13 @@
 		7F6278A127E8FB6500782EE0 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6278A027E8FB6500782EE0 /* OnboardingViewController.swift */; };
 		7F6278A727E8FBDA00782EE0 /* UIView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6278A627E8FBDA00782EE0 /* UIView+Extention.swift */; };
 		7F6278AF27E9000E00782EE0 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6278AE27E9000E00782EE0 /* OnboardingSlide.swift */; };
+		84119C1E27FAB81A002E2F69 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84119C1D27FAB81A002E2F69 /* AccountCell.swift */; };
+		84119C2027FAE7CC002E2F69 /* ImportAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84119C1F27FAE7CC002E2F69 /* ImportAccountViewController.swift */; };
 		8430963B27F471490040BEB1 /* NetworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8430963A27F471490040BEB1 /* NetworkViewController.swift */; };
 		8430963E27F477F90040BEB1 /* NetworkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8430963D27F477F90040BEB1 /* NetworkCell.swift */; };
 		8430964027F4898A0040BEB1 /* AddNetworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8430963F27F4898A0040BEB1 /* AddNetworkViewController.swift */; };
+		8439F4B227FC0BBD004D6E3A /* SendTokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439F4B127FC0BBD004D6E3A /* SendTokenViewController.swift */; };
+		8439F4B527FC0BF6004D6E3A /* SendTokenTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8439F4B427FC0BF6004D6E3A /* SendTokenTableViewController.swift */; };
 		84466FE127F5ABD700EA7513 /* CommonPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84466FE027F5ABD700EA7513 /* CommonPasswordViewController.swift */; };
 		84466FE327F5B3C700EA7513 /* SeedWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84466FE227F5B3C700EA7513 /* SeedWordsViewController.swift */; };
 		846325F727F4110B00437028 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846325F627F4110B00437028 /* SettingsViewController.swift */; };
@@ -118,6 +122,17 @@
 		849DA91527F43C470012F349 /* Inter.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F62789127E8E88B00782EE0 /* Inter.ttf */; };
 		849DA91627F43C480012F349 /* Inter.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F62789127E8E88B00782EE0 /* Inter.ttf */; };
 		849DA91827F454960012F349 /* AdvanceSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849DA91727F454960012F349 /* AdvanceSettingsViewController.swift */; };
+		84B4892A27FD8CA5004BED3C /* ConfirmSendVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B4892927FD8CA5004BED3C /* ConfirmSendVC.swift */; };
+		84B4892D27FD9516004BED3C /* TokenSentSuccessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B4892C27FD9516004BED3C /* TokenSentSuccessVC.swift */; };
+		84B4892F27FDC9D0004BED3C /* TokenSendSuccessTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B4892E27FDC9D0004BED3C /* TokenSendSuccessTableViewController.swift */; };
+		84BDBD8A27F6E5B70068BF6A /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BDBD8927F6E5B70068BF6A /* ContactsViewController.swift */; };
+		84BDBD8D27F6E7220068BF6A /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BDBD8C27F6E7220068BF6A /* ContactCell.swift */; };
+		84BDBD8F27F6FF860068BF6A /* EditContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BDBD8E27F6FF860068BF6A /* EditContactViewController.swift */; };
+		84BDBD9127F6FFBA0068BF6A /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BDBD9027F6FFBA0068BF6A /* AddContactViewController.swift */; };
+		84BDBD9327F6FFCD0068BF6A /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BDBD9227F6FFCD0068BF6A /* ContactDetailViewController.swift */; };
+		84BDBD9627F70BD90068BF6A /* DeleteDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BDBD9527F70BD90068BF6A /* DeleteDialog.swift */; };
+		84BDBD9827F716D20068BF6A /* AddAccountDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BDBD9727F716D20068BF6A /* AddAccountDialog.swift */; };
+		84BDBD9A27F739E70068BF6A /* MyAccountsDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BDBD9927F739E70068BF6A /* MyAccountsDialog.swift */; };
 		84C02DC227F318DF007B0831 /* ViewPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C02DBE27F318DF007B0831 /* ViewPager.swift */; };
 		84C02DC327F318DF007B0831 /* ViewPagerOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C02DBF27F318DF007B0831 /* ViewPagerOptions.swift */; };
 		84C02DC427F318DF007B0831 /* ViewPagerTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C02DC027F318DF007B0831 /* ViewPagerTab.swift */; };
@@ -177,9 +192,13 @@
 		7F6278A027E8FB6500782EE0 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		7F6278A627E8FBDA00782EE0 /* UIView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extention.swift"; sourceTree = "<group>"; };
 		7F6278AE27E9000E00782EE0 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
+		84119C1D27FAB81A002E2F69 /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
+		84119C1F27FAE7CC002E2F69 /* ImportAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportAccountViewController.swift; sourceTree = "<group>"; };
 		8430963A27F471490040BEB1 /* NetworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkViewController.swift; sourceTree = "<group>"; };
 		8430963D27F477F90040BEB1 /* NetworkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCell.swift; sourceTree = "<group>"; };
 		8430963F27F4898A0040BEB1 /* AddNetworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNetworkViewController.swift; sourceTree = "<group>"; };
+		8439F4B127FC0BBD004D6E3A /* SendTokenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendTokenViewController.swift; sourceTree = "<group>"; };
+		8439F4B427FC0BF6004D6E3A /* SendTokenTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendTokenTableViewController.swift; sourceTree = "<group>"; };
 		84466FE027F5ABD700EA7513 /* CommonPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonPasswordViewController.swift; sourceTree = "<group>"; };
 		84466FE227F5B3C700EA7513 /* SeedWordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeedWordsViewController.swift; sourceTree = "<group>"; };
 		846325F627F4110B00437028 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -219,6 +238,17 @@
 		849590FA27F58D4500A234F1 /* SecurityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityViewController.swift; sourceTree = "<group>"; };
 		849590FE27F5918200A234F1 /* SecurityTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityTableViewController.swift; sourceTree = "<group>"; };
 		849DA91727F454960012F349 /* AdvanceSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvanceSettingsViewController.swift; sourceTree = "<group>"; };
+		84B4892927FD8CA5004BED3C /* ConfirmSendVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmSendVC.swift; sourceTree = "<group>"; };
+		84B4892C27FD9516004BED3C /* TokenSentSuccessVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenSentSuccessVC.swift; sourceTree = "<group>"; };
+		84B4892E27FDC9D0004BED3C /* TokenSendSuccessTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenSendSuccessTableViewController.swift; sourceTree = "<group>"; };
+		84BDBD8927F6E5B70068BF6A /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		84BDBD8C27F6E7220068BF6A /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
+		84BDBD8E27F6FF860068BF6A /* EditContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactViewController.swift; sourceTree = "<group>"; };
+		84BDBD9027F6FFBA0068BF6A /* AddContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
+		84BDBD9227F6FFCD0068BF6A /* ContactDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
+		84BDBD9527F70BD90068BF6A /* DeleteDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteDialog.swift; sourceTree = "<group>"; };
+		84BDBD9727F716D20068BF6A /* AddAccountDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountDialog.swift; sourceTree = "<group>"; };
+		84BDBD9927F739E70068BF6A /* MyAccountsDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountsDialog.swift; sourceTree = "<group>"; };
 		84C02DBE27F318DF007B0831 /* ViewPager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPager.swift; sourceTree = "<group>"; };
 		84C02DBF27F318DF007B0831 /* ViewPagerOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPagerOptions.swift; sourceTree = "<group>"; };
 		84C02DC027F318DF007B0831 /* ViewPagerTab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPagerTab.swift; sourceTree = "<group>"; };
@@ -370,6 +400,15 @@
 			path = Extentions;
 			sourceTree = "<group>";
 		};
+		84119C1C27FAB809002E2F69 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				84119C1D27FAB81A002E2F69 /* AccountCell.swift */,
+				84119C1F27FAE7CC002E2F69 /* ImportAccountViewController.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
 		8430963C27F477E40040BEB1 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -377,6 +416,18 @@
 				8430963D27F477F90040BEB1 /* NetworkCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		8439F4B327FC0BE0004D6E3A /* SendToken */ = {
+			isa = PBXGroup;
+			children = (
+				8439F4B127FC0BBD004D6E3A /* SendTokenViewController.swift */,
+				8439F4B427FC0BF6004D6E3A /* SendTokenTableViewController.swift */,
+				84B4892927FD8CA5004BED3C /* ConfirmSendVC.swift */,
+				84B4892C27FD9516004BED3C /* TokenSentSuccessVC.swift */,
+				84B4892E27FDC9D0004BED3C /* TokenSendSuccessTableViewController.swift */,
+			);
+			path = SendToken;
 			sourceTree = "<group>";
 		};
 		846325F427F410AA00437028 /* Menu */ = {
@@ -390,6 +441,8 @@
 		846325F527F410C600437028 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				84119C1C27FAB809002E2F69 /* Account */,
+				84BDBD8827F6E5940068BF6A /* Contacts */,
 				849590F927F58D1300A234F1 /* Security */,
 				849590F327F57C2000A234F1 /* Network */,
 				8430963C27F477E40040BEB1 /* Cells */,
@@ -411,6 +464,7 @@
 		8474BE6827F1C5120067AC62 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				8439F4B327FC0BE0004D6E3A /* SendToken */,
 				84C02DCA27F3218B007B0831 /* ViewPagerTabContainer.swift */,
 				84C02DC827F31F62007B0831 /* ViewPagerItemViewController.swift */,
 				84C8F7FF27F30DA100F6666C /* Cells */,
@@ -512,6 +566,28 @@
 			path = Security;
 			sourceTree = "<group>";
 		};
+		84BDBD8827F6E5940068BF6A /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				84BDBD8927F6E5B70068BF6A /* ContactsViewController.swift */,
+				84BDBD8C27F6E7220068BF6A /* ContactCell.swift */,
+				84BDBD8E27F6FF860068BF6A /* EditContactViewController.swift */,
+				84BDBD9027F6FFBA0068BF6A /* AddContactViewController.swift */,
+				84BDBD9227F6FFCD0068BF6A /* ContactDetailViewController.swift */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		84BDBD9427F70B8A0068BF6A /* Dialogs */ = {
+			isa = PBXGroup;
+			children = (
+				84BDBD9527F70BD90068BF6A /* DeleteDialog.swift */,
+				84BDBD9727F716D20068BF6A /* AddAccountDialog.swift */,
+				84BDBD9927F739E70068BF6A /* MyAccountsDialog.swift */,
+			);
+			path = Dialogs;
+			sourceTree = "<group>";
+		};
 		84C02DBD27F318D8007B0831 /* ViewPager */ = {
 			isa = PBXGroup;
 			children = (
@@ -526,6 +602,7 @@
 		84C8F7EA27F2C1A700F6666C /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				84BDBD9427F70B8A0068BF6A /* Dialogs */,
 				8463260227F430EC00437028 /* GlobalPicker */,
 				84C02DBD27F318D8007B0831 /* ViewPager */,
 				84C8F7EB27F2C1BE00F6666C /* Drawer */,
@@ -698,28 +775,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F6278AF27E9000E00782EE0 /* OnboardingSlide.swift in Sources */,
+				84119C2027FAE7CC002E2F69 /* ImportAccountViewController.swift in Sources */,
+				84B4892F27FDC9D0004BED3C /* TokenSendSuccessTableViewController.swift in Sources */,
 				84C8F7F727F2C1BE00F6666C /* MenuDrawerCellTableViewCell.swift in Sources */,
 				8463260127F42AD500437028 /* Others.swift in Sources */,
 				849590C927F56DF800A234F1 /* IQKeyboardManagerConstantsInternal.swift in Sources */,
 				846325FD27F4276E00437028 /* GenralSettingsViewController.swift in Sources */,
 				84C02DCB27F3218B007B0831 /* ViewPagerTabContainer.swift in Sources */,
+				84BDBD8D27F6E7220068BF6A /* ContactCell.swift in Sources */,
 				7F62784D27E8DC7900782EE0 /* AppDelegate.swift in Sources */,
 				7F5E509627EC61350076FCD5 /* LandingPageViewController.swift in Sources */,
 				84C8F7F427F2C1BE00F6666C /* Extentions.swift in Sources */,
 				849590FF27F5918200A234F1 /* SecurityTableViewController.swift in Sources */,
 				84C8F80227F30DCC00F6666C /* TokenCell.swift in Sources */,
 				849590C327F56DF800A234F1 /* IQInvocation.swift in Sources */,
+				84BDBD9327F6FFCD0068BF6A /* ContactDetailViewController.swift in Sources */,
 				849590BA27F56DF800A234F1 /* IQBarButtonItem.swift in Sources */,
 				849590D827F56DF800A234F1 /* IQKeyboardManager+Debug.swift in Sources */,
+				84BDBD9827F716D20068BF6A /* AddAccountDialog.swift in Sources */,
+				84BDBD8A27F6E5B70068BF6A /* ContactsViewController.swift in Sources */,
 				8463260427F4315700437028 /* PickerViewClass.swift in Sources */,
+				8439F4B227FC0BBD004D6E3A /* SendTokenViewController.swift in Sources */,
 				849DA91827F454960012F349 /* AdvanceSettingsViewController.swift in Sources */,
 				84C02DC527F318DF007B0831 /* ViewPagerTabView.swift in Sources */,
 				846325F727F4110B00437028 /* SettingsViewController.swift in Sources */,
 				84C8F7F827F2C1BE00F6666C /* MenuDrawer.swift in Sources */,
+				84BDBD9A27F739E70068BF6A /* MyAccountsDialog.swift in Sources */,
 				849590F027F56DF800A234F1 /* IQKeyboardManager+UITextFieldViewNotification.swift in Sources */,
+				8439F4B527FC0BF6004D6E3A /* SendTokenTableViewController.swift in Sources */,
 				84C8F7FC27F2E1F400F6666C /* TransactionCell.swift in Sources */,
 				849590B427F56DF800A234F1 /* IQPreviousNextView.swift in Sources */,
 				849590DB27F56DF800A234F1 /* IQKeyboardManager+OrientationNotification.swift in Sources */,
+				84BDBD9127F6FFBA0068BF6A /* AddContactViewController.swift in Sources */,
 				849590C627F56DF800A234F1 /* IQKeyboardManager+UIKeyboardNotification.swift in Sources */,
 				7F6278A127E8FB6500782EE0 /* OnboardingViewController.swift in Sources */,
 				849590E427F56DF800A234F1 /* IQUIViewController+Additions.swift in Sources */,
@@ -732,16 +819,21 @@
 				849590ED27F56DF800A234F1 /* IQNSArray+Sort.swift in Sources */,
 				8430964027F4898A0040BEB1 /* AddNetworkViewController.swift in Sources */,
 				849590FB27F58D4500A234F1 /* SecurityViewController.swift in Sources */,
+				84119C1E27FAB81A002E2F69 /* AccountCell.swift in Sources */,
 				849590AE27F56DF800A234F1 /* IQTextView.swift in Sources */,
 				84466FE327F5B3C700EA7513 /* SeedWordsViewController.swift in Sources */,
 				849590BD27F56DF800A234F1 /* IQToolbar.swift in Sources */,
 				84C02DCF27F32634007B0831 /* UIColor.swift in Sources */,
+				84BDBD8F27F6FF860068BF6A /* EditContactViewController.swift in Sources */,
+				84BDBD9627F70BD90068BF6A /* DeleteDialog.swift in Sources */,
 				849590CC27F56DF800A234F1 /* IQKeyboardManagerConstants.swift in Sources */,
 				849590EA27F56DF800A234F1 /* IQUIView+Hierarchy.swift in Sources */,
 				848E434E27F5C9AB00501109 /* ChangePasswordViewController.swift in Sources */,
 				849590B727F56DF800A234F1 /* IQTitleBarButtonItem.swift in Sources */,
+				84B4892A27FD8CA5004BED3C /* ConfirmSendVC.swift in Sources */,
 				849590C027F56DF800A234F1 /* IQUIView+IQKeyboardToolbar.swift in Sources */,
 				7F5E509B27EC67E90076FCD5 /* ImportFromSeedViewController.swift in Sources */,
+				84B4892D27FD9516004BED3C /* TokenSentSuccessVC.swift in Sources */,
 				849590CF27F56DF800A234F1 /* IQKeyboardManager+Position.swift in Sources */,
 				8474BE6727F1C4ED0067AC62 /* HomeViewController.swift in Sources */,
 				849590E127F56DF800A234F1 /* IQUIScrollView+Additions.swift in Sources */,
