@@ -7,27 +7,40 @@
 
 import UIKit
 
-class TokenSendSuccessTableViewController: UITableViewController {
+var tempData = [String:String]()
 
+
+
+class TokenSendSuccessTableViewController: UITableViewController {
+    
+    @IBOutlet weak var total: UILabel!
+    @IBOutlet weak var fees: UILabel!
+    @IBOutlet weak var gwei: UILabel!
+    @IBOutlet weak var gasLimit: UILabel!
+    @IBOutlet weak var myAddress: UILabel!
+    @IBOutlet weak var amount: UILabel!
+    @IBOutlet weak var toAddress: UILabel!
+    
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
 
-        // Do any additional setup after loading the view.
+        self.myAddress.text = UserDefaultsManager.shared.getCurrentNetworkWalletAddress()
+        self.gwei.text = tempData["gwei"]
+        self.toAddress.text = tempData["recipientAddress"]
+        self.amount.text = tempData["amount"]
+        self.gasLimit.text = tempData["gasLimit"]
+        self.total.text = tempData["total"]
+        self.fees.text = tempData["fee"]
+        self.myAddress.text = tempData["myAddress"]
+       
+
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -9,21 +9,29 @@ import UIKit
 
 class TokenSentSuccessVC: UIViewController {
 
+    @IBOutlet weak var hashOrAddress: UILabel!
+    
+    var data = [String:String]()
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
+        self.hashOrAddress.text = data["hash"]
+    }
 
-        // Do any additional setup after loading the view.
+    @IBAction func onCopy(_ sender: Any) {
+        UIPasteboard.general.string =  self.hashOrAddress.text!
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func onVewTransaction(_ sender: Any) {
+       
+        if let url = URL(string: "https://explorer.apothem.network/txs/\(self.hashOrAddress.text!)") {
+            UIApplication.shared.open(url)
+        }
+        
     }
-    */
-
+    
+    @IBAction func onBackButton(_ sender: Any) {
+        self.closeAllAndMoveHome()
+    }
+    
+    
 }

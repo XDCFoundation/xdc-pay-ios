@@ -37,6 +37,27 @@ class LandingPageViewController: UIViewController {
 ////        self.present(navigationController, animated: true, completion: nil)
         
     }
+    @IBAction func onImport(_ sender: Any) {
+        
+        
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ImportFromSeedViewController")
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+        
+      
+    
+    }
+    
+    @IBAction func onCreate(_ sender: Any) {
+        
+        
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CreateNewWalletViewController") as! CreateNewWalletViewController
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+  
+        
+    }
+    
     
 
 }
