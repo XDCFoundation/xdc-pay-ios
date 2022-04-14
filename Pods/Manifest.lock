@@ -1,0 +1,57 @@
+PODS:
+  - Alamofire (4.9.1)
+  - BigInt (5.2.0)
+  - CryptoSwift (1.0.0)
+  - GenericJSON (2.0.1)
+  - GTProgressBar (0.3.3)
+  - HDWalletKit (0.3.6):
+    - CryptoSwift (~> 1.0.0)
+    - secp256k1.swift (~> 0.1.4)
+  - Navajo-Swift (2.1.0)
+  - PSMeter (0.1.3):
+    - GTProgressBar
+    - Navajo-Swift
+  - secp256k1.swift (0.1.4)
+  - SwiftyJSON (5.0.1)
+  - XDC3Swift (1.4.0):
+    - BigInt (~> 5.2.0)
+    - GenericJSON (~> 2.0.0)
+    - HDWalletKit (~> 0.3.6)
+    - secp256k1.swift (~> 0.1.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.9.0)
+  - PSMeter
+  - SwiftyJSON
+  - XDC3Swift
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - BigInt
+    - CryptoSwift
+    - GenericJSON
+    - GTProgressBar
+    - HDWalletKit
+    - Navajo-Swift
+    - PSMeter
+    - secp256k1.swift
+    - SwiftyJSON
+    - XDC3Swift
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  BigInt: f668a80089607f521586bbe29513d708491ef2f7
+  CryptoSwift: d81eeaa59dc5a8d03720fe919a6fd07b51f7439f
+  GenericJSON: a6e74e2c457f8693caab08e0eafde7d97e6666de
+  GTProgressBar: a480283ecb0ada50de16c71e634892826928f640
+  HDWalletKit: 6d97a15404b2edfe3418e3dc064faa967e51dac4
+  Navajo-Swift: 57b93e73efbfbf452433efbff04402de56beff51
+  PSMeter: 86aa508e05171a228c0b8faf983dd744bd99c6a0
+  secp256k1.swift: a7e7a214f6db6ce5db32cc6b2b45e5c4dd633634
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
+  XDC3Swift: 75993e75207ab0a73d06702a454e7e7a5e0910dc
+
+PODFILE CHECKSUM: 04d3bd1a82f414d1a786d98569483a362932f933
+
+COCOAPODS: 1.10.1

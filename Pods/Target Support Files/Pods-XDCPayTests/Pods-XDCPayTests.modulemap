@@ -1,0 +1,6 @@
+framework module Pods_XDCPayTests {
+  umbrella header "Pods-XDCPayTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
