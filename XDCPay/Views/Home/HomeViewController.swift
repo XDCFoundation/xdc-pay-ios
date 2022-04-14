@@ -118,9 +118,8 @@ extension HomeViewController:MenuDrawerProtocol {
     
     func logout() {
       
-        UserDefaultsManager.shared.clearUserDefaults()
-        //self.dismiss(animated: true, completion: nil)
-        closeAllAndMoveHome()
+        // UserDefaultsManager.shared.clearUserDefaults()
+        // closeAllAndMoveHome()
     }
     
     func openObservatory() {

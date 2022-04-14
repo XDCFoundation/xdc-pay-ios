@@ -5,6 +5,8 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
 
+    var completionHandler:((String) -> String)?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -84,7 +86,8 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     }
 
     func found(code: String) {
-        print(code)
+        let _ = completionHandler?(code)
+        self.dismiss(animated: true, completion: nil)
     }
 
     override var prefersStatusBarHidden: Bool {

@@ -103,7 +103,17 @@ class SendTokenTableViewController: UITableViewController {
   
     @IBAction func onScan(_ sender: Any) {
         
-        self.present(ScannerViewController(), animated: true, completion: nil)
+        let scaner = ScannerViewController()
+        self.present(scaner, animated: true, completion: nil)
+        scaner.completionHandler = { qrCode in
+        
+            if(!qrCode.isEmpty) {
+                self.receiverAddress.text = qrCode
+            }
+            
+           return  ""
+        }
+        
         
     }
     
@@ -131,25 +141,4 @@ extension SendTokenTableViewController {
     }
 }
 
-
-extension SendTokenTableViewController {
-    
-
-//        func getXdcPrice(xdcVal: BigUInt) {
-//
-//            let xdcValueInDouble = Double(xdcVal)
-//
-//
-//            AlamoObject.getXdcUsdPrice() { price in
-//
-//                let price = xdcValueInDouble * price
-//
-//                DispatchQueue.main.async {
-//                    self.usdBalance.text = "$\(price.rounded(toPlaces: 2)) USD"
-//                }
-//
-//            }
-//
-//
-//        }
-}
+ 

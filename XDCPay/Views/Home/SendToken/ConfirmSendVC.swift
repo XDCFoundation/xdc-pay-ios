@@ -76,6 +76,13 @@ class ConfirmSendVC: UIViewController {
                         vc.modalPresentationStyle = .fullScreen
                         self.present(vc, animated: true, completion:nil)
                     }
+                }else {
+                    
+                    DispatchQueue.main.async {
+                        self.showAlert(message: "Transaction Error")
+                    }
+                    
+                  
                 }
                
               
