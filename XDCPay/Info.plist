@@ -71,7 +71,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>Privacy - Camera Usage Description </key>
+	<key>NSCameraUsageDescription</key>
 	<string>use camera for scan </string>
 </dict>
 </plist>

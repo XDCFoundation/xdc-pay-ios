@@ -49,11 +49,28 @@ class HomeViewController: UIViewController {
               
         }
     }
+    @IBAction func scan(_ sender: Any) {
+        let scaner = ScannerViewController()
+        self.present(scaner, animated: true, completion: nil)
+        scaner.completionHandler = { qrCode in
+        
+            if(!qrCode.isEmpty) {
+                globalRecieverAddress = qrCode
+                self.pVC(viewConterlerId: "SendTokenViewController")
+                print("QRCODE = \(qrCode)")
+                
+            }
+            
+           return  ""
+        }
+        
+    }
     @IBAction func onReceive(_ sender: Any) {
         self.pVC(viewConterlerId: "ReceiveViewController")
     }
     
     @IBAction func onSend(_ sender: Any) {
+        globalRecieverAddress = ""
         self.pVC(viewConterlerId: "SendTokenViewController")
     }
     
@@ -136,6 +153,8 @@ extension HomeViewController:MenuDrawerProtocol {
             UIApplication.shared.open(url)
         }
     }
+    
+    
     
 }
 
