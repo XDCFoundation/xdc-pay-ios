@@ -11,6 +11,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     static var shared: SceneDelegate?
     
+    var tempScene : UIScene!
+    
     var window: UIWindow?
     
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
@@ -33,9 +35,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Release any resources associated with this scene that can be re-created the next time the scene connects.
         // The scene may re-connect later, as its session was not necessarily discarded (see `application:didDiscardSceneSessions` instead).
     }
-    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+    
+    func checkLogin() {
         
-        guard let windowScene = (scene as? UIWindowScene) else { return }
+        
+        guard let windowScene = (tempScene as? UIWindowScene) else { return }
         
         SceneDelegate.shared = self
         
@@ -66,6 +70,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         self.window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
+    }
+    
+    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        
+       
+        self.tempScene = scene
+        self.checkLogin()
         
        
     }

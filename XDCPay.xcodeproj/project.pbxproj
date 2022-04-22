@@ -23,6 +23,7 @@
 		7F6278A127E8FB6500782EE0 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6278A027E8FB6500782EE0 /* OnboardingViewController.swift */; };
 		7F6278A727E8FBDA00782EE0 /* UIView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6278A627E8FBDA00782EE0 /* UIView+Extention.swift */; };
 		7F6278AF27E9000E00782EE0 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6278AE27E9000E00782EE0 /* OnboardingSlide.swift */; };
+		840ED2E628129DCB001FC4A5 /* TextViewWithPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840ED2E528129DCB001FC4A5 /* TextViewWithPlaceholder.swift */; };
 		84119C1E27FAB81A002E2F69 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84119C1D27FAB81A002E2F69 /* AccountCell.swift */; };
 		84119C2027FAE7CC002E2F69 /* ImportAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84119C1F27FAE7CC002E2F69 /* ImportAccountViewController.swift */; };
 		8430963B27F471490040BEB1 /* NetworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8430963A27F471490040BEB1 /* NetworkViewController.swift */; };
@@ -215,6 +216,7 @@
 		7F6278A027E8FB6500782EE0 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		7F6278A627E8FBDA00782EE0 /* UIView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extention.swift"; sourceTree = "<group>"; };
 		7F6278AE27E9000E00782EE0 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
+		840ED2E528129DCB001FC4A5 /* TextViewWithPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewWithPlaceholder.swift; sourceTree = "<group>"; };
 		84119C1D27FAB81A002E2F69 /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
 		84119C1F27FAE7CC002E2F69 /* ImportAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportAccountViewController.swift; sourceTree = "<group>"; };
 		8430963A27F471490040BEB1 /* NetworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkViewController.swift; sourceTree = "<group>"; };
@@ -467,6 +469,14 @@
 			path = Extentions;
 			sourceTree = "<group>";
 		};
+		840ED2E428129DBA001FC4A5 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				840ED2E528129DCB001FC4A5 /* TextViewWithPlaceholder.swift */,
+			);
+			path = TextField;
+			sourceTree = "<group>";
+		};
 		84119C1C27FAB809002E2F69 /* Account */ = {
 			isa = PBXGroup;
 			children = (
@@ -693,6 +703,7 @@
 		84C8F7EA27F2C1A700F6666C /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				840ED2E428129DBA001FC4A5 /* TextField */,
 				84BDBD9427F70B8A0068BF6A /* Dialogs */,
 				8463260227F430EC00437028 /* GlobalPicker */,
 				84C02DBD27F318D8007B0831 /* ViewPager */,
@@ -999,6 +1010,7 @@
 				849590C927F56DF800A234F1 /* IQKeyboardManagerConstantsInternal.swift in Sources */,
 				846325FD27F4276E00437028 /* GenralSettingsViewController.swift in Sources */,
 				848EC6A8280579AD00ED867F /* Double.swift in Sources */,
+				840ED2E628129DCB001FC4A5 /* TextViewWithPlaceholder.swift in Sources */,
 				84C02DCB27F3218B007B0831 /* ViewPagerTabContainer.swift in Sources */,
 				843A40AD2804448E0003D130 /* QRCode.swift in Sources */,
 				84BDBD8D27F6E7220068BF6A /* ContactCell.swift in Sources */,
