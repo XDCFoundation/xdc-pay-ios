@@ -20,6 +20,11 @@ class NetworkViewController: UIViewController , UITableViewDelegate, UITableView
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.tableFooterView = UIView()
+        if DataBaseManager.shared.getNetworks().isEmpty{
+        DataBaseManager.shared.addNetwork(name: "XDC Mainnet", rpc: "https://xdcpayrpc.blocksscan.io/", id: "50", symbol: "XDC", url: "https://observer.xdc.org")
+        DataBaseManager.shared.addNetwork(name: "XDC Apothem Testnet", rpc: "https://apothemxdcpayrpc.blocksscan.io/", id: "51", symbol: "XDC", url: "https://explorer.apothem.network")
+        DataBaseManager.shared.addNetwork(name: "Localhost 8545", rpc: "https://localhost:8545", id: "", symbol: "", url: "")
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,8 +41,6 @@ class NetworkViewController: UIViewController , UITableViewDelegate, UITableView
         self.tableView.reloadData()
         
     }
-    
-   
     
     @IBAction func onAddNetwork(_ sender: Any) {
         self.pVC(viewConterlerId: "AddNetworkViewController")

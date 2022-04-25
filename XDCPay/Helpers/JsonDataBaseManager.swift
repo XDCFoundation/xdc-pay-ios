@@ -5,6 +5,7 @@ import Foundation
 
 class DataBaseManager {
     
+    
   
   static let shared = DataBaseManager()
     
@@ -68,18 +69,7 @@ class DataBaseManager {
         return networks.responseData!
  
     }
-
-    
-    func demo() {
-        
-       // self.getNetworks()
-        
-        self.addNetwork(name: "TEstNew", rpc: "RPC", id: "DEMOid", symbol: "USD", url: "URLLS")
-       
-    }
-  
 }
-
 
 
 extension DataBaseManager {
