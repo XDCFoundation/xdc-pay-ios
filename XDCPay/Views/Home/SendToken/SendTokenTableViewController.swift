@@ -32,6 +32,7 @@ class SendTokenTableViewController: UITableViewController {
         self.gasLimit.keyboardType = .numberPad
         self.gasFees.keyboardType = .numberPad
         self.amountToBeSend.keyboardType = .numberPad
+        self.receiverAddress.text = globalRecieverAddress
         self.setupGasFees()
         self.setMyAddress()
         self.getBalance()

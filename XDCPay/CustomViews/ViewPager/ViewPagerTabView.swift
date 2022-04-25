@@ -87,6 +87,7 @@ public final class ViewPagerTabView: UIView {
      * is larger. ImageView is centered inside tabview with provided paddings if tab type is Image only. Considers both padding
      * and image margin incase tab type is ImageWithText.
      */
+    
     fileprivate func setupImageTab(withText:Bool, options:ViewPagerOptions, tab:ViewPagerTab) {
         
         let distribution = options.distribution

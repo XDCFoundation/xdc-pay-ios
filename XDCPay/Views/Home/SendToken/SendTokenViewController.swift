@@ -6,6 +6,7 @@
 //
 
 import UIKit
+var globalRecieverAddress : String = ""
 
 class SendTokenViewController: UIViewController {
 
