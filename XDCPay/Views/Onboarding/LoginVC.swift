@@ -31,9 +31,6 @@ class LoginVC: UIViewController {
             
         }
        
-         
-            
-       
     }
     
     @IBAction func onCreateNewWallet(_ sender: Any) {

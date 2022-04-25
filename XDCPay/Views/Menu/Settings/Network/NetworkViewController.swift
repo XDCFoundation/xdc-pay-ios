@@ -9,6 +9,7 @@ import UIKit
 
 class NetworkViewController: UIViewController , UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var noNetworkLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     var networks = [Network]()
@@ -27,6 +28,11 @@ class NetworkViewController: UIViewController , UITableViewDelegate, UITableView
         
         networks = DataBaseManager.shared.getNetworks()
         
+        if(networks.isEmpty) {
+            noNetworkLabel.isHidden = false
+        }else {
+            noNetworkLabel.isHidden = true
+        }
         self.tableView.reloadData()
         
     }
@@ -54,7 +60,13 @@ class NetworkViewController: UIViewController , UITableViewDelegate, UITableView
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.pVC(viewConterlerId: "NetworkDetailsViewController")
+        
+        let vc = UIStoryboard(name: "Storyboard2", bundle: nil).instantiateViewController(withIdentifier: "NetworkDetailsViewController") as! NetworkDetailsViewController
+        vc.modalPresentationStyle = .fullScreen
+        vc.network = self.networks[indexPath.row]
+        self.present(vc, animated: true, completion: nil)
+        
+        
     }
    
 

@@ -22,7 +22,7 @@ class DataBaseManager {
                 "url": url,
             ]
             
-            let jsonArray = ["response" : [data,data,data] ]
+            let jsonArray = ["response" : [data] ]
             
             print(jsonArray)
             
@@ -53,9 +53,13 @@ class DataBaseManager {
     func getNetworks() -> [Network] {
        
        
-        let networkJSONString =   geNetworkJSON()
+        let networkJSONString = geNetworkJSON()
 
         print(networkJSONString)
+        
+        if(networkJSONString.isEmpty){
+            return [Network]()
+        }
         
         let dataJson = networkJSONString.data(using: .utf8)!
 
@@ -89,7 +93,7 @@ extension DataBaseManager {
     
     func geNetworkJSON() ->String {
         
-        UserDefaults.standard.value(forKey: "networkJSON") as! String
+        UserDefaults.standard.value(forKey: "networkJSON") as? String ?? ""
        
     }
     

@@ -63,9 +63,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 navigationController.navigationBar.isHidden = true
                 
             }else {
-                //HomeViewController
+               
                 let storyboard = UIStoryboard(name: "Storyboard2", bundle: nil)
-                let initialViewController = storyboard.instantiateViewController(withIdentifier: "NetworkViewController") as! NetworkViewController
+                let initialViewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
                 navigationController = UINavigationController(rootViewController: initialViewController)
                 navigationController.navigationBar.isHidden = true
                 
