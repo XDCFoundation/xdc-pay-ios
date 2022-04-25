@@ -49,13 +49,28 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
         if UserDefaultsManager.shared.isLoggedIn()
         {
-            let storyboard = UIStoryboard(name: "Storyboard2", bundle: nil)
-            let initialViewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
             
-            navigationController = UINavigationController(rootViewController: initialViewController)
             
-            navigationController.navigationBar.isHidden = true
-           
+            let isLogout = UserDefaults.standard.bool(forKey: "logOut")
+            
+            if(isLogout) {
+                
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let initialViewController = storyboard.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
+                
+                navigationController = UINavigationController(rootViewController: initialViewController)
+                
+                navigationController.navigationBar.isHidden = true
+                
+            }else {
+                //HomeViewController
+                let storyboard = UIStoryboard(name: "Storyboard2", bundle: nil)
+                let initialViewController = storyboard.instantiateViewController(withIdentifier: "NetworkViewController") as! NetworkViewController
+                navigationController = UINavigationController(rootViewController: initialViewController)
+                navigationController.navigationBar.isHidden = true
+                
+            }
+        
         }
         else
         {

@@ -21,6 +21,35 @@ class AddNetworkViewController: UIViewController {
         super.viewDidLoad()
 
     }
+    
+    @IBAction func onAddNetwork(_ sender: Any) {
+        
+        if(self.networkTextField.text!.isEmpty) {
+            self.showAlert(message: "Please Enter Network Name")
+            return
+        }
+        
+        if(self.rpcTextField.text!.isEmpty) {
+            self.showAlert(message: "Please Enter Rpc Url")
+            return
+        }
+        
+        if(self.chainIDTextField.text!.isEmpty) {
+            self.showAlert(message: "Please Enter Chain Id")
+            return
+        }
+        
+        if(self.currencySymbolTextField.text!.isEmpty) {
+            self.showAlert(message: "Please Enter Currency Symbol")
+            return
+        }
+        
+        DataBaseManager.shared.addNetwork(name: self.networkTextField.text!, rpc: self.rpcTextField.text!, id: self.chainIDTextField.text!, symbol: self.currencySymbolTextField.text!, url: self.networkTextField.text ?? "")
+        
+        self.dismiss(animated: true, completion: nil)
+        
+    }
+    
 
 
 }

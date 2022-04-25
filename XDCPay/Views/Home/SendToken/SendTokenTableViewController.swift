@@ -5,13 +5,15 @@
 //  Created by Admin on 05/04/22.
 //
 
+var globaReceiverAddress = ""
+
 import UIKit
 import XDC3Swift
 
 class SendTokenTableViewController: UITableViewController {
     
     let client = XDCClient(url: URL(string: testConfig.xinfinNetworkUrl)!)
-    let AlamoObject = AlamoWebServices()
+   
     var availableAmount = 0.0
     
     @IBOutlet weak var myAddressButton: UIButton!
@@ -33,6 +35,7 @@ class SendTokenTableViewController: UITableViewController {
         self.setupGasFees()
         self.setMyAddress()
         self.getBalance()
+        self.receiverAddress.text = globaReceiverAddress
     }
     override func viewWillAppear(_ animated: Bool) {
       //  self.sendDemo()
@@ -110,8 +113,7 @@ class SendTokenTableViewController: UITableViewController {
             if(!qrCode.isEmpty) {
                 self.receiverAddress.text = qrCode
             }
-            
-           return  ""
+        
         }
         
         

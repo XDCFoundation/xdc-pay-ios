@@ -12,7 +12,7 @@ class UserDefaultsManager  {
     
     static  let shared =  UserDefaultsManager()
     
-    
+     
     func clearUserDefaults() {
         
         let defaults = UserDefaults.standard
@@ -56,6 +56,10 @@ class UserDefaultsManager  {
            return false
         }
       
+    }
+    
+    func logOut() {
+        UserDefaults.standard.setValue(true, forKey: "logOut")
     }
     
     func getWalletAddress()->String {

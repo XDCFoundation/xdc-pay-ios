@@ -104,12 +104,10 @@ class CreateNewWalletViewController: UIViewController {
             let importFromMnemonic = try! XDCAccount.importAccountWithMnemonic(mnemonic: acc)
             
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "SecureWallectVC") as! SecureWallectVC
-            vc.accAddr = importFromMnemonic.address
-            vc.privateKey = importFromMnemonic.rawPrivateKey
             vc.seedPhrase = acc
             let accountData = [importFromMnemonic.address,importFromMnemonic.rawPrivateKey,newPassword.text!]
-            UserDefaults.standard.setValue(accountData, forKey: "WalletData")
-            UserDefaults.standard.setValue(acc, forKey: "seed")
+            vc.accountData = accountData
+
             print(acc)
             vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true, completion: nil)

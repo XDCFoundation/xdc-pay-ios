@@ -3,10 +3,10 @@
 import UIKit
 
 class SecureWallectVC: UIViewController {
-    var accAddr: String?
-    var privateKey: String?
+    
     var seedPhrase: String?
     var seedArray : [String]?
+    var accountData = [String]()
 
     @IBOutlet var seedWord1: UILabel!
     @IBOutlet var seedWord2: UILabel!
@@ -101,10 +101,24 @@ class SecureWallectVC: UIViewController {
         overrideUserInterfaceStyle = .light
     }
     
-   
+    @IBAction func onContinue(_ sender: Any) {
+        
+       
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ConfirmRecoveryVC") as! ConfirmRecoveryVC
+        vc.seedArray = seedArray!
+        vc.seedPhrase = self.seedPhrase!
+        vc.accountData = self.accountData
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+         
+    }
+    
     @IBAction func onCopyToClipBoard(_ sender: Any) {
+     
         UIPasteboard.general.string = seedArray?.joined(separator: " ")
-        print(UIPasteboard.general.string)
+      //  print(UIPasteboard.general.string)
+      
+        
     }
     
 }

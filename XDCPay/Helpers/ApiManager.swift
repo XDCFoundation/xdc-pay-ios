@@ -11,117 +11,117 @@ class AlamoWebServices {
     
   static let shared = AlamoWebServices()
     
-     func requestGetUrlWithoutParams(_ strURL: String, success:@escaping (JSON) -> Void, failure:@escaping (Error) -> Void) {
-        Alamofire.request(strURL).responseJSON { (responseObject) -> Void in
-            
-            print(responseObject)
-            if responseObject.result.isSuccess {
-                let resJson = JSON(responseObject.result.value!)
-                success(resJson)
-            }
-            if responseObject.result.isFailure {
-                let error : Error = responseObject.result.error!
-                failure(error)
-            }
-        }
-    }
-        
-     func requestPostUrlWithDictionary(_ strURL : String, params : [String : AnyObject]?, headers : [String : String]?, success:@escaping (JSON) -> Void, failure:@escaping (Error) -> Void){
-        
-        Alamofire.request(strURL, method: .post, parameters: params, encoding: URLEncoding.httpBody, headers: headers).responseJSON { (responseObject) -> Void in
-            print("POST URL -> \(strURL) \n Params: \(params ?? [:])")
-            print(responseObject)
-            
-            if responseObject.result.isSuccess {
-                let resJson = JSON(responseObject.result.value!)
-                success(resJson)
-            }
-            if responseObject.result.isFailure {
-                let error : Error = responseObject.result.error!
-                
-                failure(error)
-            }
-        }
-    }
-    
-    func requestPostUrlWithBody(_ strURL : String, params : Parameters?, headers : [String : String]?, success:@escaping (JSON) -> Void, failure:@escaping (Error) -> Void){
-       
-       Alamofire.request(strURL, method: .post, parameters: params, encoding: URLEncoding.httpBody, headers: headers).responseJSON { (responseObject) -> Void in
-           
-           print("POST URL -> \(strURL) \n Params: \(params ?? [:])")
-           //self.printJsonLogs(JSONparams: params, apiUrl: strURL, headers: headers)
-           print(responseObject)
-           
-           if responseObject.result.isSuccess {
-               let resJson = JSON(responseObject.result.value!)
-               success(resJson)
-           }
-           if responseObject.result.isFailure {
-               let error : Error = responseObject.result.error!
-               
-               failure(error)
-           }
-       }
-   }
-    
-    func requestPutUrl(_ strURL : String, params : Parameters, headers : [String : String]?, success:@escaping (JSON) -> Void, failure:@escaping (Error) -> Void){
-       
-       Alamofire.request(strURL, method: .put, parameters: params, encoding: URLEncoding.httpBody, headers: headers).responseJSON { (responseObject) -> Void in
-           
-         //  self.printJsonLogs(JSONparams: params, apiUrl: strURL, headers: headers)
-           print("Put URL -> \(strURL) \n Params: \(params ?? [:])")
-           print(responseObject)
-           
-           if responseObject.result.isSuccess {
-               let resJson = JSON(responseObject.result.value!)
-               success(resJson)
-           }
-           if responseObject.result.isFailure {
-               let error : Error = responseObject.result.error!
-               
-               failure(error)
-           }
-       }
-   }
-    
-    
-    func requestPostUrlQueryString(_ strURL : String, params : Parameters, headers : [String : String]?, success:@escaping (JSON) -> Void, failure:@escaping (Error) -> Void){
-        Alamofire.request(strURL, method: .post, parameters: params, encoding: URLEncoding.queryString, headers: nil).responseJSON { (json) in
-            print("POST Query URL -> \(strURL) \n Params: \(params ?? [:])")
-            print(json)
-            
-            if json.result.isSuccess {
-                let resJson = JSON(json.result.value!)
-                success(resJson)
-            }
-            if json.result.isFailure {
-                let error : Error = json.result.error!
-                
-                failure(error)
-            }
-
-        }
-       
-   }
-   
-    func requestGetUrlQueryString(_ strURL : String, params : Parameters?, headers : [String : String]?, success:@escaping (JSON) -> Void, failure:@escaping (Error) -> Void){
-        Alamofire.request(strURL, method: .get, parameters: params, encoding: URLEncoding.queryString, headers: nil).responseJSON { (json) in
-            print("Get URL -> \(strURL) \n Params: \(params ?? [:])")
-            print(json)
-            
-            if json.result.isSuccess {
-                let resJson = JSON(json.result.value!)
-                success(resJson)
-            }
-            if json.result.isFailure {
-                let error : Error = json.result.error!
-                
-                failure(error)
-            }
-
-        }
-       
-   }
+//     func requestGetUrlWithoutParams(_ strURL: String, success:@escaping (JSON) -> Void, failure:@escaping (Error) -> Void) {
+//        Alamofire.request(strURL).responseJSON { (responseObject) -> Void in
+//            
+//            print(responseObject)
+//            if responseObject.result.isSuccess {
+//                let resJson = JSON(responseObject.result.value!)
+//                success(resJson)
+//            }
+//            if responseObject.result.isFailure {
+//                let error : Error = responseObject.result.error!
+//                failure(error)
+//            }
+//        }
+//    }
+//        
+//     func requestPostUrlWithDictionary(_ strURL : String, params : [String : AnyObject]?, headers : [String : String]?, success:@escaping (JSON) -> Void, failure:@escaping (Error) -> Void){
+//        
+//        Alamofire.request(strURL, method: .post, parameters: params, encoding: URLEncoding.httpBody, headers: headers).responseJSON { (responseObject) -> Void in
+//            print("POST URL -> \(strURL) \n Params: \(params ?? [:])")
+//            print(responseObject)
+//            
+//            if responseObject.result.isSuccess {
+//                let resJson = JSON(responseObject.result.value!)
+//                success(resJson)
+//            }
+//            if responseObject.result.isFailure {
+//                let error : Error = responseObject.result.error!
+//                
+//                failure(error)
+//            }
+//        }
+//    }
+//    
+//    func requestPostUrlWithBody(_ strURL : String, params : Parameters?, headers : [String : String]?, success:@escaping (JSON) -> Void, failure:@escaping (Error) -> Void){
+//       
+//       Alamofire.request(strURL, method: .post, parameters: params, encoding: URLEncoding.httpBody, headers: headers).responseJSON { (responseObject) -> Void in
+//           
+//           print("POST URL -> \(strURL) \n Params: \(params ?? [:])")
+//           //self.printJsonLogs(JSONparams: params, apiUrl: strURL, headers: headers)
+//           print(responseObject)
+//           
+//           if responseObject.result.isSuccess {
+//               let resJson = JSON(responseObject.result.value!)
+//               success(resJson)
+//           }
+//           if responseObject.result.isFailure {
+//               let error : Error = responseObject.result.error!
+//               
+//               failure(error)
+//           }
+//       }
+//   }
+//    
+//    func requestPutUrl(_ strURL : String, params : Parameters, headers : [String : String]?, success:@escaping (JSON) -> Void, failure:@escaping (Error) -> Void){
+//       
+//       Alamofire.request(strURL, method: .put, parameters: params, encoding: URLEncoding.httpBody, headers: headers).responseJSON { (responseObject) -> Void in
+//           
+//         //  self.printJsonLogs(JSONparams: params, apiUrl: strURL, headers: headers)
+//           print("Put URL -> \(strURL) \n Params: \(params ?? [:])")
+//           print(responseObject)
+//           
+//           if responseObject.result.isSuccess {
+//               let resJson = JSON(responseObject.result.value!)
+//               success(resJson)
+//           }
+//           if responseObject.result.isFailure {
+//               let error : Error = responseObject.result.error!
+//               
+//               failure(error)
+//           }
+//       }
+//   }
+//    
+//    
+//    func requestPostUrlQueryString(_ strURL : String, params : Parameters, headers : [String : String]?, success:@escaping (JSON) -> Void, failure:@escaping (Error) -> Void){
+//        Alamofire.request(strURL, method: .post, parameters: params, encoding: URLEncoding.queryString, headers: nil).responseJSON { (json) in
+//            print("POST Query URL -> \(strURL) \n Params: \(params ?? [:])")
+//            print(json)
+//            
+//            if json.result.isSuccess {
+//                let resJson = JSON(json.result.value!)
+//                success(resJson)
+//            }
+//            if json.result.isFailure {
+//                let error : Error = json.result.error!
+//                
+//                failure(error)
+//            }
+//
+//        }
+//       
+//   }
+//   
+//    func requestGetUrlQueryString(_ strURL : String, params : Parameters?, headers : [String : String]?, success:@escaping (JSON) -> Void, failure:@escaping (Error) -> Void){
+//        Alamofire.request(strURL, method: .get, parameters: params, encoding: URLEncoding.queryString, headers: nil).responseJSON { (json) in
+//            print("Get URL -> \(strURL) \n Params: \(params ?? [:])")
+//            print(json)
+//            
+//            if json.result.isSuccess {
+//                let resJson = JSON(json.result.value!)
+//                success(resJson)
+//            }
+//            if json.result.isFailure {
+//                let error : Error = json.result.error!
+//                
+//                failure(error)
+//            }
+//
+//        }
+//       
+//   }
     
     
     
@@ -165,8 +165,9 @@ class AlamoWebServices {
         
        
        
-    }
     
+    }
+}
     
     
     
@@ -216,5 +217,5 @@ class AlamoWebServices {
     
    
     
-    
-}
+//
+//}

@@ -99,6 +99,9 @@
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cdl-bI-Tky">
                                                 <rect key="frame" x="0.0" y="0.0" width="33" height="27"/>
+                                                <connections>
+                                                    <action selector="onScanSend:" destination="6Fc-B7-r5k" eventType="touchUpInside" id="3Hn-BT-OMz"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1607,6 +1610,9 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onAddNetwork:" destination="I4p-Ds-Ae5" eventType="touchUpInside" id="Lb5-Y8-eeb"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iS4-KQ-OVg"/>

@@ -13,7 +13,6 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var addressText: UILabel!
     
     var accountAddress = ""
-    var privateKey = ""
    
     
     override func viewDidLoad() {
@@ -49,11 +48,32 @@ class HomeViewController: UIViewController {
               
         }
     }
+    
+    
+    @IBAction func onScanSend(_ sender: Any) {
+        
+        
+        let scaner = ScannerViewController()
+        self.present(scaner, animated: true, completion: nil)
+        scaner.completionHandler = { qrCode in
+        
+            if(!qrCode.isEmpty) {
+                globaReceiverAddress = qrCode
+                
+                DispatchQueue.main.sync {
+                    self.pVC(viewConterlerId: "SendTokenViewController")
+                }
+            }
+        }
+        
+    }
+    
     @IBAction func onReceive(_ sender: Any) {
         self.pVC(viewConterlerId: "ReceiveViewController")
     }
     
     @IBAction func onSend(_ sender: Any) {
+        globaReceiverAddress = ""
         self.pVC(viewConterlerId: "SendTokenViewController")
     }
     
@@ -117,8 +137,8 @@ extension HomeViewController:MenuDrawerProtocol {
     }
     
     func logout() {
-      
-         UserDefaultsManager.shared.clearUserDefaults()
+         //UserDefaultsManager.shared.clearUserDefaults()
+         UserDefaultsManager.shared.logOut()
          SceneDelegate.shared?.checkLogin()
          
     }
@@ -168,7 +188,5 @@ extension HomeViewController {
  
 struct testConfig{
   static let xinfinNetworkUrl = "https://rpc.apothem.network"
-  static let vaultAddress = "0xD40114140C9Ea77a81d63CEf739B9D7BBb87750F"
-  static let DeployNFT = "0xb1240e841cc220d3500b5f32098e2b9c41b5b321"
-  static let demoWalletAddress = "0xe6D63430415273ABF7227538444C9528EF532a7a"
+  
 }

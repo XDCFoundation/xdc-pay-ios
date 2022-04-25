@@ -24,6 +24,7 @@
 		7F6278A727E8FBDA00782EE0 /* UIView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6278A627E8FBDA00782EE0 /* UIView+Extention.swift */; };
 		7F6278AF27E9000E00782EE0 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6278AE27E9000E00782EE0 /* OnboardingSlide.swift */; };
 		840ED2E628129DCB001FC4A5 /* TextViewWithPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840ED2E528129DCB001FC4A5 /* TextViewWithPlaceholder.swift */; };
+		840ED2E82812CDC8001FC4A5 /* ConfirmRecoveryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840ED2E72812CDC8001FC4A5 /* ConfirmRecoveryVC.swift */; };
 		84119C1E27FAB81A002E2F69 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84119C1D27FAB81A002E2F69 /* AccountCell.swift */; };
 		84119C2027FAE7CC002E2F69 /* ImportAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84119C1F27FAE7CC002E2F69 /* ImportAccountViewController.swift */; };
 		8430963B27F471490040BEB1 /* NetworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8430963A27F471490040BEB1 /* NetworkViewController.swift */; };
@@ -44,6 +45,10 @@
 		846325FF27F42A4B00437028 /* Storyboard2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846325FE27F42A4B00437028 /* Storyboard2.storyboard */; };
 		8463260127F42AD500437028 /* Others.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8463260027F42AD500437028 /* Others.swift */; };
 		8463260427F4315700437028 /* PickerViewClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8463260327F4315700437028 /* PickerViewClass.swift */; };
+		84665F772816764B0020C12F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84665F762816764B0020C12F /* LoginVC.swift */; };
+		84665F81281687350020C12F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F62784E27E8DC7900782EE0 /* SceneDelegate.swift */; };
+		84665F8328168D680020C12F /* JsonDataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84665F8228168D680020C12F /* JsonDataBaseManager.swift */; };
+		84665F852816A82D0020C12F /* CommonModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84665F842816A82D0020C12F /* CommonModels.swift */; };
 		8474BE6727F1C4ED0067AC62 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474BE6627F1C4ED0067AC62 /* HomeViewController.swift */; };
 		848E434C27F5B90100501109 /* PrivateKeyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E434B27F5B90100501109 /* PrivateKeyViewController.swift */; };
 		848E434E27F5C9AB00501109 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E434D27F5C9AB00501109 /* ChangePasswordViewController.swift */; };
@@ -217,6 +222,7 @@
 		7F6278A627E8FBDA00782EE0 /* UIView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extention.swift"; sourceTree = "<group>"; };
 		7F6278AE27E9000E00782EE0 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
 		840ED2E528129DCB001FC4A5 /* TextViewWithPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewWithPlaceholder.swift; sourceTree = "<group>"; };
+		840ED2E72812CDC8001FC4A5 /* ConfirmRecoveryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmRecoveryVC.swift; sourceTree = "<group>"; };
 		84119C1D27FAB81A002E2F69 /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
 		84119C1F27FAE7CC002E2F69 /* ImportAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportAccountViewController.swift; sourceTree = "<group>"; };
 		8430963A27F471490040BEB1 /* NetworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkViewController.swift; sourceTree = "<group>"; };
@@ -237,6 +243,9 @@
 		846325FE27F42A4B00437028 /* Storyboard2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard2.storyboard; sourceTree = "<group>"; };
 		8463260027F42AD500437028 /* Others.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Others.swift; sourceTree = "<group>"; };
 		8463260327F4315700437028 /* PickerViewClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewClass.swift; sourceTree = "<group>"; };
+		84665F762816764B0020C12F /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		84665F8228168D680020C12F /* JsonDataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDataBaseManager.swift; sourceTree = "<group>"; };
+		84665F842816A82D0020C12F /* CommonModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonModels.swift; sourceTree = "<group>"; };
 		8474BE6627F1C4ED0067AC62 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		848E434B27F5B90100501109 /* PrivateKeyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateKeyViewController.swift; sourceTree = "<group>"; };
 		848E434D27F5C9AB00501109 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
@@ -360,6 +369,7 @@
 				7F5E509A27EC67E90076FCD5 /* ImportFromSeedViewController.swift */,
 				7F5E509F27EC68020076FCD5 /* CreateNewWalletViewController.swift */,
 				84957E422807D80900332E99 /* SecureWallectVC.swift */,
+				840ED2E72812CDC8001FC4A5 /* ConfirmRecoveryVC.swift */,
 			);
 			path = WalletSetup;
 			sourceTree = "<group>";
@@ -442,6 +452,7 @@
 				7F6278A027E8FB6500782EE0 /* OnboardingViewController.swift */,
 				7F5E509527EC61350076FCD5 /* LandingPageViewController.swift */,
 				7F5E508C27EA03680076FCD5 /* OnboardingCollectionViewCell.swift */,
+				84665F762816764B0020C12F /* LoginVC.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -452,6 +463,7 @@
 				848EC6A52805527200ED867F /* GetContent.swift */,
 				84A7940527FEB0E4001620E0 /* XDCPriceModel.swift */,
 				7F6278AE27E9000E00782EE0 /* OnboardingSlide.swift */,
+				84665F842816A82D0020C12F /* CommonModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -663,6 +675,7 @@
 				84A7940127FEAC87001620E0 /* ApiManager.swift */,
 				843A40AE2804464F0003D130 /* UserDefaultsManager.swift */,
 				84F015FF280521410051CD00 /* ScannerViewController.swift */,
+				84665F8228168D680020C12F /* JsonDataBaseManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1006,13 +1019,16 @@
 				84119C2027FAE7CC002E2F69 /* ImportAccountViewController.swift in Sources */,
 				84B4892F27FDC9D0004BED3C /* TokenSendSuccessTableViewController.swift in Sources */,
 				84C8F7F727F2C1BE00F6666C /* MenuDrawerCellTableViewCell.swift in Sources */,
+				84665F8328168D680020C12F /* JsonDataBaseManager.swift in Sources */,
 				8463260127F42AD500437028 /* Others.swift in Sources */,
 				849590C927F56DF800A234F1 /* IQKeyboardManagerConstantsInternal.swift in Sources */,
 				846325FD27F4276E00437028 /* GenralSettingsViewController.swift in Sources */,
 				848EC6A8280579AD00ED867F /* Double.swift in Sources */,
+				840ED2E82812CDC8001FC4A5 /* ConfirmRecoveryVC.swift in Sources */,
 				840ED2E628129DCB001FC4A5 /* TextViewWithPlaceholder.swift in Sources */,
 				84C02DCB27F3218B007B0831 /* ViewPagerTabContainer.swift in Sources */,
 				843A40AD2804448E0003D130 /* QRCode.swift in Sources */,
+				84665F852816A82D0020C12F /* CommonModels.swift in Sources */,
 				84BDBD8D27F6E7220068BF6A /* ContactCell.swift in Sources */,
 				7F62784D27E8DC7900782EE0 /* AppDelegate.swift in Sources */,
 				7F5E509627EC61350076FCD5 /* LandingPageViewController.swift in Sources */,
@@ -1095,6 +1111,7 @@
 				7F5E50A027EC68020076FCD5 /* CreateNewWalletViewController.swift in Sources */,
 				849590B127F56DF800A234F1 /* IQKeyboardManager+Internal.swift in Sources */,
 				8430963B27F471490040BEB1 /* NetworkViewController.swift in Sources */,
+				84665F772816764B0020C12F /* LoginVC.swift in Sources */,
 				84A7940427FEB026001620E0 /* Constants.swift in Sources */,
 				84C951F22804648E00EF5B88 /* ReceiveViewController.swift in Sources */,
 			);
@@ -1153,6 +1170,7 @@
 				849590B627F56DF800A234F1 /* IQPreviousNextView.swift in Sources */,
 				849590CB27F56DF800A234F1 /* IQKeyboardManagerConstantsInternal.swift in Sources */,
 				849590DD27F56DF800A234F1 /* IQKeyboardManager+OrientationNotification.swift in Sources */,
+				84665F81281687350020C12F /* SceneDelegate.swift in Sources */,
 				849590CE27F56DF800A234F1 /* IQKeyboardManagerConstants.swift in Sources */,
 				849590D727F56DF800A234F1 /* IQKeyboardManager.swift in Sources */,
 				7F62786F27E8DC8200782EE0 /* XDCPayUITests.swift in Sources */,

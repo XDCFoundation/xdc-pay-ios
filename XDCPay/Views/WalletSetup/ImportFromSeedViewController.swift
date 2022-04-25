@@ -116,7 +116,7 @@ class ImportFromSeedViewController: UIViewController {
                        let vc = UIStoryboard(name: "Storyboard2", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
                        vc.modalPresentationStyle = .fullScreen
                        vc.accountAddress = importFromMnemonic.address
-                       vc.privateKey = importFromMnemonic.rawPrivateKey
+                     
                        
                        let accountData = [importFromMnemonic.address,importFromMnemonic.rawPrivateKey, newPassword.text!]
                        

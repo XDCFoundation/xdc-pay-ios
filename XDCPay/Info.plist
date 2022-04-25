@@ -71,7 +71,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>Privacy - Camera Usage Description </key>
-	<string>use camera for scan </string>
+	<key>NSCameraUsageDescription</key>
+	<string>Allow to scan Qr code</string>
 </dict>
 </plist>

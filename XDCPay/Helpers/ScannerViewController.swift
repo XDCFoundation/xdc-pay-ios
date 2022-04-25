@@ -5,7 +5,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
 
-    var completionHandler:((String) -> String)?
+    var completionHandler:((String) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
