@@ -1,4 +1,4 @@
- 
+
 struct AllNetworks: Codable {
         
     var responseData: [Network]?
@@ -25,3 +25,35 @@ struct Network: Codable {
             case url = "url"
         }
 }
+
+ 
+ struct AllAccounts: Codable {
+         
+     var responseData: [Account]?
+
+         enum CodingKeys: String, CodingKey {
+             case responseData = "response"
+         }
+     }
+
+     // MARK: - ResponseDatum
+ struct Account: Codable {
+         
+         var rawPrivateKey = ""
+         var rawPublicKey = ""
+         var privateKey = ""
+         var address = ""
+         var accountName = ""
+         var canDelete = ""
+
+
+         enum CodingKeys: String, CodingKey {
+             case rawPrivateKey = "rawPrivateKey"
+             case rawPublicKey = "rawPublicKey"
+             case privateKey = "privateKey"
+             case address = "address"
+             case accountName = "accountName"
+             case canDelete = "canDelete"
+         }
+ }
+ 

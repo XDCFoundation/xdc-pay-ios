@@ -4397,6 +4397,9 @@
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onAdd:" destination="eQC-Jc-b1a" eventType="touchUpInside" id="UFg-8I-ff3"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJB-uT-cE4">
                                         <rect key="frame" x="15" y="31" width="97" height="17"/>
@@ -4539,6 +4542,9 @@
                             <constraint firstItem="cJB-uT-cE4" firstAttribute="top" secondItem="WjW-fc-MxA" secondAttribute="bottom" constant="31" id="v6A-ZF-fWa"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="account" destination="oW9-zm-yLL" id="WoU-xl-WiU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QPy-Bj-jb1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -4582,13 +4588,24 @@
                                                     <action selector="onImportAccount:" destination="TVZ-JP-JCZ" eventType="touchUpInside" id="wWP-2n-x2y"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jDt-wc-kWf">
+                                                <rect key="frame" x="53" y="9.5" width="181" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="181" id="4Lb-qE-JS5"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="onImportAccount:" destination="TVZ-JP-JCZ" eventType="touchUpInside" id="f1K-AD-Gs8"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="PID-qO-YUC" firstAttribute="leading" secondItem="g3r-ai-xdk" secondAttribute="leading" constant="23" id="9Lz-zS-Jbj"/>
+                                            <constraint firstItem="jDt-wc-kWf" firstAttribute="leading" secondItem="PID-qO-YUC" secondAttribute="trailing" id="Co8-13-gMV"/>
                                             <constraint firstItem="Vsu-NO-eB3" firstAttribute="top" secondItem="g3r-ai-xdk" secondAttribute="top" id="K4n-nj-fTz"/>
                                             <constraint firstAttribute="trailing" secondItem="Vsu-NO-eB3" secondAttribute="trailing" id="Zp5-XK-oV3"/>
                                             <constraint firstItem="Vsu-NO-eB3" firstAttribute="leading" secondItem="g3r-ai-xdk" secondAttribute="leading" id="ifM-D3-kiY"/>
+                                            <constraint firstItem="jDt-wc-kWf" firstAttribute="centerY" secondItem="PID-qO-YUC" secondAttribute="centerY" id="lgM-Jm-W0M"/>
                                             <constraint firstItem="BeU-PG-6mF" firstAttribute="top" secondItem="Vsu-NO-eB3" secondAttribute="bottom" constant="15" id="mON-Sb-yAB"/>
                                             <constraint firstAttribute="height" constant="42" id="toi-Rv-VXj"/>
                                             <constraint firstItem="PID-qO-YUC" firstAttribute="centerY" secondItem="BeU-PG-6mF" secondAttribute="centerY" id="vQc-Ud-sbz"/>
@@ -4622,6 +4639,15 @@
                                                     <action selector="onCreateAccount:" destination="TVZ-JP-JCZ" eventType="touchUpInside" id="LTi-nA-pWa"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6FB-lb-UnM">
+                                                <rect key="frame" x="53" y="9.5" width="181" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="181" id="lXN-cF-aTb"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="onCreateAccount:" destination="TVZ-JP-JCZ" eventType="touchUpInside" id="9gV-fL-2Q1"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -4629,10 +4655,12 @@
                                             <constraint firstItem="c0J-kk-oT9" firstAttribute="leading" secondItem="TMq-8y-thP" secondAttribute="leading" constant="23" id="30V-Sp-abS"/>
                                             <constraint firstItem="q7T-mV-Tce" firstAttribute="top" secondItem="TMq-8y-thP" secondAttribute="top" id="CJ6-lP-d74"/>
                                             <constraint firstItem="2Sm-qS-gw8" firstAttribute="leading" secondItem="c0J-kk-oT9" secondAttribute="trailing" constant="6" id="EHk-Z1-VuX"/>
+                                            <constraint firstItem="6FB-lb-UnM" firstAttribute="centerY" secondItem="c0J-kk-oT9" secondAttribute="centerY" id="Gck-19-Fh1"/>
                                             <constraint firstItem="c0J-kk-oT9" firstAttribute="centerY" secondItem="2Sm-qS-gw8" secondAttribute="centerY" id="Lnr-Vs-7Je"/>
                                             <constraint firstItem="q7T-mV-Tce" firstAttribute="leading" secondItem="TMq-8y-thP" secondAttribute="leading" id="MSK-GR-uFV"/>
                                             <constraint firstAttribute="trailing" secondItem="q7T-mV-Tce" secondAttribute="trailing" id="Ms1-xQ-pGm"/>
                                             <constraint firstAttribute="height" constant="42" id="O7E-Yr-pVX"/>
+                                            <constraint firstItem="6FB-lb-UnM" firstAttribute="leading" secondItem="c0J-kk-oT9" secondAttribute="trailing" id="Tiy-lh-s1u"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -4773,6 +4801,7 @@
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
+                                                    <outlet property="accountLabel" destination="Sgk-wN-HL0" id="Jct-B8-2wz"/>
                                                     <outlet property="deleteButton" destination="0Rd-5w-1hA" id="2KE-kB-bZS"/>
                                                 </connections>
                                             </tableViewCell>
@@ -4813,7 +4842,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aiH-Zt-W7A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="15857" y="411"/>
+            <point key="canvasLocation" x="15856.521739130436" y="410.49107142857139"/>
         </scene>
         <!--Send Token View Controller-->
         <scene sceneID="xcV-ox-y5p">

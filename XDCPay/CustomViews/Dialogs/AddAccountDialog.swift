@@ -3,18 +3,30 @@
 import UIKit
 
 class AddAccountDialog: UIViewController {
+    
+    
+    @IBOutlet weak var account: UITextField!
+    
    
-   var completionHandler:((Int) -> Int)?
-   
-   @IBAction func onDelete(_ sender: Any) {
-       
-//        print(selectedRow)
-//
-//        let result = completionHandler?(selectedRow)
-//        print("completionHandler returns... \(String(describing: result))")
-//        self.dismiss(animated: true, completion: nil)
-   }
-   
+    @IBAction func onAdd(_ sender: Any) {
+        
+        if(self.account.text!.isEmpty) {
+            return
+        }
+        
+        self.LoadingStart()
+        
+        DataBaseManager.shared.addAccount(accountName: self.account.text!, canDelete: "No")
+      
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+           
+            self.LoadingStop()
+
+            self.dismiss(animated: true, completion: nil)
+            
+        }
+        
+    }
 }
 
 

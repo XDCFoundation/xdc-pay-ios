@@ -11,22 +11,40 @@ class MyAccountsDialog: UIViewController , UITableViewDelegate, UITableViewDataS
     
     @IBOutlet weak var tableView: UITableView!
 
+    var accounts = [Account]()  
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        accounts.removeAll()
+        
+        accounts = DataBaseManager.shared.getAccounts()
+    
+        self.tableView.reloadData()
+        
+        }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return accounts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        let account =  self.accounts[indexPath.row]
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "AccountCell") as! AccountCell
         cell.deleteButton.tag = indexPath.row
-        cell.deleteButton.addTarget(self, action: #selector(deleteButtonTapped(_:)), for: .touchUpInside)
+        cell.accountLabel.text = account.accountName
+        
+        if(account.canDelete == "No") {
+            cell.deleteButton.isHidden = true
+        }else {
+            cell.deleteButton.isHidden = false
+        }
+         cell.deleteButton.addTarget(self, action: #selector(deleteButtonTapped(_:)), for: .touchUpInside)
          
         return cell
         
@@ -35,6 +53,8 @@ class MyAccountsDialog: UIViewController , UITableViewDelegate, UITableViewDataS
     
     @objc func deleteButtonTapped(_ sender: UIButton){
 
+        selectedIndex = sender.tag
+        
         self.pVC(viewConterlerId: "DeleteDialog")
     }
    
@@ -49,7 +69,6 @@ class MyAccountsDialog: UIViewController , UITableViewDelegate, UITableViewDataS
         self.pVC(viewConterlerId: "ImportAccountViewController")
         
     }
-    
     
     
 }

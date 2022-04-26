@@ -21,22 +21,20 @@ class ConfirmRecoveryVC: UIViewController , UITextFieldDelegate{
     
     @IBOutlet weak var word3TextField: UITextField!
     
-    var randomArray = [String]()
-    
+   
     var indexs = [Int]()
-    var words = [String]()
-    
+     
     override func viewDidLoad() {
-        
+    
         self.word1TextField.delegate = self
         self.word2TextField.delegate = self
         self.word3TextField.delegate = self
         
         print(seedArray)
         
-        indexs = getIndexAndValues().0
-        words = getIndexAndValues().1
-        
+        indexs = getIndexAndValues()
+       
+        print(indexs)
         self.word1Title.text = "Word \(indexs[0])"
         self.word2Title.text = "Word \(indexs[1])"
         self.word3Title.text = "Word \(indexs[2])"
@@ -45,9 +43,9 @@ class ConfirmRecoveryVC: UIViewController , UITextFieldDelegate{
         
     }
     
-    func getIndexAndValues() ->([Int],[String]) {
+    func getIndexAndValues() ->([Int]) {
         
-        self.randomArray =  self.seedArray.pickUniqueInValue(3)
+        let randomArray =  self.seedArray.pickUniqueInValue(3)
         
         print(randomArray)
         
@@ -55,8 +53,9 @@ class ConfirmRecoveryVC: UIViewController , UITextFieldDelegate{
         let secondIndex = seedArray.firstIndex(of: randomArray[1])! + 1
         let thirdIndex = seedArray.firstIndex(of: randomArray[2])! + 1
     
-        
-        return ([firstIndex,secondIndex,thirdIndex] , randomArray)
+        var temp = [firstIndex,secondIndex,thirdIndex]
+        temp.sort()
+        return (temp)
     }
     
     

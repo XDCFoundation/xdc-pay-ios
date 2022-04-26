@@ -12,7 +12,7 @@ class NetworkViewController: UIViewController , UITableViewDelegate, UITableView
     @IBOutlet weak var noNetworkLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    var networks = [Network]()
+    var networks = [Network]()  
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -23,8 +23,6 @@
         }else  {
             self.titleLabel.text = titleName
         }
-         
-        
     }
     
     

@@ -1,17 +1,28 @@
  
  import UIKit
  
+ var selectedIndex = 0
+ 
  class DeleteDialog: UIViewController {
     
-    var completionHandler:((Int) -> Int)?
-    
+  
     @IBAction func onDelete(_ sender: Any) {
         
-//        print(selectedRow)
-//
-//        let result = completionHandler?(selectedRow)
-//        print("completionHandler returns... \(String(describing: result))")
-//        self.dismiss(animated: true, completion: nil)
+        
+        self.LoadingStart()
+        
+        DataBaseManager.shared.deleteAccount(selectedIndex:selectedIndex)
+          
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+           
+            self.LoadingStop()
+        
+            self.dismiss(animated: true, completion: nil)
+            
+        }
+      
+       self.dismiss(animated: true, completion: nil)
+        
     }
     
  }
