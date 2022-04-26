@@ -30,6 +30,10 @@ class MenuDrawer: UIView , UITableViewDelegate , UITableViewDataSource {
        self.setupViews()
     }
     
+    @IBAction func onEdit(_ sender: Any) {
+        
+    }
+    
     @IBAction func onAccount(_ sender: Any) {
         self.hideDrawer()
         delegateMenuDrawer?.onAccount()
