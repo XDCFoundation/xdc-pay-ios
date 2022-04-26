@@ -6,6 +6,7 @@ import XDC3Swift
 
 class DataBaseManager {
     
+    
   
   static let shared = DataBaseManager()
     
@@ -69,12 +70,7 @@ class DataBaseManager {
         return networks.responseData!
  
     }
-
-    
-   
-  
 }
-
 
 
 extension DataBaseManager {

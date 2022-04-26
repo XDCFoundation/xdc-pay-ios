@@ -60,7 +60,7 @@ class HomeViewController: UIViewController {
             if(!qrCode.isEmpty) {
                 globaReceiverAddress = qrCode
                 
-                DispatchQueue.main.sync {
+                DispatchQueue.main.async {
                     self.pVC(viewConterlerId: "SendTokenViewController")
                 }
             }

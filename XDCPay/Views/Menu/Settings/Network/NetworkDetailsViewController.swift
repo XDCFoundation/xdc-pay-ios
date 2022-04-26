@@ -20,7 +20,18 @@ class NetworkDetailsViewController: UIViewController {
         super.viewDidLoad()
         
         print(network?.name)
+        if(network != nil){
+            self.setupView()
+        }
 
+    }
+    func setupView() {
+        self.url.text    = network?.url
+        self.symbol.text = network?.symbol
+        self.id.text = network?.id
+        self.name.text = network?.name
+        self.rpc.text = network?.rpc
+        
     }
     
 
