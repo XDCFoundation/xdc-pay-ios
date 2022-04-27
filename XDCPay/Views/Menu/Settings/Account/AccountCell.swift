@@ -9,6 +9,7 @@ import UIKit
 
 class AccountCell: UITableViewCell {
 
+    @IBOutlet weak var importedLabel: UILabel!
     @IBOutlet weak var accountLabel: UILabel!
     @IBOutlet weak var deleteButton: UIButton!
 

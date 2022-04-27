@@ -117,10 +117,12 @@ class ImportFromSeedViewController: UIViewController {
                        vc.modalPresentationStyle = .fullScreen
                        vc.accountAddress = importFromMnemonic.address
                      
+                       DataBaseManager.shared.saveDefaultAccount(address: importFromMnemonic.address, privateKey: importFromMnemonic.rawPrivateKey, publicKey: importFromMnemonic.rawPublicKey)
                        
-                       let accountData = [importFromMnemonic.address,importFromMnemonic.rawPrivateKey, newPassword.text!]
-                       
+                       let accountData = [importFromMnemonic.address,importFromMnemonic.rawPrivateKey, newPassword.text! , importFromMnemonic.rawPublicKey ]
+            
                        UserDefaults.standard.setValue(accountData, forKey: "WalletData")
+            
                        
                        self.present(vc, animated: true, completion: nil)
             

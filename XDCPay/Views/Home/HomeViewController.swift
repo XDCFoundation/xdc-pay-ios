@@ -7,11 +7,14 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var mainBalance: UILabel!
     @IBOutlet weak var usdBalance: UILabel!
+    @IBOutlet weak var accountName: UILabel!
     
-    let client = XDCClient(url: URL(string: testConfig.xinfinNetworkUrl)!)
+    @IBOutlet weak var networkName: UILabel!
+    let client = XDCClient(url: URL(string: currentNetwork.xinfinNetworkUrl)!)
     let AlamoObject = AlamoWebServices()
     @IBOutlet weak var addressText: UILabel!
     
+   
     var accountAddress = ""
    
     
@@ -21,15 +24,20 @@ class HomeViewController: UIViewController {
         self.usdBalance.text = "$0 USD"
         self.accountAddress = UserDefaultsManager.shared.getCurrentWalletAddress0x()
         self.setupMenuDrawer()
+        self.accountName.text = DataBaseManager.shared.getCurrentAccountName()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
         self.getBalance()
     }
     
     @IBAction func onBuy(_ sender: Any) {
         self.pVC(viewConterlerId: "BuyVC")
+    }
+    
+    
+    @IBAction func onNetworkName(_ sender: Any) {
+        
     }
     
     
@@ -191,7 +199,6 @@ extension HomeViewController {
 
  
  
-struct testConfig{
+struct currentNetwork{
   static let xinfinNetworkUrl = "https://rpc.apothem.network"
-  
 }

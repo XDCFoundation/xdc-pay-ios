@@ -105,9 +105,9 @@ class CreateNewWalletViewController: UIViewController {
             
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "SecureWallectVC") as! SecureWallectVC
             vc.seedPhrase = acc
-            let accountData = [importFromMnemonic.address,importFromMnemonic.rawPrivateKey,newPassword.text!]
-            vc.accountData = accountData
-
+            let accountData = [importFromMnemonic.address,importFromMnemonic.rawPrivateKey,newPassword.text! ,importFromMnemonic.rawPublicKey ]
+             vc.accountData = accountData
+          
             print(acc)
             vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true, completion: nil)

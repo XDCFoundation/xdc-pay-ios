@@ -16,7 +16,7 @@ class AddAccountDialog: UIViewController {
         
         self.LoadingStart()
         
-        DataBaseManager.shared.addAccount(accountName: self.account.text!, canDelete: "No")
+        DataBaseManager.shared.addAccount(accountName: self.account.text!)
       
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
            

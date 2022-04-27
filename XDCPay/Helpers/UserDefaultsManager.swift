@@ -12,6 +12,19 @@ class UserDefaultsManager  {
     
     static  let shared =  UserDefaultsManager()
     
+    
+    func  updateWalletData(address:String,privateKey:String,rawPublicKey:String) {
+        
+        var walletData = UserDefaults.standard.array(forKey: "WalletData") ?? []
+      
+        walletData[0] = address
+        walletData[1] = privateKey
+        walletData[3] = rawPublicKey
+        
+        UserDefaults.standard.setValue(walletData, forKey: "WalletData")
+
+    }
+    
      
     func clearUserDefaults() {
         

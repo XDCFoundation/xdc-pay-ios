@@ -1,7 +1,6 @@
 import UIKit
 import Foundation
 
-
 class ConfirmRecoveryVC: UIViewController , UITextFieldDelegate{
     
     var seedArray =  [String]()
@@ -97,6 +96,9 @@ class ConfirmRecoveryVC: UIViewController , UITextFieldDelegate{
             UserDefaults.standard.setValue(accountData, forKey: "WalletData")
             UserDefaults.standard.setValue(seedPhrase, forKey: "seed")
            
+            DataBaseManager.shared.saveDefaultAccount(address: self.accountData[0], privateKey: self.accountData[1], publicKey: self.accountData[3])
+        
+            
             let vc = UIStoryboard(name: "Storyboard2", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
                 vc.modalPresentationStyle = .fullScreen
                

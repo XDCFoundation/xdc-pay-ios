@@ -32,6 +32,25 @@ class MyAccountsDialog: UIViewController , UITableViewDelegate, UITableViewDataS
         return accounts.count
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+        let account = accounts[indexPath.row]
+        
+        UserDefaultsManager.shared.updateWalletData(address: account.address, privateKey: account.rawPrivateKey, rawPublicKey: account.rawPublicKey)
+        
+        self.LoadingStart()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+           
+            self.LoadingStop()
+
+            SceneDelegate.shared?.checkLogin()
+            
+        }
+        
+        
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let account =  self.accounts[indexPath.row]
@@ -41,8 +60,10 @@ class MyAccountsDialog: UIViewController , UITableViewDelegate, UITableViewDataS
         
         if(account.canDelete == "No") {
             cell.deleteButton.isHidden = true
+            cell.importedLabel.isHidden = true
         }else {
             cell.deleteButton.isHidden = false
+            cell.importedLabel.isHidden = false
         }
          cell.deleteButton.addTarget(self, action: #selector(deleteButtonTapped(_:)), for: .touchUpInside)
          

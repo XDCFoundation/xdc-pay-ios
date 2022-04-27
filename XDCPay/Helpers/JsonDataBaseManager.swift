@@ -107,6 +107,36 @@ extension DataBaseManager {
        
     }
     
+    func getCurrentAccountName() ->String {
+        
+        var name = ""
+        
+        let accountJsonString = geAccountJSON()
+
+        if(!accountJsonString.isEmpty) {
+            
+            let dataJson = accountJsonString.data(using: .utf8)!
+
+            let currentAddress =  UserDefaultsManager.shared.getWalletAddress()
+            
+            let accounts = try! JSONDecoder().decode(AllAccounts.self, from: dataJson)
+            
+            for item in accounts.responseData! {
+                
+                if(item.address == currentAddress){
+                    name = item.accountName
+                    break
+                }
+            }
+            
+        }
+        
+        return name
+        
+      
+        
+    }
+    
     func getAccounts() -> [Account] {
        
         let accountJsonString = geAccountJSON()
@@ -137,52 +167,82 @@ extension DataBaseManager {
     }
      
     
-    func addAccount(accountName:String , canDelete:String) {
+    func addAccount(accountName:String) {
         
         let savedAccounts = geAccountJSON()
 
-        if(savedAccounts.isEmpty) {
-            
-            let account = setupNewAccount()
-            
-            let data = [
-                "rawPrivateKey": account.0 ,
-                "rawPublicKey": account.1,
-                "privateKey": account.2,
-                "address": account.3,
-                "accountName": accountName,
-                "canDelete": canDelete,
-            ]
-            
-            let jsonArray = ["response" : [data] ]
-            
-            print(jsonArray)
-            
-            let str = String(data: try! JSONEncoder().encode(jsonArray), encoding: .utf8)
-            print(str as Any)
-            
-            self.saveAccount(data: (str!))
-            
-        }else {
-            
-            
             let dataJson = savedAccounts.data(using: .utf8)!
 
             var accounts = try! JSONDecoder().decode(AllAccounts.self, from: dataJson)
          
             let account = setupNewAccount()
             
-            accounts.responseData!.append(Account(rawPrivateKey: account.0, rawPublicKey: account.1, privateKey: account.2, address: account.3, accountName: accountName , canDelete: canDelete))
+            accounts.responseData!.append(Account(rawPrivateKey: account.0, rawPublicKey: account.1, privateKey: account.2, address: account.3, accountName: accountName , canDelete: "No"))
             
             let str = String(data: try! JSONEncoder().encode(accounts), encoding: .utf8)
             print(str as Any)
             
             self.saveAccount(data: (str!))
             
-        }
+     }
+    
+    func saveDefaultAccount(address:String, privateKey:String, publicKey:String) {
+         
         
-    }
+                   let data = [
+                       "rawPrivateKey": privateKey ,
+                       "rawPublicKey": publicKey,
+                       "privateKey": privateKey,
+                       "address": address,
+                       "accountName": "Account 1",
+                       "canDelete": "No",
+                   ]
+                   
+                   let jsonArray = ["response" : [data] ]
+                   
+                   print(jsonArray)
+                   
+                   let str = String(data: try! JSONEncoder().encode(jsonArray), encoding: .utf8)
+                   print(str as Any)
+                   
+                   self.saveAccount(data: (str!))
+              
+        
+   }
+    
+    func importAccount(rowPrivateKey:String) {
+        
+        let savedAccounts = geAccountJSON()
 
+             let dataJson = savedAccounts.data(using: .utf8)!
+
+             var accounts = try! JSONDecoder().decode(AllAccounts.self, from: dataJson)
+         
+             let accountName = "Account \(accounts.responseData!.count + 1)"
+   
+             let account = try? XDCAccount(keyStorage: XDCPrivateKeyStore(privateKey: rowPrivateKey))
+        
+             if let account = account {
+            
+                print(account.address.value)
+                accounts.responseData!.append(Account(rawPrivateKey: account.privateKey, rawPublicKey: account.publicKey, privateKey: account.privateKey, address: account.address.value, accountName: accountName, canDelete: "YES"))
+                    
+                    let str = String(data: try! JSONEncoder().encode(accounts), encoding: .utf8)
+                    print(str as Any)
+                    
+                    UserDefaultsManager.shared.updateWalletData(address: account.address.value, privateKey: account.privateKey, rawPublicKey: account.publicKey)
+                    
+                    self.saveAccount(data: (str!))
+                
+             }
+        
+       
+            
+     }
+    
+        
+
+    
 }
 
 
