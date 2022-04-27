@@ -28,6 +28,11 @@ class HomeViewController: UIViewController {
         self.getBalance()
     }
     
+    @IBAction func onBuy(_ sender: Any) {
+        self.pVC(viewConterlerId: "BuyVC")
+    }
+    
+    
     @IBAction func onCopyAddress(_ sender: Any) {
         UIPasteboard.general.string =  UserDefaultsManager.shared.getCurrentWalletAddress0x()
     }
