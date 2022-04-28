@@ -29,12 +29,9 @@ class ImportAccountViewController: UIViewController {
            
             self.LoadingStop()
         
-            self.dismiss(animated: true, completion: nil)
+            SceneDelegate.shared?.checkLogin()
             
         }
-      
-       self.dismiss(animated: true, completion: nil)
-        
         
     }
     

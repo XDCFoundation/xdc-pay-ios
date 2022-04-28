@@ -212,15 +212,15 @@ extension DataBaseManager {
     
     func importAccount(rowPrivateKey:String) {
         
-        let savedAccounts = geAccountJSON()
+           let account = try? XDCAccount(keyStorage: XDCPrivateKeyStore(privateKey: rowPrivateKey))
+    
+             let savedAccounts = geAccountJSON()
 
              let dataJson = savedAccounts.data(using: .utf8)!
 
              var accounts = try! JSONDecoder().decode(AllAccounts.self, from: dataJson)
          
              let accountName = "Account \(accounts.responseData!.count + 1)"
-   
-             let account = try? XDCAccount(keyStorage: XDCPrivateKeyStore(privateKey: rowPrivateKey))
         
              if let account = account {
             
@@ -262,6 +262,12 @@ extension DataBaseManager {
            
             let str = String(data: try! JSONEncoder().encode(accounts), encoding: .utf8)
             print(str as Any)
+            
+            let account = accounts.responseData!.first // defaultAccount
+            
+            // Replace old account with default account
+        
+           UserDefaultsManager.shared.updateWalletData(address: account!.address, privateKey: account!.rawPrivateKey, rawPublicKey: account!.rawPublicKey)
             
             self.saveAccount(data: (str!))
             

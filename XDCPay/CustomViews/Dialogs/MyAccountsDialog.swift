@@ -48,7 +48,6 @@ class MyAccountsDialog: UIViewController , UITableViewDelegate, UITableViewDataS
             
         }
         
-        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -90,6 +89,5 @@ class MyAccountsDialog: UIViewController , UITableViewDelegate, UITableViewDataS
         self.pVC(viewConterlerId: "ImportAccountViewController")
         
     }
-    
     
 }

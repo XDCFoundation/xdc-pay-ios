@@ -4593,6 +4593,9 @@
                             <constraint firstItem="h3F-8R-lMo" firstAttribute="leading" secondItem="1lY-LQ-bI0" secondAttribute="leading" id="hM0-dv-Btm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="amount" destination="ZHl-wO-6Tz" id="cdw-KI-YAC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JEB-yO-EJ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

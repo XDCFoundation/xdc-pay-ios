@@ -3,12 +3,13 @@ import UIKit
 import XDC3Swift
 import BigInt
 
+var homeVc : HomeViewController!
+
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var mainBalance: UILabel!
     @IBOutlet weak var usdBalance: UILabel!
     @IBOutlet weak var accountName: UILabel!
-    
     @IBOutlet weak var networkName: UILabel!
     let client = XDCClient(url: URL(string: currentNetwork.xinfinNetworkUrl)!)
     let AlamoObject = AlamoWebServices()
@@ -16,12 +17,12 @@ class HomeViewController: UIViewController {
     
    
     var accountAddress = ""
-   
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.mainBalance.text =  "0 XDC"
         self.usdBalance.text = "$0 USD"
+        homeVc = self
         self.accountAddress = UserDefaultsManager.shared.getCurrentWalletAddress0x()
         self.setupMenuDrawer()
         self.accountName.text = DataBaseManager.shared.getCurrentAccountName()
@@ -40,7 +41,6 @@ class HomeViewController: UIViewController {
         
     }
     
-    
     @IBAction func onCopyAddress(_ sender: Any) {
         UIPasteboard.general.string =  UserDefaultsManager.shared.getCurrentWalletAddress0x()
     }
@@ -54,7 +54,7 @@ class HomeViewController: UIViewController {
                 print(value)
                
               DispatchQueue.main.async {
-                  self.mainBalance.text =  "\(value) XDC"
+                   self.mainBalance.text =  "\(value) XDC"
                    self.getXdcPrice(xdcVal: value)
               }
             }

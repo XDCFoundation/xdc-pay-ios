@@ -93,6 +93,8 @@ class ConfirmRecoveryVC: UIViewController , UITextFieldDelegate{
         
         if(!firstTick.isHidden && !secondTick.isHidden && !thirdTick.isHidden ) {
             
+            UserDefaultsManager.shared.clearUserDefaults()
+            
             UserDefaults.standard.setValue(accountData, forKey: "WalletData")
             UserDefaults.standard.setValue(seedPhrase, forKey: "seed")
            
