@@ -1,7 +1,7 @@
 import UIKit
 import Foundation
 
-class ConfirmRecoveryVC: UIViewController , UITextFieldDelegate{
+class ConfirmRecoveryVC: UIViewController , UITextFieldDelegate {
     
     var seedArray =  [String]()
     var accountData = [String]()
@@ -113,6 +113,7 @@ class ConfirmRecoveryVC: UIViewController , UITextFieldDelegate{
     }
     
 }
+extension ConfirmRecoveryVC
 
 extension Array where Element: Hashable {
     

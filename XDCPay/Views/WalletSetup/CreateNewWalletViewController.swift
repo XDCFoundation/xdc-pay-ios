@@ -15,8 +15,8 @@ class CreateNewWalletViewController: UIViewController {
     @IBOutlet var createWalletBtn: UIButton!
     @IBOutlet var newSwitch: UISwitch!
     @IBOutlet var understandText: UILabel!
-    
-   
+    @IBOutlet weak var showBtn: UIButton!
+    var showSelected = true
     
     var flag1 = false
     override func viewDidLoad() {
@@ -30,8 +30,16 @@ class CreateNewWalletViewController: UIViewController {
     
     @IBAction func onShowPassword(_ sender: Any) {
         
-        self.newPassword.isSecureTextEntry = false
-        self.confirmPassword.isSecureTextEntry = false
+        if showSelected {
+            self.newPassword.isSecureTextEntry = false
+            self.confirmPassword.isSecureTextEntry = false
+            self.showBtn.setTitle("Hide", for: .normal)
+        } else {
+            self.newPassword.isSecureTextEntry = true
+            self.confirmPassword.isSecureTextEntry = true
+            self.showBtn.setTitle("Show", for: .normal)
+        }
+        showSelected = !showSelected
     }
     
     func hexStringToUIColor (hex:String) -> UIColor {

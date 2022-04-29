@@ -109,24 +109,24 @@ class ImportFromSeedViewController: UIViewController {
         
         if newPassword.text == confirmPassword.text &&  self.secretTextView.text!.count >= 24   {
             
-                       let mnemonic = secretTextView!.text
-                       let importFromMnemonic = try! XDCAccount.importAccountWithMnemonic(mnemonic: mnemonic!)
-                       print(importFromMnemonic.address)
-                       
-                       let vc = UIStoryboard(name: "Storyboard2", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-                       vc.modalPresentationStyle = .fullScreen
-                       vc.accountAddress = importFromMnemonic.address
+            let mnemonic = secretTextView!.text
+            let importFromMnemonic = try! XDCAccount.importAccountWithMnemonic(mnemonic: mnemonic!)
+            print(importFromMnemonic.address)
             
-                       UserDefaultsManager.shared.clearUserDefaults()
-                     
-                       DataBaseManager.shared.saveDefaultAccount(address: importFromMnemonic.address, privateKey: importFromMnemonic.rawPrivateKey, publicKey: importFromMnemonic.rawPublicKey)
-                       
-                       let accountData = [importFromMnemonic.address,importFromMnemonic.rawPrivateKey, newPassword.text! , importFromMnemonic.rawPublicKey ]
+            let vc = UIStoryboard(name: "Storyboard2", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+            vc.modalPresentationStyle = .fullScreen
+            vc.accountAddress = importFromMnemonic.address
             
-                       UserDefaults.standard.setValue(accountData, forKey: "WalletData")
-                       UserDefaults.standard.setValue(mnemonic, forKey: "seed")
-          
-                       self.present(vc, animated: true, completion: nil)
+            UserDefaultsManager.shared.clearUserDefaults()
+            
+            DataBaseManager.shared.saveDefaultAccount(address: importFromMnemonic.address, privateKey: importFromMnemonic.rawPrivateKey, publicKey: importFromMnemonic.rawPublicKey)
+            
+            let accountData = [importFromMnemonic.address,importFromMnemonic.rawPrivateKey, newPassword.text! , importFromMnemonic.rawPublicKey ]
+            
+            UserDefaults.standard.setValue(accountData, forKey: "WalletData")
+            UserDefaults.standard.setValue(mnemonic, forKey: "seed")
+            
+            self.present(vc, animated: true, completion: nil)
             
         }
     }

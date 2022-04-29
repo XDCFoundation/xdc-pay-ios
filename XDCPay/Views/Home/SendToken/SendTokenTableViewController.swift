@@ -23,7 +23,7 @@ class SendTokenTableViewController: UITableViewController {
     @IBOutlet weak var gasLimit: UITextField!
     @IBOutlet weak var gasFees: UITextField!
     @IBOutlet weak var amountToBeSend: UITextField!
-    @IBOutlet weak var myAddress: UIButton!
+//    @IBOutlet weak var myAddress: UIButton!
     @IBOutlet weak var receiverAddress: UITextField!
     
     
@@ -55,7 +55,16 @@ class SendTokenTableViewController: UITableViewController {
     }
      
     func setMyAddress() {
-        self.myAddressButton.setTitle(UserDefaultsManager.shared.getCurrentNetworkWalletAddress(), for: .normal)
+        let str = UserDefaultsManager.shared.getCurrentNetworkWalletAddress()
+        let index = str.index(str.startIndex, offsetBy: 12)
+        let mySubstring1 = str[..<index]
+        
+        let index2 = str.index(str.endIndex, offsetBy: -4)
+        let mySubstring2 = str[index2...] // playground
+        
+        let truncateStr = mySubstring1 + "..." + mySubstring2
+        
+        self.myAddressButton.setTitle("\(truncateStr)", for: .normal)
     }
     
     @IBAction func onMyAddress(_ sender: Any) {

@@ -10,9 +10,8 @@ import XDC3Swift
 
 
 class ImportAccountViewController: UIViewController {
-
-    @IBOutlet weak var privateKey: UITextField!
     
+    @IBOutlet weak var privateKey: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,19 +19,33 @@ class ImportAccountViewController: UIViewController {
     }
     
     @IBAction func onImport(_ sender: Any) {
-        
         self.LoadingStart()
          
         DataBaseManager.shared.importAccount(rowPrivateKey: self.privateKey.text!)
-        
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-           
             self.LoadingStop()
-        
             SceneDelegate.shared?.checkLogin()
-            
         }
-        
+    }
+    
+}
+
+// MARK: - UITextViewDelegate Extension
+
+extension ImportAccountViewController: UITextViewDelegate {
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.text == "eg. ce4085d87dc63992e358f5c1a8bd4c4de647b b0cfdec034d00c3c9532535f324" {
+            textView.text = nil
+            textView.textColor = AppColors.textColor.color()
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = "eg. ce4085d87dc63992e358f5c1a8bd4c4de647b b0cfdec034d00c3c9532535f324"
+            textView.textColor = AppColors.placeholderColor.color()
+        }
     }
     
 }
