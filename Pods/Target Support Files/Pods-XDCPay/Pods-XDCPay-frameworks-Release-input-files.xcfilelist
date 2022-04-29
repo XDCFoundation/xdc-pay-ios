@@ -1,0 +1,10 @@
+${PODS_ROOT}/Target Support Files/Pods-XDCPay/Pods-XDCPay-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/BigInt/BigInt.framework
+${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework
+${BUILT_PRODUCTS_DIR}/GTProgressBar/GTProgressBar.framework
+${BUILT_PRODUCTS_DIR}/GenericJSON/GenericJSON.framework
+${BUILT_PRODUCTS_DIR}/Navajo-Swift/Navajo_Swift.framework
+${BUILT_PRODUCTS_DIR}/PSMeter/PSMeter.framework
+${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework
+${BUILT_PRODUCTS_DIR}/secp256k1.swift/secp256k1.framework
