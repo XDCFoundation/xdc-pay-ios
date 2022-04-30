@@ -24,6 +24,7 @@ class CommonPasswordViewController: UIViewController {
         super.viewDidLoad()
 
         self.topTitle.text  = topTitleText
+        self.textField.isSecureTextEntry = true
     
         if(topTitleText == "Change Password") {
             self.textFieldTitleLabel.text = "Confirm your current password"
@@ -43,17 +44,30 @@ class CommonPasswordViewController: UIViewController {
     }
     
     @IBAction func onButtonPress(_ sender: Any) {
-        
+       
+        let password = UserDefaults.standard.array(forKey: "WalletData")![2]
+       
         if(topTitleText == "Secret seed words") {
             self.pVC(viewConterlerId: "SeedWordsViewController")
         }
         
         if(topTitleText == "Show Private Key") {
-            self.pVC(viewConterlerId: "PrivateKeyViewController")
+            
+            if(self.textField.text! == password as! String ) {
+                self.pVC(viewConterlerId: "PrivateKeyViewController")
+            }else {
+                showAlert(message: "Password not correct")
+            }
+          
         }
         
         if(topTitleText == "Change Password") {
-            self.pVC(viewConterlerId: "ChangePasswordViewController")
+            if(self.textField.text! == password as! String ) {
+                self.pVC(viewConterlerId: "ChangePasswordViewController")
+            }else {
+                showAlert(message: "Password not correct")
+            }
+          
         }
         
         

@@ -9,12 +9,21 @@ import UIKit
 
 class PrivateKeyViewController: UIViewController {
 
+    
+    @IBOutlet weak var privateKey: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let value = UserDefaults.standard.array(forKey: "WalletData")
+        let privateKeyWallet = value![1] as! String
+        self.privateKey.text = privateKeyWallet
+         
     }
     
- 
+    @IBAction func onCopy(_ sender: Any) {
+        UIPasteboard.general.string =  self.privateKey.text!
+    }
+    
 
 }
