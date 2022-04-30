@@ -47,29 +47,21 @@ class CommonPasswordViewController: UIViewController {
        
         let password = UserDefaults.standard.array(forKey: "WalletData")![2]
        
-        if(topTitleText == "Secret seed words") {
-            self.pVC(viewConterlerId: "SeedWordsViewController")
-        }
-        
-        if(topTitleText == "Show Private Key") {
+        if(self.textField.text! == password as! String ) {
             
-            if(self.textField.text! == password as! String ) {
-                self.pVC(viewConterlerId: "PrivateKeyViewController")
-            }else {
-                showAlert(message: "Password not correct")
-            }
-          
-        }
-        
-        if(topTitleText == "Change Password") {
-            if(self.textField.text! == password as! String ) {
+            switch topTitleText {
+            case  "Secret seed words":
+                self.pVC(viewConterlerId: "SeedWordsViewController")
+            case  "Change Password":
                 self.pVC(viewConterlerId: "ChangePasswordViewController")
-            }else {
-                showAlert(message: "Password not correct")
+            case  "Show Private Key":
+                self.pVC(viewConterlerId: "PrivateKeyViewController")
+            default:
+                print("")
             }
-          
+        }else {
+            showAlert(message: "Password not correct")
         }
-        
         
     }
     
