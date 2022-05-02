@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -683,7 +683,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SettingMenuCell" rowHeight="66" id="dly-zJ-Ppf" customClass="SettingMenuCell" customModule="XDCPay" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="66"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dly-zJ-Ppf" id="t0C-Oe-Aow">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="66"/>
@@ -1254,7 +1254,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NetworkCell" rowHeight="59" id="kcV-Mf-e6Z" customClass="NetworkCell" customModule="XDCPay" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="59"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="59"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kcV-Mf-e6Z" id="fgf-Ys-TGA">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="59"/>
@@ -1453,7 +1453,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SeR-kV-dV5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5425" y="1061"/>
+            <point key="canvasLocation" x="5424.6376811594209" y="1060.7142857142858"/>
         </scene>
         <!--Picker View Class-->
         <scene sceneID="HDv-27-3cv">
@@ -1948,17 +1948,28 @@
                                             <constraint firstAttribute="bottom" secondItem="psW-6m-7fk" secondAttribute="bottom" id="qhQ-dw-oLi"/>
                                         </constraints>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMM-EH-TAF">
+                                        <rect key="frame" x="339" y="46.5" width="55" height="30"/>
+                                        <state key="normal" title="Remove">
+                                            <color key="titleColor" red="1" green="0.0" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onDelete:" destination="aNC-z7-mzV" eventType="touchUpInside" id="wd4-hv-CbF"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="1oc-zW-14u" secondAttribute="bottom" id="JQR-3m-2Ew"/>
                                     <constraint firstAttribute="height" constant="95" id="Ubj-gm-HMv"/>
+                                    <constraint firstItem="DMM-EH-TAF" firstAttribute="centerY" secondItem="dGC-xp-frf" secondAttribute="centerY" id="VA4-wW-gEh"/>
                                     <constraint firstAttribute="bottom" secondItem="LpJ-dG-UU7" secondAttribute="bottom" constant="20" id="WPY-LG-uY0"/>
                                     <constraint firstItem="1oc-zW-14u" firstAttribute="leading" secondItem="HSz-zU-dos" secondAttribute="leading" id="ZAe-ok-hGz"/>
                                     <constraint firstItem="LpJ-dG-UU7" firstAttribute="leading" secondItem="HSz-zU-dos" secondAttribute="leading" constant="14" id="dXB-Gh-Kyz"/>
                                     <constraint firstAttribute="trailing" secondItem="1oc-zW-14u" secondAttribute="trailing" id="uEV-KG-6s6"/>
                                     <constraint firstItem="dGC-xp-frf" firstAttribute="centerY" secondItem="psW-6m-7fk" secondAttribute="centerY" id="yio-TF-I7a"/>
                                     <constraint firstItem="dGC-xp-frf" firstAttribute="centerX" secondItem="HSz-zU-dos" secondAttribute="centerX" id="yvx-qj-uyW"/>
+                                    <constraint firstAttribute="trailing" secondItem="DMM-EH-TAF" secondAttribute="trailing" constant="20" id="zeg-DL-hcl"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Network name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bA-4y-6w2">
@@ -2117,6 +2128,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="deleteButton" destination="DMM-EH-TAF" id="feT-R9-fFh"/>
                         <outlet property="id" destination="JkC-no-Zbg" id="1CT-D3-vst"/>
                         <outlet property="name" destination="qe2-4p-4go" id="M8H-Xh-Awc"/>
                         <outlet property="rpc" destination="VeI-eU-B2r" id="1Em-5k-Ajs"/>
@@ -2230,7 +2242,7 @@
                             <tableViewSection headerTitle="" id="6cc-7K-esl">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="171" id="kxo-zw-RWZ">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="171"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="171"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kxo-zw-RWZ" id="Lae-QO-vMM">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="171"/>
@@ -2311,7 +2323,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="171" id="UoY-sR-DlC">
-                                        <rect key="frame" x="0.0" y="199" width="414" height="171"/>
+                                        <rect key="frame" x="0.0" y="195.5" width="414" height="171"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UoY-sR-DlC" id="Oqb-yt-gh9">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="171"/>
@@ -2392,7 +2404,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="171" id="L5p-7G-PcE">
-                                        <rect key="frame" x="0.0" y="370" width="414" height="171"/>
+                                        <rect key="frame" x="0.0" y="366.5" width="414" height="171"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L5p-7G-PcE" id="OLS-lc-WP2">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="171"/>
@@ -2482,7 +2494,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="171" id="zwA-sQ-tOz">
-                                        <rect key="frame" x="0.0" y="541" width="414" height="171"/>
+                                        <rect key="frame" x="0.0" y="537.5" width="414" height="171"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zwA-sQ-tOz" id="Xz6-aB-iW9">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="171"/>
@@ -2563,7 +2575,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="171" id="NIZ-Bn-GbM">
-                                        <rect key="frame" x="0.0" y="712" width="414" height="171"/>
+                                        <rect key="frame" x="0.0" y="708.5" width="414" height="171"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NIZ-Bn-GbM" id="m84-ij-ySX">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="171"/>
@@ -3856,7 +3868,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ContactCell" rowHeight="68" id="1ug-gC-qjQ" customClass="ContactCell" customModule="XDCPay" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="68"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="68"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1ug-gC-qjQ" id="OW2-Lc-Knx">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="68"/>
@@ -4494,7 +4506,7 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AccountCell" id="0cU-EW-sNy" customClass="AccountCell" customModule="XDCPay" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                                <rect key="frame" x="0.0" y="24.5" width="414" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0cU-EW-sNy" id="bUP-Fi-tL3">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -4691,7 +4703,7 @@
                             <tableViewSection headerTitle="" id="ub3-4b-Inh">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="693" id="blu-k5-lNr">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="693"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="693"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="blu-k5-lNr" id="shG-jz-8a6">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="693"/>
@@ -5306,7 +5318,7 @@
                             <tableViewSection id="ag8-YW-r2c">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="466" id="2W0-hr-nhO">
-                                        <rect key="frame" x="0.0" y="28" width="384" height="466"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="384" height="466"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2W0-hr-nhO" id="Nqj-HK-0d5">
                                             <rect key="frame" x="0.0" y="0.0" width="384" height="466"/>

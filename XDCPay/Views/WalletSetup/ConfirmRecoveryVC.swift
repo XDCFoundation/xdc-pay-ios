@@ -100,6 +100,8 @@ class ConfirmRecoveryVC: UIViewController , UITextFieldDelegate{
            
             DataBaseManager.shared.saveDefaultAccount(address: self.accountData[0], privateKey: self.accountData[1], publicKey: self.accountData[3])
         
+            DataBaseManager.shared.addDefaultNetworks()
+            
             
             let vc = UIStoryboard(name: "Storyboard2", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
                 vc.modalPresentationStyle = .fullScreen

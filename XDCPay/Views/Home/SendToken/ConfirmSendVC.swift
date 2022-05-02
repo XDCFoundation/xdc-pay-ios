@@ -18,7 +18,7 @@ class ConfirmSendVC: UIViewController {
     @IBOutlet weak var myAddress: UILabel!
     @IBOutlet weak var amount: UILabel!
     @IBOutlet weak var toAddress: UILabel!
-    let client = XDCClient(url: URL(string: currentNetwork.xinfinNetworkUrl)!)
+    let client = XDCClientManager.shared.getXDCClient()
     var data = [String:String]()
     
     override func viewDidLoad() {

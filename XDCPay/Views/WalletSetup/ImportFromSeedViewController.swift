@@ -116,16 +116,19 @@ class ImportFromSeedViewController: UIViewController {
                        let vc = UIStoryboard(name: "Storyboard2", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
                        vc.modalPresentationStyle = .fullScreen
                        vc.accountAddress = importFromMnemonic.address
-            
+                      
                        UserDefaultsManager.shared.clearUserDefaults()
                      
+                       DataBaseManager.shared.addDefaultNetworks()
+
+            
                        DataBaseManager.shared.saveDefaultAccount(address: importFromMnemonic.address, privateKey: importFromMnemonic.rawPrivateKey, publicKey: importFromMnemonic.rawPublicKey)
                        
                        let accountData = [importFromMnemonic.address,importFromMnemonic.rawPrivateKey, newPassword.text! , importFromMnemonic.rawPublicKey ]
             
                        UserDefaults.standard.setValue(accountData, forKey: "WalletData")
                        UserDefaults.standard.setValue(mnemonic, forKey: "seed")
-          
+                     
                        self.present(vc, animated: true, completion: nil)
             
         }

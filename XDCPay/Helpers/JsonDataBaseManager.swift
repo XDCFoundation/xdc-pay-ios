@@ -274,7 +274,51 @@ extension DataBaseManager {
             
         }
         
+}
+
+extension DataBaseManager {
+    
+    
+    func deleteNetwork(selectedIndex:Int) {
+        
+        let savedNetworks = geNetworkJSON()
+
+         let dataJson = savedNetworks.data(using: .utf8)!
+
+            var networks = try! JSONDecoder().decode(AllNetworks.self, from: dataJson)
+         
+            networks.responseData?.remove(at: selectedIndex)
+           
+            let str = String(data: try! JSONEncoder().encode(networks), encoding: .utf8)
+            print(str as Any)
+            
+        self.saveNetwork(data: str!)
+        
+          //  let network = networks.responseData!.first // default Network
+    
+            
+        }
         
 }
     
  
+
+
+extension DataBaseManager {
+    
+func addDefaultNetworks () {
+    
+    if DataBaseManager.shared.getNetworks().isEmpty{
+      
+              DataBaseManager.shared.addNetwork(name: "XDC Apothem Testnet", rpc: "https://apothemxdcpayrpc.blocksscan.io/", id: "51", symbol: "XDC", url: "https://explorer.apothem.network", isEditable: "No")
+       
+              DataBaseManager.shared.addNetwork(name: "XDC Mainnet", rpc: "https://xdcpayrpc.blocksscan.io/", id: "50", symbol: "XDC", url: "https://observer.xdc.org", isEditable: "No")
+        
+              DataBaseManager.shared.addNetwork(name: "Localhost 8545", rpc: "https://localhost:8545", id: "", symbol: "", url: "", isEditable: "No")
+        
+              UserDefaultsManager.shared.setOrUpdateCurrentNetwork(url: "https://apothemxdcpayrpc.blocksscan.io")
+    
+    }
+  }
+    
+}
