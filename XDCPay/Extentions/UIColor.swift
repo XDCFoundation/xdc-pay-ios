@@ -38,6 +38,20 @@ extension UIColor {
     
 }
 
+public extension UIColor {
+    convenience init(hexCode: String, alpha: Float = 1.0) {
+        let scanner = Scanner(string: hexCode)
+        var color: UInt64 = 0
+        scanner.scanHexInt64(&color)
+
+        let mask = 0x0000_00FF
+        let r = CGFloat(Float(Int(color >> 16) & mask) / 255.0)
+        let g = CGFloat(Float(Int(color >> 8) & mask) / 255.0)
+        let b = CGFloat(Float(Int(color) & mask) / 255.0)
+        self.init(red: r, green: g, blue: b, alpha: CGFloat(alpha))
+    }
+}
+
 extension CGFloat {
     static func random() -> CGFloat {
         return CGFloat(arc4random()) / CGFloat(UInt32.max)

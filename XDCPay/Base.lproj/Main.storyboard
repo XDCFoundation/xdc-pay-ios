@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -29,7 +29,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zQk-8s-qec">
-                                <rect key="frame" x="0.0" y="44" width="414" height="519.5"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="521"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="0rb-qJ-g6p">
                                     <size key="itemSize" width="414" height="542"/>
@@ -39,7 +39,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OnboardingCollectionViewCell" id="8eq-eq-DNH" customClass="OnboardingCollectionViewCell" customModule="XDCPay" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="-11.5" width="414" height="542"/>
+                                        <rect key="frame" x="0.0" y="-10.5" width="414" height="542"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="peM-MW-dNW">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="542"/>
@@ -121,8 +121,8 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="RRj-3o-Eov"/>
                                 </connections>
                             </collectionView>
-                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="K0p-jF-QpT">
-                                <rect key="frame" x="156" y="603.5" width="102.5" height="27.5"/>
+                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="K0p-jF-QpT" customClass="BorderedPageControl" customModule="XDCPay" customModuleProvider="target">
+                                <rect key="frame" x="158.5" y="605" width="97.5" height="26"/>
                                 <color key="pageIndicatorTintColor" systemColor="opaqueSeparatorColor"/>
                                 <color key="currentPageIndicatorTintColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
@@ -177,7 +177,7 @@
                     <connections>
                         <outlet property="btnGetStarted" destination="EYf-bg-yua" id="jgj-RR-v08"/>
                         <outlet property="collectionView" destination="zQk-8s-qec" id="Cj8-Fo-5gq"/>
-                        <outlet property="pageControl" destination="K0p-jF-QpT" id="0Bk-r1-UdQ"/>
+                        <outlet property="pageView" destination="K0p-jF-QpT" id="R6R-ne-cUG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -246,13 +246,13 @@
                                 <rect key="frame" x="153.5" y="116" width="107" height="107"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wallet Setup" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YbS-Bd-CoC">
-                                <rect key="frame" x="145" y="246" width="124.5" height="26"/>
+                                <rect key="frame" x="140.5" y="246" width="133" height="27"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular_Medium" family="Inter" pointSize="22"/>
                                 <color key="textColor" red="0.1647058824" green="0.1647058824" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Import existing or create new one" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="296" translatesAutoresizingMaskIntoConstraints="NO" id="mP4-ww-Hiu">
-                                <rect key="frame" x="102.5" y="284" width="209.5" height="16.5"/>
+                                <rect key="frame" x="94.5" y="285" width="225" height="17"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular_Medium" family="Inter" pointSize="14"/>
                                 <color key="textColor" red="0.1647058824" green="0.1647058824" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -308,16 +308,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRi-hi-wvd">
-                                <rect key="frame" x="16" y="148" width="65.5" height="14"/>
+                                <rect key="frame" x="16" y="148" width="65.5" height="17"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="14" id="blz-DM-jnX"/>
+                                    <constraint firstAttribute="height" constant="17" id="blz-DM-jnX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Inter-Regular_Medium" family="Inter" pointSize="14"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6J7-GA-zsX">
-                                <rect key="frame" x="16" y="170" width="382" height="44"/>
+                                <rect key="frame" x="16" y="173" width="382" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="h7E-68-iy8"/>
                                 </constraints>
@@ -328,16 +328,16 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MlE-vr-H3P">
-                                <rect key="frame" x="16" y="252" width="123" height="14"/>
+                                <rect key="frame" x="16" y="257" width="123" height="17"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="14" id="5c5-hq-Nkp"/>
+                                    <constraint firstAttribute="height" constant="17" id="5c5-hq-Nkp"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Inter-Regular_Medium" family="Inter" pointSize="14"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WC0-OS-CB4">
-                                <rect key="frame" x="16" y="274" width="382" height="44"/>
+                                <rect key="frame" x="16" y="282" width="382" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Jek-6M-Ydy"/>
                                 </constraints>
@@ -346,13 +346,13 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in with Face ID?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULF-v7-iCo">
-                                <rect key="frame" x="16" y="386" width="114" height="14"/>
+                                <rect key="frame" x="16" y="394" width="114" height="14"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                 <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="l5R-fV-BiK">
-                                <rect key="frame" x="333" y="377.5" width="51" height="31"/>
+                                <rect key="frame" x="333" y="385.5" width="51" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="49" id="Y1P-7c-Npw"/>
                                     <constraint firstAttribute="height" constant="31" id="p08-yH-vPi"/>
@@ -391,7 +391,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PfI-ex-hxd" customClass="PSMeter" customModule="PSMeter">
-                                <rect key="frame" x="16" y="215" width="382" height="40"/>
+                                <rect key="frame" x="16" y="218" width="382" height="40"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="C1Q-cg-8gE"/>
@@ -462,13 +462,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Must be at least 8 characters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vak-p3-NsK">
-                                <rect key="frame" x="16" y="334" width="194" height="17"/>
+                                <rect key="frame" x="16" y="342" width="194" height="17"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
                                 <color key="textColor" red="0.61568627450980395" green="0.66666666666666663" blue="0.73333333333333328" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f28-2z-Ie9">
-                                <rect key="frame" x="348" y="177.5" width="37" height="29"/>
+                                <rect key="frame" x="348" y="180.5" width="37" height="29"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
                                 <state key="normal" title="Show">
                                     <color key="titleColor" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
@@ -509,7 +509,7 @@
                             <constraint firstItem="eVS-pO-5Cn" firstAttribute="leading" secondItem="PfI-ex-hxd" secondAttribute="leading" id="cr1-NC-GV3"/>
                             <constraint firstItem="WC0-OS-CB4" firstAttribute="top" secondItem="MlE-vr-H3P" secondAttribute="bottom" constant="8" id="gTb-aw-UtH"/>
                             <constraint firstItem="aRi-hi-wvd" firstAttribute="leading" secondItem="2CL-p9-lM2" secondAttribute="leading" constant="16" id="iVA-9M-m1x"/>
-                            <constraint firstItem="MlE-vr-H3P" firstAttribute="top" secondItem="6J7-GA-zsX" secondAttribute="bottom" constant="38" id="lNT-Fv-pyu"/>
+                            <constraint firstItem="MlE-vr-H3P" firstAttribute="top" secondItem="6J7-GA-zsX" secondAttribute="bottom" constant="40" id="lNT-Fv-pyu"/>
                             <constraint firstItem="PfI-ex-hxd" firstAttribute="top" secondItem="6J7-GA-zsX" secondAttribute="bottom" constant="1" id="orB-Pk-Q0Y"/>
                             <constraint firstItem="2CL-p9-lM2" firstAttribute="trailing" secondItem="e97-AE-tzA" secondAttribute="trailing" constant="46" id="pIM-lw-jV5"/>
                             <constraint firstItem="PfI-ex-hxd" firstAttribute="trailing" secondItem="6J7-GA-zsX" secondAttribute="trailing" id="sbH-9V-jaW"/>
@@ -526,6 +526,7 @@
                         <outlet property="newPassword" destination="6J7-GA-zsX" id="lDE-OJ-q0F"/>
                         <outlet property="newSwitch" destination="l5R-fV-BiK" id="TFb-Ia-O9K"/>
                         <outlet property="psMeter" destination="PfI-ex-hxd" id="hdV-3K-YhH"/>
+                        <outlet property="showBtn" destination="f28-2z-Ie9" id="mlj-Rf-wCX"/>
                         <outlet property="understandText" destination="e97-AE-tzA" id="mx1-cy-fN4"/>
                     </connections>
                 </viewController>
@@ -542,13 +543,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="These 12 words are the only way to restore your XDCPay accounts. Save them somewhere safe and secret." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDd-K1-Fyy">
-                                <rect key="frame" x="45" y="112" width="324" height="28"/>
+                                <rect key="frame" x="45" y="112.5" width="324" height="29.5"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="12"/>
                                 <color key="textColor" red="0.51764705882352935" green="0.51764705882352935" blue="0.51764705882352935" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="zxa-lH-JTN">
-                                <rect key="frame" x="57" y="172" width="300" height="155"/>
+                                <rect key="frame" x="57" y="174" width="300" height="155"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="jcs-JJ-pNv">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="29"/>
@@ -696,7 +697,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="95"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Secure wallet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="duI-CD-ZBU">
-                                        <rect key="frame" x="159" y="52" width="96" height="19"/>
+                                        <rect key="frame" x="155.5" y="52" width="103.5" height="19.5"/>
                                         <fontDescription key="fontDescription" name="Inter-Regular_Medium" family="Inter" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -725,7 +726,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKm-Fa-rDB">
-                                <rect key="frame" x="150.5" y="359" width="113" height="29"/>
+                                <rect key="frame" x="147.5" y="361" width="119" height="29"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular_Medium" family="Inter" pointSize="14"/>
                                 <state key="normal" title="Copy to clipboard">
                                     <color key="titleColor" red="0.12941176470588234" green="0.28627450980392155" blue="0.72549019607843135" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
@@ -735,7 +736,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write down these 12 words down, or copy them to a password manager" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrx-bG-EDR">
-                                <rect key="frame" x="45" y="404" width="324" height="28"/>
+                                <rect key="frame" x="45" y="406" width="324" height="29.5"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="12"/>
                                 <color key="textColor" red="0.51764705879999995" green="0.51764705879999995" blue="0.51764705879999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -805,16 +806,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scw-k2-Gv2">
-                                <rect key="frame" x="16" y="338" width="65.5" height="14"/>
+                                <rect key="frame" x="16" y="338" width="65.5" height="17"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="14" id="FL2-4R-nRJ"/>
+                                    <constraint firstAttribute="height" constant="17" id="FL2-4R-nRJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Inter-Regular_Medium" family="Inter" pointSize="14"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Password (min 8 chars)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ogo-Mg-9lv">
-                                <rect key="frame" x="16" y="360" width="382" height="44"/>
+                                <rect key="frame" x="16" y="363" width="382" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="jae-vf-8mA"/>
                                 </constraints>
@@ -825,16 +826,16 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LuJ-UF-p9l">
-                                <rect key="frame" x="16" y="442" width="123" height="14"/>
+                                <rect key="frame" x="16" y="449" width="123" height="17"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="14" id="9eA-fb-uvl"/>
+                                    <constraint firstAttribute="height" constant="17" id="9eA-fb-uvl"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Inter-Regular_Medium" family="Inter" pointSize="14"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Nt-oI-gKJ">
-                                <rect key="frame" x="16" y="464" width="382" height="44"/>
+                                <rect key="frame" x="16" y="474" width="382" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="zme-ZP-onZ"/>
                                 </constraints>
@@ -843,7 +844,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZwT-9B-bOe" customClass="PSMeter" customModule="PSMeter">
-                                <rect key="frame" x="16" y="405" width="382" height="40"/>
+                                <rect key="frame" x="16" y="408" width="382" height="40"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="udU-lD-zPU"/>
@@ -908,7 +909,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YfA-z6-fWE">
-                                <rect key="frame" x="348" y="367.5" width="37" height="29"/>
+                                <rect key="frame" x="348" y="370.5" width="37" height="29"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
                                 <state key="normal" title="Show">
                                     <color key="titleColor" red="0.1647058824" green="0.1647058824" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
@@ -938,6 +939,9 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Enter your secret twelve word phrase here to restore your vault."/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="Xum-xU-IPS" id="Lra-VR-2Z9"/>
+                                </connections>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Secret Recovery Phrase" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gue-VU-wfx">
                                 <rect key="frame" x="16" y="121" width="160.5" height="17"/>
@@ -964,7 +968,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MOs-aG-IjA">
-                                <rect key="frame" x="16" y="540" width="382" height="44"/>
+                                <rect key="frame" x="16" y="550" width="382" height="44"/>
                                 <color key="backgroundColor" red="0.01176470588" green="0.74509803919999995" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="W6r-a1-NJZ"/>
@@ -985,7 +989,7 @@
                             <constraint firstItem="ogo-Mg-9lv" firstAttribute="leading" secondItem="scw-k2-Gv2" secondAttribute="leading" id="57S-eF-iPR"/>
                             <constraint firstItem="YfA-z6-fWE" firstAttribute="leading" secondItem="ogo-Mg-9lv" secondAttribute="trailing" constant="-50" id="5Sq-XR-oq5"/>
                             <constraint firstItem="gue-VU-wfx" firstAttribute="leading" secondItem="xzY-4j-cal" secondAttribute="leading" constant="16" id="7QS-Uu-mL0"/>
-                            <constraint firstItem="LuJ-UF-p9l" firstAttribute="top" secondItem="ogo-Mg-9lv" secondAttribute="bottom" constant="38" id="80c-Do-Yuf"/>
+                            <constraint firstItem="LuJ-UF-p9l" firstAttribute="top" secondItem="ogo-Mg-9lv" secondAttribute="bottom" constant="42" id="80c-Do-Yuf"/>
                             <constraint firstItem="ogo-Mg-9lv" firstAttribute="top" secondItem="scw-k2-Gv2" secondAttribute="bottom" constant="8" id="9AQ-Sg-gOg"/>
                             <constraint firstItem="MOs-aG-IjA" firstAttribute="leading" secondItem="6Nt-oI-gKJ" secondAttribute="leading" id="A4C-bn-D5R"/>
                             <constraint firstItem="6Nt-oI-gKJ" firstAttribute="trailing" secondItem="ogo-Mg-9lv" secondAttribute="trailing" id="BEU-CR-YAq"/>
@@ -1019,6 +1023,7 @@
                         <outlet property="newPassword" destination="ogo-Mg-9lv" id="wuE-86-HI9"/>
                         <outlet property="psMeter" destination="ZwT-9B-bOe" id="gNU-6B-yAe"/>
                         <outlet property="secretTextView" destination="jQK-bs-F08" id="dHW-ez-KNK"/>
+                        <outlet property="showBtn" destination="YfA-z6-fWE" id="Ubc-Qj-Lxi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="526-yT-zOO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1051,7 +1056,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="95"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Recovery Phrase" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzE-60-w7k">
-                                        <rect key="frame" x="115.5" y="52" width="183" height="19"/>
+                                        <rect key="frame" x="110" y="52" width="194.5" height="19"/>
                                         <fontDescription key="fontDescription" name="Inter-Regular_Medium" family="Inter" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1106,7 +1111,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8By-H6-MAo">
-                                <rect key="frame" x="16" y="112" width="45" height="14"/>
+                                <rect key="frame" x="16" y="112" width="46" height="14"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="lir-Id-B3l"/>
                                 </constraints>
@@ -1124,7 +1129,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMi-8O-FLL">
-                                <rect key="frame" x="16" y="213" width="45" height="14"/>
+                                <rect key="frame" x="16" y="213" width="48" height="14"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="USC-GJ-wsc"/>
                                 </constraints>
@@ -1149,7 +1154,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Jm-T2-7jg">
-                                <rect key="frame" x="16" y="314" width="45" height="14"/>
+                                <rect key="frame" x="16" y="314" width="48" height="14"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="oTM-AT-Enz"/>
                                 </constraints>
@@ -1247,13 +1252,13 @@
                                 <rect key="frame" x="153.5" y="94" width="107" height="107"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Back!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UcP-D7-UCH">
-                                <rect key="frame" x="144.5" y="224" width="125" height="21"/>
+                                <rect key="frame" x="141" y="224" width="132" height="22"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular_Medium" family="Inter" pointSize="18"/>
                                 <color key="textColor" red="0.1647058824" green="0.1647058824" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mcr-6E-807">
-                                <rect key="frame" x="16" y="278" width="382" height="44"/>
+                                <rect key="frame" x="16" y="279" width="382" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="q8R-Ze-jTc"/>
                                 </constraints>
@@ -1262,13 +1267,13 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in with Face ID?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dma-nA-ZT7">
-                                <rect key="frame" x="16" y="357" width="114" height="14"/>
+                                <rect key="frame" x="16" y="358" width="114" height="14"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                 <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qcM-zM-APH">
-                                <rect key="frame" x="329" y="348.5" width="51" height="31"/>
+                                <rect key="frame" x="329" y="349.5" width="51" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="ghR-xb-d0U"/>
                                     <constraint firstAttribute="width" constant="49" id="gpJ-0I-nEd"/>
@@ -1276,7 +1281,7 @@
                                 <color key="onTintColor" red="0.01176470588" green="0.74509803919999995" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Raw-1v-SiZ">
-                                <rect key="frame" x="16" y="414.5" width="382" height="44"/>
+                                <rect key="frame" x="16" y="415.5" width="382" height="44"/>
                                 <color key="backgroundColor" red="0.01176470588" green="0.74509803919999995" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="1M7-Jn-X5h"/>
@@ -1290,7 +1295,7 @@
                                 </connections>
                             </button>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nAt-eu-OMs">
-                                <rect key="frame" x="16" y="480.5" width="382" height="42"/>
+                                <rect key="frame" x="16" y="481.5" width="382" height="42"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IBZ-kR-yj9">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="42"/>
@@ -1324,7 +1329,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcw-2z-hJp">
-                                <rect key="frame" x="126" y="551.5" width="162" height="29"/>
+                                <rect key="frame" x="121.5" y="552.5" width="171" height="29"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
                                 <state key="normal" title="Restore from seed phrase">
                                     <color key="titleColor" red="0.12941176469999999" green="0.28627450980000002" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>

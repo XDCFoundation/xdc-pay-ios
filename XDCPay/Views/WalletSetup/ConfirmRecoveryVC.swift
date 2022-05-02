@@ -1,7 +1,7 @@
 import UIKit
 import Foundation
 
-class ConfirmRecoveryVC: UIViewController , UITextFieldDelegate{
+class ConfirmRecoveryVC: UIViewController {
     
     var seedArray =  [String]()
     var accountData = [String]()
@@ -29,11 +29,8 @@ class ConfirmRecoveryVC: UIViewController , UITextFieldDelegate{
         self.word2TextField.delegate = self
         self.word3TextField.delegate = self
         
-        print(seedArray)
-        
         indexs = getIndexAndValues()
        
-        print(indexs)
         self.word1Title.text = "Word \(indexs[0])"
         self.word2Title.text = "Word \(indexs[1])"
         self.word3Title.text = "Word \(indexs[2])"
@@ -45,8 +42,6 @@ class ConfirmRecoveryVC: UIViewController , UITextFieldDelegate{
     func getIndexAndValues() ->([Int]) {
         
         let randomArray =  self.seedArray.pickUniqueInValue(3)
-        
-        print(randomArray)
         
         let firstIndex = seedArray.firstIndex(of: randomArray[0])! + 1
         let secondIndex = seedArray.firstIndex(of: randomArray[1])! + 1
@@ -65,19 +60,13 @@ class ConfirmRecoveryVC: UIViewController , UITextFieldDelegate{
         let sWord = word2TextField.text!
         let tWord = word3TextField.text!
         
-        print(fWord)
-        print(sWord)
-        print(tWord)
-        
         if(fWord == seedArray[indexs[0] - 1]) {
-            print("first word is ok")
             self.firstTick.isHidden = false
         }else {
             self.firstTick.isHidden = true
         }
         
         if(sWord == seedArray[indexs[1] - 1]) {
-            print("second word is ok")
             self.secondTick.isHidden = false
         }else {
             self.secondTick.isHidden = true
@@ -85,7 +74,6 @@ class ConfirmRecoveryVC: UIViewController , UITextFieldDelegate{
         
         if(tWord == seedArray[indexs[2] - 1]) {
             self.thirdTick.isHidden = false
-            print("third word is ok")
         }else {
             self.thirdTick.isHidden = true
         }
@@ -99,7 +87,6 @@ class ConfirmRecoveryVC: UIViewController , UITextFieldDelegate{
             UserDefaults.standard.setValue(seedPhrase, forKey: "seed")
            
             DataBaseManager.shared.saveDefaultAccount(address: self.accountData[0], privateKey: self.accountData[1], publicKey: self.accountData[3])
-        
             
             let vc = UIStoryboard(name: "Storyboard2", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
                 vc.modalPresentationStyle = .fullScreen
@@ -112,6 +99,31 @@ class ConfirmRecoveryVC: UIViewController , UITextFieldDelegate{
         
     }
     
+}
+extension ConfirmRecoveryVC: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if (textField == self.word1TextField) {
+            if self.word1TextField.text == seedArray[indexs[0] - 1] {
+                self.firstTick.isHidden = false
+            } else {
+                self.firstTick.isHidden = true
+            }
+            
+        } else if (textField == self.word2TextField) {
+            if self.word2TextField.text == seedArray[indexs[1] - 1] {
+                self.secondTick.isHidden = false
+            } else {
+                self.secondTick.isHidden = true
+            }
+            
+        } else if (textField == self.word3TextField) {
+            if self.word3TextField.text == seedArray[indexs[2] - 1] {
+                self.thirdTick.isHidden = false
+            } else {
+                self.thirdTick.isHidden = true
+            }
+        }
+    }
 }
 
 extension Array where Element: Hashable {

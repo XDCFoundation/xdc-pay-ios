@@ -15,7 +15,8 @@ class ImportFromSeedViewController: UIViewController {
     @IBOutlet var importWalletBtn: UIButton!
     @IBOutlet var understandText: UILabel!
     @IBOutlet weak var secretTextView: UITextView!
-      
+    @IBOutlet weak var showBtn: UIButton!
+    var showSelected = true
    
     
     var showSecret = false
@@ -29,8 +30,16 @@ class ImportFromSeedViewController: UIViewController {
     
     @IBAction func onShowPassword(_ sender: Any) {
         
-        self.newPassword.isSecureTextEntry = false
-        self.confirmPassword.isSecureTextEntry = false
+        if showSelected {
+            self.newPassword.isSecureTextEntry = false
+            self.confirmPassword.isSecureTextEntry = false
+            self.showBtn.setTitle("Hide", for: .normal)
+        } else {
+            self.newPassword.isSecureTextEntry = true
+            self.confirmPassword.isSecureTextEntry = true
+            self.showBtn.setTitle("Show", for: .normal)
+        }
+        showSelected = !showSelected
     }
     
     func hexStringToUIColor (hex:String) -> UIColor {
@@ -109,27 +118,41 @@ class ImportFromSeedViewController: UIViewController {
         
         if newPassword.text == confirmPassword.text &&  self.secretTextView.text!.count >= 24   {
             
-                       let mnemonic = secretTextView!.text
-                       let importFromMnemonic = try! XDCAccount.importAccountWithMnemonic(mnemonic: mnemonic!)
-                       print(importFromMnemonic.address)
-                       
-                       let vc = UIStoryboard(name: "Storyboard2", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-                       vc.modalPresentationStyle = .fullScreen
-                       vc.accountAddress = importFromMnemonic.address
+            let mnemonic = secretTextView!.text
+            let importFromMnemonic = try! XDCAccount.importAccountWithMnemonic(mnemonic: mnemonic!)
+            print(importFromMnemonic.address)
             
-                       UserDefaultsManager.shared.clearUserDefaults()
-                     
-                       DataBaseManager.shared.saveDefaultAccount(address: importFromMnemonic.address, privateKey: importFromMnemonic.rawPrivateKey, publicKey: importFromMnemonic.rawPublicKey)
-                       
-                       let accountData = [importFromMnemonic.address,importFromMnemonic.rawPrivateKey, newPassword.text! , importFromMnemonic.rawPublicKey ]
+            let vc = UIStoryboard(name: "Storyboard2", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+            vc.modalPresentationStyle = .fullScreen
+            vc.accountAddress = importFromMnemonic.address
             
-                       UserDefaults.standard.setValue(accountData, forKey: "WalletData")
-                       UserDefaults.standard.setValue(mnemonic, forKey: "seed")
-          
-                       self.present(vc, animated: true, completion: nil)
+            UserDefaultsManager.shared.clearUserDefaults()
+            
+            DataBaseManager.shared.saveDefaultAccount(address: importFromMnemonic.address, privateKey: importFromMnemonic.rawPrivateKey, publicKey: importFromMnemonic.rawPublicKey)
+            
+            let accountData = [importFromMnemonic.address,importFromMnemonic.rawPrivateKey, newPassword.text! , importFromMnemonic.rawPublicKey ]
+            
+            UserDefaults.standard.setValue(accountData, forKey: "WalletData")
+            UserDefaults.standard.setValue(mnemonic, forKey: "seed")
+            
+            self.present(vc, animated: true, completion: nil)
             
         }
     }
 
 }
  
+extension ImportFromSeedViewController : UITextViewDelegate {
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        
+        let allowedCharacters = CharacterSet(charactersIn:"abcdefghijklmnopqrstuvwxyz ").inverted
+        let components = text.components(separatedBy: allowedCharacters)
+        let filtered = components.joined(separator: "")
+        
+        if text == filtered {
+            return true
+        } else {
+            return false
+        }
+    }
+}

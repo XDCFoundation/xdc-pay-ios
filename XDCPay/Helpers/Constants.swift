@@ -108,5 +108,13 @@ let primaryColor = UIColor(red: 255.0/255.0, green: 196.0/255.0, blue: 0.0/255.0
 typealias Handler<T> = (T) -> Void
 
 
-
+enum AppColors: String {
+    case placeholderColor = "848484"
+    case textColor = "2A2A2A"
+    case darkColor = "707070"
+    
+    func color() -> UIColor {
+        return UIColor(hexCode: rawValue)
+    }
+}
 
