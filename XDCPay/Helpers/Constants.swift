@@ -91,6 +91,24 @@ struct Constants {
 
 extension Constants {
     static let oneSignalID = "1192cd82-e183-461d-8bec-2915f8889fea"
+    
+    static let visitOurWebsiteUrl = "https://www.xdc.org/"
+    static let privacyPolicyUrl = "https://www.xdc.org/privacy"
+    static let contactUsUrl = "https://www.xdc.org/contact-us"
+    static let termsConditionUrl = "https://www.xdc.org/"
+    
+    static let infoHelpStr =
+"""
+Dear XDCPay Users,
+    
+XDCPay is a beta software.
+
+When you log in to XDCPay, your current account’s address is visible to every new site you visit. This can be used to look up your account balances of XDC and other tokens.
+
+For your privacy, for now, please sign out of XDC Pay when you’re done using a site.
+
+Related Links
+"""
 }
 
 extension Constants {

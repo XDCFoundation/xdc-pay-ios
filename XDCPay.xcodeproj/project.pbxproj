@@ -176,6 +176,7 @@
 		84F0160228053DF80051CD00 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F0160128053DF80051CD00 /* String.swift */; };
 		84F298CE2800382300F8476F /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F298CD2800382300F8476F /* UIViewController.swift */; };
 		84FD7EA12818044A00CEB47D /* Dialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FD7EA02818044A00CEB47D /* Dialog.swift */; };
+		8F142DC0281FEBD300A3663A /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F142DBF281FEBD300A3663A /* HelpViewController.swift */; };
 		ECDE5F2206DF67B3CD0A8767 /* Pods_XDCPay_XDCPayUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 318E80B364AB4EDDBA8F16C7 /* Pods_XDCPay_XDCPayUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -320,6 +321,7 @@
 		84F0160128053DF80051CD00 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		84F298CD2800382300F8476F /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		84FD7EA02818044A00CEB47D /* Dialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dialog.swift; sourceTree = "<group>"; };
+		8F142DBF281FEBD300A3663A /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		981E7A6408BE28394FE30FD4 /* Pods_XDCPayTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XDCPayTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D64173F68F4DFCF442AB2A35 /* Pods-XDCPay-XDCPayUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XDCPay-XDCPayUITests.debug.xcconfig"; path = "Target Support Files/Pods-XDCPay-XDCPayUITests/Pods-XDCPay-XDCPayUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F9938CB9A665E9CDB80B528C /* Pods-XDCPay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XDCPay.debug.xcconfig"; path = "Target Support Files/Pods-XDCPay/Pods-XDCPay.debug.xcconfig"; sourceTree = "<group>"; };
@@ -537,6 +539,7 @@
 		846325F427F410AA00437028 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				8F142DBE281FEB6300A3663A /* Help */,
 				846325F527F410C600437028 /* Settings */,
 			);
 			path = Menu;
@@ -771,6 +774,14 @@
 				84C951F12804648E00EF5B88 /* ReceiveViewController.swift */,
 			);
 			path = ReceiveToken;
+			sourceTree = "<group>";
+		};
+		8F142DBE281FEB6300A3663A /* Help */ = {
+			isa = PBXGroup;
+			children = (
+				8F142DBF281FEBD300A3663A /* HelpViewController.swift */,
+			);
+			path = Help;
 			sourceTree = "<group>";
 		};
 		90921ABFF9292510E940AF45 /* Frameworks */ = {
@@ -1108,6 +1119,7 @@
 				84B4892D27FD9516004BED3C /* TokenSentSuccessVC.swift in Sources */,
 				849590CF27F56DF800A234F1 /* IQKeyboardManager+Position.swift in Sources */,
 				8474BE6727F1C4ED0067AC62 /* HomeViewController.swift in Sources */,
+				8F142DC0281FEBD300A3663A /* HelpViewController.swift in Sources */,
 				849590E127F56DF800A234F1 /* IQUIScrollView+Additions.swift in Sources */,
 				843A40AF2804464F0003D130 /* UserDefaultsManager.swift in Sources */,
 				849590F527F57CA800A234F1 /* NetworkDetailsViewController.swift in Sources */,

@@ -11,12 +11,12 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var usdBalance: UILabel!
     @IBOutlet weak var accountName: UILabel!
     @IBOutlet weak var networkName: UILabel!
+    @IBOutlet weak var addressText: UILabel!
     let client = XDCClient(url: URL(string: currentNetwork.xinfinNetworkUrl)!)
     let AlamoObject = AlamoWebServices()
-    @IBOutlet weak var addressText: UILabel!
-    
    
     var accountAddress = ""
+    var networkArray = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +27,20 @@ class HomeViewController: UIViewController {
         self.addressText.text = self.accountAddress
         self.setupMenuDrawer()
         self.accountName.text = DataBaseManager.shared.getCurrentAccountName()
+        
+        if DataBaseManager.shared.getNetworks().isEmpty{
+        DataBaseManager.shared.addNetwork(name: "XDC Mainnet", rpc: "https://xdcpayrpc.blocksscan.io/", id: "50", symbol: "XDC", url: "https://observer.xdc.org")
+        DataBaseManager.shared.addNetwork(name: "XDC Apothem Testnet", rpc: "https://apothemxdcpayrpc.blocksscan.io/", id: "51", symbol: "XDC", url: "https://explorer.apothem.network")
+        DataBaseManager.shared.addNetwork(name: "Localhost 8545", rpc: "https://localhost:8545", id: "", symbol: "", url: "")
+        }
+        
+        var networks = [Network]()
+        networks = DataBaseManager.shared.getNetworks()
+        networkArray.removeAll()
+        for i in 0...networks.count-1 {
+            let str = networks[i].name
+            networkArray.append(str)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,7 +53,14 @@ class HomeViewController: UIViewController {
     
     
     @IBAction func onNetworkName(_ sender: Any) {
-        
+        let pickerViewClass = self.storyboard?.instantiateViewController(withIdentifier: "PickerViewClass") as! PickerViewClass
+        pickerViewClass.pickerData = self.networkArray
+        pickerViewClass.titleName = "Network"
+        self.present(pickerViewClass, animated: true, completion: nil)
+        pickerViewClass.completionHandler = { selectedRow in
+            self.networkName.text = self.networkArray[selectedRow]
+            return  50
+        }
     }
     
     @IBAction func onCopyAddress(_ sender: Any) {

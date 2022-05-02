@@ -7,15 +7,79 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "736389CF-BF03-4F75-8D8C-86234CF7E9BB"
-            shouldBeEnabled = "No"
+            uuid = "32C0AF4E-F2AF-4ACF-A14A-2AAD4548070F"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "XDCPay/Views/Home/HomeViewController.swift"
+            filePath = "XDCPay/Views/WalletSetup/ImportFromSeedViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "importWalletBtnAction(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "32C0AF4E-F2AF-4ACF-A14A-2AAD4548070F - b61574dbef080eda"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XDCPay.ImportFromSeedViewController.importWalletBtnAction(__C.UIButton) -&gt; ()"
+                  moduleName = "XDCPay"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/prashant/Desktop/xdcpayios/XDCPay/Views/WalletSetup/ImportFromSeedViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "133"
+                  endingLineNumber = "133"
+                  offsetFromSymbolStart = "5404">
+               </Location>
+               <Location
+                  uuid = "32C0AF4E-F2AF-4ACF-A14A-2AAD4548070F - b61574dbef080eda"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "XDCPay.ImportFromSeedViewController.importWalletBtnAction(__C.UIButton) -&gt; ()"
+                  moduleName = "XDCPay"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/prashant/Desktop/xdcpayios/XDCPay/Views/WalletSetup/ImportFromSeedViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "133"
+                  endingLineNumber = "133"
+                  offsetFromSymbolStart = "5912">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B07D6680-D44F-4D17-A505-8FF6572A9D52"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "XDCPay/Views/WalletSetup/ImportFromSeedViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
+            landmarkName = "importWalletBtnAction(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BEB652D6-8AC9-43A7-B68C-42CF25C07D7E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "XDCPay/Views/Home/InfoHelpVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
