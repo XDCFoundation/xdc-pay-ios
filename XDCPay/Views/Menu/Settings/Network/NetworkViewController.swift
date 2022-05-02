@@ -21,9 +21,9 @@ class NetworkViewController: UIViewController , UITableViewDelegate, UITableView
         self.tableView.dataSource = self
         self.tableView.tableFooterView = UIView()
         if DataBaseManager.shared.getNetworks().isEmpty{
-        DataBaseManager.shared.addNetwork(name: "XDC Mainnet", rpc: "https://xdcpayrpc.blocksscan.io/", id: "50", symbol: "XDC", url: "https://observer.xdc.org")
-        DataBaseManager.shared.addNetwork(name: "XDC Apothem Testnet", rpc: "https://apothemxdcpayrpc.blocksscan.io/", id: "51", symbol: "XDC", url: "https://explorer.apothem.network")
-        DataBaseManager.shared.addNetwork(name: "Localhost 8545", rpc: "https://localhost:8545", id: "", symbol: "", url: "")
+            DataBaseManager.shared.addNetwork(name: "XDC Mainnet", rpc: "https://xdcpayrpc.blocksscan.io/", id: "50", symbol: "XDC", url: "https://observer.xdc.org", isEditable: "No")
+        DataBaseManager.shared.addNetwork(name: "XDC Apothem Testnet", rpc: "https://apothemxdcpayrpc.blocksscan.io/", id: "51", symbol: "XDC", url: "https://explorer.apothem.network", isEditable: "No")
+        DataBaseManager.shared.addNetwork(name: "Localhost 8545", rpc: "https://localhost:8545", id: "", symbol: "", url: "", isEditable: "No")
         }
     }
     
@@ -58,6 +58,11 @@ class NetworkViewController: UIViewController , UITableViewDelegate, UITableView
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "NetworkCell") as! NetworkCell
         cell.menuTitle.text = self.networks[indexPath.row].name
         cell.roundView.backgroundColor = UIColor.random()
+        if self.networks[indexPath.row].isEditable == "Yes" {
+            cell.lockOrDelete.image = #imageLiteral(resourceName: "Remove")
+        } else {
+            cell.lockOrDelete.image = #imageLiteral(resourceName: "Lock")
+        }
         return cell
     }
     

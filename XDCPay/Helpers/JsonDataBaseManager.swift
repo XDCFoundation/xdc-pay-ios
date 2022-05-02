@@ -10,7 +10,7 @@ class DataBaseManager {
   
   static let shared = DataBaseManager()
     
-    func addNetwork(name:String,rpc:String,id:String,symbol:String,url:String) {
+    func addNetwork(name:String,rpc:String,id:String,symbol:String,url:String,isEditable:String) {
         
         let savedNetworks =  geNetworkJSON()
 
@@ -22,6 +22,7 @@ class DataBaseManager {
                 "id": id,
                 "symbol": symbol,
                 "url": url,
+                "isEditable": isEditable
             ]
             
             let jsonArray = ["response" : [data] ]
@@ -41,7 +42,7 @@ class DataBaseManager {
 
             var networks = try! JSONDecoder().decode(AllNetworks.self, from: dataJson)
          
-            networks.responseData!.append(Network(name: name, rpc: rpc, id: id, symbol: symbol, url: url))
+            networks.responseData!.append(Network(name: name, rpc: rpc, id: id, symbol: symbol, url: url, isEditable: isEditable))
             
             let str = String(data: try! JSONEncoder().encode(networks), encoding: .utf8)
             print(str as Any)

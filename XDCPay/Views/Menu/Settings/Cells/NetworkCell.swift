@@ -13,4 +13,5 @@ class NetworkCell: UITableViewCell {
     
     @IBOutlet weak var roundView: UIView!
     
+    @IBOutlet weak var lockOrDelete: UIImageView!
 }
