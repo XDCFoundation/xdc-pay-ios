@@ -15,7 +15,8 @@ class ImportFromSeedViewController: UIViewController {
     @IBOutlet var importWalletBtn: UIButton!
     @IBOutlet var understandText: UILabel!
     @IBOutlet weak var secretTextView: UITextView!
-      
+    @IBOutlet weak var showBtn: UIButton!
+    var showSelected = true
    
     
     var showSecret = false
@@ -29,8 +30,16 @@ class ImportFromSeedViewController: UIViewController {
     
     @IBAction func onShowPassword(_ sender: Any) {
         
-        self.newPassword.isSecureTextEntry = false
-        self.confirmPassword.isSecureTextEntry = false
+        if showSelected {
+            self.newPassword.isSecureTextEntry = false
+            self.confirmPassword.isSecureTextEntry = false
+            self.showBtn.setTitle("Hide", for: .normal)
+        } else {
+            self.newPassword.isSecureTextEntry = true
+            self.confirmPassword.isSecureTextEntry = true
+            self.showBtn.setTitle("Show", for: .normal)
+        }
+        showSelected = !showSelected
     }
     
     func hexStringToUIColor (hex:String) -> UIColor {
@@ -133,3 +142,17 @@ class ImportFromSeedViewController: UIViewController {
 
 }
  
+extension ImportFromSeedViewController : UITextViewDelegate {
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        
+        let allowedCharacters = CharacterSet(charactersIn:"abcdefghijklmnopqrstuvwxyz ").inverted
+        let components = text.components(separatedBy: allowedCharacters)
+        let filtered = components.joined(separator: "")
+        
+        if text == filtered {
+            return true
+        } else {
+            return false
+        }
+    }
+}

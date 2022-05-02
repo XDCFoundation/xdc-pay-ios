@@ -121,7 +121,7 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="RRj-3o-Eov"/>
                                 </connections>
                             </collectionView>
-                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="K0p-jF-QpT">
+                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="K0p-jF-QpT" customClass="BorderedPageControl" customModule="XDCPay" customModuleProvider="target">
                                 <rect key="frame" x="158.5" y="605" width="97.5" height="26"/>
                                 <color key="pageIndicatorTintColor" systemColor="opaqueSeparatorColor"/>
                                 <color key="currentPageIndicatorTintColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
@@ -177,7 +177,7 @@
                     <connections>
                         <outlet property="btnGetStarted" destination="EYf-bg-yua" id="jgj-RR-v08"/>
                         <outlet property="collectionView" destination="zQk-8s-qec" id="Cj8-Fo-5gq"/>
-                        <outlet property="pageControl" destination="K0p-jF-QpT" id="0Bk-r1-UdQ"/>
+                        <outlet property="pageView" destination="K0p-jF-QpT" id="R6R-ne-cUG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -939,6 +939,9 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="Enter your secret twelve word phrase here to restore your vault."/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="Xum-xU-IPS" id="Lra-VR-2Z9"/>
+                                </connections>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Secret Recovery Phrase" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gue-VU-wfx">
                                 <rect key="frame" x="16" y="121" width="160.5" height="17"/>
@@ -1020,6 +1023,7 @@
                         <outlet property="newPassword" destination="ogo-Mg-9lv" id="wuE-86-HI9"/>
                         <outlet property="psMeter" destination="ZwT-9B-bOe" id="gNU-6B-yAe"/>
                         <outlet property="secretTextView" destination="jQK-bs-F08" id="dHW-ez-KNK"/>
+                        <outlet property="showBtn" destination="YfA-z6-fWE" id="Ubc-Qj-Lxi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="526-yT-zOO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
