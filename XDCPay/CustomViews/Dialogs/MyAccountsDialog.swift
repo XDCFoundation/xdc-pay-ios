@@ -10,8 +10,9 @@ import UIKit
 class MyAccountsDialog: UIViewController , UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
-
-    var accounts = [Account]()  
+    @IBOutlet weak var accountViewHeightConstraints: NSLayoutConstraint!
+    
+    var accounts = [Account]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,12 +21,17 @@ class MyAccountsDialog: UIViewController , UITableViewDelegate, UITableViewDataS
     override func viewWillAppear(_ animated: Bool) {
         
         accounts.removeAll()
-        
         accounts = DataBaseManager.shared.getAccounts()
-    
+        if (accounts.count > 3) {
+            accountViewHeightConstraints.constant = 132
+            tableView.isScrollEnabled = true
+        } else {
+            accountViewHeightConstraints.constant = CGFloat(44 * accounts.count)
+            tableView.isScrollEnabled = false
+        }
         self.tableView.reloadData()
         
-        }
+    }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -33,7 +39,7 @@ class MyAccountsDialog: UIViewController , UITableViewDelegate, UITableViewDataS
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    
+        
         let account = accounts[indexPath.row]
         
         UserDefaultsManager.shared.updateWalletData(address: account.address, privateKey: account.rawPrivateKey, rawPublicKey: account.rawPublicKey)
@@ -41,9 +47,9 @@ class MyAccountsDialog: UIViewController , UITableViewDelegate, UITableViewDataS
         self.LoadingStart()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-           
+            
             self.LoadingStop()
-
+            
             SceneDelegate.shared?.checkLogin()
             
         }
@@ -64,23 +70,23 @@ class MyAccountsDialog: UIViewController , UITableViewDelegate, UITableViewDataS
             cell.deleteButton.isHidden = false
             cell.importedLabel.isHidden = false
         }
-         cell.deleteButton.addTarget(self, action: #selector(deleteButtonTapped(_:)), for: .touchUpInside)
-         
+        cell.deleteButton.addTarget(self, action: #selector(deleteButtonTapped(_:)), for: .touchUpInside)
+        
         return cell
         
     }
     
     
     @objc func deleteButtonTapped(_ sender: UIButton){
-
+        
         selectedIndex = sender.tag
         
         self.pVC(viewConterlerId: "DeleteDialog")
     }
-   
-
+    
+    
     @IBAction func onCreateAccount(_ sender: Any) {
-       
+        
         self.pVC(viewConterlerId: "AddAccountDialog")
     }
     
