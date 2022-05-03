@@ -10,7 +10,38 @@ import UIKit
 
 class InfoHelpVC : UIViewController {
     
-    override func viewDidLoad() {
-        
+    @IBOutlet weak var contentLbl: UILabel!
+    
+    
+    override func viewDidLoad() {        
+        let version = version()
+        self.contentLbl.text = "XDC Pay Version \n" + "\(version)" + "\n\n" + Constants.infoHelpStr
     }
+    
+    func version() -> String {
+        let dictionary = Bundle.main.infoDictionary!
+        let version = dictionary["CFBundleShortVersionString"] as! String
+//        let build = dictionary["CFBundleVersion"] as! String
+//        return "\(version) build \(build)"
+        return "\(version)"
+    }
+    
+    @IBAction func privacyPolicyBtnAction(_ sender: UIButton) {
+        let viewController = UIStoryboard(name: "Storyboard3", bundle: nil).instantiateViewController(withIdentifier: "HelpViewController") as! HelpViewController
+        viewController.pageLink = Constants.privacyPolicyUrl
+        self.present(viewController, animated: true, completion: nil)
+    }
+    
+    @IBAction func visitOurWebsiteBtnAction(_ sender: UIButton) {
+        let viewController = UIStoryboard(name: "Storyboard3", bundle: nil).instantiateViewController(withIdentifier: "HelpViewController") as! HelpViewController
+        viewController.pageLink = Constants.visitOurWebsiteUrl
+        self.present(viewController, animated: true, completion: nil)
+    }
+    
+    @IBAction func contactUsBtnAction(_ sender: UIButton) {
+        let viewController = UIStoryboard(name: "Storyboard3", bundle: nil).instantiateViewController(withIdentifier: "HelpViewController") as! HelpViewController
+        viewController.pageLink = Constants.contactUsUrl
+        self.present(viewController, animated: true, completion: nil)
+    }
+    
 }

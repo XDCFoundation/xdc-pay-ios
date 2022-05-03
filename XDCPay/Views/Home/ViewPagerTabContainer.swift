@@ -25,6 +25,7 @@ class ViewPagerTabContainer: UIViewController {
             ViewPagerTab(title: "Tokens", image: UIImage(named: "Tokens")),
         ]
         options = ViewPagerOptions()
+        options?.isTabBarShadowAvailable = false
         options?.tabViewBackgroundDefaultColor = .white
         options?.tabViewBackgroundHighlightColor = .white
         options?.tabIndicatorViewBackgroundColor = UIColor.init(hexString: "#2049B9")

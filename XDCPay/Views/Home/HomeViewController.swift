@@ -11,12 +11,13 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var usdBalance: UILabel!
     @IBOutlet weak var accountName: UILabel!
     @IBOutlet weak var networkName: UILabel!
-    var client : XDCClient?
-    let AlamoObject = AlamoWebServices()
     @IBOutlet weak var addressText: UILabel!
     
+    var client : XDCClient?
+    let AlamoObject = AlamoWebServices()
    
     var accountAddress = ""
+    var networkArray = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,11 +27,20 @@ class HomeViewController: UIViewController {
         self.mainBalance.text =  "0 XDC"
         self.usdBalance.text = "$0 USD"
         homeVc = self
-        self.accountAddress = UserDefaultsManager.shared.getCurrentWalletAddress0x()
+        self.accountAddress = UserDefaultsManager.shared.getCurrentNetworkWalletAddress()
         self.addressText.text = self.accountAddress
         self.setupMenuDrawer()
         self.accountName.text = DataBaseManager.shared.getCurrentAccountName()
+        
+        var networks = [Network]()
+        networks = DataBaseManager.shared.getNetworks()
+        networkArray.removeAll()
+        for i in 0...networks.count-1 {
+            let str = networks[i].name
+            networkArray.append(str)
+        }
         self.networkName.text =  DataBaseManager.shared.getNetworks().first!.name
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -43,7 +53,14 @@ class HomeViewController: UIViewController {
     
     
     @IBAction func onNetworkName(_ sender: Any) {
-        
+        let pickerViewClass = self.storyboard?.instantiateViewController(withIdentifier: "PickerViewClass") as! PickerViewClass
+        pickerViewClass.pickerData = self.networkArray
+        pickerViewClass.titleName = "Network"
+        self.present(pickerViewClass, animated: true, completion: nil)
+        pickerViewClass.completionHandler = { selectedRow in
+            self.networkName.text = self.networkArray[selectedRow]
+            return  50
+        }
     }
     
     @IBAction func onCopyAddress(_ sender: Any) {

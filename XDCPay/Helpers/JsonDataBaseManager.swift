@@ -188,28 +188,28 @@ extension DataBaseManager {
      }
     
     func saveDefaultAccount(address:String, privateKey:String, publicKey:String) {
-         
         
-                   let data = [
-                       "rawPrivateKey": privateKey ,
-                       "rawPublicKey": publicKey,
-                       "privateKey": privateKey,
-                       "address": address,
-                       "accountName": "Account 1",
-                       "canDelete": "No",
-                   ]
-                   
-                   let jsonArray = ["response" : [data] ]
-                   
-                   print(jsonArray)
-                   
-                   let str = String(data: try! JSONEncoder().encode(jsonArray), encoding: .utf8)
-                   print(str as Any)
-                   
-                   self.saveAccount(data: (str!))
-              
         
-   }
+        let data = [
+            "rawPrivateKey": privateKey ,
+            "rawPublicKey": publicKey,
+            "privateKey": privateKey,
+            "address": address,
+            "accountName": "Account 1",
+            "canDelete": "No",
+        ]
+        
+        let jsonArray = ["response" : [data] ]
+        
+        print(jsonArray)
+        
+        let str = String(data: try! JSONEncoder().encode(jsonArray), encoding: .utf8)
+        print(str as Any)
+        
+        self.saveAccount(data: (str!))
+        
+        
+    }
     
     func importAccount(rowPrivateKey:String) {
         
