@@ -27,7 +27,7 @@ class HomeViewController: UIViewController {
         self.mainBalance.text =  "0 XDC"
         self.usdBalance.text = "$0 USD"
         homeVc = self
-        self.accountAddress = UserDefaultsManager.shared.getCurrentWalletAddress0x()
+        self.accountAddress = UserDefaultsManager.shared.getCurrentNetworkWalletAddress()
         self.addressText.text = self.accountAddress
         self.setupMenuDrawer()
         self.accountName.text = DataBaseManager.shared.getCurrentAccountName()
