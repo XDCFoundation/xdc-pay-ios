@@ -12,7 +12,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var accountName: UILabel!
     @IBOutlet weak var networkName: UILabel!
     @IBOutlet weak var addressText: UILabel!
-    let client = XDCClient(url: URL(string: currentNetwork.xinfinNetworkUrl)!)
+    
+    var client : XDCClient?
     let AlamoObject = AlamoWebServices()
    
     var accountAddress = ""
@@ -20,6 +21,9 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.client = XDCClientManager.shared.getXDCClient()
+        
         self.mainBalance.text =  "0 XDC"
         self.usdBalance.text = "$0 USD"
         homeVc = self
@@ -28,12 +32,6 @@ class HomeViewController: UIViewController {
         self.setupMenuDrawer()
         self.accountName.text = DataBaseManager.shared.getCurrentAccountName()
         
-        if DataBaseManager.shared.getNetworks().isEmpty{
-        DataBaseManager.shared.addNetwork(name: "XDC Mainnet", rpc: "https://xdcpayrpc.blocksscan.io/", id: "50", symbol: "XDC", url: "https://observer.xdc.org")
-        DataBaseManager.shared.addNetwork(name: "XDC Apothem Testnet", rpc: "https://apothemxdcpayrpc.blocksscan.io/", id: "51", symbol: "XDC", url: "https://explorer.apothem.network")
-        DataBaseManager.shared.addNetwork(name: "Localhost 8545", rpc: "https://localhost:8545", id: "", symbol: "", url: "")
-        }
-        
         var networks = [Network]()
         networks = DataBaseManager.shared.getNetworks()
         networkArray.removeAll()
@@ -41,6 +39,8 @@ class HomeViewController: UIViewController {
             let str = networks[i].name
             networkArray.append(str)
         }
+        self.networkName.text =  DataBaseManager.shared.getNetworks().first!.name
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -69,7 +69,7 @@ class HomeViewController: UIViewController {
     func getBalance() {
         
        
-        self.client.eth_getBalance(address: XDCAddress(UserDefaultsManager.shared.getMainWalletAddress()), block: .Latest) { (error, balanceOf) in
+        self.client!.eth_getBalance(address: XDCAddress(UserDefaultsManager.shared.getMainWalletAddress()), block: .Latest) { (error, balanceOf) in
                 
             if (balanceOf != nil){
                 let value = balanceOf!/1000000000000000000
@@ -217,10 +217,4 @@ extension HomeViewController {
         
     }
 }
-
-
  
- 
-struct currentNetwork{
-  static let xinfinNetworkUrl = "https://rpc.apothem.network"
-}

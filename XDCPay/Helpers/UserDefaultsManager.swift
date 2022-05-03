@@ -13,6 +13,16 @@ class UserDefaultsManager  {
     static  let shared =  UserDefaultsManager()
     
     
+    func getCurrentNetwork() ->String {
+        
+        return UserDefaults.standard.value(forKey: "currentNetwork") as! String
+        
+    }
+    
+    func setOrUpdateCurrentNetwork(url:String) {
+        UserDefaults.standard.setValue(url, forKey: "currentNetwork")
+    }
+    
     func  updateWalletData(address:String,privateKey:String,rawPublicKey:String) {
         
         var walletData = UserDefaults.standard.array(forKey: "WalletData") ?? []

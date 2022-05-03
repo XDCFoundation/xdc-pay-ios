@@ -12,7 +12,7 @@ import XDC3Swift
 
 class SendTokenTableViewController: UITableViewController {
     
-    let client = XDCClient(url: URL(string: currentNetwork.xinfinNetworkUrl)!)
+    let client =  XDCClientManager.shared.getXDCClient()
    
     var availableAmount = 0.0
     

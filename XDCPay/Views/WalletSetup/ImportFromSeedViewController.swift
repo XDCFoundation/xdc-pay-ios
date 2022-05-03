@@ -17,7 +17,7 @@ class ImportFromSeedViewController: UIViewController {
     @IBOutlet weak var secretTextView: UITextView!
     @IBOutlet weak var showBtn: UIButton!
     var showSelected = true
-   
+    
     
     var showSecret = false
     override func viewDidLoad() {
@@ -44,18 +44,18 @@ class ImportFromSeedViewController: UIViewController {
     
     func hexStringToUIColor (hex:String) -> UIColor {
         var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
-
+        
         if (cString.hasPrefix("#")) {
             cString.remove(at: cString.startIndex)
         }
-
+        
         if ((cString.count) != 6) {
             return UIColor.gray
         }
-
+        
         var rgbValue:UInt64 = 0
         Scanner(string: cString).scanHexInt64(&rgbValue)
-
+        
         return UIColor(
             red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
             green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
@@ -71,8 +71,8 @@ class ImportFromSeedViewController: UIViewController {
     }
     
     @IBAction func checkBoxOnTap(_ sender: UIButton) {
-     
-     
+        
+        
         if(showSecret == false)
         {
             self.secretTextView.isSecureTextEntry = false
@@ -82,12 +82,12 @@ class ImportFromSeedViewController: UIViewController {
         
         else{
             self.secretTextView.isSecureTextEntry = true
-          
+            
             sender.setBackgroundImage((UIImage(named: "CheckBoxEmpty")), for: UIControl.State.normal)
             showSecret = false
         }
     }
-     
+    
     @IBAction func importWalletBtnAction(_ sender: UIButton) {
         
         if(newPassword.text! != confirmPassword!.text ) {
@@ -101,14 +101,14 @@ class ImportFromSeedViewController: UIViewController {
         }
         
         if(psMeter.passwordStrength == PasswordStrength.weak || psMeter.passwordStrength == PasswordStrength.veryWeak ) {
-   
+            
             showAlert(message: "Password is \(psMeter.passwordStrength!)")
             return
             
         }
         
         if(secretTextView.text!.count < 24) {
-   
+            
             showAlert(message: "Please enter correct Secret Phrase")
             return
             
@@ -117,7 +117,6 @@ class ImportFromSeedViewController: UIViewController {
         
         
         if newPassword.text == confirmPassword.text &&  self.secretTextView.text!.count >= 24   {
-            
             let mnemonic = secretTextView!.text
             let importFromMnemonic = try! XDCAccount.importAccountWithMnemonic(mnemonic: mnemonic!)
             print(importFromMnemonic.address)
@@ -127,6 +126,9 @@ class ImportFromSeedViewController: UIViewController {
             vc.accountAddress = importFromMnemonic.address
             
             UserDefaultsManager.shared.clearUserDefaults()
+            
+            DataBaseManager.shared.addDefaultNetworks()
+            
             
             DataBaseManager.shared.saveDefaultAccount(address: importFromMnemonic.address, privateKey: importFromMnemonic.rawPrivateKey, publicKey: importFromMnemonic.rawPublicKey)
             
@@ -139,9 +141,9 @@ class ImportFromSeedViewController: UIViewController {
             
         }
     }
-
+    
 }
- 
+
 extension ImportFromSeedViewController : UITextViewDelegate {
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         

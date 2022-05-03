@@ -23,6 +23,7 @@
 		7F6278A127E8FB6500782EE0 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6278A027E8FB6500782EE0 /* OnboardingViewController.swift */; };
 		7F6278A727E8FBDA00782EE0 /* UIView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6278A627E8FBDA00782EE0 /* UIView+Extention.swift */; };
 		7F6278AF27E9000E00782EE0 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6278AE27E9000E00782EE0 /* OnboardingSlide.swift */; };
+		8402762F281FEB9D0006832C /* XdcClientManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402762E281FEB9D0006832C /* XdcClientManager.swift */; };
 		840ED2E628129DCB001FC4A5 /* TextViewWithPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840ED2E528129DCB001FC4A5 /* TextViewWithPlaceholder.swift */; };
 		840ED2E82812CDC8001FC4A5 /* ConfirmRecoveryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840ED2E72812CDC8001FC4A5 /* ConfirmRecoveryVC.swift */; };
 		84119C1E27FAB81A002E2F69 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84119C1D27FAB81A002E2F69 /* AccountCell.swift */; };
@@ -177,6 +178,7 @@
 		84F298CE2800382300F8476F /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F298CD2800382300F8476F /* UIViewController.swift */; };
 		84FD7EA12818044A00CEB47D /* Dialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FD7EA02818044A00CEB47D /* Dialog.swift */; };
 		8F142DC0281FEBD300A3663A /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F142DBF281FEBD300A3663A /* HelpViewController.swift */; };
+		8F6F572F2820FC6C00DDDE70 /* Storyboard3.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F6F572E2820FC6C00DDDE70 /* Storyboard3.storyboard */; };
 		ECDE5F2206DF67B3CD0A8767 /* Pods_XDCPay_XDCPayUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 318E80B364AB4EDDBA8F16C7 /* Pods_XDCPay_XDCPayUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -224,6 +226,7 @@
 		7F6278A027E8FB6500782EE0 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		7F6278A627E8FBDA00782EE0 /* UIView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extention.swift"; sourceTree = "<group>"; };
 		7F6278AE27E9000E00782EE0 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
+		8402762E281FEB9D0006832C /* XdcClientManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XdcClientManager.swift; sourceTree = "<group>"; };
 		840ED2E528129DCB001FC4A5 /* TextViewWithPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewWithPlaceholder.swift; sourceTree = "<group>"; };
 		840ED2E72812CDC8001FC4A5 /* ConfirmRecoveryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmRecoveryVC.swift; sourceTree = "<group>"; };
 		84119C1D27FAB81A002E2F69 /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
@@ -322,6 +325,7 @@
 		84F298CD2800382300F8476F /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		84FD7EA02818044A00CEB47D /* Dialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dialog.swift; sourceTree = "<group>"; };
 		8F142DBF281FEBD300A3663A /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		8F6F572E2820FC6C00DDDE70 /* Storyboard3.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard3.storyboard; sourceTree = "<group>"; };
 		981E7A6408BE28394FE30FD4 /* Pods_XDCPayTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XDCPayTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D64173F68F4DFCF442AB2A35 /* Pods-XDCPay-XDCPayUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XDCPay-XDCPayUITests.debug.xcconfig"; path = "Target Support Files/Pods-XDCPay-XDCPayUITests/Pods-XDCPay-XDCPayUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F9938CB9A665E9CDB80B528C /* Pods-XDCPay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XDCPay.debug.xcconfig"; path = "Target Support Files/Pods-XDCPay/Pods-XDCPay.debug.xcconfig"; sourceTree = "<group>"; };
@@ -413,6 +417,7 @@
 				7F62788A27E8DCFA00782EE0 /* Models */,
 				7F62784C27E8DC7900782EE0 /* AppDelegate.swift */,
 				7F62784E27E8DC7900782EE0 /* SceneDelegate.swift */,
+				8F6F572E2820FC6C00DDDE70 /* Storyboard3.storyboard */,
 				7F62785227E8DC7900782EE0 /* Main.storyboard */,
 				7F62785527E8DC8100782EE0 /* Assets.xcassets */,
 				7F62785727E8DC8100782EE0 /* LaunchScreen.storyboard */,
@@ -693,6 +698,7 @@
 				843A40AE2804464F0003D130 /* UserDefaultsManager.swift */,
 				84F015FF280521410051CD00 /* ScannerViewController.swift */,
 				84665F8228168D680020C12F /* JsonDataBaseManager.swift */,
+				8402762E281FEB9D0006832C /* XdcClientManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -903,6 +909,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				846325FF27F42A4B00437028 /* Storyboard2.storyboard in Resources */,
+				8F6F572F2820FC6C00DDDE70 /* Storyboard3.storyboard in Resources */,
 				7F62785927E8DC8100782EE0 /* LaunchScreen.storyboard in Resources */,
 				84C8F7F327F2C1BE00F6666C /* MenuDrawerCellTableViewCell.xib in Resources */,
 				84C8F7FD27F2E1F400F6666C /* TransactionCell.xib in Resources */,
@@ -1078,6 +1085,7 @@
 				84C8F7F827F2C1BE00F6666C /* MenuDrawer.swift in Sources */,
 				84BDBD9A27F739E70068BF6A /* MyAccountsDialog.swift in Sources */,
 				843A40AC2804448E0003D130 /* QRCodeView.swift in Sources */,
+				8402762F281FEB9D0006832C /* XdcClientManager.swift in Sources */,
 				849590F027F56DF800A234F1 /* IQKeyboardManager+UITextFieldViewNotification.swift in Sources */,
 				8439F4B527FC0BF6004D6E3A /* SendTokenTableViewController.swift in Sources */,
 				84C8F7FC27F2E1F400F6666C /* TransactionCell.swift in Sources */,

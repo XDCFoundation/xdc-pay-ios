@@ -16,6 +16,7 @@ struct Network: Codable {
         var id: String = ""
         var symbol: String = ""
         var url: String = ""
+        var isEditable: String = ""
 
         enum CodingKeys: String, CodingKey {
             case name = "name"
@@ -23,6 +24,7 @@ struct Network: Codable {
             case id = "id"
             case symbol = "symbol"
             case url = "url"
+            case isEditable = "isEditable"
         }
 }
 
