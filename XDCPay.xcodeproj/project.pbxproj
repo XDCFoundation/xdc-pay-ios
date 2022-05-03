@@ -23,6 +23,7 @@
 		7F6278A127E8FB6500782EE0 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6278A027E8FB6500782EE0 /* OnboardingViewController.swift */; };
 		7F6278A727E8FBDA00782EE0 /* UIView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6278A627E8FBDA00782EE0 /* UIView+Extention.swift */; };
 		7F6278AF27E9000E00782EE0 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6278AE27E9000E00782EE0 /* OnboardingSlide.swift */; };
+		8402762F281FEB9D0006832C /* XdcClientManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402762E281FEB9D0006832C /* XdcClientManager.swift */; };
 		840ED2E628129DCB001FC4A5 /* TextViewWithPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840ED2E528129DCB001FC4A5 /* TextViewWithPlaceholder.swift */; };
 		840ED2E82812CDC8001FC4A5 /* ConfirmRecoveryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840ED2E72812CDC8001FC4A5 /* ConfirmRecoveryVC.swift */; };
 		84119C1E27FAB81A002E2F69 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84119C1D27FAB81A002E2F69 /* AccountCell.swift */; };
@@ -223,6 +224,7 @@
 		7F6278A027E8FB6500782EE0 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		7F6278A627E8FBDA00782EE0 /* UIView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extention.swift"; sourceTree = "<group>"; };
 		7F6278AE27E9000E00782EE0 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
+		8402762E281FEB9D0006832C /* XdcClientManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XdcClientManager.swift; sourceTree = "<group>"; };
 		840ED2E528129DCB001FC4A5 /* TextViewWithPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewWithPlaceholder.swift; sourceTree = "<group>"; };
 		840ED2E72812CDC8001FC4A5 /* ConfirmRecoveryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmRecoveryVC.swift; sourceTree = "<group>"; };
 		84119C1D27FAB81A002E2F69 /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
@@ -690,6 +692,7 @@
 				843A40AE2804464F0003D130 /* UserDefaultsManager.swift */,
 				84F015FF280521410051CD00 /* ScannerViewController.swift */,
 				84665F8228168D680020C12F /* JsonDataBaseManager.swift */,
+				8402762E281FEB9D0006832C /* XdcClientManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1067,6 +1070,7 @@
 				84C8F7F827F2C1BE00F6666C /* MenuDrawer.swift in Sources */,
 				84BDBD9A27F739E70068BF6A /* MyAccountsDialog.swift in Sources */,
 				843A40AC2804448E0003D130 /* QRCodeView.swift in Sources */,
+				8402762F281FEB9D0006832C /* XdcClientManager.swift in Sources */,
 				849590F027F56DF800A234F1 /* IQKeyboardManager+UITextFieldViewNotification.swift in Sources */,
 				8439F4B527FC0BF6004D6E3A /* SendTokenTableViewController.swift in Sources */,
 				84C8F7FC27F2E1F400F6666C /* TransactionCell.swift in Sources */,

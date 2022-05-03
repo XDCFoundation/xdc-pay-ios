@@ -11,7 +11,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var usdBalance: UILabel!
     @IBOutlet weak var accountName: UILabel!
     @IBOutlet weak var networkName: UILabel!
-    let client = XDCClient(url: URL(string: currentNetwork.xinfinNetworkUrl)!)
+    var client : XDCClient?
     let AlamoObject = AlamoWebServices()
     @IBOutlet weak var addressText: UILabel!
     
@@ -20,6 +20,9 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.client = XDCClientManager.shared.getXDCClient()
+        
         self.mainBalance.text =  "0 XDC"
         self.usdBalance.text = "$0 USD"
         homeVc = self
@@ -27,6 +30,7 @@ class HomeViewController: UIViewController {
         self.addressText.text = self.accountAddress
         self.setupMenuDrawer()
         self.accountName.text = DataBaseManager.shared.getCurrentAccountName()
+        self.networkName.text =  DataBaseManager.shared.getNetworks().first!.name
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,7 +52,7 @@ class HomeViewController: UIViewController {
     func getBalance() {
         
        
-        self.client.eth_getBalance(address: XDCAddress(UserDefaultsManager.shared.getMainWalletAddress()), block: .Latest) { (error, balanceOf) in
+        self.client!.eth_getBalance(address: XDCAddress(UserDefaultsManager.shared.getMainWalletAddress()), block: .Latest) { (error, balanceOf) in
                 
             if (balanceOf != nil){
                 let value = balanceOf!/1000000000000000000
@@ -196,10 +200,4 @@ extension HomeViewController {
         
     }
 }
-
-
  
- 
-struct currentNetwork{
-  static let xinfinNetworkUrl = "https://rpc.apothem.network"
-}
