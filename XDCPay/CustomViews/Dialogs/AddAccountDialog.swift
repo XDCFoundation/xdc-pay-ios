@@ -7,6 +7,9 @@ class AddAccountDialog: UIViewController {
     
     @IBOutlet weak var account: UITextField!
     
+    override func viewDidLoad() {
+        self.account.delegate = self
+    }
    
     @IBAction func onAdd(_ sender: Any) {
         
@@ -24,9 +27,13 @@ class AddAccountDialog: UIViewController {
 
             self.dismiss(animated: true, completion: nil)
             
-        }
-        
+        }        
     }
 }
 
+extension AddAccountDialog: UITextFieldDelegate {
+    public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        return range.location < 30
+    }
+}
 

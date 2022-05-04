@@ -17,7 +17,7 @@ class HomeViewController: UIViewController {
     let AlamoObject = AlamoWebServices()
    
     var accountAddress = ""
-  
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,7 +30,9 @@ class HomeViewController: UIViewController {
         self.addressText.text = self.accountAddress
         self.setupMenuDrawer()
         self.accountName.text = DataBaseManager.shared.getCurrentAccountName()
+
         self.networkName.text = UserDefaultsManager.shared.getCurrentNetworName()
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
