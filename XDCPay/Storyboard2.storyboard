@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -493,7 +493,7 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="onBuySimplex:" destination="f4Q-Bb-9nI" eventType="touchUpInside" id="N3V-b2-hV0"/>
+                                            <action selector="onFaucet:" destination="f4Q-Bb-9nI" eventType="touchUpInside" id="8Aq-Fh-Yke"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="forward_black" translatesAutoresizingMaskIntoConstraints="NO" id="1yK-ft-Dyz">
@@ -546,6 +546,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="faucetBtn" destination="BG1-hC-EjT" id="Wkx-L6-0vC"/>
                         <outlet property="faucetView" destination="wXr-3y-oQi" id="T6I-26-kY0"/>
                         <outlet property="simplexView" destination="ccX-IM-rOi" id="98m-hf-MVd"/>
                     </connections>
@@ -694,7 +695,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SettingMenuCell" rowHeight="66" id="dly-zJ-Ppf" customClass="SettingMenuCell" customModule="XDCPay" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="66"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dly-zJ-Ppf" id="t0C-Oe-Aow">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="66"/>
@@ -1157,6 +1158,7 @@
                                         </state>
                                         <connections>
                                             <action selector="onCurrency:" destination="KVo-aa-vC0" eventType="touchUpInside" id="cC8-2W-AnM"/>
+                                            <action selector="resetAccountBtnAction:" destination="S8D-EK-Wc4" eventType="touchUpInside" id="vf2-SD-e7U"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1794,7 +1796,7 @@
                             <tableViewSection headerTitle="" id="6cc-7K-esl">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="171" id="kxo-zw-RWZ">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="171"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="171"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kxo-zw-RWZ" id="Lae-QO-vMM">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="171"/>
@@ -1875,7 +1877,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="171" id="UoY-sR-DlC">
-                                        <rect key="frame" x="0.0" y="195.5" width="414" height="171"/>
+                                        <rect key="frame" x="0.0" y="215.5" width="414" height="171"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UoY-sR-DlC" id="Oqb-yt-gh9">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="171"/>
@@ -1956,7 +1958,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="171" id="L5p-7G-PcE">
-                                        <rect key="frame" x="0.0" y="366.5" width="414" height="171"/>
+                                        <rect key="frame" x="0.0" y="386.5" width="414" height="171"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L5p-7G-PcE" id="OLS-lc-WP2">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="171"/>
@@ -2046,7 +2048,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="171" id="zwA-sQ-tOz">
-                                        <rect key="frame" x="0.0" y="537.5" width="414" height="171"/>
+                                        <rect key="frame" x="0.0" y="557.5" width="414" height="171"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zwA-sQ-tOz" id="Xz6-aB-iW9">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="171"/>
@@ -2127,7 +2129,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="171" id="NIZ-Bn-GbM">
-                                        <rect key="frame" x="0.0" y="708.5" width="414" height="171"/>
+                                        <rect key="frame" x="0.0" y="728.5" width="414" height="171"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NIZ-Bn-GbM" id="m84-ij-ySX">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="171"/>
@@ -3249,7 +3251,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ContactCell" rowHeight="68" id="1ug-gC-qjQ" customClass="ContactCell" customModule="XDCPay" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="68"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="68"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1ug-gC-qjQ" id="OW2-Lc-Knx">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="68"/>
@@ -3887,7 +3889,7 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AccountCell" id="0cU-EW-sNy" customClass="AccountCell" customModule="XDCPay" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="24.5" width="414" height="44"/>
+                                                <rect key="frame" x="0.0" y="44.5" width="414" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0cU-EW-sNy" id="bUP-Fi-tL3">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -4085,7 +4087,7 @@
                             <tableViewSection headerTitle="" id="ub3-4b-Inh">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="693" id="blu-k5-lNr">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="693"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="693"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="blu-k5-lNr" id="shG-jz-8a6">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="693"/>
@@ -4699,7 +4701,7 @@
                             <tableViewSection id="ag8-YW-r2c">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="466" id="2W0-hr-nhO">
-                                        <rect key="frame" x="0.0" y="24.5" width="384" height="466"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="384" height="466"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2W0-hr-nhO" id="Nqj-HK-0d5">
                                             <rect key="frame" x="0.0" y="0.0" width="384" height="466"/>
@@ -6447,7 +6449,7 @@ Related Links </string>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NetworkCell" rowHeight="59" id="uwK-BU-QES" customClass="NetworkCell" customModule="XDCPay" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="59"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="59"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uwK-BU-QES" id="DZy-Sd-Uuf">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="59"/>

@@ -11,10 +11,16 @@ class BuyVC: UIViewController {
     @IBOutlet weak var simplexView: UIView!
     @IBOutlet weak var faucetView: UIView!
     
+    @IBOutlet weak var faucetBtn: UIButton!
+    
     var isMainNet = false
+    var selectedNetwork:String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        selectedNetwork = UserDefaultsManager.shared.getCurrentNetworName()
+        faucetBtn.setTitle("  \(selectedNetwork ?? "")", for: .normal)
         
         if(isMainNet) {
             self.simplexView.isHidden = false
@@ -36,9 +42,14 @@ class BuyVC: UIViewController {
     
     @IBAction func onFaucet(_ sender: Any) {
         
-        if let url = URL(string: "http://faucet.apothem.network/") {
-            UIApplication.shared.open(url)
+        let networks = DataBaseManager.shared.getNetworks()
+        if let index = networks.firstIndex(where: { $0.name == selectedNetwork }) {
+            let url = networks[index].url
+            if let url = URL(string: "\(url)") {
+                UIApplication.shared.open(url)
+            }
         }
+        
         
     }
     
