@@ -23,6 +23,7 @@ class MenuDrawer: UIView , UITableViewDelegate , UITableViewDataSource {
     @IBOutlet weak var blockerView: UIView!
     @IBOutlet weak var tableView: UITableView!
    
+    @IBOutlet weak var accountName: UILabel!
     var items =  [String]()
     var images =  [String]()
     
@@ -69,6 +70,9 @@ class MenuDrawer: UIView , UITableViewDelegate , UITableViewDataSource {
   
     func showHideDrawer() {
         
+        self.accountName.text = DataBaseManager.shared.getCurrentAccountName()
+     
+        
         if var topController = UIApplication.shared.keyWindow?.rootViewController {
             while let presentedViewController = topController.presentedViewController {
                 topController = presentedViewController
@@ -95,6 +99,8 @@ extension MenuDrawer {
    
     func setupViews() {
       
+        self.accountName.text = DataBaseManager.shared.getCurrentAccountName()
+        
         self.tableView.register(UINib(nibName: "MenuDrawerCellTableViewCell", bundle: nil), forCellReuseIdentifier: "MenuDrawerCellTableViewCell")
         tableView.delegate = self
         tableView.dataSource = self

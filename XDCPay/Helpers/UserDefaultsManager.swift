@@ -12,16 +12,28 @@ class UserDefaultsManager  {
     
     static  let shared =  UserDefaultsManager()
     
+    func setOrUpdateCurrentNetworkName(name:String) {
+        UserDefaults.standard.setValue(name, forKey: "currentNetworkName")
+    }
     
-    func getCurrentNetwork() ->String {
+    func getCurrentNetworkRpc() ->String {
         
         return UserDefaults.standard.value(forKey: "currentNetwork") as! String
         
     }
     
-    func setOrUpdateCurrentNetwork(url:String) {
+    func setOrUpdateCurrentNetworkRpc(url:String) {
         UserDefaults.standard.setValue(url, forKey: "currentNetwork")
     }
+    
+    func getCurrentNetworName() ->String {
+        
+        return UserDefaults.standard.value(forKey: "currentNetworkName") as! String
+        
+    }
+
+    
+   
     
     func  updateWalletData(address:String,privateKey:String,rawPublicKey:String) {
         

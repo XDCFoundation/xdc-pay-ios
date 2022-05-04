@@ -4,7 +4,7 @@
  class PickerViewClass: UIViewController,UIPickerViewDataSource,UIPickerViewDelegate {
     
     @IBOutlet weak var titleLabel: UILabel!
-    var completionHandler:((Int) -> Int)?
+    var completionHandler:((Int) -> Void)?
     var titleName = ""
     
     @IBOutlet weak var pickerView: UIPickerView!

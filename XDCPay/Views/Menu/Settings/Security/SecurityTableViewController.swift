@@ -29,7 +29,7 @@ class SecurityTableViewController: UITableViewController {
                            pickerViewClass.completionHandler = { selectedRow in
                               // self.positionButton.setTitle( self.positionArray[selectedRow], for: .normal)
                               // self.selectedIndex = selectedRow
-                               return  0
+                            
         }
         
     }
