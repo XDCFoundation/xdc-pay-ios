@@ -29,18 +29,21 @@ class InfoHelpVC : UIViewController {
     @IBAction func privacyPolicyBtnAction(_ sender: UIButton) {
         let viewController = UIStoryboard(name: "Storyboard3", bundle: nil).instantiateViewController(withIdentifier: "HelpViewController") as! HelpViewController
         viewController.pageLink = Constants.privacyPolicyUrl
+        viewController.modalPresentationStyle = .fullScreen
         self.present(viewController, animated: true, completion: nil)
     }
     
     @IBAction func visitOurWebsiteBtnAction(_ sender: UIButton) {
         let viewController = UIStoryboard(name: "Storyboard3", bundle: nil).instantiateViewController(withIdentifier: "HelpViewController") as! HelpViewController
         viewController.pageLink = Constants.visitOurWebsiteUrl
+        viewController.modalPresentationStyle = .fullScreen
         self.present(viewController, animated: true, completion: nil)
     }
     
     @IBAction func contactUsBtnAction(_ sender: UIButton) {
         let viewController = UIStoryboard(name: "Storyboard3", bundle: nil).instantiateViewController(withIdentifier: "HelpViewController") as! HelpViewController
         viewController.pageLink = Constants.contactUsUrl
+        viewController.modalPresentationStyle = .fullScreen
         self.present(viewController, animated: true, completion: nil)
     }
     

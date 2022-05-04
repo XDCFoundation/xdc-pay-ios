@@ -18,6 +18,7 @@ class HomeViewController: UIViewController {
    
     var accountAddress = ""
     var networkArray = [String]()
+    var networks = [Network]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +33,7 @@ class HomeViewController: UIViewController {
         self.setupMenuDrawer()
         self.accountName.text = DataBaseManager.shared.getCurrentAccountName()
         
-        var networks = [Network]()
+        
         networks = DataBaseManager.shared.getNetworks()
         networkArray.removeAll()
         for i in 0...networks.count-1 {
