@@ -13,7 +13,7 @@ class NetworkDetailsViewController: UIViewController {
     @IBOutlet weak var symbol: UILabel!
     @IBOutlet weak var id: UILabel!
     @IBOutlet weak var name: UILabel!
-    @IBOutlet weak var rpc: UILabel!
+    @IBOutlet weak var rpc: UILabel!    
     var selectedIndex = 0
     var network : Network?
     
@@ -44,7 +44,9 @@ class NetworkDetailsViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
            
             self.LoadingStop()
-            UserDefaultsManager.shared.setOrUpdateCurrentNetwork(url:  DataBaseManager.shared.getNetworks().first!.rpc)
+            UserDefaultsManager.shared.setOrUpdateCurrentNetworkRpc(url:  DataBaseManager.shared.getNetworks().first!.rpc)
+            UserDefaultsManager.shared.setOrUpdateCurrentNetworkName(name:  DataBaseManager.shared.getNetworks().first!.name)
+          
             SceneDelegate.shared?.checkLogin()
         }
         

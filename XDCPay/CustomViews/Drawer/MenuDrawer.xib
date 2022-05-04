@@ -137,6 +137,7 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="mZO-JP-5Id" secondAttribute="trailing" id="xAt-HP-CYW"/>
             </constraints>
             <connections>
+                <outlet property="accountName" destination="tsi-U4-Xfc" id="mM9-Hf-cX9"/>
                 <outlet property="blockerView" destination="mZO-JP-5Id" id="74A-5M-bFz"/>
                 <outlet property="tableView" destination="68Z-7E-yEk" id="dis-WJ-dhp"/>
             </connections>

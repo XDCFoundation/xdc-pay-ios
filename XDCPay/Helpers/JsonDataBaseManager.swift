@@ -200,7 +200,7 @@ extension DataBaseManager {
         ]
         
         let jsonArray = ["response" : [data] ]
-        
+         
         print(jsonArray)
         
         let str = String(data: try! JSONEncoder().encode(jsonArray), encoding: .utf8)
@@ -236,8 +236,6 @@ extension DataBaseManager {
                     self.saveAccount(data: (str!))
                 
              }
-        
-       
             
      }
     
@@ -316,8 +314,9 @@ func addDefaultNetworks () {
         
               DataBaseManager.shared.addNetwork(name: "Localhost 8545", rpc: "https://localhost:8545", id: "", symbol: "", url: "", isEditable: "No")
         
-              UserDefaultsManager.shared.setOrUpdateCurrentNetwork(url: "https://apothemxdcpayrpc.blocksscan.io")
-    
+        UserDefaultsManager.shared.setOrUpdateCurrentNetworkRpc(url:  DataBaseManager.shared.getNetworks().first?.rpc ?? "")
+              UserDefaultsManager.shared.setOrUpdateCurrentNetworkName(name: DataBaseManager.shared.getNetworks().first?.name ?? "")
+      
     }
   }
     

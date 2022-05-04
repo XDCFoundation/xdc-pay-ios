@@ -17,9 +17,7 @@ class HomeViewController: UIViewController {
     let AlamoObject = AlamoWebServices()
    
     var accountAddress = ""
-    var networkArray = [String]()
-    var networks = [Network]()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,15 +30,8 @@ class HomeViewController: UIViewController {
         self.addressText.text = self.accountAddress
         self.setupMenuDrawer()
         self.accountName.text = DataBaseManager.shared.getCurrentAccountName()
-        
-        
-        networks = DataBaseManager.shared.getNetworks()
-        networkArray.removeAll()
-        for i in 0...networks.count-1 {
-            let str = networks[i].name
-            networkArray.append(str)
-        }
-        self.networkName.text =  DataBaseManager.shared.getNetworks().first!.name
+
+        self.networkName.text = UserDefaultsManager.shared.getCurrentNetworName()
 
     }
     
@@ -55,12 +46,15 @@ class HomeViewController: UIViewController {
     
     @IBAction func onNetworkName(_ sender: Any) {
         let pickerViewClass = self.storyboard?.instantiateViewController(withIdentifier: "PickerViewClass") as! PickerViewClass
-        pickerViewClass.pickerData = self.networkArray
+        let networks = DataBaseManager.shared.getNetworks()
+        pickerViewClass.pickerData = networks.map{$0.name}
         pickerViewClass.titleName = "Network"
         self.present(pickerViewClass, animated: true, completion: nil)
         pickerViewClass.completionHandler = { selectedRow in
-            self.networkName.text = self.networkArray[selectedRow]
-            return  50
+            self.networkName.text =  networks[selectedRow].name
+            UserDefaultsManager.shared.setOrUpdateCurrentNetworkRpc(url: networks[selectedRow].rpc)
+            UserDefaultsManager.shared.setOrUpdateCurrentNetworkName(name: networks[selectedRow].name)
+            SceneDelegate.shared?.checkLogin()
         }
     }
     

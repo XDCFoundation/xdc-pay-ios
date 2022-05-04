@@ -19,6 +19,7 @@ class AddNetworkViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.chainIDTextField.keyboardType = .numberPad
 
     }
     
@@ -34,6 +35,11 @@ class AddNetworkViewController: UIViewController {
             return
         }
         
+        if(!self.rpcTextField.text!.isValidateURL()) {
+            self.showAlert(message: "Please Enter correct Url")
+            return
+        }
+        
         if(self.chainIDTextField.text!.isEmpty) {
             self.showAlert(message: "Please Enter Chain Id")
             return
@@ -44,6 +50,7 @@ class AddNetworkViewController: UIViewController {
             return
         }
         
+        
         DataBaseManager.shared.addNetwork(name: self.networkTextField.text!, rpc: self.rpcTextField.text!, id: self.chainIDTextField.text!, symbol: self.currencySymbolTextField.text!, url: self.networkTextField.text ?? "", isEditable: "Yes")
         
         self.dismiss(animated: true, completion: nil)
@@ -51,5 +58,5 @@ class AddNetworkViewController: UIViewController {
     }
     
 
-
 }
+

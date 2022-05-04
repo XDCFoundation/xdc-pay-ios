@@ -24,7 +24,7 @@ class GenralSettingsViewController: UIViewController {
                            pickerViewClass.completionHandler = { selectedRow in
                               // self.positionButton.setTitle( self.positionArray[selectedRow], for: .normal)
                               // self.selectedIndex = selectedRow
-                               return  50
+                              
         }
         
     }
@@ -39,7 +39,7 @@ class GenralSettingsViewController: UIViewController {
                            pickerViewClass.completionHandler = { selectedRow in
                               // self.positionButton.setTitle( self.positionArray[selectedRow], for: .normal)
                               // self.selectedIndex = selectedRow
-                               return  50
+                              
         }
         
     }

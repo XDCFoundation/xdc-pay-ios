@@ -8,7 +8,7 @@ import Foundation
     
     func getXDCClient() -> XDCClient {
         
-      let currentNetwork =  UserDefaultsManager.shared.getCurrentNetwork()
+      let currentNetwork =  UserDefaultsManager.shared.getCurrentNetworkRpc()
         
       print(currentNetwork)
       return  XDCClient(url: URL(string: currentNetwork)!)
