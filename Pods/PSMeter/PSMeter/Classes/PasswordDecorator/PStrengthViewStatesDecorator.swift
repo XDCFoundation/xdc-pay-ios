@@ -19,7 +19,7 @@ public struct PStrengthViewStatesDecorator {
     static let veryWeakColor = #colorLiteral(red: 0.8705882353, green: 0.02745098039, blue: 0, alpha: 1)
     static let weakColor = #colorLiteral(red: 0.8666666667, green: 0.2196078431, blue: 0.003921568627, alpha: 1)
     static let fairColor = #colorLiteral(red: 0.9960784314, green: 0.7960784314, blue: 0, alpha: 1)
-    static let strongColor = #colorLiteral(red: 0.1843137255, green: 0.9019607843, blue: 0.0431372549, alpha: 1)
+    static let strongColor = #colorLiteral(red: 0.012, green: 0.745, blue: 0.275, alpha: 1)
     static let veryStrongColor = #colorLiteral(red: 0.1058823529, green: 0.5882352941, blue: 0.02352941176, alpha: 1)
 
     public init(

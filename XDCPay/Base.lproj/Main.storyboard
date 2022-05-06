@@ -854,7 +854,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="95"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Import from seed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0BL-Ai-eTv">
-                                        <rect key="frame" x="141" y="51.5" width="132" height="20"/>
+                                        <rect key="frame" x="141" y="52" width="132" height="19"/>
                                         <fontDescription key="fontDescription" name="Inter-Regular_Medium" family="Inter" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
