@@ -12,12 +12,13 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var accountName: UILabel!
     @IBOutlet weak var networkName: UILabel!
     @IBOutlet weak var addressText: UILabel!
+    @IBOutlet weak var addressView: UIView!
     
     var client : XDCClient?
     let AlamoObject = AlamoWebServices()
-   
+    
     var accountAddress = ""
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,9 +31,9 @@ class HomeViewController: UIViewController {
         self.addressText.text = self.accountAddress
         self.setupMenuDrawer()
         self.accountName.text = DataBaseManager.shared.getCurrentAccountName()
-
+        
         self.networkName.text = UserDefaultsManager.shared.getCurrentNetworName()
-
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -59,23 +60,24 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func onCopyAddress(_ sender: Any) {
-        UIPasteboard.general.string =  UserDefaultsManager.shared.getCurrentWalletAddress0x()
+        self.showToast(message: "Copied", font: .systemFont(ofSize: 14.0), view: addressView)
+        UIPasteboard.general.string =  UserDefaultsManager.shared.getCurrentNetworkWalletAddress()
     }
     func getBalance() {
         
-       
+        
         self.client!.eth_getBalance(address: XDCAddress(UserDefaultsManager.shared.getMainWalletAddress()), block: .Latest) { (error, balanceOf) in
-                
+            
             if (balanceOf != nil){
                 let value = balanceOf!/1000000000000000000
                 print(value)
-               
-              DispatchQueue.main.async {
-                   self.mainBalance.text =  "\(value) XDC"
-                   self.getXdcPrice(xdcVal: value)
-              }
+                
+                DispatchQueue.main.async {
+                    self.mainBalance.text =  "\(value) XDC"
+                    self.getXdcPrice(xdcVal: value)
+                }
             }
-              
+            
         }
     }
     
@@ -86,7 +88,7 @@ class HomeViewController: UIViewController {
         let scaner = ScannerViewController()
         self.present(scaner, animated: true, completion: nil)
         scaner.completionHandler = { qrCode in
-        
+            
             if(!qrCode.isEmpty) {
                 globaReceiverAddress = qrCode
                 
@@ -109,7 +111,7 @@ class HomeViewController: UIViewController {
     
 }
 
- 
+
 
 extension HomeViewController:MenuDrawerProtocol {
     
@@ -117,60 +119,59 @@ extension HomeViewController:MenuDrawerProtocol {
     func onAccount() {
         
         let pickerViewClass = self.storyboard?.instantiateViewController(withIdentifier: "MyAccountsDialog") as! MyAccountsDialog
-                        
-       
-                            self.present(pickerViewClass, animated: true, completion: nil)
-//                           pickerViewClass.completionHandler = { selectedRow in
-//                              // self.positionButton.setTitle( self.positionArray[selectedRow], for: .normal)
-//                              // self.selectedIndex = selectedRow
-//                               return  50
-//        }
         
-            
         
-       
+        self.present(pickerViewClass, animated: true, completion: nil)
+        //                           pickerViewClass.completionHandler = { selectedRow in
+        //                              // self.positionButton.setTitle( self.positionArray[selectedRow], for: .normal)
+        //                              // self.selectedIndex = selectedRow
+        //                               return  50
+        //        }
+        
+        
+        
+        
     }
     
     
     func setupMenuDrawer() {
         
         menuDrawer.setTableViewData(data: ["View on Observatory" , "Settings" , "Info/Help" , "Logout"], images: ["View on observatory" , "Settings" , "Info" , "Log out"])
-         
-        menuDrawer.initialize(view: self.view) 
-      
+        
+        menuDrawer.initialize(view: self.view)
+        
         delegateMenuDrawer = self
     }
     
     
     func onSelectRow(row: Int) {
         
-        
-                switch row {
-                case 0:
-                    openObservatory()
-                case 1:
-                    let viewController = self.storyboard?.instantiateViewController(withIdentifier: "SettingsViewController") as! SettingsViewController
-                    viewController.modalPresentationStyle = .fullScreen
-                    self.present(viewController, animated: true, completion: nil)
-                case 2:
-                    let viewController = self.storyboard?.instantiateViewController(withIdentifier: "InfoHelpVC") as! InfoHelpVC
-                    viewController.modalPresentationStyle = .fullScreen
-                    self.present(viewController, animated: true, completion: nil)
-        
-                case 3:
-                    self.logout()
-                    
-                default:
-                    print("Default")
-                }
+        switch row {
+        case 0:
+            openObservatory()
+        case 1:
+            let viewController = self.storyboard?.instantiateViewController(withIdentifier: "SettingsViewController") as! SettingsViewController
+            viewController.modalPresentationStyle = .fullScreen
+            self.present(viewController, animated: true, completion: nil)
+        case 2:
+            let viewController = self.storyboard?.instantiateViewController(withIdentifier: "InfoHelpVC") as! InfoHelpVC
+            viewController.modalPresentationStyle = .fullScreen
+            self.present(viewController, animated: true, completion: nil)
+            
+        case 3:
+            self.logout()
+            
+        default:
+            print("Default")
+        }
         
     }
     
     func logout() {
-         //UserDefaultsManager.shared.clearUserDefaults()
-         UserDefaultsManager.shared.logOut()
-         SceneDelegate.shared?.checkLogin()
-         
+        //UserDefaultsManager.shared.clearUserDefaults()
+        UserDefaultsManager.shared.logOut()
+        SceneDelegate.shared?.checkLogin()
+        
     }
     
     func openObservatory() {
@@ -195,12 +196,12 @@ extension HomeViewController:MenuDrawerProtocol {
 extension HomeViewController {
     
     func getXdcPrice(xdcVal: BigUInt) {
-      
+        
         let xdcValueInDouble = Double(xdcVal)
-
+        
         
         AlamoObject.getXdcUsdPrice() { price in
-           
+            
             let price = xdcValueInDouble * price
             
             DispatchQueue.main.async {
@@ -208,8 +209,8 @@ extension HomeViewController {
             }
             
         }
- 
+        
         
     }
 }
- 
+

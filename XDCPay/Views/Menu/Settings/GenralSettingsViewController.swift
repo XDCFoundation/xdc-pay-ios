@@ -9,7 +9,8 @@ import UIKit
 
 class GenralSettingsViewController: UIViewController {
     
-    var currencyArray = ["USD" , "INR" , "EUR" , "RUB" , "SNT", "SGD- Singapore Dollar" , "SAI- SAI"]
+//    var currencyArray = ["USD" , "INR" , "EUR" , "RUB" , "SNT", "SGD- Singapore Dollar" , "SAI- SAI"]
+    var currencyArray = ["USD"]
     
 //    var languageArray = ["Hindi" , "English" , "Spanish" , "Russian" , "Korean" , "Portugal- Brazil" , "Japanese"]
     var languageArray = ["English"]

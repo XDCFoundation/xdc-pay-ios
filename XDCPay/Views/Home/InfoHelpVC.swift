@@ -15,7 +15,7 @@ class InfoHelpVC : UIViewController {
     
     override func viewDidLoad() {        
         let version = version()
-        self.contentLbl.text = "XDC Pay Version \n" + "\(version)" + "\n\n" + Constants.infoHelpStr
+        self.contentLbl.text = "XDCPay Version \n" + "\(version) (Beta)" + "\n\n" + Constants.infoHelpStr
     }
     
     func version() -> String {

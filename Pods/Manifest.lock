@@ -12,6 +12,9 @@ PODS:
     - GTProgressBar
     - Navajo-Swift
   - secp256k1.swift (0.1.4)
+  - SwiftMessages (9.0.6):
+    - SwiftMessages/App (= 9.0.6)
+  - SwiftMessages/App (9.0.6)
   - SwiftyJSON (5.0.1)
   - XDC3Swift (1.4.0):
     - BigInt (~> 5.2.0)
@@ -22,6 +25,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.9.0)
   - PSMeter
+  - SwiftMessages (~> 9.0)
   - SwiftyJSON
   - XDC3Swift
 
@@ -36,6 +40,7 @@ SPEC REPOS:
     - Navajo-Swift
     - PSMeter
     - secp256k1.swift
+    - SwiftMessages
     - SwiftyJSON
     - XDC3Swift
 
@@ -49,9 +54,10 @@ SPEC CHECKSUMS:
   Navajo-Swift: 57b93e73efbfbf452433efbff04402de56beff51
   PSMeter: 86aa508e05171a228c0b8faf983dd744bd99c6a0
   secp256k1.swift: a7e7a214f6db6ce5db32cc6b2b45e5c4dd633634
+  SwiftMessages: f0c7ef4705a570ad6c5e208b611f4333e660ed92
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
   XDC3Swift: 75993e75207ab0a73d06702a454e7e7a5e0910dc
 
-PODFILE CHECKSUM: 04d3bd1a82f414d1a786d98569483a362932f933
+PODFILE CHECKSUM: b35570b070d46e476229477f4b6daf112d9084b6
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.3

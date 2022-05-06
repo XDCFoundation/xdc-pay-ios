@@ -89,9 +89,11 @@ class CreateNewWalletViewController: UIViewController {
     }
     @IBAction func createWalletBtnAction(_ sender: UIButton) {
         
-        if(newPassword.text! != confirmPassword!.text ) {
-            showAlert(message: "Password does not match")
+        if(psMeter.passwordStrength == PasswordStrength.weak || psMeter.passwordStrength == PasswordStrength.veryWeak ) {
+   
+            showAlert(message: "Password is \(psMeter.passwordStrength!)")
             return
+            
         }
         
         if(newPassword.text!.count < 8) {
@@ -99,12 +101,15 @@ class CreateNewWalletViewController: UIViewController {
             return
         }
         
-        if(psMeter.passwordStrength == PasswordStrength.weak || psMeter.passwordStrength == PasswordStrength.veryWeak ) {
-   
-            showAlert(message: "Password is \(psMeter.passwordStrength!)")
+        if(newPassword.text! != confirmPassword!.text ) {
+            showAlert(message: "Password does not match")
             return
-            
         }
+        
+//        if !flag1 {
+//            showAlert(message: "Check XDC Pay cannot recover this password for me")
+//            return
+//        }
         
         if newPassword.text == confirmPassword.text && flag1 == true {
            
