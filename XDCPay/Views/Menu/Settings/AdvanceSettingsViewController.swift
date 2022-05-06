@@ -16,7 +16,12 @@ class AdvanceSettingsViewController: UIViewController {
     }
     
 
+    @IBAction func DownloadStateLogsBtnAction(_ sender: UIButton) {
+        MessageDisplayer.showMessage(message: "Under development")
+    }
+    
     @IBAction func resetAccountBtnAction(_ sender: UIButton) {
+        MessageDisplayer.showMessage(message: "Under development")
     }
     
 

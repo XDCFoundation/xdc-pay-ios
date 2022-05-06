@@ -178,6 +178,12 @@
 		84F298CE2800382300F8476F /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F298CD2800382300F8476F /* UIViewController.swift */; };
 		84FD7EA12818044A00CEB47D /* Dialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FD7EA02818044A00CEB47D /* Dialog.swift */; };
 		8F142DC0281FEBD300A3663A /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F142DBF281FEBD300A3663A /* HelpViewController.swift */; };
+		8F4D00432823F716009AF24D /* TimeLimits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4D00402823F716009AF24D /* TimeLimits.swift */; };
+		8F4D00442823F716009AF24D /* FadeInOutAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4D00412823F716009AF24D /* FadeInOutAnimation.swift */; };
+		8F4D00452823F716009AF24D /* MessageDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4D00422823F716009AF24D /* MessageDisplayer.swift */; };
+		8F4D00472823FB9E009AF24D /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4D00462823FB9E009AF24D /* String+Localized.swift */; };
+		8F4D00492823FC0E009AF24D /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4D00482823FC0E009AF24D /* String+Extensions.swift */; };
+		8F4E40A32823C8250015690A /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4E40A22823C8250015690A /* TransactionViewController.swift */; };
 		8F6F572F2820FC6C00DDDE70 /* Storyboard3.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F6F572E2820FC6C00DDDE70 /* Storyboard3.storyboard */; };
 		ECDE5F2206DF67B3CD0A8767 /* Pods_XDCPay_XDCPayUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 318E80B364AB4EDDBA8F16C7 /* Pods_XDCPay_XDCPayUITests.framework */; };
 /* End PBXBuildFile section */
@@ -325,6 +331,12 @@
 		84F298CD2800382300F8476F /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		84FD7EA02818044A00CEB47D /* Dialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dialog.swift; sourceTree = "<group>"; };
 		8F142DBF281FEBD300A3663A /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		8F4D00402823F716009AF24D /* TimeLimits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLimits.swift; sourceTree = "<group>"; };
+		8F4D00412823F716009AF24D /* FadeInOutAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeInOutAnimation.swift; sourceTree = "<group>"; };
+		8F4D00422823F716009AF24D /* MessageDisplayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageDisplayer.swift; sourceTree = "<group>"; };
+		8F4D00462823FB9E009AF24D /* String+Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
+		8F4D00482823FC0E009AF24D /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		8F4E40A22823C8250015690A /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
 		8F6F572E2820FC6C00DDDE70 /* Storyboard3.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard3.storyboard; sourceTree = "<group>"; };
 		981E7A6408BE28394FE30FD4 /* Pods_XDCPayTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XDCPayTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D64173F68F4DFCF442AB2A35 /* Pods-XDCPay-XDCPayUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XDCPay-XDCPayUITests.debug.xcconfig"; path = "Target Support Files/Pods-XDCPay-XDCPayUITests/Pods-XDCPay-XDCPayUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -483,6 +495,8 @@
 		7F6278A527E8FB8A00782EE0 /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
+				8F4D00482823FC0E009AF24D /* String+Extensions.swift */,
+				8F4D00462823FB9E009AF24D /* String+Localized.swift */,
 				84C02DCE27F32634007B0831 /* UIColor.swift */,
 				7F6278A627E8FBDA00782EE0 /* UIView+Extention.swift */,
 				8463260027F42AD500437028 /* Others.swift */,
@@ -546,6 +560,7 @@
 			children = (
 				8F142DBE281FEB6300A3663A /* Help */,
 				846325F527F410C600437028 /* Settings */,
+				8F4E40A22823C8250015690A /* TransactionViewController.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -739,6 +754,7 @@
 		84C8F7EA27F2C1A700F6666C /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				8F4D003F2823F704009AF24D /* MessageDisplayer */,
 				840ED2E428129DBA001FC4A5 /* TextField */,
 				84BDBD9427F70B8A0068BF6A /* Dialogs */,
 				8463260227F430EC00437028 /* GlobalPicker */,
@@ -788,6 +804,16 @@
 				8F142DBF281FEBD300A3663A /* HelpViewController.swift */,
 			);
 			path = Help;
+			sourceTree = "<group>";
+		};
+		8F4D003F2823F704009AF24D /* MessageDisplayer */ = {
+			isa = PBXGroup;
+			children = (
+				8F4D00412823F716009AF24D /* FadeInOutAnimation.swift */,
+				8F4D00422823F716009AF24D /* MessageDisplayer.swift */,
+				8F4D00402823F716009AF24D /* TimeLimits.swift */,
+			);
+			path = MessageDisplayer;
 			sourceTree = "<group>";
 		};
 		90921ABFF9292510E940AF45 /* Frameworks */ = {
@@ -1059,11 +1085,13 @@
 				840ED2E82812CDC8001FC4A5 /* ConfirmRecoveryVC.swift in Sources */,
 				840ED2E628129DCB001FC4A5 /* TextViewWithPlaceholder.swift in Sources */,
 				84C02DCB27F3218B007B0831 /* ViewPagerTabContainer.swift in Sources */,
+				8F4D00432823F716009AF24D /* TimeLimits.swift in Sources */,
 				843A40AD2804448E0003D130 /* QRCode.swift in Sources */,
 				84665F852816A82D0020C12F /* CommonModels.swift in Sources */,
 				84BDBD8D27F6E7220068BF6A /* ContactCell.swift in Sources */,
 				7F62784D27E8DC7900782EE0 /* AppDelegate.swift in Sources */,
 				7F5E509627EC61350076FCD5 /* LandingPageViewController.swift in Sources */,
+				8F4D00472823FB9E009AF24D /* String+Localized.swift in Sources */,
 				84C8F7F427F2C1BE00F6666C /* Extentions.swift in Sources */,
 				84F01600280521410051CD00 /* ScannerViewController.swift in Sources */,
 				849590FF27F5918200A234F1 /* SecurityTableViewController.swift in Sources */,
@@ -1100,6 +1128,7 @@
 				848E434C27F5B90100501109 /* PrivateKeyViewController.swift in Sources */,
 				84C02DC327F318DF007B0831 /* ViewPagerOptions.swift in Sources */,
 				84FD7EA12818044A00CEB47D /* Dialog.swift in Sources */,
+				8F4D00442823F716009AF24D /* FadeInOutAnimation.swift in Sources */,
 				84466FE127F5ABD700EA7513 /* CommonPasswordViewController.swift in Sources */,
 				84C02DC927F31F62007B0831 /* ViewPagerItemViewController.swift in Sources */,
 				849590D527F56DF800A234F1 /* IQKeyboardManager.swift in Sources */,
@@ -1109,7 +1138,9 @@
 				8430964027F4898A0040BEB1 /* AddNetworkViewController.swift in Sources */,
 				849590FB27F58D4500A234F1 /* SecurityViewController.swift in Sources */,
 				84F0160228053DF80051CD00 /* String.swift in Sources */,
+				8F4D00492823FC0E009AF24D /* String+Extensions.swift in Sources */,
 				84119C1E27FAB81A002E2F69 /* AccountCell.swift in Sources */,
+				8F4E40A32823C8250015690A /* TransactionViewController.swift in Sources */,
 				849590AE27F56DF800A234F1 /* IQTextView.swift in Sources */,
 				84466FE327F5B3C700EA7513 /* SeedWordsViewController.swift in Sources */,
 				849590BD27F56DF800A234F1 /* IQToolbar.swift in Sources */,
@@ -1146,6 +1177,7 @@
 				849590E727F56DF800A234F1 /* IQUITextFieldView+Additions.swift in Sources */,
 				7F5E50A027EC68020076FCD5 /* CreateNewWalletViewController.swift in Sources */,
 				849590B127F56DF800A234F1 /* IQKeyboardManager+Internal.swift in Sources */,
+				8F4D00452823F716009AF24D /* MessageDisplayer.swift in Sources */,
 				8430963B27F471490040BEB1 /* NetworkViewController.swift in Sources */,
 				84665F772816764B0020C12F /* LoginVC.swift in Sources */,
 				84A7940427FEB026001620E0 /* Constants.swift in Sources */,

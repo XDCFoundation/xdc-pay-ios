@@ -90,8 +90,16 @@ class ImportFromSeedViewController: UIViewController {
     
     @IBAction func importWalletBtnAction(_ sender: UIButton) {
         
-        if(newPassword.text! != confirmPassword!.text ) {
-            showAlert(message: "Password does not match")
+        if(secretTextView.text!.count < 24) {
+            
+            showAlert(message: "Please enter correct Secret Phrase")
+            return
+            
+        }
+        
+        if(psMeter.passwordStrength == PasswordStrength.weak || psMeter.passwordStrength == PasswordStrength.veryWeak ) {
+            
+            showAlert(message: "Password strength is \(psMeter.passwordStrength!)")
             return
         }
         
@@ -100,21 +108,11 @@ class ImportFromSeedViewController: UIViewController {
             return
         }
         
-        if(psMeter.passwordStrength == PasswordStrength.weak || psMeter.passwordStrength == PasswordStrength.veryWeak ) {
-            
-            showAlert(message: "Password is \(psMeter.passwordStrength!)")
+        if(newPassword.text! != confirmPassword!.text ) {
+            showAlert(message: "Password does not match")
             return
-            
         }
-        
-        if(secretTextView.text!.count < 24) {
-            
-            showAlert(message: "Please enter correct Secret Phrase")
-            return
-            
-        }
-        
-        
+    
         
         if newPassword.text == confirmPassword.text &&  self.secretTextView.text!.count >= 24   {
             let mnemonic = secretTextView!.text

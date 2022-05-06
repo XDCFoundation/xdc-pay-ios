@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 import HDWalletKit
- 
+
 var baseUrl3000 = "http://xdc-nft-elb-1240623583.us-east-2.elb.amazonaws.com:3000/" // Users
 var baseUrl3001 = "http://xdc-nft-elb-1240623583.us-east-2.elb.amazonaws.com:3001/" //
 var baseUrl3002 = "http://xdc-nft-elb-1240623583.us-east-2.elb.amazonaws.com:3002/" // Content
@@ -22,13 +22,13 @@ struct Constants {
     static let Content_Details = baseUrl3002 + "user-content"
     static let like_Video = baseUrl3002 + "like-dislike-video"
     
-
-
+    
+    
     static let publishVideo = "content"
-
+    
     static let homeDetails = "user-content"
     static let categoryContent = "category-content"
-
+    
     static let Publish_Vedios = baseUrl3002 + "content"
     static let Owned_Videos = "total-owned-videos"
     static let Purchased_Videos = "purchased-by-user"
@@ -83,7 +83,7 @@ struct Constants {
     static let put_manage_notification = baseUrl3000 + "edit-user-details"
     
     static let userByUserId = baseUrl3000 + "user-by-userId"
-
+    
     static let user_Info = "user-profile"
     static let update_content_preferences = "update-content-preference"
     
@@ -130,9 +130,19 @@ enum AppColors: String {
     case placeholderColor = "848484"
     case textColor = "2A2A2A"
     case darkColor = "707070"
+    case textForground = "FFFFFF"
+    case backkgroundDark = "2149B9"
     
     func color() -> UIColor {
         return UIColor(hexCode: rawValue)
     }
 }
 
+func log(_ message: String,
+         function: String = #function,
+         file: String = #file,
+         line: Int = #line) {
+    
+    print("Message \"\(message)")
+    //    print("Message \"\(message)\" (File: \(file), Function: \(function), Line: \(line))")
+}

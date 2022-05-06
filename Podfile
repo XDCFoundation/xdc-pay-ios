@@ -11,6 +11,7 @@ target 'XDCPay' do
   pod 'Alamofire', '~> 4.9.0'
   pod 'SwiftyJSON'
   pod 'PSMeter'
+  pod 'SwiftMessages', '~> 9.0'
 
   target 'XDCPayTests' do
     inherit! :search_paths

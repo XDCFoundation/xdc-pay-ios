@@ -22,7 +22,7 @@ class BuyVC: UIViewController {
         selectedNetwork = UserDefaultsManager.shared.getCurrentNetworName()
         faucetBtn.setTitle("  \(selectedNetwork ?? "")", for: .normal)
         
-        if(isMainNet) {
+        if(selectedNetwork == "XDC Mainnet") {
             self.simplexView.isHidden = false
             self.faucetView.isHidden = true
         }else {
@@ -33,8 +33,12 @@ class BuyVC: UIViewController {
     
     @IBAction func onBuySimplex(_ sender: Any) {
         
-        if let url = URL(string: "https://simplex.bringtotheblock.net/") {
-            UIApplication.shared.open(url)
+        let networks = DataBaseManager.shared.getNetworks()
+        if let index = networks.firstIndex(where: { $0.name == selectedNetwork }) {
+            let url = networks[index].url
+            if let url = URL(string: "\(url)") {
+                UIApplication.shared.open(url)
+            }
         }
         
     }

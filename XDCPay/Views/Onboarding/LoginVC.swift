@@ -26,7 +26,7 @@ class LoginVC: UIViewController {
                 UserDefaults.standard.setValue(false, forKey: "logOut")
                 SceneDelegate.shared?.checkLogin()
             }else {
-                self.showAlert(message: "The Password you entered is incorrect. Please try again.")
+                showAlert(message: "Password does not match")
             }
             
         }

@@ -6,5 +6,6 @@ ${BUILT_PRODUCTS_DIR}/GTProgressBar/GTProgressBar.framework
 ${BUILT_PRODUCTS_DIR}/GenericJSON/GenericJSON.framework
 ${BUILT_PRODUCTS_DIR}/Navajo-Swift/Navajo_Swift.framework
 ${BUILT_PRODUCTS_DIR}/PSMeter/PSMeter.framework
+${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework
 ${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework
 ${BUILT_PRODUCTS_DIR}/secp256k1.swift/secp256k1.framework

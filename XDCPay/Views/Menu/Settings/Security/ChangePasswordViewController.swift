@@ -15,7 +15,8 @@ class ChangePasswordViewController: UIViewController {
     @IBOutlet var createWalletBtn: UIButton!
     @IBOutlet var newSwitch: UISwitch!
     @IBOutlet var understandText: UILabel!
-    
+    @IBOutlet weak var showBtn: UIButton!
+    var showSelected = true
    
     
     var flag1 = false
@@ -30,8 +31,16 @@ class ChangePasswordViewController: UIViewController {
     
     @IBAction func onShowPassword(_ sender: Any) {
         
-        self.newPassword.isSecureTextEntry = false
-        self.confirmPassword.isSecureTextEntry = false
+        if showSelected {
+            self.newPassword.isSecureTextEntry = false
+            self.confirmPassword.isSecureTextEntry = false
+            self.showBtn.setTitle("Hide", for: .normal)
+        } else {
+            self.newPassword.isSecureTextEntry = true
+            self.confirmPassword.isSecureTextEntry = true
+            self.showBtn.setTitle("Show", for: .normal)
+        }
+        showSelected = !showSelected
     }
     
     func hexStringToUIColor (hex:String) -> UIColor {
@@ -86,17 +95,18 @@ class ChangePasswordViewController: UIViewController {
             showAlert(message: "Password does not match")
             return
         }
-        
-        if(newPassword.text!.count < 8) {
-            showAlert(message: "Password length should be more then eight")
-            return
-        }
+      
         
         if(psMeter.passwordStrength == PasswordStrength.weak || psMeter.passwordStrength == PasswordStrength.veryWeak ) {
    
             showAlert(message: "Password is \(psMeter.passwordStrength!)")
             return
             
+        }
+        
+        if(newPassword.text!.count < 8) {
+            showAlert(message: "Password length should be more then eight")
+            return
         }
         
         if newPassword.text == confirmPassword.text && flag1 == true {

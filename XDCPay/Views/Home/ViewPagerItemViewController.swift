@@ -24,9 +24,14 @@ class ViewPagerItemViewController: UIViewController, UITableViewDelegate, UITabl
         self.tableView.register(UINib(nibName: "TransactionCell", bundle: nil), forCellReuseIdentifier: "TransactionCell")
         self.tableView.register(UINib(nibName: "TokenCell", bundle: nil), forCellReuseIdentifier: "TokenCell")
        
-        
+        //Token or NFT
     }
     
+    @IBAction func addTokenBtnAction(_ sender: UIButton) {
+        MessageDisplayer.showMessage(message: "Under development")
+    }
+    
+    //MARK: - UITableview Delegates
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if(position == 0) {
             return 5
@@ -47,14 +52,11 @@ class ViewPagerItemViewController: UIViewController, UITableViewDelegate, UITabl
             let cell = self.tableView.dequeueReusableCell(withIdentifier: "TransactionCell", for: indexPath) as! TransactionCell
             return cell
             
-            
-        }else {
+        } else {
             self.addTokenButton.isHidden = false
             let cell = self.tableView.dequeueReusableCell(withIdentifier: "TokenCell", for: indexPath) as! TokenCell
             return cell
         }
-         
-        
          
     }
     

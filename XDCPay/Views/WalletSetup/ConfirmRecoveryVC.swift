@@ -96,6 +96,8 @@ class ConfirmRecoveryVC: UIViewController {
             
                 self.present(vc, animated: true, completion: nil)
             
+        } else {
+            showAlert(message: "Enter correct recovery phrase")
         }
         
         
