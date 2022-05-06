@@ -90,6 +90,15 @@ class ImportFromSeedViewController: UIViewController {
     
     @IBAction func importWalletBtnAction(_ sender: UIButton) {
         
+        let input = secretTextView.text!
+        let uppers = CharacterSet.uppercaseLetters
+        input.unicodeScalars.forEach {
+            if uppers.contains($0) {
+                showAlert(message: "Seed words only have lowercase characters")
+                return
+            }
+        }        
+        
         if(secretTextView.text!.count < 24) {
             
             showAlert(message: "Please enter correct Secret Phrase")
@@ -140,19 +149,4 @@ class ImportFromSeedViewController: UIViewController {
         }
     }
     
-}
-
-extension ImportFromSeedViewController : UITextViewDelegate {
-    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        
-        let allowedCharacters = CharacterSet(charactersIn:"abcdefghijklmnopqrstuvwxyz ").inverted
-        let components = text.components(separatedBy: allowedCharacters)
-        let filtered = components.joined(separator: "")
-        
-        if text == filtered {
-            return true
-        } else {
-            return false
-        }
-    }
 }
