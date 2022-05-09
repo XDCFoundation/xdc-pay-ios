@@ -6,7 +6,7 @@ struct AllNetworks: Codable {
         enum CodingKeys: String, CodingKey {
             case responseData = "response"
         }
-    }
+}
 
     // MARK: - ResponseDatum
 struct Network: Codable {
@@ -59,3 +59,42 @@ struct Network: Codable {
          }
  }
  
+
+
+
+struct AllTransactions: Codable {
+        
+    var responseData: [Transaction]?
+
+        enum CodingKeys: String, CodingKey {
+            case responseData = "response"
+        }
+    }
+
+    // MARK: - ResponseDatum
+struct Transaction: Codable {
+        
+        var gwei = ""
+        var recipientAddress = ""
+        var amount = ""
+        var gasLimit = ""
+        var hash = ""
+        var fee = ""
+        var total = ""
+        var myAddress = ""
+        var time = ""
+
+
+        enum CodingKeys: String, CodingKey {
+            case gwei = "gwei"
+            case recipientAddress = "recipientAddress"
+            case amount = "amount"
+            case gasLimit = "gasLimit"
+            case hash = "hash"
+            case fee = "fee"
+            case total = "total"
+            case myAddress = "myAddress"
+            case time = "time"
+        }
+}
+

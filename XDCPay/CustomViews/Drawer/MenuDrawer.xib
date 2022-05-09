@@ -25,7 +25,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zTd-9G-fS0">
-                            <rect key="frame" x="0.0" y="0.0" width="240" height="161"/>
+                            <rect key="frame" x="0.0" y="0.0" width="220" height="161"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile" translatesAutoresizingMaskIntoConstraints="NO" id="skr-c7-MgG">
                                     <rect key="frame" x="15" y="85" width="42" height="42"/>
@@ -35,7 +35,7 @@
                                     </constraints>
                                 </imageView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hRi-9s-26K">
-                                    <rect key="frame" x="0.0" y="141" width="240" height="1"/>
+                                    <rect key="frame" x="0.0" y="141" width="220" height="1"/>
                                     <color key="backgroundColor" red="0.8901960784313725" green="0.90588235294117647" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="1" id="hTw-YD-aHw"/>
@@ -114,26 +114,28 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.29939853499718561" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="zTd-9G-fS0" secondAttribute="trailing" constant="135" id="QrE-Ya-cQx"/>
                         <constraint firstItem="zTd-9G-fS0" firstAttribute="top" secondItem="mZO-JP-5Id" secondAttribute="top" id="T2y-vc-KCl"/>
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="68Z-7E-yEk">
-                    <rect key="frame" x="0.0" y="161" width="240" height="506"/>
+                    <rect key="frame" x="0.0" y="161" width="220" height="506"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="220" id="aEe-TO-LlU"/>
+                    </constraints>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="zTd-9G-fS0" firstAttribute="width" secondItem="68Z-7E-yEk" secondAttribute="width" id="Lz6-WI-Jhn"/>
                 <constraint firstItem="zTd-9G-fS0" firstAttribute="centerX" secondItem="68Z-7E-yEk" secondAttribute="centerX" id="O3a-xZ-Ha3"/>
                 <constraint firstItem="68Z-7E-yEk" firstAttribute="top" secondItem="zTd-9G-fS0" secondAttribute="bottom" id="YWn-MB-Igf"/>
                 <constraint firstItem="mZO-JP-5Id" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Z4m-bn-fJh"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="mZO-JP-5Id" secondAttribute="bottom" id="bbH-9e-ise"/>
-                <constraint firstItem="mZO-JP-5Id" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="jf1-qW-DNY"/>
+                <constraint firstAttribute="bottom" secondItem="mZO-JP-5Id" secondAttribute="bottom" id="bbH-9e-ise"/>
+                <constraint firstItem="mZO-JP-5Id" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="jf1-qW-DNY"/>
                 <constraint firstItem="68Z-7E-yEk" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="k9I-1U-71i"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="68Z-7E-yEk" secondAttribute="trailing" constant="135" id="pfA-7u-Nfv"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="68Z-7E-yEk" secondAttribute="bottom" id="wFG-5f-FTX"/>
+                <constraint firstAttribute="bottom" secondItem="68Z-7E-yEk" secondAttribute="bottom" id="wFG-5f-FTX"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="mZO-JP-5Id" secondAttribute="trailing" id="xAt-HP-CYW"/>
             </constraints>
             <connections>

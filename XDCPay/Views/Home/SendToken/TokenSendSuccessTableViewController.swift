@@ -28,7 +28,7 @@ class TokenSendSuccessTableViewController: UITableViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
 
-        self.myAddress.text = UserDefaultsManager.shared.getCurrentNetworkWalletAddress()
+        self.myAddress.text = UserDefaultsManager.shared.getCurrentAccoutWalletAddress()
         self.gwei.text = tempData["gwei"]
         self.toAddress.text = tempData["recipientAddress"]
         self.amount.text = tempData["amount"]
