@@ -106,10 +106,10 @@ class CreateNewWalletViewController: UIViewController {
             return
         }
         
-//        if !flag1 {
-//            showAlert(message: "Check XDC Pay cannot recover this password for me")
-//            return
-//        }
+        if !flag1 {
+            showAlert(message: "Check XDC Pay cannot recover this password for me")
+            return
+        }
         
         if newPassword.text == confirmPassword.text && flag1 == true {
            

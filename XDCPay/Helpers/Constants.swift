@@ -148,7 +148,7 @@ func log(_ message: String,
 }
 
 
-func getDateString() ->String {
+func getDateString(style:DateFormatter.Style = .short) ->String {
     
     // Create Date
     let date = Date()
@@ -157,12 +157,24 @@ func getDateString() ->String {
     let dateFormatter = DateFormatter()
 
     // Set Date/Time Style
-    dateFormatter.dateStyle = .short
-    dateFormatter.timeStyle = .short
+    dateFormatter.dateStyle = style
+    dateFormatter.timeStyle = style
 
     // Convert Date to String
     return dateFormatter.string(from: date) // September 9, 2020 at 12:24 PM
-
     
+}
+
+func getDateStringTest() ->String {
+    
+    // Create Date
+    let date = Date()
+
+    // Create Date Formatter
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "dd MMMM yyyy hh:mm:SSZ"
+
+    // Convert Date to String
+    return dateFormatter.string(from: date) // September 9, 2020 at 12:24 PM
     
 }

@@ -9,8 +9,7 @@ import Foundation
 
 class UserDefaultsManager  {
     
-    
-    static  let shared =  UserDefaultsManager()
+     static  let shared =  UserDefaultsManager()
     
     func setOrUpdateCurrentNetworkName(name:String) {
         UserDefaults.standard.setValue(name, forKey: "currentNetworkName")
@@ -20,10 +19,24 @@ class UserDefaultsManager  {
     }
     
     func getCurrentNetworkRpc() ->String {
-        
         return UserDefaults.standard.value(forKey: "currentNetwork") as! String
-        
     }
+    
+    func setCurrencyUpdateTime() {
+        UserDefaults.standard.setValue(getDateString(style: .long), forKey: "CurrencyUpdateTime")
+    }
+    
+    func setLanguageUpdateTime() {
+        UserDefaults.standard.setValue(getDateString(style: .long), forKey: "LanguageUpdateTime")
+    }
+    
+    func currencyUpdateTime() ->String {
+        return UserDefaults.standard.value(forKey: "CurrencyUpdateTime") as! String
+    }
+    func languageUpdateTime() ->String {
+        return UserDefaults.standard.value(forKey: "LanguageUpdateTime") as! String
+    }
+    
     
     func setOrUpdateCurrentNetworkRpc(url:String) {
         UserDefaults.standard.setValue(url, forKey: "currentNetwork")

@@ -136,6 +136,9 @@ class ImportFromSeedViewController: UIViewController {
             
             DataBaseManager.shared.addDefaultNetworks()
             
+            UserDefaultsManager.shared.setCurrencyUpdateTime()
+            UserDefaultsManager.shared.setLanguageUpdateTime()
+            
             
             DataBaseManager.shared.saveDefaultAccount(address: importFromMnemonic.address, privateKey: importFromMnemonic.rawPrivateKey, publicKey: importFromMnemonic.rawPublicKey)
             

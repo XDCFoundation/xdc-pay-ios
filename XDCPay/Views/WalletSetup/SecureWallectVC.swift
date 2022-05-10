@@ -114,7 +114,7 @@ class SecureWallectVC: UIViewController {
     }
     
     @IBAction func onCopyToClipBoard(_ sender: Any) {
-     
+        self.showCopyToast()
         UIPasteboard.general.string = seedArray?.joined(separator: " ")
       //  print(UIPasteboard.general.string)
       

@@ -11,7 +11,6 @@ class ReceiveViewController: UIViewController {
     @IBOutlet weak var accountName: UILabel!
     @IBOutlet weak var walletName: UILabel!
     @IBOutlet weak var qrImageView: UIImageView!
-    
     @IBOutlet weak var walletAddress: UILabel!
      
     
@@ -26,7 +25,8 @@ class ReceiveViewController: UIViewController {
     }
     
     @IBAction func onCopy(_ sender: Any) {
-        
+        UIPasteboard.general.string =  self.walletAddress.text!
+        self.showCopyToast()
     }
     
 
