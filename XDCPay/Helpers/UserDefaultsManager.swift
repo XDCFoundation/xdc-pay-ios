@@ -15,6 +15,9 @@ class UserDefaultsManager  {
     func setOrUpdateCurrentNetworkName(name:String) {
         UserDefaults.standard.setValue(name, forKey: "currentNetworkName")
     }
+    func resetAccount() {
+         UserDefaults.standard.setValue("", forKey: "transaction")
+    }
     
     func getCurrentNetworkRpc() ->String {
         
@@ -58,7 +61,7 @@ class UserDefaultsManager  {
             }
     }
     
-    func getCurrentNetworkWalletAddress()->String {
+    func getCurrentAccoutWalletAddress()->String {
         
         let walletData = UserDefaults.standard.array(forKey: "WalletData") ?? []
         

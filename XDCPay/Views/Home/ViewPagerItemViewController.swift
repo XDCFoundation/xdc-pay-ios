@@ -12,6 +12,9 @@ class ViewPagerItemViewController: UIViewController, UITableViewDelegate, UITabl
    
     @IBOutlet weak var addTokenButton: UIButton!
     
+    var transactions = [Transaction]()
+    
+    
     var position = 0
     
     @IBOutlet weak var tableView: UITableView!
@@ -24,7 +27,13 @@ class ViewPagerItemViewController: UIViewController, UITableViewDelegate, UITabl
         self.tableView.register(UINib(nibName: "TransactionCell", bundle: nil), forCellReuseIdentifier: "TransactionCell")
         self.tableView.register(UINib(nibName: "TokenCell", bundle: nil), forCellReuseIdentifier: "TokenCell")
        
+        self.transactions = DataBaseManager.shared.getTransactions()
+     
         //Token or NFT
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.addTokenButton.isHidden = true
     }
     
     @IBAction func addTokenBtnAction(_ sender: UIButton) {
@@ -34,7 +43,7 @@ class ViewPagerItemViewController: UIViewController, UITableViewDelegate, UITabl
     //MARK: - UITableview Delegates
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if(position == 0) {
-            return 5
+            return transactions.count
         }
         return 2
     }
@@ -49,8 +58,17 @@ class ViewPagerItemViewController: UIViewController, UITableViewDelegate, UITabl
             
             self.addTokenButton.isHidden = true
             
+            let transction = self.transactions[indexPath.row]
+ 
             let cell = self.tableView.dequeueReusableCell(withIdentifier: "TransactionCell", for: indexPath) as! TransactionCell
+            
+            cell.transactionHash.text = transction.hash
+            cell.symbol.text = "XDC"
+            cell.amount.text =  transction.amount
+            cell.time.text = transction.time
+
             return cell
+           
             
         } else {
             self.addTokenButton.isHidden = false

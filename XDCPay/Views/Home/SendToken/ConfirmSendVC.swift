@@ -23,7 +23,7 @@ class ConfirmSendVC: UIViewController {
     
     override func viewDidLoad() {
          
-        self.myAddress.text = UserDefaultsManager.shared.getCurrentNetworkWalletAddress()
+        self.myAddress.text = UserDefaultsManager.shared.getCurrentAccoutWalletAddress()
         self.gwei.text = data["gwei"]
         self.toAddress.text = data["recipientAddress"]
         self.amount.text = data["amount"]
@@ -59,9 +59,11 @@ class ConfirmSendVC: UIViewController {
              
             print(gasPrice ?? 0)
             
-            let transcation = XDCTransaction(from: nil, to: XDCAddress(to), value: BigUInt(amount*1000000000000000000), data: nil, nonce: 3, gasPrice: BigUInt(gasPrice!), gasLimit: BigUInt(50005), chainId: 51)
+            let chainId = DataBaseManager.shared.getNetworks().first?.id ?? "0"
+            
+            let transcation = XDCTransaction(from: nil, to: XDCAddress(to), value: BigUInt(amount*1000000000000000000), data: nil, nonce: 3, gasPrice: BigUInt(gasPrice!), gasLimit: BigUInt(50005), chainId: Int(chainId))
           
-            self.client.eth_sendRawTransaction(transcation, withAccount: xdcAccount!) { error, hash in
+            self.client.eth_sendRawTransaction(transcation, withAccount: xdcAccount!) { [self] error, hash in
                 print(hash)
                 if let hash = hash {
                     
@@ -69,6 +71,9 @@ class ConfirmSendVC: UIViewController {
                     self.data.updateValue(self.fees.text!, forKey: "fee")
                     self.data.updateValue(self.total.text!, forKey: "total")
                     self.data.updateValue(self.myAddress.text!, forKey: "myAddress")
+                   
+                    DataBaseManager.shared.addTransaction(data:data)
+                    
                     DispatchQueue.main.async {
                         let vc = self.storyboard?.instantiateViewController(identifier: "TokenSentSuccessVC") as! TokenSentSuccessVC
                         vc.data = self.data

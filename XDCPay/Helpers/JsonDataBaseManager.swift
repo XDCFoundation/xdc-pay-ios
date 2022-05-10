@@ -10,6 +10,73 @@ class DataBaseManager {
   
   static let shared = DataBaseManager()
     
+    
+    func addTransaction(data:[String:String]) {
+        
+        print(data)
+        
+        let savedTransactions = geTransactions()
+
+        if(savedTransactions.isEmpty) {
+            
+            let data = [
+                "gwei": data["gwei"],
+                "recipientAddress": data["recipientAddress"],
+                "amount": data["amount"],
+                "gasLimit": data["gasLimit"],
+                "hash":data["hash"],
+                "fee": data["fee"],
+                "total" : data["total"],
+                "time" : getDateString(),
+                "myAddress"  : UserDefaultsManager.shared.getCurrentAccoutWalletAddress()
+            ] as! [String:String]
+            
+            let jsonArray = ["response" : [data] ]
+            
+            print(jsonArray)
+            
+            let str = String(data: try! JSONEncoder().encode(jsonArray), encoding: .utf8)
+            print(str as Any)
+            
+            self.saveTransaction(data: (str!))
+            
+            
+        }else {
+            
+            
+            let dataJson = savedTransactions.data(using: .utf8)!
+
+            var transaction = try! JSONDecoder().decode(AllTransactions.self, from: dataJson)
+         
+            transaction.responseData!.append(Transaction(gwei: data["gwei"]!, recipientAddress: data["recipientAddress"]!, amount: data["amount"]!, gasLimit: data["gasLimit"]!, hash: data["hash"]!, fee: data["fee"]!, total: data["total"]!, myAddress: data["myAddress"]!,time: getDateString() ))
+            
+            let str = String(data: try! JSONEncoder().encode(transaction), encoding: .utf8)
+            print(str as Any)
+            
+            self.saveTransaction(data: (str!))
+            
+        }
+        
+    }
+    
+    func getTransactions() -> [Transaction] {
+       
+        let networkJsonString = geTransactions()
+ 
+        if(networkJsonString.isEmpty){
+            return [Transaction]()
+        }
+        
+        let dataJson = networkJsonString.data(using: .utf8)!
+
+        let transacton = try! JSONDecoder().decode(AllTransactions.self, from: dataJson)
+        
+        return transacton.responseData!
+ 
+    }
+    
+    
+    
     func addNetwork(name:String,rpc:String,id:String,symbol:String,url:String,isEditable:String) {
         
         let savedNetworks =  geNetworkJSON()
@@ -86,6 +153,23 @@ extension DataBaseManager {
     func geNetworkJSON() ->String {
         
         UserDefaults.standard.value(forKey: "networkJSON") as? String ?? ""
+       
+    }
+    
+}
+
+extension DataBaseManager {
+    
+    
+    private func saveTransaction(data:String) {
+        
+        UserDefaults.standard.setValue(data, forKey: "transaction")
+       
+    }
+    
+    func geTransactions() ->String {
+        
+        UserDefaults.standard.value(forKey: "transaction") as? String ?? ""
        
     }
     
@@ -312,7 +396,7 @@ func addDefaultNetworks () {
        
               DataBaseManager.shared.addNetwork(name: "XDC Mainnet", rpc: "https://xdcpayrpc.blocksscan.io/", id: "50", symbol: "XDC", url: "https://simplex.bringtotheblock.net/", isEditable: "No")
         
-              DataBaseManager.shared.addNetwork(name: "Localhost 8545", rpc: "https://localhost:8545", id: "", symbol: "", url: "", isEditable: "No")
+              DataBaseManager.shared.addNetwork(name: "Localhost 8545", rpc: "https://localhost:8545", id: "51", symbol: "", url: "", isEditable: "No")
         
         UserDefaultsManager.shared.setOrUpdateCurrentNetworkRpc(url:  DataBaseManager.shared.getNetworks().first?.rpc ?? "")
               UserDefaultsManager.shared.setOrUpdateCurrentNetworkName(name: DataBaseManager.shared.getNetworks().first?.name ?? "")

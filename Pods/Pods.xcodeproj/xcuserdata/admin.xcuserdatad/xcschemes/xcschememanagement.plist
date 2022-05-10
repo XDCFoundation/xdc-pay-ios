@@ -81,6 +81,16 @@
 			<key>orderHint</key>
 			<integer>9</integer>
 		</dict>
+		<key>SwiftMessages-SwiftMessages.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>16</integer>
+		</dict>
+		<key>SwiftMessages.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>15</integer>
+		</dict>
 		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>

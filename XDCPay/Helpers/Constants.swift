@@ -146,3 +146,23 @@ func log(_ message: String,
     print("Message \"\(message)")
     //    print("Message \"\(message)\" (File: \(file), Function: \(function), Line: \(line))")
 }
+
+
+func getDateString() ->String {
+    
+    // Create Date
+    let date = Date()
+
+    // Create Date Formatter
+    let dateFormatter = DateFormatter()
+
+    // Set Date/Time Style
+    dateFormatter.dateStyle = .short
+    dateFormatter.timeStyle = .short
+
+    // Convert Date to String
+    return dateFormatter.string(from: date) // September 9, 2020 at 12:24 PM
+
+    
+    
+}

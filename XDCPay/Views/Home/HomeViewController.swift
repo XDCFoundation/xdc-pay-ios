@@ -27,7 +27,7 @@ class HomeViewController: UIViewController {
         self.mainBalance.text =  "0 XDC"
         self.usdBalance.text = "$0 USD"
         homeVc = self
-        self.accountAddress = UserDefaultsManager.shared.getCurrentNetworkWalletAddress()
+        self.accountAddress = UserDefaultsManager.shared.getCurrentAccoutWalletAddress()
         self.addressText.text = self.accountAddress
         self.setupMenuDrawer()
         self.accountName.text = DataBaseManager.shared.getCurrentAccountName()
@@ -61,7 +61,7 @@ class HomeViewController: UIViewController {
     
     @IBAction func onCopyAddress(_ sender: Any) {
         self.showToast(message: "Copied", font: .systemFont(ofSize: 14.0), view: addressView)
-        UIPasteboard.general.string =  UserDefaultsManager.shared.getCurrentNetworkWalletAddress()
+        UIPasteboard.general.string =  UserDefaultsManager.shared.getCurrentAccoutWalletAddress()
     }
     func getBalance() {
         
@@ -149,6 +149,7 @@ extension HomeViewController:MenuDrawerProtocol {
         switch row {
         case 0:
             openObservatory()
+       
         case 1:
             let viewController = self.storyboard?.instantiateViewController(withIdentifier: "SettingsViewController") as! SettingsViewController
             viewController.modalPresentationStyle = .fullScreen

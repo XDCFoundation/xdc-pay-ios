@@ -55,7 +55,7 @@ class SendTokenTableViewController: UITableViewController {
     }
      
     func setMyAddress() {
-        let str = UserDefaultsManager.shared.getCurrentNetworkWalletAddress()
+        let str = UserDefaultsManager.shared.getCurrentAccoutWalletAddress()
         let index = str.index(str.startIndex, offsetBy: 12)
         let mySubstring1 = str[..<index]
         
