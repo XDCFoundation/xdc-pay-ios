@@ -24,10 +24,14 @@ class CreateNewWalletViewController: UIViewController {
         overrideUserInterfaceStyle = .light
         newSwitch.transform = CGAffineTransform(scaleX: 0.75, y: 0.75)
         createWalletBtn.layer.cornerRadius = 4
+      
         //enableBio.isHidden = true
        // newSwitch.isHidden = true
     }
     
+    @IBAction func onBackButtonPress(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     @IBAction func onShowPassword(_ sender: Any) {
         
         if showSelected {
@@ -106,10 +110,10 @@ class CreateNewWalletViewController: UIViewController {
             return
         }
         
-//        if !flag1 {
-//            showAlert(message: "Check XDC Pay cannot recover this password for me")
-//            return
-//        }
+        if !flag1 {
+            showAlert(message: "Check XDC Pay cannot recover this password for me")
+            return
+        }
         
         if newPassword.text == confirmPassword.text && flag1 == true {
            
@@ -123,7 +127,8 @@ class CreateNewWalletViewController: UIViewController {
           
             print(acc)
             vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: true, completion: nil)
+            
+            self.navigationController?.pushViewController(vc, animated: true)
             
         }
     }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -29,7 +29,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zQk-8s-qec">
-                                <rect key="frame" x="0.0" y="44" width="414" height="521"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="519.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="0rb-qJ-g6p">
                                     <size key="itemSize" width="414" height="542"/>
@@ -39,7 +39,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OnboardingCollectionViewCell" id="8eq-eq-DNH" customClass="OnboardingCollectionViewCell" customModule="XDCPay" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="-10.5" width="414" height="542"/>
+                                        <rect key="frame" x="0.0" y="-11.5" width="414" height="542"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="peM-MW-dNW">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="542"/>
@@ -122,7 +122,7 @@
                                 </connections>
                             </collectionView>
                             <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="K0p-jF-QpT" customClass="BorderedPageControl" customModule="XDCPay" customModuleProvider="target">
-                                <rect key="frame" x="158.5" y="605" width="97.5" height="26"/>
+                                <rect key="frame" x="156" y="603.5" width="102.5" height="27.5"/>
                                 <color key="pageIndicatorTintColor" systemColor="opaqueSeparatorColor"/>
                                 <color key="currentPageIndicatorTintColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
@@ -424,7 +424,7 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Back Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="XCg-eS-RaT">
                                                 <rect key="frame" x="0.0" y="0.0" width="33" height="27"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izc-wa-nkY" customClass="BackButton" customModule="XDCPay" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izc-wa-nkY" customClass="BackButtonNavigation" customModule="XDCPay" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="33" height="27"/>
                                             </button>
                                         </subviews>
@@ -806,7 +806,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scw-k2-Gv2">
-                                <rect key="frame" x="16" y="338" width="65.5" height="17"/>
+                                <rect key="frame" x="16" y="337.5" width="62" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="FL2-4R-nRJ"/>
                                 </constraints>
@@ -815,7 +815,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Password (min 8 chars)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ogo-Mg-9lv">
-                                <rect key="frame" x="16" y="363" width="382" height="44"/>
+                                <rect key="frame" x="16" y="362.5" width="382" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="jae-vf-8mA"/>
                                 </constraints>
@@ -826,7 +826,7 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LuJ-UF-p9l">
-                                <rect key="frame" x="16" y="449" width="123" height="17"/>
+                                <rect key="frame" x="16" y="448.5" width="116" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="9eA-fb-uvl"/>
                                 </constraints>
@@ -835,7 +835,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Nt-oI-gKJ">
-                                <rect key="frame" x="16" y="474" width="382" height="44"/>
+                                <rect key="frame" x="16" y="473.5" width="382" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="zme-ZP-onZ"/>
                                 </constraints>
@@ -844,7 +844,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZwT-9B-bOe" customClass="PSMeter" customModule="PSMeter">
-                                <rect key="frame" x="16" y="408" width="382" height="40"/>
+                                <rect key="frame" x="16" y="407.5" width="382" height="40"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="udU-lD-zPU"/>
@@ -854,7 +854,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="95"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Import from seed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0BL-Ai-eTv">
-                                        <rect key="frame" x="141" y="52" width="132" height="19"/>
+                                        <rect key="frame" x="145.5" y="52" width="123.5" height="19"/>
                                         <fontDescription key="fontDescription" name="Inter-Regular_Medium" family="Inter" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -877,7 +877,7 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Back Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="vSF-fh-NdJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="33" height="27"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lr0-Kw-e9F" customClass="BackButton" customModule="XDCPay" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lr0-Kw-e9F" customClass="BackButtonNavigation" customModule="XDCPay" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="33" height="27"/>
                                             </button>
                                         </subviews>
@@ -909,7 +909,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YfA-z6-fWE">
-                                <rect key="frame" x="348" y="370.5" width="37" height="29"/>
+                                <rect key="frame" x="348" y="370" width="36" height="29"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
                                 <state key="normal" title="Show">
                                     <color key="titleColor" red="0.1647058824" green="0.1647058824" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
@@ -944,7 +944,7 @@
                                 </connections>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Secret Recovery Phrase" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gue-VU-wfx">
-                                <rect key="frame" x="16" y="121" width="160.5" height="17"/>
+                                <rect key="frame" x="16" y="121" width="151" height="17"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular_Medium" family="Inter" pointSize="14"/>
                                 <color key="textColor" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -962,13 +962,13 @@
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show seed phrase" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GpK-IH-alR">
-                                <rect key="frame" x="40" y="299" width="122.5" height="17"/>
+                                <rect key="frame" x="40" y="299" width="116.5" height="16.5"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
                                 <color key="textColor" red="0.62352941176470589" green="0.66274509803921566" blue="0.72941176470588232" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MOs-aG-IjA">
-                                <rect key="frame" x="16" y="550" width="382" height="44"/>
+                                <rect key="frame" x="16" y="549.5" width="382" height="44"/>
                                 <color key="backgroundColor" red="0.01176470588" green="0.74509803919999995" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="W6r-a1-NJZ"/>
@@ -1028,7 +1028,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="526-yT-zOO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2704" y="72"/>
+            <point key="canvasLocation" x="2702.898550724638" y="71.651785714285708"/>
         </scene>
         <!--Confirm RecoveryVC-->
         <scene sceneID="flX-Kr-neb">
@@ -1045,7 +1045,7 @@
                                     <constraint firstAttribute="height" constant="44" id="IxC-vC-djF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                <state key="normal" title="Conform Recovery Phase">
+                                <state key="normal" title="Confirm Recovery Phase">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -1079,7 +1079,7 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Back Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="U3M-Sc-v27">
                                                 <rect key="frame" x="0.0" y="0.0" width="33" height="27"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44H-HV-50L" customClass="BackButton" customModule="XDCPay" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44H-HV-50L" customClass="BackButtonNavigation" customModule="XDCPay" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="33" height="27"/>
                                             </button>
                                         </subviews>
@@ -1251,7 +1251,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3eb-Ef-U6C">
+                            <navigationBar hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3eb-Ef-U6C">
                                 <rect key="frame" x="0.0" y="30" width="414" height="44"/>
                                 <items>
                                     <navigationItem id="DQh-Go-1fx"/>

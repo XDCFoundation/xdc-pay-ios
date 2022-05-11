@@ -10,6 +10,7 @@ import UIKit
 class CommonPasswordViewController: UIViewController {
     
     var topTitleText  = ""
+    var viewController = UIViewController()
     
     @IBOutlet weak var topTitle: UILabel!
     
@@ -45,26 +46,31 @@ class CommonPasswordViewController: UIViewController {
     
     @IBAction func onButtonPress(_ sender: Any) {
        
+      
         let password = UserDefaults.standard.array(forKey: "WalletData")![2]
        
         if(self.textField.text! == password as! String ) {
             
             switch topTitleText {
             case  "Secret seed words":
-                self.pVC(viewConterlerId: "SeedWordsViewController")
+                  viewController = self.storyboard!.instantiateViewController(withIdentifier: "SeedWordsViewController")
+              
             case  "Change Password":
-                self.pVC(viewConterlerId: "ChangePasswordViewController")
+                  viewController = self.storyboard!.instantiateViewController(withIdentifier: "ChangePasswordViewController")
+              
             case  "Show Private Key":
-                self.pVC(viewConterlerId: "PrivateKeyViewController")
+                 viewController = self.storyboard!.instantiateViewController(withIdentifier: "PrivateKeyViewController")
+              
             default:
                 print("")
             }
+            viewController.modalPresentationStyle = .fullScreen
+            self.navigationController?.pushViewController(viewController, animated: true)
         }else {
             showAlert(message: "Password not correct")
         }
         
     }
-    
-   
+    //Secure123$$
 
 }

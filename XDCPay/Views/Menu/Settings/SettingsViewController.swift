@@ -8,7 +8,7 @@ import  UIKit
 
 class SettingsViewController : UIViewController, UITableViewDelegate , UITableViewDataSource{
    
-    var titles = ["General Settings", "Advance Settings" , "Security & Privacy" , "Networks" , "Contacts"]
+    var titles = ["General Settings", "Advance Settings" , "Security & Privacy Settings" , "Contacts" , "Networks Settings" , "About"]
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -52,18 +52,21 @@ class SettingsViewController : UIViewController, UITableViewDelegate , UITableVi
             viewController = self.storyboard?.instantiateViewController(withIdentifier: "SecurityViewController") as! SecurityViewController
             
         case 3:
-            viewController = self.storyboard?.instantiateViewController(withIdentifier: "NetworkViewController") as! NetworkViewController
-        case 4:
             viewController = self.storyboard?.instantiateViewController(withIdentifier: "ContactsViewController") as! ContactsViewController
+     
+        case 4:
             
+            viewController = self.storyboard?.instantiateViewController(withIdentifier: "NetworkViewController") as! NetworkViewController
+            
+        case 5:
+            viewController = self.storyboard?.instantiateViewController(withIdentifier: "InfoHelpVC") as! InfoHelpVC
+             
         default:
             print("")
         }
         
         viewController.modalPresentationStyle = .fullScreen
-        
-        self.present(viewController, animated: true, completion: nil)
-        
+        self.navigationController?.pushViewController(viewController, animated: true)
         
     }
 }

@@ -39,7 +39,11 @@ class NetworkViewController: UIViewController , UITableViewDelegate, UITableView
     }
     
     @IBAction func onAddNetwork(_ sender: Any) {
-        self.pVC(viewConterlerId: "AddNetworkViewController")
+        
+        let vc = UIStoryboard(name: "Storyboard2", bundle: nil).instantiateViewController(withIdentifier: "AddNetworkViewController")
+        vc.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(vc, animated: true)
+
     }
     
 
@@ -75,7 +79,8 @@ class NetworkViewController: UIViewController , UITableViewDelegate, UITableView
         vc.modalPresentationStyle = .fullScreen
         vc.network = self.networks[indexPath.row]
         vc.selectedIndex = indexPath.row
-        self.present(vc, animated: true, completion: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
+        
         
     }
    

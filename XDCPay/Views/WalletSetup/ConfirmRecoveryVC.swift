@@ -88,12 +88,15 @@ class ConfirmRecoveryVC: UIViewController {
            
             DataBaseManager.shared.saveDefaultAccount(address: self.accountData[0], privateKey: self.accountData[1], publicKey: self.accountData[3])
         
+            UserDefaultsManager.shared.setCurrencyUpdateTime()
+            UserDefaultsManager.shared.setLanguageUpdateTime()
+           
             DataBaseManager.shared.addDefaultNetworks()
             
             let vc = UIStoryboard(name: "Storyboard2", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
                 vc.modalPresentationStyle = .fullScreen
                
-            
+                vc.modalTransitionStyle = .crossDissolve
                 self.present(vc, animated: true, completion: nil)
             
         } else {

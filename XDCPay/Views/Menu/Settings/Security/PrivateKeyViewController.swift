@@ -22,7 +22,12 @@ class PrivateKeyViewController: UIViewController {
     }
     
     @IBAction func onCopy(_ sender: Any) {
+        self.showCopyToast()
         UIPasteboard.general.string =  self.privateKey.text!
+    }
+    
+    @IBAction func bckButton(_ sender: Any) {
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
 

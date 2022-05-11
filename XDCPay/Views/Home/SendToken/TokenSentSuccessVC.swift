@@ -18,6 +18,7 @@ class TokenSentSuccessVC: UIViewController {
     }
 
     @IBAction func onCopy(_ sender: Any) {
+        self.showCopyToast()
         UIPasteboard.general.string =  self.hashOrAddress.text!
     }
     
@@ -30,7 +31,8 @@ class TokenSentSuccessVC: UIViewController {
     }
     
     @IBAction func onBackButton(_ sender: Any) {
-        self.closeAllAndMoveHome()
+         
+        SceneDelegate.shared?.checkLogin()
     }
     
     

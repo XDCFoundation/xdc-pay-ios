@@ -31,13 +31,13 @@ class HomeViewController: UIViewController {
         self.addressText.text = self.accountAddress
         self.setupMenuDrawer()
         self.accountName.text = DataBaseManager.shared.getCurrentAccountName()
-        
         self.networkName.text = UserDefaultsManager.shared.getCurrentNetworName()
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.getBalance()
+       // viewPagerItemViewController!.tableView.reloadData()
     }
     
     @IBAction func onBuy(_ sender: Any) {
@@ -60,7 +60,9 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func onCopyAddress(_ sender: Any) {
-        self.showToast(message: "Copied", font: .systemFont(ofSize: 14.0), view: addressView)
+        self.showCopyToast()
+      //  MessageDisplayer.showMessage(message: "Copy")
+      //  self.showToast(message: "Copied", font: .systemFont(ofSize: 14.0), view: addressView)
         UIPasteboard.general.string =  UserDefaultsManager.shared.getCurrentAccoutWalletAddress()
     }
     func getBalance() {
@@ -151,7 +153,7 @@ extension HomeViewController:MenuDrawerProtocol {
             openObservatory()
        
         case 1:
-            let viewController = self.storyboard?.instantiateViewController(withIdentifier: "SettingsViewController") as! SettingsViewController
+            let viewController = self.storyboard?.instantiateViewController(withIdentifier: "SettingNC") as! UINavigationController
             viewController.modalPresentationStyle = .fullScreen
             self.present(viewController, animated: true, completion: nil)
         case 2:

@@ -8,6 +8,8 @@
 
 import UIKit
 
+var viewPagerItemViewController : ViewPagerItemViewController?
+
 class ViewPagerItemViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
    
     @IBOutlet weak var addTokenButton: UIButton!
@@ -20,6 +22,7 @@ class ViewPagerItemViewController: UIViewController, UITableViewDelegate, UITabl
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
+        viewPagerItemViewController = self
          
         self.tableView.delegate = self
         self.tableView.dataSource = self
@@ -27,7 +30,7 @@ class ViewPagerItemViewController: UIViewController, UITableViewDelegate, UITabl
         self.tableView.register(UINib(nibName: "TransactionCell", bundle: nil), forCellReuseIdentifier: "TransactionCell")
         self.tableView.register(UINib(nibName: "TokenCell", bundle: nil), forCellReuseIdentifier: "TokenCell")
        
-        self.transactions = DataBaseManager.shared.getTransactions()
+        self.transactions = DataBaseManager.shared.getTransactions().filter{$0.myAddress == UserDefaultsManager.shared.getCurrentAccoutWalletAddress()}
      
         //Token or NFT
     }
