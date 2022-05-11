@@ -34,7 +34,8 @@ class SendTokenTableViewController: UITableViewController {
         self.amountToBeSend.keyboardType = .numberPad
         self.receiverAddress.text = globalRecieverAddress
         self.setupGasFees()
-        self.setMyAddress()
+        let addressStr = UserDefaultsManager.shared.getCurrentAccoutWalletAddress()
+        self.setMyAddress(str: addressStr)
         self.getBalance()
         self.receiverAddress.text = globaReceiverAddress
     }
@@ -54,8 +55,7 @@ class SendTokenTableViewController: UITableViewController {
         return 0.0
     }
      
-    func setMyAddress() {
-        let str = UserDefaultsManager.shared.getCurrentAccoutWalletAddress()
+    func setMyAddress(str:String) {
         let index = str.index(str.startIndex, offsetBy: 12)
         let mySubstring1 = str[..<index]
         

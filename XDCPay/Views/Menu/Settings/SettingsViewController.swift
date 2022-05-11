@@ -39,34 +39,44 @@ class SettingsViewController : UIViewController, UITableViewDelegate , UITableVi
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         switch indexPath.row {
-        
-        case 0:
-             
-         viewController = self.storyboard?.instantiateViewController(withIdentifier: "GenralSettingsViewController") as! GenralSettingsViewController
-      
+            
+        case 0:            
+            viewController = self.storyboard?.instantiateViewController(withIdentifier: "GenralSettingsViewController") as! GenralSettingsViewController
+            viewController.modalPresentationStyle = .fullScreen
+            self.navigationController?.pushViewController(viewController, animated: true)
+            
             
         case 1:
             viewController = self.storyboard?.instantiateViewController(withIdentifier: "AdvanceSettingsViewController") as! AdvanceSettingsViewController
+            viewController.modalPresentationStyle = .fullScreen
+            self.navigationController?.pushViewController(viewController, animated: true)
             
         case 2:
             viewController = self.storyboard?.instantiateViewController(withIdentifier: "SecurityViewController") as! SecurityViewController
+            viewController.modalPresentationStyle = .fullScreen
+            self.navigationController?.pushViewController(viewController, animated: true)
             
         case 3:
             viewController = self.storyboard?.instantiateViewController(withIdentifier: "ContactsViewController") as! ContactsViewController
-     
+            viewController.modalPresentationStyle = .fullScreen
+            self.navigationController?.pushViewController(viewController, animated: true)
+            
         case 4:
             
             viewController = self.storyboard?.instantiateViewController(withIdentifier: "NetworkViewController") as! NetworkViewController
+            viewController.modalPresentationStyle = .fullScreen
+            self.navigationController?.pushViewController(viewController, animated: true)
             
         case 5:
             viewController = self.storyboard?.instantiateViewController(withIdentifier: "InfoHelpVC") as! InfoHelpVC
-             
+            viewController.modalPresentationStyle = .fullScreen
+            self.navigationController?.pushViewController(viewController, animated: true)
+            
         default:
             print("")
         }
         
-        viewController.modalPresentationStyle = .fullScreen
-        self.navigationController?.pushViewController(viewController, animated: true)
+       
         
     }
 }

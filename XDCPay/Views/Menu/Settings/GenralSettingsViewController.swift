@@ -29,7 +29,7 @@ class GenralSettingsViewController: UIViewController {
         
         let pickerViewClass = self.storyboard?.instantiateViewController(withIdentifier: "PickerViewClass") as! PickerViewClass
                        pickerViewClass.pickerData = self.currencyArray
-        pickerViewClass.titleName = "Current Language"
+        pickerViewClass.titleName = "Base Currency"
                             self.present(pickerViewClass, animated: true, completion: nil)
                            pickerViewClass.completionHandler = { selectedRow in
                             UserDefaultsManager.shared.setCurrencyUpdateTime()
@@ -46,7 +46,7 @@ class GenralSettingsViewController: UIViewController {
         
         let pickerViewClass = self.storyboard?.instantiateViewController(withIdentifier: "PickerViewClass") as! PickerViewClass
                        pickerViewClass.pickerData = self.languageArray
-        pickerViewClass.titleName = "Base Currency"
+        pickerViewClass.titleName = "Current Language"
                             self.present(pickerViewClass, animated: true, completion: nil)
                             pickerViewClass.completionHandler = { selectedRow in
                             UserDefaultsManager.shared.setLanguageUpdateTime()
