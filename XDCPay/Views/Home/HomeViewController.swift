@@ -153,7 +153,7 @@ extension HomeViewController:MenuDrawerProtocol {
             openObservatory()
        
         case 1:
-            let viewController = self.storyboard?.instantiateViewController(withIdentifier: "SettingsViewController") as! SettingsViewController
+            let viewController = self.storyboard?.instantiateViewController(withIdentifier: "SettingNC") as! UINavigationController
             viewController.modalPresentationStyle = .fullScreen
             self.present(viewController, animated: true, completion: nil)
         case 2:

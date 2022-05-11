@@ -55,6 +55,7 @@ class SettingsViewController : UIViewController, UITableViewDelegate , UITableVi
             viewController = self.storyboard?.instantiateViewController(withIdentifier: "ContactsViewController") as! ContactsViewController
      
         case 4:
+            
             viewController = self.storyboard?.instantiateViewController(withIdentifier: "NetworkViewController") as! NetworkViewController
             
         case 5:
@@ -65,9 +66,7 @@ class SettingsViewController : UIViewController, UITableViewDelegate , UITableVi
         }
         
         viewController.modalPresentationStyle = .fullScreen
-        
-        self.present(viewController, animated: true, completion: nil)
-        
+        self.navigationController?.pushViewController(viewController, animated: true)
         
     }
 }

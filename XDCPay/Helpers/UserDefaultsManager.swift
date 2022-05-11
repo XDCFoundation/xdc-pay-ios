@@ -49,8 +49,6 @@ class UserDefaultsManager  {
     }
 
     
-   
-    
     func  updateWalletData(address:String,privateKey:String,rawPublicKey:String) {
         
         var walletData = UserDefaults.standard.array(forKey: "WalletData") ?? []

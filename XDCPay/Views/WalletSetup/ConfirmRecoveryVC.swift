@@ -96,7 +96,7 @@ class ConfirmRecoveryVC: UIViewController {
             let vc = UIStoryboard(name: "Storyboard2", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
                 vc.modalPresentationStyle = .fullScreen
                
-            
+                vc.modalTransitionStyle = .crossDissolve
                 self.present(vc, animated: true, completion: nil)
             
         } else {

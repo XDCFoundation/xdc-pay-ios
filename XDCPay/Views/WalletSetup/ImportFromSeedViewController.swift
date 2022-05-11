@@ -130,6 +130,7 @@ class ImportFromSeedViewController: UIViewController {
             
             let vc = UIStoryboard(name: "Storyboard2", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
             vc.modalPresentationStyle = .fullScreen
+            vc.modalTransitionStyle = .crossDissolve
             vc.accountAddress = importFromMnemonic.address
             
             UserDefaultsManager.shared.clearUserDefaults()

@@ -86,7 +86,7 @@ class ChangePasswordViewController: UIViewController {
         }
     }
     @IBAction func bckButton(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     @IBAction func onResetPassword(_ sender: UIButton) {
@@ -109,6 +109,11 @@ class ChangePasswordViewController: UIViewController {
             return
         }
         
+        if !flag1 {
+            showAlert(message: "Check XDC Pay cannot recover this password for me")
+            return
+        }
+        
         if newPassword.text == confirmPassword.text && flag1 == true {
            
             
@@ -118,7 +123,7 @@ class ChangePasswordViewController: UIViewController {
             
             UserDefaults.standard.setValue(walletData, forKey: "WalletData")
            
-            SceneDelegate.shared?.checkLogin()
+            self.navigationController?.popToRootViewController(animated: true)
             
         }
     }

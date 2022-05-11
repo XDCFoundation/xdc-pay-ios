@@ -26,5 +26,9 @@ class PrivateKeyViewController: UIViewController {
         UIPasteboard.general.string =  self.privateKey.text!
     }
     
+    @IBAction func bckButton(_ sender: Any) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
 
 }

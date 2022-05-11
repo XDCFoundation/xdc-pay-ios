@@ -108,4 +108,8 @@ class SeedWordsViewController: UIViewController {
         
     }
     
+    @IBAction func bckButton(_ sender: Any) {
+        self.navigationController?.`popToRootViewController`(animated: true)
+    }
 }
+

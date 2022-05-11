@@ -53,7 +53,7 @@ class AddNetworkViewController: UIViewController {
         
         DataBaseManager.shared.addNetwork(name: self.networkTextField.text!, rpc: self.rpcTextField.text!, id: self.chainIDTextField.text!, symbol: self.currencySymbolTextField.text!, url: self.networkTextField.text ?? "", isEditable: "Yes")
         
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
         
     }
     

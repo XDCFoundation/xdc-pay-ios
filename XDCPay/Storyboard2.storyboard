@@ -745,13 +745,14 @@
                             <constraint firstItem="n6c-uU-Rp4" firstAttribute="top" secondItem="0L2-jz-2lQ" secondAttribute="bottom" id="zmy-de-Jd0"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ZUK-b8-7jC"/>
                     <connections>
                         <outlet property="tableView" destination="n6c-uU-Rp4" id="xkJ-PS-bdy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="idn-GC-0CO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3315.9420289855075" y="1060.7142857142858"/>
+            <point key="canvasLocation" x="4226.086956521739" y="1060.7142857142858"/>
         </scene>
         <!--Genral Settings View Controller-->
         <scene sceneID="HkJ-o9-r7m">
@@ -788,7 +789,7 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Back Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="PC0-91-H1W">
                                                 <rect key="frame" x="0.0" y="0.0" width="33" height="27"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Muw-Ak-e3s" customClass="BackButton" customModule="XDCPay" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Muw-Ak-e3s" customClass="BackButtonNavigation" customModule="XDCPay" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="33" height="27"/>
                                             </button>
                                         </subviews>
@@ -1010,7 +1011,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MrV-hD-FaP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4005.7971014492755" y="1060.7142857142858"/>
+            <point key="canvasLocation" x="4915.9420289855079" y="1060.7142857142858"/>
         </scene>
         <!--Advance Settings View Controller-->
         <scene sceneID="X5l-aF-y9O">
@@ -1047,7 +1048,7 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Back Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="xpB-NT-k6F">
                                                 <rect key="frame" x="0.0" y="0.0" width="33" height="27"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJz-K6-pKf" customClass="BackButton" customModule="XDCPay" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJz-K6-pKf" customClass="BackButtonNavigation" customModule="XDCPay" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="33" height="27"/>
                                             </button>
                                         </subviews>
@@ -1260,7 +1261,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gfg-na-R73" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4707.2463768115949" y="1060.7142857142858"/>
+            <point key="canvasLocation" x="5617.3913043478269" y="1060.7142857142858"/>
         </scene>
         <!--Picker View Class-->
         <scene sceneID="HDv-27-3cv">
@@ -1426,7 +1427,7 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Back Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="jQA-eb-v8v">
                                                 <rect key="frame" x="0.0" y="0.0" width="33" height="27"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LaM-ft-agR" customClass="BackButton" customModule="XDCPay" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LaM-ft-agR" customClass="BackButtonNavigation" customModule="XDCPay" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="33" height="27"/>
                                             </button>
                                         </subviews>
@@ -1700,7 +1701,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fRB-CJ-oqM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6113.04347826087" y="1060.7142857142858"/>
+            <point key="canvasLocation" x="7933.3333333333339" y="1060.7142857142858"/>
         </scene>
         <!--Security View Controller-->
         <scene sceneID="WKL-ng-koi">
@@ -1737,7 +1738,7 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Back Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="aYO-HF-ffS">
                                                 <rect key="frame" x="0.0" y="0.0" width="33" height="27"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0I7-4V-97A" customClass="BackButton" customModule="XDCPay" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0I7-4V-97A" customClass="BackButtonNavigation" customModule="XDCPay" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="33" height="27"/>
                                             </button>
                                         </subviews>
@@ -1790,7 +1791,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J7E-Bf-lg8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7596" y="1061"/>
+            <point key="canvasLocation" x="9415.9420289855079" y="1060.7142857142858"/>
         </scene>
         <!--Security Table View Controller-->
         <scene sceneID="ZeC-ym-pvt">
@@ -2180,7 +2181,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y0A-GK-bNc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8387" y="1042"/>
+            <point key="canvasLocation" x="10207.246376811596" y="1041.6294642857142"/>
         </scene>
         <!--Common Password View Controller-->
         <scene sceneID="fnM-k3-OT3">
@@ -2217,7 +2218,7 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Back Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="EgS-Dt-7mg">
                                                 <rect key="frame" x="0.0" y="0.0" width="33" height="27"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qci-5V-orW" customClass="BackButton" customModule="XDCPay" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qci-5V-orW" customClass="BackButtonNavigation" customModule="XDCPay" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="33" height="27"/>
                                             </button>
                                         </subviews>
@@ -2328,7 +2329,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vkW-gs-1An" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9148" y="1043"/>
+            <point key="canvasLocation" x="10968.115942028986" y="1041.9642857142858"/>
         </scene>
         <!--Import Account View Controller-->
         <scene sceneID="8lq-k5-2Kv">
@@ -2342,7 +2343,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="95"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Import Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSr-QP-zB1">
-                                        <rect key="frame" x="151.5" y="52" width="111" height="19"/>
+                                        <rect key="frame" x="147.5" y="52" width="119" height="19"/>
                                         <fontDescription key="fontDescription" name="Inter-Regular_Medium" family="Inter" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -2397,13 +2398,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Private Key" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4b-79-53D">
-                                <rect key="frame" x="15" y="162" width="103" height="17"/>
+                                <rect key="frame" x="15" y="163.5" width="109.5" height="17"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular_Medium" family="Inter" pointSize="14"/>
                                 <color key="textColor" red="0.1647058824" green="0.1647058824" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Flr-AL-rFc">
-                                <rect key="frame" x="15" y="187" width="384" height="79.5"/>
+                                <rect key="frame" x="15" y="188.5" width="384" height="79.5"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="eg. ce4085d87dc63992e358f5c1a8bd4c4de647b b0cfdec034d00c3c9532535f324" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="l99-in-lYn">
                                         <rect key="frame" x="15" y="15" width="354" height="49.5"/>
@@ -2436,13 +2437,13 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Imported accounts are viewable in your wallet but are not recoverable with your secret recovery phase" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TVz-Xm-nIA">
-                                <rect key="frame" x="35" y="112" width="344" height="28"/>
+                                <rect key="frame" x="35" y="112" width="344" height="29.5"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="12"/>
                                 <color key="textColor" red="0.1647058824" green="0.1647058824" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rww-qk-R6j">
-                                <rect key="frame" x="15" y="298.5" width="384" height="42"/>
+                                <rect key="frame" x="15" y="300" width="384" height="42"/>
                                 <color key="backgroundColor" red="0.01176470588" green="0.74117647060000003" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="Rp7-BU-n2E"/>
@@ -2737,7 +2738,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EIe-GZ-g8W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="12095.652173913044" y="1041.9642857142858"/>
+            <point key="canvasLocation" x="13915.942028985508" y="1041.9642857142858"/>
         </scene>
         <!--Contact Detail View Controller-->
         <scene sceneID="0LD-99-eYC">
@@ -2914,7 +2915,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xew-bS-CQ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="12800.000000000002" y="1041.9642857142858"/>
+            <point key="canvasLocation" x="14620.289855072466" y="1041.9642857142858"/>
         </scene>
         <!--Add Contact View Controller-->
         <scene sceneID="NR7-em-9rw">
@@ -3156,7 +3157,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cJD-Xy-v5l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="13477" y="1049"/>
+            <point key="canvasLocation" x="15297.101449275364" y="1048.6607142857142"/>
         </scene>
         <!--Contacts View Controller-->
         <scene sceneID="KdI-de-Wm5">
@@ -3193,7 +3194,7 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Back Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="EfU-0Q-dDg">
                                                 <rect key="frame" x="0.0" y="0.0" width="33" height="27"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44l-5h-ADG" customClass="BackButton" customModule="XDCPay" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44l-5h-ADG" customClass="BackButtonNavigation" customModule="XDCPay" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="33" height="27"/>
                                             </button>
                                         </subviews>
@@ -3331,7 +3332,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mrL-L8-lCE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="14192.753623188408" y="1048.6607142857142"/>
+            <point key="canvasLocation" x="16013.04347826087" y="1048.6607142857142"/>
         </scene>
         <!--Delete Dialog-->
         <scene sceneID="riu-ED-RVh">
@@ -4523,7 +4524,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nlZ-6Y-d9j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18204" y="1141"/>
+            <point key="canvasLocation" x="20023.188405797104" y="1140.7366071428571"/>
         </scene>
         <!--Token Sent SuccessVC-->
         <scene sceneID="48X-6g-9z5">
@@ -4695,7 +4696,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1NI-S5-Njq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20098.550724637684" y="480.80357142857139"/>
+            <point key="canvasLocation" x="22518.840579710148" y="541.74107142857144"/>
         </scene>
         <!--Token Send Success Table View Controller-->
         <scene sceneID="1rj-Co-Ocm">
@@ -5759,7 +5760,7 @@ Related Links </string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UQX-Gw-1hC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="19296" y="494"/>
+            <point key="canvasLocation" x="21115.942028985508" y="493.52678571428567"/>
         </scene>
         <!--Seed Words View Controller-->
         <scene sceneID="UIZ-HV-0Mw">
@@ -5948,8 +5949,11 @@ Related Links </string>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Back Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="WbA-l5-CXs">
                                                 <rect key="frame" x="0.0" y="0.0" width="33" height="27"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jXf-6u-kA1" customClass="BackButton" customModule="XDCPay" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jXf-6u-kA1">
                                                 <rect key="frame" x="0.0" y="0.0" width="33" height="27"/>
+                                                <connections>
+                                                    <action selector="bckButton:" destination="UiI-if-t9n" eventType="touchUpInside" id="IbJ-nY-R7E"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -6032,7 +6036,7 @@ Related Links </string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Cn-mY-F4G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9843" y="1043"/>
+            <point key="canvasLocation" x="11662.318840579712" y="1041.9642857142858"/>
         </scene>
         <!--Private Key View Controller-->
         <scene sceneID="MRw-tw-Drt">
@@ -6069,8 +6073,11 @@ Related Links </string>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Back Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="Bky-my-mks">
                                                 <rect key="frame" x="0.0" y="0.0" width="33" height="27"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m6g-hu-fFu" customClass="BackButton" customModule="XDCPay" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m6g-hu-fFu">
                                                 <rect key="frame" x="0.0" y="0.0" width="33" height="27"/>
+                                                <connections>
+                                                    <action selector="bckButton:" destination="5nd-A1-TP5" eventType="touchUpInside" id="puY-2e-QKg"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -6227,9 +6234,6 @@ Related Links </string>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                            <connections>
-                                <action selector="passwordDidChange:" destination="Z3N-sK-Dtw" eventType="editingChanged" id="B3U-l6-XbU"/>
-                            </connections>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pQb-5f-tqU">
                             <rect key="frame" x="16" y="254.5" width="123" height="14"/>
@@ -6270,9 +6274,6 @@ Related Links </string>
                                 <constraint firstAttribute="height" constant="14" id="uZc-yH-vGN"/>
                             </constraints>
                             <state key="normal" backgroundImage="CheckBoxEmpty"/>
-                            <connections>
-                                <action selector="checkBoxOnTap:" destination="Z3N-sK-Dtw" eventType="touchUpInside" id="eNa-mx-6Hi"/>
-                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I understand that XDC Pay cannot recover this password for me" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpI-yb-bz0">
                             <rect key="frame" x="40" y="652" width="328" height="34"/>
@@ -6290,9 +6291,6 @@ Related Links </string>
                             <state key="normal" title="Reset password">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
-                            <connections>
-                                <action selector="onResetPassword:" destination="Z3N-sK-Dtw" eventType="touchUpInside" id="5yw-VZ-2ah"/>
-                            </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vFa-vE-f9x" customClass="PSMeter" customModule="PSMeter">
                             <rect key="frame" x="16" y="215.5" width="382" height="40"/>
@@ -6377,9 +6375,6 @@ Related Links </string>
                             <state key="normal" title="Show">
                                 <color key="titleColor" red="0.1647058824" green="0.1647058824" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
-                            <connections>
-                                <action selector="onShowPassword:" destination="Z3N-sK-Dtw" eventType="touchUpInside" id="pCg-fb-nfX"/>
-                            </connections>
                         </button>
                     </subviews>
                     <viewLayoutGuide key="safeArea" id="g7k-IN-KOm"/>
@@ -6423,27 +6418,7 @@ Related Links </string>
                     </constraints>
                 </view>
             </objects>
-            <point key="canvasLocation" x="10563.76811594203" y="1048.6607142857142"/>
-        </scene>
-        <!--Change Password View Controller-->
-        <scene sceneID="LTq-ih-lTT">
-            <objects>
-                <viewController storyboardIdentifier="ChangePasswordViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Z3N-sK-Dtw" customClass="ChangePasswordViewController" customModule="XDCPay" customModuleProvider="target" sceneMemberID="viewController">
-                    <connections>
-                        <outlet property="checkBox" destination="5Yo-Eq-pgm" id="eu2-PV-65b"/>
-                        <outlet property="confirmPassword" destination="7Gs-vc-2NF" id="4CP-j9-5MB"/>
-                        <outlet property="createWalletBtn" destination="kdB-Yk-btE" id="mSw-mh-xxX"/>
-                        <outlet property="enableBio" destination="n1p-JX-83F" id="ulH-LD-R8U"/>
-                        <outlet property="newPassword" destination="OfT-Nm-nUz" id="TCg-S5-NCp"/>
-                        <outlet property="newSwitch" destination="eWW-Mn-rRv" id="oi9-gM-nCt"/>
-                        <outlet property="psMeter" destination="vFa-vE-f9x" id="8tX-6D-sMF"/>
-                        <outlet property="showBtn" destination="oKk-33-A0g" id="FAd-Bw-opE"/>
-                        <outlet property="understandText" destination="tpI-yb-bz0" id="KaI-Fd-Rqh"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KCf-D9-9PH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="11394" y="242"/>
+            <point key="canvasLocation" x="12384.057971014494" y="1048.6607142857142"/>
         </scene>
         <!--Network View Controller-->
         <scene sceneID="Oxi-6d-uyt">
@@ -6567,7 +6542,7 @@ Related Links </string>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Back Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="pTf-sC-AWs">
                                                 <rect key="frame" x="0.0" y="0.0" width="33" height="27"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heZ-iF-cOv" customClass="BackButton" customModule="XDCPay" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heZ-iF-cOv" customClass="BackButtonNavigation" customModule="XDCPay" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="33" height="27"/>
                                             </button>
                                         </subviews>
@@ -6650,6 +6625,7 @@ Related Links </string>
                             <constraint firstItem="Z4f-aH-9Lo" firstAttribute="trailing" secondItem="sXQ-Rg-0QV" secondAttribute="trailing" id="gv4-I9-xxe"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="4KQ-eU-2Jq"/>
                     <connections>
                         <outlet property="noNetworkLabel" destination="jl7-t0-kHA" id="V6B-pT-NvG"/>
                         <outlet property="tableView" destination="sXQ-Rg-0QV" id="t5Z-i7-vsg"/>
@@ -6657,7 +6633,7 @@ Related Links </string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Xx-cR-aUR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5424.6376811594209" y="1060.7142857142858"/>
+            <point key="canvasLocation" x="7244.9275362318849" y="1060.7142857142858"/>
         </scene>
         <!--Network Details View Controller-->
         <scene sceneID="S6G-ii-Ofh">
@@ -6694,7 +6670,7 @@ Related Links </string>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Back Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="53C-sv-Zzb">
                                                 <rect key="frame" x="0.0" y="0.0" width="33" height="27"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FI6-Rn-j4U" customClass="BackButton" customModule="XDCPay" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FI6-Rn-j4U" customClass="BackButtonNavigation" customModule="XDCPay" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="33" height="27"/>
                                             </button>
                                         </subviews>
@@ -6902,7 +6878,7 @@ Related Links </string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z5c-L9-785" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6841" y="1061"/>
+            <point key="canvasLocation" x="8660.8695652173919" y="1060.7142857142858"/>
         </scene>
         <!--Transaction View Controller-->
         <scene sceneID="cuw-ke-FZa">
@@ -7059,6 +7035,278 @@ Related Links </string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6h7-rG-w4D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2575" y="1872"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hNY-6n-gem">
+            <objects>
+                <navigationController storyboardIdentifier="SettingNC" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="GdG-Hj-SrU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9w8-fg-Qrc">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="N7c-KS-VEc" kind="relationship" relationship="rootViewController" id="M2S-8q-gSS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fli-8i-Ssv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3315.9420289855075" y="1060.7142857142858"/>
+        </scene>
+        <!--Change Password View Controller-->
+        <scene sceneID="TVZ-S5-w6s">
+            <objects>
+                <viewController storyboardIdentifier="ChangePasswordViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Udd-lb-Usd" customClass="ChangePasswordViewController" customModule="XDCPay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FYe-UB-GTf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVD-90-Xl1">
+                                <rect key="frame" x="16" y="148.5" width="65.5" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="hPH-pY-xbU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Inter-Regular_Medium" family="Inter" pointSize="14"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HD4-Sd-B8k">
+                                <rect key="frame" x="16" y="173.5" width="382" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Nuh-Wm-C2j"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="passwordDidChange:" destination="Udd-lb-Usd" eventType="editingChanged" id="FM3-Nd-FMS"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7M-2I-uj7">
+                                <rect key="frame" x="16" y="257.5" width="123" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="jWD-Qv-5Bu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Inter-Regular_Medium" family="Inter" pointSize="14"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1x6-MC-GGh">
+                                <rect key="frame" x="16" y="282.5" width="382" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="OFW-qL-zhR"/>
+                                </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in with Face ID?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="soH-8X-aFV">
+                                <rect key="frame" x="16" y="394.5" width="114" height="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oHq-j4-tzX">
+                                <rect key="frame" x="333" y="386" width="51" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="ZzI-Dj-KIO"/>
+                                    <constraint firstAttribute="width" constant="49" id="hNG-yk-SCD"/>
+                                </constraints>
+                                <color key="onTintColor" red="0.01176470588" green="0.74509803919999995" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DeZ-Qj-Q0A">
+                                <rect key="frame" x="16" y="655" width="14" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="14" id="2IB-Z5-G6K"/>
+                                    <constraint firstAttribute="height" constant="14" id="Nm0-6E-FmO"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="CheckBoxEmpty"/>
+                                <connections>
+                                    <action selector="checkBoxOnTap:" destination="Udd-lb-Usd" eventType="touchUpInside" id="2Z6-EO-nfA"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I understand that XDC Pay cannot recover this password for me" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fb1-oP-hNf">
+                                <rect key="frame" x="40" y="652" width="328" height="34"/>
+                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9v7-yn-xw7">
+                                <rect key="frame" x="16" y="718" width="382" height="44"/>
+                                <color key="backgroundColor" red="0.01176470588" green="0.74509803919999995" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="0ZO-qF-eHu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Reset password">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onResetPassword:" destination="Udd-lb-Usd" eventType="touchUpInside" id="Bwa-aw-dct"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9vs-nJ-c6J" customClass="PSMeter" customModule="PSMeter">
+                                <rect key="frame" x="16" y="218.5" width="382" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="T6m-1w-DoX"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0NP-AB-nPw">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="95"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNK-KL-75X">
+                                        <rect key="frame" x="137.5" y="51.5" width="139" height="20"/>
+                                        <fontDescription key="fontDescription" name="Inter-Regular_Medium" family="Inter" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vpx-ln-Ct9">
+                                        <rect key="frame" x="0.0" y="94" width="414" height="1"/>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="4CS-Ho-Qmn"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" systemColor="secondarySystemBackgroundColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="To3-sI-QIo">
+                                        <rect key="frame" x="14" y="48" width="33" height="27"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Back Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="K0M-xz-ZiY">
+                                                <rect key="frame" x="0.0" y="0.0" width="33" height="27"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zdc-Ha-Pqs">
+                                                <rect key="frame" x="0.0" y="0.0" width="33" height="27"/>
+                                                <connections>
+                                                    <action selector="bckButton:" destination="Udd-lb-Usd" eventType="touchUpInside" id="yhW-9E-UTt"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="zdc-Ha-Pqs" firstAttribute="top" secondItem="To3-sI-QIo" secondAttribute="top" id="5Qf-ge-xMQ"/>
+                                            <constraint firstAttribute="bottom" secondItem="zdc-Ha-Pqs" secondAttribute="bottom" id="DJ1-Ui-IVI"/>
+                                            <constraint firstAttribute="trailing" secondItem="K0M-xz-ZiY" secondAttribute="trailing" id="EhD-a9-VqO"/>
+                                            <constraint firstAttribute="trailing" secondItem="zdc-Ha-Pqs" secondAttribute="trailing" id="LpS-yg-PaA"/>
+                                            <constraint firstAttribute="bottom" secondItem="K0M-xz-ZiY" secondAttribute="bottom" id="PvM-rq-4AF"/>
+                                            <constraint firstAttribute="width" constant="33" id="Qu0-DN-KDT"/>
+                                            <constraint firstItem="K0M-xz-ZiY" firstAttribute="leading" secondItem="To3-sI-QIo" secondAttribute="leading" id="UEz-5j-fAL"/>
+                                            <constraint firstItem="K0M-xz-ZiY" firstAttribute="top" secondItem="To3-sI-QIo" secondAttribute="top" id="WVf-ve-b4r"/>
+                                            <constraint firstAttribute="height" constant="27" id="dFn-mN-g5A"/>
+                                            <constraint firstItem="zdc-Ha-Pqs" firstAttribute="leading" secondItem="To3-sI-QIo" secondAttribute="leading" id="euH-3P-ZrN"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="To3-sI-QIo" secondAttribute="bottom" constant="20" id="4dG-Rg-bSQ"/>
+                                    <constraint firstItem="YNK-KL-75X" firstAttribute="centerX" secondItem="0NP-AB-nPw" secondAttribute="centerX" id="DB2-Ci-Qq9"/>
+                                    <constraint firstItem="To3-sI-QIo" firstAttribute="leading" secondItem="0NP-AB-nPw" secondAttribute="leading" constant="14" id="Gi8-qT-FfO"/>
+                                    <constraint firstAttribute="trailing" secondItem="vpx-ln-Ct9" secondAttribute="trailing" id="MP2-cQ-uIh"/>
+                                    <constraint firstItem="YNK-KL-75X" firstAttribute="centerY" secondItem="zdc-Ha-Pqs" secondAttribute="centerY" id="gMt-a5-iyV"/>
+                                    <constraint firstAttribute="height" constant="95" id="lS5-if-7E0"/>
+                                    <constraint firstItem="vpx-ln-Ct9" firstAttribute="leading" secondItem="0NP-AB-nPw" secondAttribute="leading" id="t2I-Mk-eqk"/>
+                                    <constraint firstAttribute="bottom" secondItem="vpx-ln-Ct9" secondAttribute="bottom" id="tcw-iI-BfO"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This password will unlock your wallet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bb3-Bs-95u">
+                                <rect key="frame" x="0.0" y="107.5" width="414" height="17"/>
+                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Must be at least 8 characters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGq-R1-tAv">
+                                <rect key="frame" x="16" y="342.5" width="194" height="17"/>
+                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
+                                <color key="textColor" red="0.61568627450000002" green="0.66666666669999997" blue="0.73333333329999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7G-hw-emw">
+                                <rect key="frame" x="348" y="181" width="37" height="29"/>
+                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
+                                <state key="normal" title="Show">
+                                    <color key="titleColor" red="0.1647058824" green="0.1647058824" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onShowPassword:" destination="Udd-lb-Usd" eventType="touchUpInside" id="8YA-fi-QDZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ev5-As-1EV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9vs-nJ-c6J" firstAttribute="top" secondItem="HD4-Sd-B8k" secondAttribute="bottom" constant="1" id="2pd-cL-uGC"/>
+                            <constraint firstItem="Bb3-Bs-95u" firstAttribute="top" secondItem="YNK-KL-75X" secondAttribute="bottom" constant="36" id="62g-vs-bVL"/>
+                            <constraint firstItem="soH-8X-aFV" firstAttribute="top" secondItem="uGq-R1-tAv" secondAttribute="bottom" constant="35" id="8Rb-DF-qem"/>
+                            <constraint firstItem="ev5-As-1EV" firstAttribute="trailing" secondItem="0NP-AB-nPw" secondAttribute="trailing" id="AFs-Y3-iKW"/>
+                            <constraint firstItem="9v7-yn-xw7" firstAttribute="leading" secondItem="1x6-MC-GGh" secondAttribute="leading" id="BDg-1n-cgh"/>
+                            <constraint firstItem="oHq-j4-tzX" firstAttribute="centerY" secondItem="soH-8X-aFV" secondAttribute="centerY" id="BFc-Oy-Z6S"/>
+                            <constraint firstItem="0NP-AB-nPw" firstAttribute="leading" secondItem="ev5-As-1EV" secondAttribute="leading" id="BOG-np-ve5"/>
+                            <constraint firstItem="9v7-yn-xw7" firstAttribute="trailing" secondItem="1x6-MC-GGh" secondAttribute="trailing" id="CAh-Dl-AqT"/>
+                            <constraint firstItem="ev5-As-1EV" firstAttribute="trailing" secondItem="HD4-Sd-B8k" secondAttribute="trailing" constant="16" id="EAd-Yz-f8O"/>
+                            <constraint firstItem="DeZ-Qj-Q0A" firstAttribute="leading" secondItem="9vs-nJ-c6J" secondAttribute="leading" id="Fw6-kr-Hca"/>
+                            <constraint firstItem="R7M-2I-uj7" firstAttribute="top" secondItem="HD4-Sd-B8k" secondAttribute="bottom" constant="40" id="Gna-FA-zdb"/>
+                            <constraint firstItem="c7G-hw-emw" firstAttribute="leading" secondItem="HD4-Sd-B8k" secondAttribute="trailing" constant="-50" id="LhW-Rl-qbc"/>
+                            <constraint firstItem="0NP-AB-nPw" firstAttribute="top" secondItem="FYe-UB-GTf" secondAttribute="top" id="MKF-8N-swQ"/>
+                            <constraint firstItem="ev5-As-1EV" firstAttribute="trailing" secondItem="Bb3-Bs-95u" secondAttribute="trailing" id="MPU-5o-SAI"/>
+                            <constraint firstItem="ev5-As-1EV" firstAttribute="trailing" secondItem="Fb1-oP-hNf" secondAttribute="trailing" constant="46" id="MVJ-Sk-453"/>
+                            <constraint firstItem="uGq-R1-tAv" firstAttribute="top" secondItem="1x6-MC-GGh" secondAttribute="bottom" constant="16" id="OYd-lq-xqk"/>
+                            <constraint firstItem="IVD-90-Xl1" firstAttribute="top" secondItem="Bb3-Bs-95u" secondAttribute="bottom" constant="24" id="PKq-xa-bUA"/>
+                            <constraint firstItem="c7G-hw-emw" firstAttribute="centerY" secondItem="HD4-Sd-B8k" secondAttribute="centerY" id="UF3-xb-VgP"/>
+                            <constraint firstItem="Bb3-Bs-95u" firstAttribute="leading" secondItem="ev5-As-1EV" secondAttribute="leading" id="XNd-to-tEl"/>
+                            <constraint firstItem="HD4-Sd-B8k" firstAttribute="top" secondItem="IVD-90-Xl1" secondAttribute="bottom" constant="8" id="ayf-Zh-W2c"/>
+                            <constraint firstItem="soH-8X-aFV" firstAttribute="leading" secondItem="IVD-90-Xl1" secondAttribute="leading" id="cqu-Yd-rgG"/>
+                            <constraint firstItem="1x6-MC-GGh" firstAttribute="trailing" secondItem="HD4-Sd-B8k" secondAttribute="trailing" id="dMa-4B-7qf"/>
+                            <constraint firstItem="uGq-R1-tAv" firstAttribute="leading" secondItem="1x6-MC-GGh" secondAttribute="leading" id="dUy-Ei-Sd9"/>
+                            <constraint firstItem="Fb1-oP-hNf" firstAttribute="leading" secondItem="DeZ-Qj-Q0A" secondAttribute="trailing" constant="10" id="fa1-6N-sYe"/>
+                            <constraint firstItem="9v7-yn-xw7" firstAttribute="top" secondItem="Fb1-oP-hNf" secondAttribute="bottom" constant="32" id="itE-JZ-ioE"/>
+                            <constraint firstItem="9vs-nJ-c6J" firstAttribute="trailing" secondItem="HD4-Sd-B8k" secondAttribute="trailing" id="mXY-G5-j04"/>
+                            <constraint firstItem="DeZ-Qj-Q0A" firstAttribute="top" secondItem="Fb1-oP-hNf" secondAttribute="top" constant="3" id="mZs-fO-SVD"/>
+                            <constraint firstItem="ev5-As-1EV" firstAttribute="bottom" secondItem="9v7-yn-xw7" secondAttribute="bottom" constant="100" id="oO6-pI-k9q"/>
+                            <constraint firstItem="1x6-MC-GGh" firstAttribute="top" secondItem="R7M-2I-uj7" secondAttribute="bottom" constant="8" id="opp-Ez-wFq"/>
+                            <constraint firstItem="9vs-nJ-c6J" firstAttribute="leading" secondItem="HD4-Sd-B8k" secondAttribute="leading" id="weX-8l-yZw"/>
+                            <constraint firstItem="ev5-As-1EV" firstAttribute="trailing" secondItem="oHq-j4-tzX" secondAttribute="trailing" constant="32" id="y8S-xr-XK2"/>
+                            <constraint firstItem="IVD-90-Xl1" firstAttribute="leading" secondItem="ev5-As-1EV" secondAttribute="leading" constant="16" id="yGo-cB-at5"/>
+                            <constraint firstItem="1x6-MC-GGh" firstAttribute="leading" secondItem="HD4-Sd-B8k" secondAttribute="leading" id="yfp-Of-fW5"/>
+                            <constraint firstItem="HD4-Sd-B8k" firstAttribute="leading" secondItem="IVD-90-Xl1" secondAttribute="leading" id="yhe-Jq-2BY"/>
+                            <constraint firstItem="R7M-2I-uj7" firstAttribute="leading" secondItem="IVD-90-Xl1" secondAttribute="leading" id="zpI-Q2-tVS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="checkBox" destination="DeZ-Qj-Q0A" id="LD7-GI-fuM"/>
+                        <outlet property="confirmPassword" destination="1x6-MC-GGh" id="XOZ-mY-aUN"/>
+                        <outlet property="createWalletBtn" destination="9v7-yn-xw7" id="0ke-dS-lgH"/>
+                        <outlet property="enableBio" destination="soH-8X-aFV" id="54r-RW-vYm"/>
+                        <outlet property="newPassword" destination="HD4-Sd-B8k" id="Qcr-82-e0d"/>
+                        <outlet property="newSwitch" destination="oHq-j4-tzX" id="A8k-Iq-Svx"/>
+                        <outlet property="psMeter" destination="9vs-nJ-c6J" id="L4i-0B-5tK"/>
+                        <outlet property="showBtn" destination="c7G-hw-emw" id="0Vx-Ji-QUf"/>
+                        <outlet property="understandText" destination="Fb1-oP-hNf" id="Kcr-bP-tfu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VYm-nv-tfX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3783" y="165"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4eJ-0t-iry">
+            <objects>
+                <navigationController storyboardIdentifier="NetworkNC" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="hD4-g6-WfB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3co-1l-Xuy">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Dm8-xB-tYU" kind="relationship" relationship="rootViewController" id="TIv-gj-m49"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="omi-4P-Igk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6334.7826086956529" y="1060.7142857142858"/>
         </scene>
     </scenes>
     <resources>

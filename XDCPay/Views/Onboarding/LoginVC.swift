@@ -37,7 +37,7 @@ class LoginVC: UIViewController {
         
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CreateNewWalletViewController") as! CreateNewWalletViewController
         vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true, completion: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 
@@ -46,7 +46,7 @@ class LoginVC: UIViewController {
         
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ImportFromSeedViewController")
         vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true, completion: nil)
+        self.navigationController?.pushViewController(vc, animated: true) 
     }
     
     

@@ -109,7 +109,7 @@ class SecureWallectVC: UIViewController {
         vc.seedPhrase = self.seedPhrase!
         vc.accountData = self.accountData
         vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true, completion: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
          
     }
     
