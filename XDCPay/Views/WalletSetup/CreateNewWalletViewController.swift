@@ -93,6 +93,16 @@ class CreateNewWalletViewController: UIViewController {
     }
     @IBAction func createWalletBtnAction(_ sender: UIButton) {
         
+        if(newPassword.text!.count  == 0) {
+            showAlert(message: "Please Enter Password")
+            return
+        }
+        
+        if(confirmPassword.text!.count  == 0) {
+            showAlert(message: "Please Enter Confirm Password")
+            return
+        }
+        
         if(psMeter.passwordStrength == PasswordStrength.weak || psMeter.passwordStrength == PasswordStrength.veryWeak ) {
    
             showAlert(message: "Password is \(psMeter.passwordStrength!)")
@@ -100,13 +110,8 @@ class CreateNewWalletViewController: UIViewController {
             
         }
         
-        if(newPassword.text!.count < 8) {
-            showAlert(message: "Password length should be more then eight")
-            return
-        }
-        
         if(newPassword.text! != confirmPassword!.text ) {
-            showAlert(message: "Password does not match")
+            showAlert(message: "Password and Confirm Password does not match")
             return
         }
         

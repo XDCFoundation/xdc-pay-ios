@@ -192,6 +192,34 @@ extension DataBaseManager {
        
     }
     
+    func updateAccountName(name:String) {
+        
+        let accountJsonString = geAccountJSON()
+ 
+            let dataJson = accountJsonString.data(using: .utf8)!
+
+            let currentAddress =  UserDefaultsManager.shared.getWalletAddress()
+            
+            var accounts = try! JSONDecoder().decode(AllAccounts.self, from: dataJson)
+            
+            var itemIndex = 0
+        
+            for (index,item) in accounts.responseData!.enumerated() {
+                
+                if(item.address == currentAddress){
+                    itemIndex = index
+                    break
+                }
+            }
+        
+           accounts.responseData![itemIndex].accountName = name
+          
+            let str = String(data: try! JSONEncoder().encode(accounts), encoding: .utf8)
+            print(str as Any)
+        
+           self.saveAccount(data: (str!))
+    }
+    
     func getCurrentAccountName() ->String {
         
         var name = ""
@@ -217,9 +245,6 @@ extension DataBaseManager {
         }
         
         return name
-        
-      
-        
     }
     
     func getAccounts() -> [Account] {

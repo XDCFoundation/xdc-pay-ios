@@ -117,6 +117,37 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController:MenuDrawerProtocol {
     
+    func onEditAccountName() {
+        
+        let alertController = UIAlertController(title: "Edit name", message: "This will be your new account name", preferredStyle: .alert)
+
+         
+        let saveAction = UIAlertAction(title: "Done", style: .default, handler: { alert -> Void in
+            
+            let firstTextField = alertController.textFields![0] as UITextField
+          
+            if(firstTextField.text!.isEmpty) {
+                return
+            }else {
+                DataBaseManager.shared.updateAccountName(name:firstTextField.text!)
+                SceneDelegate.shared?.checkLogin()
+            }
+            
+        })
+
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil )
+
+        alertController.addTextField { (textField : UITextField!) -> Void in
+            textField.placeholder = "Enter Account Name"
+            textField.text = DataBaseManager.shared.getCurrentAccountName()
+        }
+
+        alertController.addAction(cancelAction)
+        alertController.addAction(saveAction)
+         
+        self.present(alertController, animated: true, completion: nil)
+        
+    }
     
     func onAccount() {
         

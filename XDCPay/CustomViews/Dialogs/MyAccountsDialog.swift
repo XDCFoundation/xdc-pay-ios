@@ -46,7 +46,7 @@ class MyAccountsDialog: UIViewController , UITableViewDelegate, UITableViewDataS
         
         self.LoadingStart()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             
             self.LoadingStop()
             

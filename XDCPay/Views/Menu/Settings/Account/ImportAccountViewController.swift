@@ -22,7 +22,7 @@ class ImportAccountViewController: UIViewController {
         self.LoadingStart()
          
         DataBaseManager.shared.importAccount(rowPrivateKey: self.privateKey.text!)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.LoadingStop()
             SceneDelegate.shared?.checkLogin()
         }
