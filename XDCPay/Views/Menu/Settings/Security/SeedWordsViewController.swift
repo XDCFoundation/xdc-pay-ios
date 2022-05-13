@@ -109,7 +109,14 @@ class SeedWordsViewController: UIViewController {
     }
     
     @IBAction func bckButton(_ sender: Any) {
-        self.navigationController?.`popToRootViewController`(animated: true)
+        if let navController = self.navigationController {
+            for controller in navController.viewControllers {
+                if controller is SecurityViewController { // Change to suit your menu view controller subclass
+                    navController.popToViewController(controller, animated:true)
+                    break
+                }
+            }
+        }
     }
 }
 

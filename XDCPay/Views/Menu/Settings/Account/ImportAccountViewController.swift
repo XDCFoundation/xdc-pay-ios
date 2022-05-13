@@ -19,12 +19,15 @@ class ImportAccountViewController: UIViewController {
     }
     
     @IBAction func onImport(_ sender: Any) {
-        self.LoadingStart()
-         
-        DataBaseManager.shared.importAccount(rowPrivateKey: self.privateKey.text!)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.LoadingStop()
-            SceneDelegate.shared?.checkLogin()
+ 
+        if privateKey.text.count > 0 && privateKey.text != "eg. ce4085d87dc63992e358f5c1a8bd4c4de647b b0cfdec034d00c3c9532535f324" {
+            self.LoadingStart()
+            
+            DataBaseManager.shared.importAccount(rowPrivateKey: self.privateKey.text!)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.LoadingStop()
+                SceneDelegate.shared?.checkLogin()
+            }
         }
     }
     

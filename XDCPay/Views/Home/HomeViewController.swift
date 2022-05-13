@@ -28,7 +28,9 @@ class HomeViewController: UIViewController {
         self.usdBalance.text = "$0 USD"
         homeVc = self
         self.accountAddress = UserDefaultsManager.shared.getCurrentAccoutWalletAddress()
-        self.addressText.text = self.accountAddress
+        
+        self.setMyAddress(str: self.accountAddress)
+        
         self.setupMenuDrawer()
         self.accountName.text = DataBaseManager.shared.getCurrentAccountName()
         self.networkName.text = UserDefaultsManager.shared.getCurrentNetworName()
@@ -83,6 +85,16 @@ class HomeViewController: UIViewController {
         }
     }
     
+    func setMyAddress(str:String) {
+        let index = str.index(str.startIndex, offsetBy: 7)
+        let mySubstring1 = str[..<index]
+        
+        let index2 = str.index(str.endIndex, offsetBy: -4)
+        let mySubstring2 = str[index2...] // playground
+        
+        let truncateStr = mySubstring1 + "..." + mySubstring2
+        self.addressText.text = "\(truncateStr)"
+    }
     
     @IBAction func onScanSend(_ sender: Any) {
         
