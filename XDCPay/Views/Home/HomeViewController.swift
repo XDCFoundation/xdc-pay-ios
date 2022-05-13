@@ -67,8 +67,8 @@ class HomeViewController: UIViewController {
       //  self.showToast(message: "Copied", font: .systemFont(ofSize: 14.0), view: addressView)
         UIPasteboard.general.string =  UserDefaultsManager.shared.getCurrentAccoutWalletAddress()
     }
+    
     func getBalance() {
-        
         
         self.client!.eth_getBalance(address: XDCAddress(UserDefaultsManager.shared.getMainWalletAddress()), block: .Latest) { (error, balanceOf) in
             

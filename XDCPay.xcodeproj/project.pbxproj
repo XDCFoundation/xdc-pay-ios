@@ -178,6 +178,7 @@
 		84F298CE2800382300F8476F /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F298CD2800382300F8476F /* UIViewController.swift */; };
 		84FD7EA12818044A00CEB47D /* Dialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FD7EA02818044A00CEB47D /* Dialog.swift */; };
 		8F142DC0281FEBD300A3663A /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F142DBF281FEBD300A3663A /* HelpViewController.swift */; };
+		8F1E0B85282E198400096CF9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F1E0B84282E198400096CF9 /* GoogleService-Info.plist */; };
 		8F4D00432823F716009AF24D /* TimeLimits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4D00402823F716009AF24D /* TimeLimits.swift */; };
 		8F4D00442823F716009AF24D /* FadeInOutAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4D00412823F716009AF24D /* FadeInOutAnimation.swift */; };
 		8F4D00452823F716009AF24D /* MessageDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4D00422823F716009AF24D /* MessageDisplayer.swift */; };
@@ -185,6 +186,10 @@
 		8F4D00492823FC0E009AF24D /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4D00482823FC0E009AF24D /* String+Extensions.swift */; };
 		8F4E40A32823C8250015690A /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4E40A22823C8250015690A /* TransactionViewController.swift */; };
 		8F6F572F2820FC6C00DDDE70 /* Storyboard3.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F6F572E2820FC6C00DDDE70 /* Storyboard3.storyboard */; };
+		8F76BB56282CF1F000E5339F /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F76BB55282CF1F000E5339F /* SF-Pro-Text-Semibold.otf */; };
+		8F76BB58282CF20300E5339F /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F76BB57282CF20300E5339F /* SF-Pro-Text-Medium.otf */; };
+		8F76BB5A282CF21000E5339F /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F76BB59282CF21000E5339F /* SF-Pro-Text-Bold.otf */; };
+		8F76BB5C282CF22000E5339F /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F76BB5B282CF22000E5339F /* SF-Pro-Text-Regular.otf */; };
 		ECDE5F2206DF67B3CD0A8767 /* Pods_XDCPay_XDCPayUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 318E80B364AB4EDDBA8F16C7 /* Pods_XDCPay_XDCPayUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -228,7 +233,7 @@
 		7F62786A27E8DC8200782EE0 /* XDCPayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XDCPayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F62786E27E8DC8200782EE0 /* XDCPayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDCPayUITests.swift; sourceTree = "<group>"; };
 		7F62787027E8DC8200782EE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7F62789127E8E88B00782EE0 /* Inter.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Inter.ttf; path = XDCPay/Inter.ttf; sourceTree = SOURCE_ROOT; };
+		7F62789127E8E88B00782EE0 /* Inter.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Inter.ttf; path = XDCPay/Font/Inter.ttf; sourceTree = SOURCE_ROOT; };
 		7F6278A027E8FB6500782EE0 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		7F6278A627E8FBDA00782EE0 /* UIView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extention.swift"; sourceTree = "<group>"; };
 		7F6278AE27E9000E00782EE0 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
@@ -331,6 +336,7 @@
 		84F298CD2800382300F8476F /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		84FD7EA02818044A00CEB47D /* Dialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dialog.swift; sourceTree = "<group>"; };
 		8F142DBF281FEBD300A3663A /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		8F1E0B84282E198400096CF9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8F4D00402823F716009AF24D /* TimeLimits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLimits.swift; sourceTree = "<group>"; };
 		8F4D00412823F716009AF24D /* FadeInOutAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeInOutAnimation.swift; sourceTree = "<group>"; };
 		8F4D00422823F716009AF24D /* MessageDisplayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageDisplayer.swift; sourceTree = "<group>"; };
@@ -338,6 +344,10 @@
 		8F4D00482823FC0E009AF24D /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		8F4E40A22823C8250015690A /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
 		8F6F572E2820FC6C00DDDE70 /* Storyboard3.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard3.storyboard; sourceTree = "<group>"; };
+		8F76BB55282CF1F000E5339F /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
+		8F76BB57282CF20300E5339F /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
+		8F76BB59282CF21000E5339F /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
+		8F76BB5B282CF22000E5339F /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
 		981E7A6408BE28394FE30FD4 /* Pods_XDCPayTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XDCPayTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D64173F68F4DFCF442AB2A35 /* Pods-XDCPay-XDCPayUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XDCPay-XDCPayUITests.debug.xcconfig"; path = "Target Support Files/Pods-XDCPay-XDCPayUITests/Pods-XDCPay-XDCPayUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F9938CB9A665E9CDB80B528C /* Pods-XDCPay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XDCPay.debug.xcconfig"; path = "Target Support Files/Pods-XDCPay/Pods-XDCPay.debug.xcconfig"; sourceTree = "<group>"; };
@@ -433,7 +443,8 @@
 				7F62785227E8DC7900782EE0 /* Main.storyboard */,
 				7F62785527E8DC8100782EE0 /* Assets.xcassets */,
 				7F62785727E8DC8100782EE0 /* LaunchScreen.storyboard */,
-				7F62789127E8E88B00782EE0 /* Inter.ttf */,
+				8F1E0B84282E198400096CF9 /* GoogleService-Info.plist */,
+				8F76BB54282CEEF300E5339F /* Font */,
 				7F62785A27E8DC8100782EE0 /* Info.plist */,
 				846325FE27F42A4B00437028 /* Storyboard2.storyboard */,
 			);
@@ -816,6 +827,18 @@
 			path = MessageDisplayer;
 			sourceTree = "<group>";
 		};
+		8F76BB54282CEEF300E5339F /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				8F76BB5B282CF22000E5339F /* SF-Pro-Text-Regular.otf */,
+				8F76BB59282CF21000E5339F /* SF-Pro-Text-Bold.otf */,
+				8F76BB57282CF20300E5339F /* SF-Pro-Text-Medium.otf */,
+				8F76BB55282CF1F000E5339F /* SF-Pro-Text-Semibold.otf */,
+				7F62789127E8E88B00782EE0 /* Inter.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		90921ABFF9292510E940AF45 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -838,6 +861,7 @@
 				7F62784627E8DC7900782EE0 /* Frameworks */,
 				7F62784727E8DC7900782EE0 /* Resources */,
 				BB295044416121FB1052EF21 /* [CP] Embed Pods Frameworks */,
+				8F1E0B83282E193600096CF9 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -936,12 +960,17 @@
 			files = (
 				846325FF27F42A4B00437028 /* Storyboard2.storyboard in Resources */,
 				8F6F572F2820FC6C00DDDE70 /* Storyboard3.storyboard in Resources */,
+				8F1E0B85282E198400096CF9 /* GoogleService-Info.plist in Resources */,
 				7F62785927E8DC8100782EE0 /* LaunchScreen.storyboard in Resources */,
 				84C8F7F327F2C1BE00F6666C /* MenuDrawerCellTableViewCell.xib in Resources */,
 				84C8F7FD27F2E1F400F6666C /* TransactionCell.xib in Resources */,
 				7F62785627E8DC8100782EE0 /* Assets.xcassets in Resources */,
+				8F76BB5C282CF22000E5339F /* SF-Pro-Text-Regular.otf in Resources */,
 				7F62785427E8DC7900782EE0 /* Main.storyboard in Resources */,
+				8F76BB5A282CF21000E5339F /* SF-Pro-Text-Bold.otf in Resources */,
 				849DA91427F43C460012F349 /* Inter.ttf in Resources */,
+				8F76BB58282CF20300E5339F /* SF-Pro-Text-Medium.otf in Resources */,
+				8F76BB56282CF1F000E5339F /* SF-Pro-Text-Semibold.otf in Resources */,
 				84C8F80327F30DCC00F6666C /* TokenCell.xib in Resources */,
 				84C8F7F927F2C1BE00F6666C /* MenuDrawer.xib in Resources */,
 			);
@@ -987,6 +1016,25 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		8F1E0B83282E193600096CF9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
 		};
 		A49CA9550B7FC1D62DBDE37A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1413,6 +1461,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 4W75RHUJ5V;
 				INFOPLIST_FILE = XDCPay/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;

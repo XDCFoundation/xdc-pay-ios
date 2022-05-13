@@ -11,11 +11,17 @@ class MyAccountsDialog: UIViewController , UITableViewDelegate, UITableViewDataS
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var accountViewHeightConstraints: NSLayoutConstraint!
+    @IBOutlet weak var view2: UIView!
     
     var accounts = [Account]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        self.view2.clipsToBounds = true
+        self.view2.layer.cornerRadius = 10
+        self.view2.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner] // Top right corner, Top left corner respectively
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -33,7 +33,7 @@ class AddAccountDialog: UIViewController {
 
 extension AddAccountDialog: UITextFieldDelegate {
     public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        return range.location < 30
+        return range.location < 20
     }
 }
 
