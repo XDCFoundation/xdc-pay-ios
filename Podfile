@@ -12,7 +12,10 @@ target 'XDCPay' do
   pod 'SwiftyJSON'
   pod 'PSMeter'
   pod 'SwiftMessages', '~> 9.0'
-
+  pod 'Firebase/Crashlytics'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Core'
+  
   target 'XDCPayTests' do
     inherit! :search_paths
     # Pods for testing

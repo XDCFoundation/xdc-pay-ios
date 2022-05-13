@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        UINavigationBar.appearance().isTranslucent = false
 //        
 //       // print(getDateStringTest())
+        
+        FirebaseApp.configure()
+        
         return true
     }
 
