@@ -14,6 +14,7 @@ var delegateMenuDrawer :MenuDrawerProtocol?
 protocol MenuDrawerProtocol {
     func onSelectRow(row:Int)
     func onAccount()
+    func onEditAccountName()
 }
 
 
@@ -33,6 +34,8 @@ class MenuDrawer: UIView , UITableViewDelegate , UITableViewDataSource {
     
     @IBAction func onEdit(_ sender: Any) {
         
+        self.hideDrawer()
+        delegateMenuDrawer?.onEditAccountName()
     }
     
     @IBAction func onAccount(_ sender: Any) {

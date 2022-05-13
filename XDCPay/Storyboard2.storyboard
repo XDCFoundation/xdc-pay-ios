@@ -5343,7 +5343,7 @@ Related Links </string>
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="95"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Transaction" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzb-eD-H7P">
-                                        <rect key="frame" x="129" y="52" width="156" height="19"/>
+                                        <rect key="frame" x="129.5" y="52" width="155.5" height="19"/>
                                         <fontDescription key="fontDescription" name="Inter-Regular_Medium" family="Inter" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -7105,7 +7105,7 @@ Related Links </string>
                                 <color key="onTintColor" red="0.01176470588" green="0.74509803919999995" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DeZ-Qj-Q0A">
-                                <rect key="frame" x="16" y="655" width="14" height="14"/>
+                                <rect key="frame" x="16" y="656" width="14" height="14"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="14" id="2IB-Z5-G6K"/>
                                     <constraint firstAttribute="height" constant="14" id="Nm0-6E-FmO"/>
@@ -7116,7 +7116,7 @@ Related Links </string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I understand that XDC Pay cannot recover this password for me" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fb1-oP-hNf">
-                                <rect key="frame" x="40" y="652" width="328" height="34"/>
+                                <rect key="frame" x="40" y="653" width="328" height="33"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
