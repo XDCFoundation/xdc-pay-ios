@@ -175,6 +175,13 @@ public class ViewPager: NSObject {
         
         if options.isTabIndicatorAvailable {
             
+            //Mark add a gray Line
+            let mView = UIView(frame: CGRect(x: 0, y: 59, width:UIScreen.main.bounds.width, height: 1))
+            mView.backgroundColor = UIColor.lightGray
+            setupForAutolayout(view: mView, inView: tabContainer)
+            //Mark add a gray Line End
+            
+            setupForAutolayout(view: tabIndicator, inView: tabContainer)
             setupForAutolayout(view: tabIndicator, inView: tabContainer)
             tabIndicator.backgroundColor = options.tabIndicatorViewBackgroundColor
             tabIndicator.heightAnchor.constraint(equalToConstant: options.tabIndicatorViewHeight).isActive = true
@@ -187,6 +194,8 @@ public class ViewPager: NSObject {
             
             tabIndicatorLeadingConstraint?.isActive = true
             tabIndicatorWidthConstraint?.isActive = true
+           
+         
         }
         
         if options.isTabHighlightAvailable {

@@ -5360,7 +5360,7 @@ Related Links </string>
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="95"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Transaction" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzb-eD-H7P">
-                                        <rect key="frame" x="129" y="52" width="156" height="19"/>
+                                        <rect key="frame" x="129.5" y="52" width="155.5" height="19"/>
                                         <fontDescription key="fontDescription" name="Inter-Regular_Medium" family="Inter" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -6908,13 +6908,13 @@ Related Links </string>
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="95"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transactions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZ6-WZ-L0J">
-                                        <rect key="frame" x="157.5" y="50.5" width="99" height="20"/>
+                                        <rect key="frame" x="157.5" y="51" width="99" height="19"/>
                                         <fontDescription key="fontDescription" name="Inter-Regular_Medium" family="Inter" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XDC Mainnet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dr-H4-IBL">
-                                        <rect key="frame" x="173" y="75.5" width="62" height="12"/>
+                                        <rect key="frame" x="173" y="75" width="62" height="12"/>
                                         <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="10"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -6956,21 +6956,21 @@ Related Links </string>
                                         </constraints>
                                     </view>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="dnf-cA-fOM">
-                                        <rect key="frame" x="237" y="73.5" width="11" height="16"/>
+                                        <rect key="frame" x="237" y="73" width="11" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="11" id="0bi-ay-hQl"/>
                                             <constraint firstAttribute="height" constant="16" id="Wnv-eB-arx"/>
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Circle4" translatesAutoresizingMaskIntoConstraints="NO" id="19F-f9-iDM">
-                                        <rect key="frame" x="160" y="77.5" width="8" height="8"/>
+                                        <rect key="frame" x="160" y="77" width="8" height="8"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="8" id="IHV-3G-vYi"/>
                                             <constraint firstAttribute="width" constant="8" id="qNA-lk-eeo"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZXN-EL-53v">
-                                        <rect key="frame" x="173" y="66.5" width="75" height="30"/>
+                                        <rect key="frame" x="173" y="66" width="75" height="30"/>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dpg-7i-wzB">
                                         <rect key="frame" x="14" y="47" width="33" height="27"/>
@@ -7070,7 +7070,7 @@ Related Links </string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVD-90-Xl1">
-                                <rect key="frame" x="16" y="148.5" width="65.5" height="17"/>
+                                <rect key="frame" x="16" y="148" width="62" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="hPH-pY-xbU"/>
                                 </constraints>
@@ -7079,7 +7079,7 @@ Related Links </string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HD4-Sd-B8k">
-                                <rect key="frame" x="16" y="173.5" width="382" height="44"/>
+                                <rect key="frame" x="16" y="173" width="382" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Nuh-Wm-C2j"/>
                                 </constraints>
@@ -7090,7 +7090,7 @@ Related Links </string>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7M-2I-uj7">
-                                <rect key="frame" x="16" y="257.5" width="123" height="17"/>
+                                <rect key="frame" x="16" y="257" width="116" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="jWD-Qv-5Bu"/>
                                 </constraints>
@@ -7099,7 +7099,7 @@ Related Links </string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1x6-MC-GGh">
-                                <rect key="frame" x="16" y="282.5" width="382" height="44"/>
+                                <rect key="frame" x="16" y="282" width="382" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="OFW-qL-zhR"/>
                                 </constraints>
@@ -7108,13 +7108,13 @@ Related Links </string>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in with Face ID?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="soH-8X-aFV">
-                                <rect key="frame" x="16" y="394.5" width="114" height="14"/>
+                                <rect key="frame" x="16" y="394" width="114" height="14"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                 <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oHq-j4-tzX">
-                                <rect key="frame" x="333" y="386" width="51" height="31"/>
+                                <rect key="frame" x="333" y="385.5" width="51" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="ZzI-Dj-KIO"/>
                                     <constraint firstAttribute="width" constant="49" id="hNG-yk-SCD"/>
@@ -7122,7 +7122,7 @@ Related Links </string>
                                 <color key="onTintColor" red="0.01176470588" green="0.74509803919999995" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DeZ-Qj-Q0A">
-                                <rect key="frame" x="16" y="655" width="14" height="14"/>
+                                <rect key="frame" x="16" y="656" width="14" height="14"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="14" id="2IB-Z5-G6K"/>
                                     <constraint firstAttribute="height" constant="14" id="Nm0-6E-FmO"/>
@@ -7133,7 +7133,7 @@ Related Links </string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I understand that XDC Pay cannot recover this password for me" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fb1-oP-hNf">
-                                <rect key="frame" x="40" y="652" width="328" height="34"/>
+                                <rect key="frame" x="40" y="653" width="328" height="33"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -7153,7 +7153,7 @@ Related Links </string>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9vs-nJ-c6J" customClass="PSMeter" customModule="PSMeter">
-                                <rect key="frame" x="16" y="218.5" width="382" height="40"/>
+                                <rect key="frame" x="16" y="218" width="382" height="40"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="T6m-1w-DoX"/>
@@ -7163,7 +7163,7 @@ Related Links </string>
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="95"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNK-KL-75X">
-                                        <rect key="frame" x="137.5" y="51.5" width="139" height="20"/>
+                                        <rect key="frame" x="141.5" y="52" width="131" height="19"/>
                                         <fontDescription key="fontDescription" name="Inter-Regular_Medium" family="Inter" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -7221,19 +7221,19 @@ Related Links </string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This password will unlock your wallet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bb3-Bs-95u">
-                                <rect key="frame" x="0.0" y="107.5" width="414" height="17"/>
+                                <rect key="frame" x="0.0" y="107" width="414" height="17"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Must be at least 8 characters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGq-R1-tAv">
-                                <rect key="frame" x="16" y="342.5" width="194" height="17"/>
+                                <rect key="frame" x="16" y="342" width="182.5" height="17"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
                                 <color key="textColor" red="0.61568627450000002" green="0.66666666669999997" blue="0.73333333329999995" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7G-hw-emw">
-                                <rect key="frame" x="348" y="181" width="37" height="29"/>
+                                <rect key="frame" x="348" y="180.5" width="36" height="29"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
                                 <state key="normal" title="Show">
                                     <color key="titleColor" red="0.1647058824" green="0.1647058824" blue="0.1647058824" alpha="1" colorSpace="calibratedRGB"/>

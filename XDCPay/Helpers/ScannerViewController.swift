@@ -47,8 +47,24 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         view.layer.addSublayer(previewLayer)
 
         captureSession.startRunning()
+        
+        self.addBackButton()
     }
 
+    func addBackButton() {
+         let backButton = UIButton(frame: CGRect(x: 40, y: 20, width: 50, height: 50))
+         backButton.backgroundColor = .clear
+         backButton.setTitleColor(UIColor.black, for: .normal)
+         backButton.setImage(UIImage(named: "cross_fill"), for: .normal)
+         backButton.tintColor = .white
+         backButton.addTarget(self, action: #selector(self.buttonTapped), for: .touchUpInside)
+         self.view.addSubview(backButton)
+
+    }
+    @objc func buttonTapped(sender : UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     func failed() {
         let ac = UIAlertController(title: "Scanning not supported", message: "Your device does not support scanning a code from an item. Please use a device with a camera.", preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "OK", style: .default))
