@@ -16,12 +16,11 @@ class HomeViewController: UIViewController {
     
     var client : XDCClient?
     let AlamoObject = AlamoWebServices()
-    
     var accountAddress = ""
-    
+     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         self.client = XDCClientManager.shared.getXDCClient()
         
         self.mainBalance.text =  "0 XDC"
