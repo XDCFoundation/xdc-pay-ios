@@ -38,6 +38,12 @@ class SendTokenTableViewController: UITableViewController {
         self.setMyAddress(str: addressStr)
         self.getBalance()
         self.receiverAddress.text = globaReceiverAddress
+        hideGasLimit()
+    }
+    
+    func hideGasLimit(){
+        self.gasLimit.isEnabled = false
+        self.errorMessage.isHidden = true
     }
     override func viewWillAppear(_ animated: Bool) {
       //  self.sendDemo()

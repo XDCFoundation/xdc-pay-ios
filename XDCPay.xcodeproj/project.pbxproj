@@ -173,6 +173,8 @@
 		84C8F80227F30DCC00F6666C /* TokenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8F80027F30DCC00F6666C /* TokenCell.swift */; };
 		84C8F80327F30DCC00F6666C /* TokenCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C8F80127F30DCC00F6666C /* TokenCell.xib */; };
 		84C951F22804648E00EF5B88 /* ReceiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C951F12804648E00EF5B88 /* ReceiveViewController.swift */; };
+		84E2304528322FFC00FB35F1 /* NetworkListPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E2304428322FFC00FB35F1 /* NetworkListPickerView.swift */; };
+		84E230472832447C00FB35F1 /* NetwrokListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E230462832447C00FB35F1 /* NetwrokListCell.swift */; };
 		84F01600280521410051CD00 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F015FF280521410051CD00 /* ScannerViewController.swift */; };
 		84F0160228053DF80051CD00 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F0160128053DF80051CD00 /* String.swift */; };
 		84F298CE2800382300F8476F /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F298CD2800382300F8476F /* UIViewController.swift */; };
@@ -331,6 +333,8 @@
 		84C8F80027F30DCC00F6666C /* TokenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenCell.swift; sourceTree = "<group>"; };
 		84C8F80127F30DCC00F6666C /* TokenCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TokenCell.xib; sourceTree = "<group>"; };
 		84C951F12804648E00EF5B88 /* ReceiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveViewController.swift; sourceTree = "<group>"; };
+		84E2304428322FFC00FB35F1 /* NetworkListPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkListPickerView.swift; sourceTree = "<group>"; };
+		84E230462832447C00FB35F1 /* NetwrokListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetwrokListCell.swift; sourceTree = "<group>"; };
 		84F015FF280521410051CD00 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		84F0160128053DF80051CD00 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		84F298CD2800382300F8476F /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
@@ -540,6 +544,7 @@
 			children = (
 				846325FA27F4177300437028 /* SettingMenuCell.swift */,
 				8430963D27F477F90040BEB1 /* NetworkCell.swift */,
+				84E230462832447C00FB35F1 /* NetwrokListCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -698,6 +703,7 @@
 				8430963F27F4898A0040BEB1 /* AddNetworkViewController.swift */,
 				8430963A27F471490040BEB1 /* NetworkViewController.swift */,
 				849590F427F57CA800A234F1 /* NetworkDetailsViewController.swift */,
+				84E2304428322FFC00FB35F1 /* NetworkListPickerView.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -1138,6 +1144,7 @@
 				84665F852816A82D0020C12F /* CommonModels.swift in Sources */,
 				84BDBD8D27F6E7220068BF6A /* ContactCell.swift in Sources */,
 				7F62784D27E8DC7900782EE0 /* AppDelegate.swift in Sources */,
+				84E2304528322FFC00FB35F1 /* NetworkListPickerView.swift in Sources */,
 				7F5E509627EC61350076FCD5 /* LandingPageViewController.swift in Sources */,
 				8F4D00472823FB9E009AF24D /* String+Localized.swift in Sources */,
 				84C8F7F427F2C1BE00F6666C /* Extentions.swift in Sources */,
@@ -1230,6 +1237,7 @@
 				84665F772816764B0020C12F /* LoginVC.swift in Sources */,
 				84A7940427FEB026001620E0 /* Constants.swift in Sources */,
 				84C951F22804648E00EF5B88 /* ReceiveViewController.swift in Sources */,
+				84E230472832447C00FB35F1 /* NetwrokListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -48,17 +48,8 @@ class HomeViewController: UIViewController {
     
     
     @IBAction func onNetworkName(_ sender: Any) {
-        let pickerViewClass = self.storyboard?.instantiateViewController(withIdentifier: "PickerViewClass") as! PickerViewClass
-        let networks = DataBaseManager.shared.getNetworks()
-        pickerViewClass.pickerData = networks.map{$0.name}
-        pickerViewClass.titleName = "Network"
+        let pickerViewClass = self.storyboard?.instantiateViewController(withIdentifier: "NetworkListPickerView") as! NetworkListPickerView
         self.present(pickerViewClass, animated: true, completion: nil)
-        pickerViewClass.completionHandler = { selectedRow in
-            self.networkName.text =  networks[selectedRow].name
-            UserDefaultsManager.shared.setOrUpdateCurrentNetworkRpc(url: networks[selectedRow].rpc)
-            UserDefaultsManager.shared.setOrUpdateCurrentNetworkName(name: networks[selectedRow].name)
-            SceneDelegate.shared?.checkLogin()
-        }
     }
     
     @IBAction func onCopyAddress(_ sender: Any) {
