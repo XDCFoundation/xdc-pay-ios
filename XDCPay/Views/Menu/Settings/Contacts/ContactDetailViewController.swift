@@ -9,10 +9,11 @@ import UIKit
 
 class ContactDetailViewController: UIViewController {
 
+    var contactName = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        print(contactName)
     }
     
 

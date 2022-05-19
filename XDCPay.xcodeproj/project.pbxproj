@@ -28,6 +28,7 @@
 		840ED2E82812CDC8001FC4A5 /* ConfirmRecoveryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840ED2E72812CDC8001FC4A5 /* ConfirmRecoveryVC.swift */; };
 		84119C1E27FAB81A002E2F69 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84119C1D27FAB81A002E2F69 /* AccountCell.swift */; };
 		84119C2027FAE7CC002E2F69 /* ImportAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84119C1F27FAE7CC002E2F69 /* ImportAccountViewController.swift */; };
+		8425F6322835F76F00552336 /* ScreenProtector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425F6312835F76F00552336 /* ScreenProtector.swift */; };
 		8430963B27F471490040BEB1 /* NetworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8430963A27F471490040BEB1 /* NetworkViewController.swift */; };
 		8430963E27F477F90040BEB1 /* NetworkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8430963D27F477F90040BEB1 /* NetworkCell.swift */; };
 		8430964027F4898A0040BEB1 /* AddNetworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8430963F27F4898A0040BEB1 /* AddNetworkViewController.swift */; };
@@ -246,6 +247,7 @@
 		840ED2E72812CDC8001FC4A5 /* ConfirmRecoveryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmRecoveryVC.swift; sourceTree = "<group>"; };
 		84119C1D27FAB81A002E2F69 /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
 		84119C1F27FAE7CC002E2F69 /* ImportAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportAccountViewController.swift; sourceTree = "<group>"; };
+		8425F6312835F76F00552336 /* ScreenProtector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenProtector.swift; sourceTree = "<group>"; };
 		8430963A27F471490040BEB1 /* NetworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkViewController.swift; sourceTree = "<group>"; };
 		8430963D27F477F90040BEB1 /* NetworkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCell.swift; sourceTree = "<group>"; };
 		8430963F27F4898A0040BEB1 /* AddNetworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNetworkViewController.swift; sourceTree = "<group>"; };
@@ -737,6 +739,7 @@
 				84F015FF280521410051CD00 /* ScannerViewController.swift */,
 				84665F8228168D680020C12F /* JsonDataBaseManager.swift */,
 				8402762E281FEB9D0006832C /* XdcClientManager.swift */,
+				8425F6312835F76F00552336 /* ScreenProtector.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1137,6 +1140,7 @@
 				7F6278AF27E9000E00782EE0 /* OnboardingSlide.swift in Sources */,
 				84119C2027FAE7CC002E2F69 /* ImportAccountViewController.swift in Sources */,
 				84B4892F27FDC9D0004BED3C /* TokenSendSuccessTableViewController.swift in Sources */,
+				8425F6322835F76F00552336 /* ScreenProtector.swift in Sources */,
 				84C8F7F727F2C1BE00F6666C /* MenuDrawerCellTableViewCell.swift in Sources */,
 				84665F8328168D680020C12F /* JsonDataBaseManager.swift in Sources */,
 				8463260127F42AD500437028 /* Others.swift in Sources */,

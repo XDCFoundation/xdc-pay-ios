@@ -6,9 +6,7 @@ import XDC3Swift
 
 class DataBaseManager {
     
-    
-  
-  static let shared = DataBaseManager()
+   static let shared = DataBaseManager()
     
     
     func addTransaction(data:[String:String]) {
@@ -279,7 +277,7 @@ extension DataBaseManager {
     
     func addAccount(accountName:String) {
         
-        let savedAccounts = geAccountJSON()
+            let savedAccounts = geAccountJSON()
 
             let dataJson = savedAccounts.data(using: .utf8)!
 
@@ -429,4 +427,63 @@ func addDefaultNetworks () {
     }
   }
     
+}
+
+
+extension DataBaseManager {
+    
+    func geContactJSON() ->String {
+        UserDefaults.standard.value(forKey: "contacts") as? String ?? ""
+    }
+    
+    private func saveContact(data:String) {
+        UserDefaults.standard.setValue(data, forKey: "contacts")
+    }
+    
+    func addContact(name:String,address:String) {
+        
+        let savedContacts = geContactJSON()
+
+        if(savedContacts.isEmpty) {
+            
+            let data = [
+                "name": name,
+                "address": address
+            ]
+            
+            let jsonArray = ["response" : [data] ]
+            let str = String(data: try! JSONEncoder().encode(jsonArray), encoding: .utf8)
+            self.saveContact(data: (str!))
+            
+            
+        }else {
+            
+            let dataJson = savedContacts.data(using: .utf8)!
+
+            var data = try! JSONDecoder().decode(AllContacts.self, from: dataJson)
+         
+            data.responseData!.append(Contact(name: name, address: address))
+            
+            let str = String(data: try! JSONEncoder().encode(data), encoding: .utf8)
+            self.saveContact(data: (str!))
+            
+        }
+        
+    }
+    
+    func getContacts() -> [Contact] {
+       
+        let contactJsonString = geContactJSON()
+        
+        if(contactJsonString.isEmpty){
+            return [Contact]()
+        }
+        
+        let dataJson = contactJsonString.data(using: .utf8)!
+
+        let data = try! JSONDecoder().decode(AllContacts.self, from: dataJson)
+        
+        return data.responseData!
+ 
+    }
 }
