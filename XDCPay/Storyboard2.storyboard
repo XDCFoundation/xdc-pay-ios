@@ -2790,7 +2790,7 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Back Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="jmR-qN-ibi">
                                                 <rect key="frame" x="0.0" y="0.0" width="33" height="27"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2f9-Yu-Qxh" customClass="BackButton" customModule="XDCPay" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2f9-Yu-Qxh" customClass="BackButtonNavigation" customModule="XDCPay" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="33" height="27"/>
                                             </button>
                                         </subviews>
@@ -2870,6 +2870,9 @@
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ZR-yi-xbQ">
                                         <rect key="frame" x="0.0" y="0.0" width="33" height="27"/>
+                                        <connections>
+                                            <action selector="onCopy:" destination="Ygk-iF-Yoc" eventType="touchUpInside" id="BpD-lK-5Xf"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -2927,6 +2930,11 @@
                             <constraint firstItem="7uH-fx-c7J" firstAttribute="top" secondItem="ORL-b2-Shp" secondAttribute="bottom" constant="22" id="wXl-1H-EqE"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="address" destination="ORL-b2-Shp" id="RKA-Ov-c2F"/>
+                        <outlet property="name" destination="ICp-eW-E5W" id="UcR-LD-kSo"/>
+                        <outlet property="noTransaction" destination="ntJ-Py-OES" id="fUA-MQ-0jQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xew-bS-CQ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
