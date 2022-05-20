@@ -17,19 +17,14 @@ class HomeViewController: UIViewController {
     var client : XDCClient?
     let AlamoObject = AlamoWebServices()
     var accountAddress = ""
-     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
         self.client = XDCClientManager.shared.getXDCClient()
-        
         self.mainBalance.text =  "0 XDC"
         self.usdBalance.text = "$0 USD"
         homeVc = self
         self.accountAddress = UserDefaultsManager.shared.getCurrentAccoutWalletAddress()
-        
         self.setMyAddress(str: self.accountAddress)
-        
         self.setupMenuDrawer()
         self.accountName.text = DataBaseManager.shared.getCurrentAccountName()
         self.networkName.text = UserDefaultsManager.shared.getCurrentNetworName()
@@ -44,8 +39,6 @@ class HomeViewController: UIViewController {
     @IBAction func onBuy(_ sender: Any) {
         self.pVC(viewConterlerId: "BuyVC")
     }
-    
-    
     @IBAction func onNetworkName(_ sender: Any) {
         let pickerViewClass = self.storyboard?.instantiateViewController(withIdentifier: "NetworkListPickerView") as! NetworkListPickerView
         self.present(pickerViewClass, animated: true, completion: nil)
@@ -53,25 +46,18 @@ class HomeViewController: UIViewController {
     
     @IBAction func onCopyAddress(_ sender: Any) {
         self.showCopyToast()
-      //  MessageDisplayer.showMessage(message: "Copy")
-      //  self.showToast(message: "Copied", font: .systemFont(ofSize: 14.0), view: addressView)
         UIPasteboard.general.string =  UserDefaultsManager.shared.getCurrentAccoutWalletAddress()
     }
-    
     func getBalance() {
-        
         self.client!.eth_getBalance(address: XDCAddress(UserDefaultsManager.shared.getMainWalletAddress()), block: .Latest) { (error, balanceOf) in
-            
             if (balanceOf != nil){
                 let value = balanceOf!/1000000000000000000
                 print(value)
-                
                 DispatchQueue.main.async {
                     self.mainBalance.text =  "\(value) XDC"
                     self.getXdcPrice(xdcVal: value)
                 }
             }
-            
         }
     }
     

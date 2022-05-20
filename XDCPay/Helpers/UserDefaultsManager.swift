@@ -50,13 +50,10 @@ class UserDefaultsManager  {
 
     
     func  updateWalletData(address:String,privateKey:String,rawPublicKey:String) {
-        
         var walletData = UserDefaults.standard.array(forKey: "WalletData") ?? []
-      
         walletData[0] = address
         walletData[1] = privateKey
         walletData[3] = rawPublicKey
-        
         UserDefaults.standard.setValue(walletData, forKey: "WalletData")
 
     }
@@ -73,23 +70,17 @@ class UserDefaultsManager  {
     }
     
     func getCurrentAccoutWalletAddress()->String {
-        
         let walletData = UserDefaults.standard.array(forKey: "WalletData") ?? []
-        
         if(walletData.count > 0) {
             guard var walletAddress = walletData[0] as? String else {
                 return ""
             }
-            
             walletAddress.removeFirst()
             walletAddress.removeFirst()
-            
-            
             return "xdc" + walletAddress
         }else {
             return ""
         }
-       
     }
     
     
