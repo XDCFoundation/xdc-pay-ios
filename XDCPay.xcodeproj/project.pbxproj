@@ -28,6 +28,7 @@
 		840ED2E82812CDC8001FC4A5 /* ConfirmRecoveryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840ED2E72812CDC8001FC4A5 /* ConfirmRecoveryVC.swift */; };
 		84119C1E27FAB81A002E2F69 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84119C1D27FAB81A002E2F69 /* AccountCell.swift */; };
 		84119C2027FAE7CC002E2F69 /* ImportAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84119C1F27FAE7CC002E2F69 /* ImportAccountViewController.swift */; };
+		8425F6322835F76F00552336 /* ScreenProtector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425F6312835F76F00552336 /* ScreenProtector.swift */; };
 		8430963B27F471490040BEB1 /* NetworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8430963A27F471490040BEB1 /* NetworkViewController.swift */; };
 		8430963E27F477F90040BEB1 /* NetworkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8430963D27F477F90040BEB1 /* NetworkCell.swift */; };
 		8430964027F4898A0040BEB1 /* AddNetworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8430963F27F4898A0040BEB1 /* AddNetworkViewController.swift */; };
@@ -173,6 +174,10 @@
 		84C8F80227F30DCC00F6666C /* TokenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8F80027F30DCC00F6666C /* TokenCell.swift */; };
 		84C8F80327F30DCC00F6666C /* TokenCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84C8F80127F30DCC00F6666C /* TokenCell.xib */; };
 		84C951F22804648E00EF5B88 /* ReceiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C951F12804648E00EF5B88 /* ReceiveViewController.swift */; };
+		84D3385D2833E83300D79D85 /* CommanSettingsPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D3385C2833E83300D79D85 /* CommanSettingsPicker.swift */; };
+		84D338602833EF4400D79D85 /* CommanListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D3385E2833EF4400D79D85 /* CommanListCell.swift */; };
+		84D338612833EF4400D79D85 /* CommanListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D3385F2833EF4400D79D85 /* CommanListCell.xib */; };
+		84E2304528322FFC00FB35F1 /* NetworkListPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E2304428322FFC00FB35F1 /* NetworkListPickerView.swift */; };
 		84F01600280521410051CD00 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F015FF280521410051CD00 /* ScannerViewController.swift */; };
 		84F0160228053DF80051CD00 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F0160128053DF80051CD00 /* String.swift */; };
 		84F298CE2800382300F8476F /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F298CD2800382300F8476F /* UIViewController.swift */; };
@@ -242,6 +247,7 @@
 		840ED2E72812CDC8001FC4A5 /* ConfirmRecoveryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmRecoveryVC.swift; sourceTree = "<group>"; };
 		84119C1D27FAB81A002E2F69 /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
 		84119C1F27FAE7CC002E2F69 /* ImportAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportAccountViewController.swift; sourceTree = "<group>"; };
+		8425F6312835F76F00552336 /* ScreenProtector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenProtector.swift; sourceTree = "<group>"; };
 		8430963A27F471490040BEB1 /* NetworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkViewController.swift; sourceTree = "<group>"; };
 		8430963D27F477F90040BEB1 /* NetworkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCell.swift; sourceTree = "<group>"; };
 		8430963F27F4898A0040BEB1 /* AddNetworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNetworkViewController.swift; sourceTree = "<group>"; };
@@ -331,6 +337,10 @@
 		84C8F80027F30DCC00F6666C /* TokenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenCell.swift; sourceTree = "<group>"; };
 		84C8F80127F30DCC00F6666C /* TokenCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TokenCell.xib; sourceTree = "<group>"; };
 		84C951F12804648E00EF5B88 /* ReceiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveViewController.swift; sourceTree = "<group>"; };
+		84D3385C2833E83300D79D85 /* CommanSettingsPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommanSettingsPicker.swift; sourceTree = "<group>"; };
+		84D3385E2833EF4400D79D85 /* CommanListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommanListCell.swift; sourceTree = "<group>"; };
+		84D3385F2833EF4400D79D85 /* CommanListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommanListCell.xib; sourceTree = "<group>"; };
+		84E2304428322FFC00FB35F1 /* NetworkListPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkListPickerView.swift; sourceTree = "<group>"; };
 		84F015FF280521410051CD00 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		84F0160128053DF80051CD00 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		84F298CD2800382300F8476F /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
@@ -572,6 +582,8 @@
 				8F142DBE281FEB6300A3663A /* Help */,
 				846325F527F410C600437028 /* Settings */,
 				8F4E40A22823C8250015690A /* TransactionViewController.swift */,
+				84D3385E2833EF4400D79D85 /* CommanListCell.swift */,
+				84D3385F2833EF4400D79D85 /* CommanListCell.xib */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -587,6 +599,7 @@
 				846325F627F4110B00437028 /* SettingsViewController.swift */,
 				846325FC27F4276E00437028 /* GenralSettingsViewController.swift */,
 				849DA91727F454960012F349 /* AdvanceSettingsViewController.swift */,
+				84D3385C2833E83300D79D85 /* CommanSettingsPicker.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -698,6 +711,7 @@
 				8430963F27F4898A0040BEB1 /* AddNetworkViewController.swift */,
 				8430963A27F471490040BEB1 /* NetworkViewController.swift */,
 				849590F427F57CA800A234F1 /* NetworkDetailsViewController.swift */,
+				84E2304428322FFC00FB35F1 /* NetworkListPickerView.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -725,6 +739,7 @@
 				84F015FF280521410051CD00 /* ScannerViewController.swift */,
 				84665F8228168D680020C12F /* JsonDataBaseManager.swift */,
 				8402762E281FEB9D0006832C /* XdcClientManager.swift */,
+				8425F6312835F76F00552336 /* ScreenProtector.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -968,6 +983,7 @@
 				8F76BB5C282CF22000E5339F /* SF-Pro-Text-Regular.otf in Resources */,
 				7F62785427E8DC7900782EE0 /* Main.storyboard in Resources */,
 				8F76BB5A282CF21000E5339F /* SF-Pro-Text-Bold.otf in Resources */,
+				84D338612833EF4400D79D85 /* CommanListCell.xib in Resources */,
 				849DA91427F43C460012F349 /* Inter.ttf in Resources */,
 				8F76BB58282CF20300E5339F /* SF-Pro-Text-Medium.otf in Resources */,
 				8F76BB56282CF1F000E5339F /* SF-Pro-Text-Semibold.otf in Resources */,
@@ -1124,6 +1140,7 @@
 				7F6278AF27E9000E00782EE0 /* OnboardingSlide.swift in Sources */,
 				84119C2027FAE7CC002E2F69 /* ImportAccountViewController.swift in Sources */,
 				84B4892F27FDC9D0004BED3C /* TokenSendSuccessTableViewController.swift in Sources */,
+				8425F6322835F76F00552336 /* ScreenProtector.swift in Sources */,
 				84C8F7F727F2C1BE00F6666C /* MenuDrawerCellTableViewCell.swift in Sources */,
 				84665F8328168D680020C12F /* JsonDataBaseManager.swift in Sources */,
 				8463260127F42AD500437028 /* Others.swift in Sources */,
@@ -1138,6 +1155,7 @@
 				84665F852816A82D0020C12F /* CommonModels.swift in Sources */,
 				84BDBD8D27F6E7220068BF6A /* ContactCell.swift in Sources */,
 				7F62784D27E8DC7900782EE0 /* AppDelegate.swift in Sources */,
+				84E2304528322FFC00FB35F1 /* NetworkListPickerView.swift in Sources */,
 				7F5E509627EC61350076FCD5 /* LandingPageViewController.swift in Sources */,
 				8F4D00472823FB9E009AF24D /* String+Localized.swift in Sources */,
 				84C8F7F427F2C1BE00F6666C /* Extentions.swift in Sources */,
@@ -1183,6 +1201,7 @@
 				84A7940827FF0978001620E0 /* InfoHelpVC.swift in Sources */,
 				848EC6A62805527200ED867F /* GetContent.swift in Sources */,
 				849590ED27F56DF800A234F1 /* IQNSArray+Sort.swift in Sources */,
+				84D3385D2833E83300D79D85 /* CommanSettingsPicker.swift in Sources */,
 				8430964027F4898A0040BEB1 /* AddNetworkViewController.swift in Sources */,
 				849590FB27F58D4500A234F1 /* SecurityViewController.swift in Sources */,
 				84F0160228053DF80051CD00 /* String.swift in Sources */,
@@ -1230,6 +1249,7 @@
 				84665F772816764B0020C12F /* LoginVC.swift in Sources */,
 				84A7940427FEB026001620E0 /* Constants.swift in Sources */,
 				84C951F22804648E00EF5B88 /* ReceiveViewController.swift in Sources */,
+				84D338602833EF4400D79D85 /* CommanListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

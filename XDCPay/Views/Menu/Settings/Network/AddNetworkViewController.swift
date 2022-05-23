@@ -50,6 +50,21 @@ class AddNetworkViewController: UIViewController {
             return
         }
         
+        var netwrokFound = false
+        
+        for netwrok in DataBaseManager.shared.getNetworks() {
+         
+            if(netwrok.name.lowercased() == self.networkTextField.text!.lowercased()) {
+                netwrokFound = true
+                break
+            }
+        }
+       
+        if(netwrokFound) {
+            showAlert(message: "Network Name Already Used, Please use diffrent Name")
+            return
+        }
+        
         
         DataBaseManager.shared.addNetwork(name: self.networkTextField.text!, rpc: self.rpcTextField.text!, id: self.chainIDTextField.text!, symbol: self.currencySymbolTextField.text!, url: self.networkTextField.text ?? "", isEditable: "Yes")
         

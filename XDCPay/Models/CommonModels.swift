@@ -59,6 +59,28 @@ struct Network: Codable {
          }
  }
  
+struct Contact: Codable {
+        
+        var name = ""
+        var address = ""
+        var id = ""
+
+        enum CodingKeys: String, CodingKey {
+            case name = "name"
+            case address = "address"
+            case id = "id"
+        }
+}
+
+
+struct AllContacts: Codable {
+    
+    var responseData: [Contact]?
+
+        enum CodingKeys: String, CodingKey {
+            case responseData = "response"
+        }
+}
 
 
 

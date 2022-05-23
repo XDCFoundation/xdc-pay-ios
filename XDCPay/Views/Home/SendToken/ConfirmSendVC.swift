@@ -48,8 +48,7 @@ class ConfirmSendVC: UIViewController {
     
     
     func sendAmount(to:String, amount:Double) {
-       
-        print(to)
+        
         let value = UserDefaults.standard.array(forKey: "WalletData")
         let privateKeyWallet = value![1] as! String
         let privateKeyWithHexPrefix = privateKeyWallet.xdc3.withHexPrefix
@@ -64,7 +63,7 @@ class ConfirmSendVC: UIViewController {
             let transcation = XDCTransaction(from: nil, to: XDCAddress(to), value: BigUInt(amount*1000000000000000000), data: nil, nonce: 3, gasPrice: BigUInt(gasPrice!), gasLimit: BigUInt(50005), chainId: Int(chainId))
           
             self.client.eth_sendRawTransaction(transcation, withAccount: xdcAccount!) { [self] error, hash in
-                print(hash)
+    
                 if let hash = hash {
                     
                     self.data.updateValue(hash, forKey: "hash")
@@ -86,10 +85,7 @@ class ConfirmSendVC: UIViewController {
                     DispatchQueue.main.async {
                         self.showAlert(message: "Transaction Error")
                     }
-                    
-                  
                 }
-               
               
             }
         }

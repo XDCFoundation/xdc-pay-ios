@@ -45,6 +45,16 @@ class SeedWordsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        screenProtecter.startPreventingRecording()
+        screenProtecter.startPreventingScreenshot()
+
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        screenProtecter.stopObserver()
+    }
+    
 
     func setup() {
         
