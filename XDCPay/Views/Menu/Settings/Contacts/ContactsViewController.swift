@@ -32,12 +32,13 @@ class ContactsViewController: UIViewController , UITableViewDataSource , UITable
         contactDictionary.removeAll()
         contactitles.removeAll()
         
-        contacts = DataBaseManager.shared.getContacts().map{$0.name}
+        contacts = DataBaseManager.shared.getContacts().map{$0.name + "~" + $0.id}
+        
               for contact in contacts {
                   let contactKey = String(contact.prefix(1))
-                  if var carValues = contactDictionary[contactKey] {
-                      carValues.append(contact)
-                      contactDictionary[contactKey] = carValues
+                  if var contactValues = contactDictionary[contactKey] {
+                    contactValues.append(contact)
+                      contactDictionary[contactKey] = contactValues
                   } else {
                     contactDictionary[contactKey] = [contact]
                   }
@@ -69,7 +70,7 @@ class ContactsViewController: UIViewController , UITableViewDataSource , UITable
            // Configure the cell...
            let carKey = contactitles[indexPath.section]
            if let carValues = contactDictionary[carKey] {
-               cell.contactName?.text = carValues[indexPath.row]
+            cell.contactName?.text = String(carValues[indexPath.row]).split(separator: "~")[0].description
            }
 
            return cell
@@ -97,7 +98,7 @@ class ContactsViewController: UIViewController , UITableViewDataSource , UITable
         vc.modalPresentationStyle = .fullScreen
         let contactKey = contactitles[indexPath.section]
         let contactName = contactDictionary[contactKey]![indexPath.row]
-        vc.contactName =  contactName
+        vc.id =   contactName.split(separator: "~")[1].description
         self.navigationController?.pushViewController(vc, animated: true)
         
     }

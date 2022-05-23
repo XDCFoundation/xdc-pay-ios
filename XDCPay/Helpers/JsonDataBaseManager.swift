@@ -8,6 +8,64 @@ class DataBaseManager {
     
    static let shared = DataBaseManager()
     
+    func deleteContact(id:String) {
+        
+        let savedContacts = geContactJSON()
+
+        let dataJson = savedContacts.data(using: .utf8)!
+
+        var contacts = try! JSONDecoder().decode(AllContacts.self, from: dataJson)
+            
+        var idIndex = 0
+        
+        for (index,contact) in contacts.responseData!.enumerated() {
+            
+            if(contact.id == id) {
+                idIndex = index
+                break
+            }
+        }
+         
+        contacts.responseData!.remove(at: idIndex)
+           
+            let str = String(data: try! JSONEncoder().encode(contacts), encoding: .utf8)
+            print(str as Any)
+            
+        self.saveContact(data: str!)
+        
+    }
+    
+    
+    func updateContact(name:String,address:String,id:String) {
+        
+        let savedContacts = geContactJSON()
+
+        let dataJson = savedContacts.data(using: .utf8)!
+
+        var contacts = try! JSONDecoder().decode(AllContacts.self, from: dataJson)
+            
+        var idIndex = 0
+        
+        for (index,contact) in contacts.responseData!.enumerated() {
+            
+            if(contact.id == id) {
+                idIndex = index
+                break
+            }
+        }
+         
+        contacts.responseData![idIndex].name = name
+        contacts.responseData![idIndex].address = address
+        
+            let str = String(data: try! JSONEncoder().encode(contacts), encoding: .utf8)
+            print(str as Any)
+            
+        self.saveContact(data: str!)
+            
+        
+    }
+    
+    
     
     func addTransaction(data:[String:String]) {
         
@@ -448,7 +506,8 @@ extension DataBaseManager {
             
             let data = [
                 "name": name,
-                "address": address
+                "address": address,
+                "id" : getTimeStampString()
             ]
             
             let jsonArray = ["response" : [data] ]
@@ -462,7 +521,7 @@ extension DataBaseManager {
 
             var data = try! JSONDecoder().decode(AllContacts.self, from: dataJson)
          
-            data.responseData!.append(Contact(name: name, address: address))
+            data.responseData!.append(Contact(name: name, address: address,id: getTimeStampString()))
             
             let str = String(data: try! JSONEncoder().encode(data), encoding: .utf8)
             self.saveContact(data: (str!))
@@ -486,4 +545,15 @@ extension DataBaseManager {
         return data.responseData!
  
     }
+}
+
+
+extension Date {
+    func currentTimeMillis() -> Int64 {
+        return Int64(self.timeIntervalSince1970 * 1000)
+    }
+}
+func getTimeStampString() ->String {
+    let timestamp = Date().currentTimeMillis()
+    return timestamp.description
 }

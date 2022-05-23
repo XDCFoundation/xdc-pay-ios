@@ -42,8 +42,15 @@ class SendTokenTableViewController: UITableViewController {
     }
     
     func hideGasLimit(){
-        self.gasLimit.isEnabled = false
-        self.errorMessage.isHidden = true
+        
+        if(UserDefaultsManager.shared.getGas() == true) {
+            self.gasLimit.isEnabled = true
+            self.errorMessage.isHidden = false
+        }else {
+            self.gasLimit.isEnabled = false
+            self.errorMessage.isHidden = true
+        }
+       
     }
     override func viewWillAppear(_ animated: Bool) {
       //  self.sendDemo()
