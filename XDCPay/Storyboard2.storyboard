@@ -575,7 +575,7 @@
             <objects>
                 <viewController storyboardIdentifier="ViewPagerTabContainer" id="Tdy-MJ-u8g" customClass="ViewPagerTabContainer" customModule="XDCPay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pl2-dn-OoJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="460.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="460"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="rOa-FM-cgm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1225,6 +1225,9 @@
                             </label>
                             <switch opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cmh-0u-cdL">
                                 <rect key="frame" x="16" y="553" width="51" height="31"/>
+                                <connections>
+                                    <action selector="onSwith:" destination="S8D-EK-Wc4" eventType="valueChanged" id="rai-oB-gOy"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Off" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7S6-iN-ibn">
                                 <rect key="frame" x="72" y="558.5" width="24.5" height="20.5"/>
@@ -1272,6 +1275,10 @@
                             <constraint firstItem="z5z-d8-Thg" firstAttribute="leading" secondItem="S0n-Y2-ZNu" secondAttribute="leading" id="zke-Ts-aTK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="onOffLabel" destination="7S6-iN-ibn" id="v4V-a9-c4a"/>
+                        <outlet property="swith" destination="cmh-0u-cdL" id="m85-jl-ubO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gfg-na-R73" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
