@@ -14,7 +14,7 @@ class GenralSettingsViewController: UIViewController {
     @IBOutlet weak var languageUpdate: UILabel!
     
     //    var currencyArray = ["USD" , "INR" , "EUR" , "RUB" , "SNT", "SGD- Singapore Dollar" , "SAI- SAI"]
-    var currencyArray = ["USD"]
+    var currencyArray = ["USD- United State Dollar"]
     
 //    var languageArray = ["Hindi" , "English" , "Spanish" , "Russian" , "Korean" , "Portugal- Brazil" , "Japanese"]
     var languageArray = ["English"]
@@ -27,15 +27,13 @@ class GenralSettingsViewController: UIViewController {
 
     @IBAction func onCurrency(_ sender: Any) {
         
-        let pickerViewClass = self.storyboard?.instantiateViewController(withIdentifier: "PickerViewClass") as! PickerViewClass
-                       pickerViewClass.pickerData = self.currencyArray
-        pickerViewClass.titleName = "Base Currency"
-                            self.present(pickerViewClass, animated: true, completion: nil)
-                           pickerViewClass.completionHandler = { selectedRow in
-                            UserDefaultsManager.shared.setCurrencyUpdateTime()
-                            self.currencyUpdate.text = "Updated " +  UserDefaultsManager.shared.currencyUpdateTime()
-                              // self.positionButton.setTitle( self.positionArray[selectedRow], for: .normal)
-                              // self.selectedIndex = selectedRow
+        let picker = self.storyboard?.instantiateViewController(withIdentifier: "CommanSettingsPicker") as! CommanSettingsPicker
+        picker.data = self.currencyArray
+        picker.titleName = "Base Currency"
+        self.present(picker, animated: true, completion: nil)
+        picker.completionHandler = { selectedRow in
+             UserDefaultsManager.shared.setCurrencyUpdateTime()
+             self.currencyUpdate.text = "Updated " +  UserDefaultsManager.shared.currencyUpdateTime()
                               
         }
         
@@ -44,18 +42,15 @@ class GenralSettingsViewController: UIViewController {
     
     @IBAction func onLanguage(_ sender: Any) {
         
-        let pickerViewClass = self.storyboard?.instantiateViewController(withIdentifier: "PickerViewClass") as! PickerViewClass
-                       pickerViewClass.pickerData = self.languageArray
-        pickerViewClass.titleName = "Current Language"
-                            self.present(pickerViewClass, animated: true, completion: nil)
-                            pickerViewClass.completionHandler = { selectedRow in
-                            UserDefaultsManager.shared.setLanguageUpdateTime()
-                            self.languageUpdate.text = "Updated " +  UserDefaultsManager.shared.languageUpdateTime()
-                          
-                              // self.positionButton.setTitle( self.positionArray[selectedRow], for: .normal)
-                              // self.selectedIndex = selectedRow
-                              
+        let picker = self.storyboard?.instantiateViewController(withIdentifier: "CommanSettingsPicker") as! CommanSettingsPicker
+        picker.data = self.languageArray
+        picker.titleName = "Current Language"
+        self.present(picker, animated: true, completion: nil)
+        picker.completionHandler = { selectedRow in
+            UserDefaultsManager.shared.setLanguageUpdateTime()
+            self.languageUpdate.text = "Updated " +  UserDefaultsManager.shared.languageUpdateTime()
         }
+        
         
     }
 

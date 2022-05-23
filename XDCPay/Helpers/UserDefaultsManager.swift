@@ -17,6 +17,19 @@ class UserDefaultsManager  {
     
      static  let shared =  UserDefaultsManager()
     
+    func setGas(status:String) {
+        UserDefaults.standard.setValue(status, forKey: "gas")
+    }
+    
+    func getGas() -> Bool {
+       let gas =  UserDefaults.standard.value(forKey: "gas")  ?? "off"
+        if(gas as! String == "on") {
+            return true
+        }else {
+            return false
+        }
+    }
+    
     func setOrUpdateCurrentNetworkName(name:String) {
         UserDefaults.standard.setValue(name, forKey: "currentNetworkName")
     }

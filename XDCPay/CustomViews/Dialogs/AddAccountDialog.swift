@@ -17,6 +17,21 @@ class AddAccountDialog: UIViewController {
             return
         }
         
+        var accountFound = false
+        
+        for account in DataBaseManager.shared.getAccounts() {
+         
+            if(account.accountName.lowercased() == self.account.text!.lowercased()) {
+                accountFound = true
+                break
+            }
+        }
+       
+        if(accountFound) {
+            showAlert(message: "Account Name Already Used, Please use diffrent Name")
+            return
+        }
+        
         self.LoadingStart()
         
         DataBaseManager.shared.addAccount(accountName: self.account.text!)

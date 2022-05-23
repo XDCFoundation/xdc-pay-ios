@@ -11,44 +11,54 @@ class ContactsViewController: UIViewController , UITableViewDataSource , UITable
   
     @IBOutlet weak var tableView: UITableView!
     
-    var carsDictionary = [String: [String]]()
-    var carSectionTitles = [String]()
-    var cars = [String]()
+    var contactDictionary = [String: [String]]()
+    var contactitles = [String]()
+    var contacts = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.tableFooterView = UIView()
-        
-        cars = ["Audi", "Aston Martin","BMW", "Bugatti", "Bentley","Chevrolet", "Cadillac","Dodge","Ferrari", "Ford","Honda","Jaguar","Lamborghini","Mercedes", "Mazda","Nissan","Porsche","Rolls Royce","Toyota","Volkswagen"]
-              
-              for car in cars {
-                  let carKey = String(car.prefix(1))
-                  if var carValues = carsDictionary[carKey] {
-                      carValues.append(car)
-                      carsDictionary[carKey] = carValues
-                  } else {
-                      carsDictionary[carKey] = [car]
-                  }
-              }
-              
-              carSectionTitles = [String](carsDictionary.keys)
-              carSectionTitles = carSectionTitles.sorted(by: { $0 < $1 })
-        
-        self.tableView.tableHeaderView?.backgroundColor = UIColor.red
-      
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.getContacts()
+    }
+    
+    func getContacts() {
+        
+        contacts.removeAll()
+        contactDictionary.removeAll()
+        contactitles.removeAll()
+        
+        contacts = DataBaseManager.shared.getContacts().map{$0.name + "~" + $0.id}
+        
+              for contact in contacts {
+                  let contactKey = String(contact.prefix(1))
+                  if var contactValues = contactDictionary[contactKey] {
+                    contactValues.append(contact)
+                      contactDictionary[contactKey] = contactValues
+                  } else {
+                    contactDictionary[contactKey] = [contact]
+                  }
+              }
+        
+              contactitles = [String](contactDictionary.keys)
+              contactitles = contactitles.sorted(by: { $0 < $1 })
+        
+        self.tableView.tableHeaderView?.backgroundColor = UIColor.red
+        self.tableView.reloadData()
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return carSectionTitles.count
+        return contactitles.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-           let carKey = carSectionTitles[section]
-           if let carValues = carsDictionary[carKey] {
-               return carValues.count
+           let contactKey = contactitles[section]
+           if let contactValues = contactDictionary[contactKey] {
+               return contactValues.count
            }
            
            return 0
@@ -58,9 +68,9 @@ class ContactsViewController: UIViewController , UITableViewDataSource , UITable
            let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath) as! ContactCell
 
            // Configure the cell...
-           let carKey = carSectionTitles[indexPath.section]
-           if let carValues = carsDictionary[carKey] {
-               cell.contactName?.text = carValues[indexPath.row]
+           let carKey = contactitles[indexPath.section]
+           if let carValues = contactDictionary[carKey] {
+            cell.contactName?.text = String(carValues[indexPath.row]).split(separator: "~")[0].description
            }
 
            return cell
@@ -68,12 +78,12 @@ class ContactsViewController: UIViewController , UITableViewDataSource , UITable
     
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-           return carSectionTitles[section]
+           return contactitles[section]
        }
 
        
     func sectionIndexTitles(for tableView: UITableView) -> [String]? {
-           return carSectionTitles
+           return contactitles
    }
     
       
@@ -83,11 +93,23 @@ class ContactsViewController: UIViewController , UITableViewDataSource , UITable
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.pVC(viewConterlerId: "ContactDetailViewController")
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ContactDetailViewController") as! ContactDetailViewController
+        vc.modalPresentationStyle = .fullScreen
+        let contactKey = contactitles[indexPath.section]
+        let contactName = contactDictionary[contactKey]![indexPath.row]
+        vc.id =   contactName.split(separator: "~")[1].description
+        self.navigationController?.pushViewController(vc, animated: true)
+        
     }
+    
     @IBAction func onAddContact(_ sender: Any) {
         
-        self.pVC(viewConterlerId: "AddContactViewController")
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddContactViewController") as! AddContactViewController
+        vc.titleText = "Add Contact"
+        vc.modalPresentationStyle = .fullScreen
+        self.navigationController?.pushViewController(vc, animated: true)
+        
     }
     
     
