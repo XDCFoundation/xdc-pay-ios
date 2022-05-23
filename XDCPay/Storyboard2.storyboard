@@ -2082,23 +2082,23 @@
                                                     <color key="textColor" red="0.12941176469999999" green="0.28627450980000002" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BjM-ZG-v7T">
-                                                    <rect key="frame" x="15" y="50" width="51" height="31"/>
-                                                </switch>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="On" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7KZ-Db-S0Z">
                                                     <rect key="frame" x="71" y="55" width="22.5" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z6Z-QG-qoh">
+                                                    <rect key="frame" x="15" y="50" width="51" height="31"/>
+                                                </switch>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="7KZ-Db-S0Z" firstAttribute="centerY" secondItem="BjM-ZG-v7T" secondAttribute="centerY" id="DHY-gz-Gcc"/>
+                                                <constraint firstItem="7KZ-Db-S0Z" firstAttribute="leading" secondItem="Z6Z-QG-qoh" secondAttribute="trailing" constant="7" id="N5J-mf-Tv7"/>
                                                 <constraint firstItem="f8K-F8-28k" firstAttribute="top" secondItem="m84-ij-ySX" secondAttribute="top" constant="17" id="ezn-PA-ujQ"/>
+                                                <constraint firstItem="Z6Z-QG-qoh" firstAttribute="leading" secondItem="f8K-F8-28k" secondAttribute="leading" id="gzP-RO-1Up"/>
+                                                <constraint firstItem="7KZ-Db-S0Z" firstAttribute="centerY" secondItem="Z6Z-QG-qoh" secondAttribute="centerY" id="iSW-hV-0l9"/>
                                                 <constraint firstItem="f8K-F8-28k" firstAttribute="leading" secondItem="m84-ij-ySX" secondAttribute="leading" constant="15" id="vhe-Em-H5g"/>
-                                                <constraint firstItem="BjM-ZG-v7T" firstAttribute="leading" secondItem="f8K-F8-28k" secondAttribute="leading" id="wAc-TH-dWI"/>
-                                                <constraint firstItem="7KZ-Db-S0Z" firstAttribute="leading" secondItem="BjM-ZG-v7T" secondAttribute="trailing" constant="7" id="wFX-SL-Bxc"/>
-                                                <constraint firstItem="BjM-ZG-v7T" firstAttribute="top" secondItem="f8K-F8-28k" secondAttribute="bottom" constant="16" id="ydZ-dM-Wy2"/>
+                                                <constraint firstItem="Z6Z-QG-qoh" firstAttribute="top" secondItem="f8K-F8-28k" secondAttribute="bottom" constant="16" id="zSB-qK-rlQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -2200,6 +2200,9 @@
                             <outlet property="delegate" destination="pig-I5-3jG" id="Pjn-Em-vch"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="biometricSwitch" destination="Z6Z-QG-qoh" id="xhp-Pa-uzv"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y0A-GK-bNc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
