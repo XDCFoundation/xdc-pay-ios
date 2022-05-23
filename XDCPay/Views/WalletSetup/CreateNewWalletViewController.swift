@@ -122,7 +122,7 @@ class CreateNewWalletViewController: UIViewController {
         
         if newPassword.text == confirmPassword.text && flag1 == true {
             
-            if newSwitch.isEnabled == true {
+            if newSwitch.isOn == true {
                 UserDefaultsManager.shared.faceIdEnabled = true
             }else {
                 UserDefaultsManager.shared.faceIdEnabled = false
