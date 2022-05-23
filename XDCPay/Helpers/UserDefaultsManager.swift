@@ -9,6 +9,12 @@ import Foundation
 
 class UserDefaultsManager  {
     
+    
+    enum UserDefaultKeys: String {
+        case faceIdEnabled
+    }
+
+    
      static  let shared =  UserDefaultsManager()
     
     func setGas(status:String) {
@@ -79,10 +85,13 @@ class UserDefaultsManager  {
         
         let defaults = UserDefaults.standard
         let dictionary = defaults.dictionaryRepresentation()
-
-            dictionary.keys.forEach
-            { key in   defaults.removeObject(forKey: key)
+        for key in dictionary.keys {
+            if key == "faceIdEnabled" {
+                continue
             }
+            defaults.removeObject(forKey: key)
+        }
+        
     }
     
     func getCurrentAccoutWalletAddress()->String {
@@ -189,4 +198,12 @@ class UserDefaultsManager  {
        
     }
     
+        var faceIdEnabled: Bool {
+            get {
+                UserDefaults.standard.bool(forKey: UserDefaultKeys.faceIdEnabled.rawValue)
+            }
+            set {
+                UserDefaults.standard.setValue(newValue, forKey: UserDefaultKeys.faceIdEnabled.rawValue)
+            }
+        }
 }
