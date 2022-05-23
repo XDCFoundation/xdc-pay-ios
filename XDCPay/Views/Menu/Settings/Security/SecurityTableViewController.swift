@@ -9,15 +9,25 @@ import UIKit
 
 class SecurityTableViewController: UITableViewController {
 
+    @IBOutlet weak var biometricSwitch: UISwitch!
     var timerArray = ["Immediately", "5 seconds" , "15 seconds" , "30 seconds" , "60 seconds" , "5 minutes" , "10 minutes"]
     
     override func viewDidLoad() {
         
         self.tableView.tableFooterView = UIView()
-        
+        self.biometricSwitch.isOn = UserDefaultsManager.shared.faceIdEnabled
+        self.biometricSwitch.addTarget(self, action: #selector(onSwitchValueChanged(_:)), for: .valueChanged)
+
     }
     
-   
+     @objc private func onSwitchValueChanged(_ switch: UISwitch) {
+        
+         if biometricSwitch.isOn == true {
+             UserDefaultsManager.shared.faceIdEnabled = true
+         }else if biometricSwitch.isOn == false {
+             UserDefaultsManager.shared.faceIdEnabled = false
+         }
+    }
     
    
     @IBAction func onTime(_ sender: Any) {
