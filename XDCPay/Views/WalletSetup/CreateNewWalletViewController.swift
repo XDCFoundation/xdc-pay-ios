@@ -121,6 +121,12 @@ class CreateNewWalletViewController: UIViewController {
         }
         
         if newPassword.text == confirmPassword.text && flag1 == true {
+            
+            if newSwitch.isEnabled == true {
+                UserDefaultsManager.shared.faceIdEnabled = true
+            }else {
+                UserDefaultsManager.shared.faceIdEnabled = false
+            }
            
             let acc = try! XDCAccount.createAccountWithMemonic()
             let importFromMnemonic = try! XDCAccount.importAccountWithMnemonic(mnemonic: acc)
