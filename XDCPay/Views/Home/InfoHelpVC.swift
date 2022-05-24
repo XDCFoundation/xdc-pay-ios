@@ -39,7 +39,12 @@ class InfoHelpVC : UIViewController {
         viewController.modalPresentationStyle = .fullScreen
         self.present(viewController, animated: true, completion: nil)
     }
-    
+    @IBAction func supportCentreBtnAction(_ sender: UIButton) {
+        let viewController = UIStoryboard(name: "Storyboard3", bundle: nil).instantiateViewController(withIdentifier: "HelpViewController") as! HelpViewController
+        viewController.pageLink = Constants.supportCentreUrl
+        viewController.modalPresentationStyle = .fullScreen
+        self.present(viewController, animated: true, completion: nil)
+    }
     @IBAction func contactUsBtnAction(_ sender: UIButton) {
         let viewController = UIStoryboard(name: "Storyboard3", bundle: nil).instantiateViewController(withIdentifier: "HelpViewController") as! HelpViewController
         viewController.pageLink = Constants.contactUsUrl

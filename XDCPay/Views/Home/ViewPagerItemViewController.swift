@@ -32,7 +32,7 @@ class ViewPagerItemViewController: UIViewController, UITableViewDelegate, UITabl
        
         self.transactions = DataBaseManager.shared.getTransactions().filter{$0.myAddress == UserDefaultsManager.shared.getCurrentAccoutWalletAddress()}
      
-        //Token or NFT
+        //MARK: -> Token or NFT
     }
     
     override func viewWillAppear(_ animated: Bool) {

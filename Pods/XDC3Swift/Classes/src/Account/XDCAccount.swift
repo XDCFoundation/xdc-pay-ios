@@ -48,7 +48,6 @@ public class XDCAccount: XDCAccountProtocol {
     }()
     
     required public init(keyStorage: XDCKeyStorageProtocol, keystorePassword password: String) throws {
-        
         do {
             let data = try keyStorage.loadPrivateKey()
             if let decodedKey = try? KeystoreUtil.decode(data: data, password: password) {
@@ -72,14 +71,11 @@ public class XDCAccount: XDCAccountProtocol {
             throw XDCAccountError.loadAccountError
         }
     }
-    
     //   Create a account with private and public key.
-     
     public static func create(keyStorage: XDCKeyStorageProtocol, keystorePassword password: String) throws -> XDCAccount {
         guard let privateKey = KeyUtil.generatePrivateKeyData() else {
             throw XDCAccountError.createAccountError
         }
-        
         do {
             let encodedData = try KeystoreUtil.encode(privateKey: privateKey, password: password)
             try keyStorage.storePrivateKey(key: encodedData)

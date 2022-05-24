@@ -96,6 +96,7 @@ extension Constants {
     static let privacyPolicyUrl = "https://www.xdc.org/privacy"
     static let contactUsUrl = "https://www.xdc.org/contact-us"
     static let termsConditionUrl = "https://www.xdc.org/"
+    static let supportCentreUrl = "https://xinfin.org/"
     
     static let infoHelpStr =
 """
@@ -110,7 +111,6 @@ For your privacy, for now, please sign out of XDC Pay when you’re done using a
 Related Links
 """
 }
-
 extension Constants {
     static func videoCategory(categoryName: String) -> String {
         //Remove this from Api
@@ -120,8 +120,6 @@ extension Constants {
         return baseUrl3002 + (finalURL ?? "")
     }
 }
-
-
 let primaryColor = UIColor(red: 255.0/255.0, green: 196.0/255.0, blue: 0.0/255.0, alpha: 1.0)
 typealias Handler<T> = (T) -> Void
 
@@ -146,8 +144,6 @@ func log(_ message: String,
     print("Message \"\(message)")
     //    print("Message \"\(message)\" (File: \(file), Function: \(function), Line: \(line))")
 }
-
-
 func getDateString(style:DateFormatter.Style = .short) ->String {
     
     // Create Date
