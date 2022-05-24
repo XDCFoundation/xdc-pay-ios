@@ -195,6 +195,8 @@
 		8F76BB58282CF20300E5339F /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F76BB57282CF20300E5339F /* SF-Pro-Text-Medium.otf */; };
 		8F76BB5A282CF21000E5339F /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F76BB59282CF21000E5339F /* SF-Pro-Text-Bold.otf */; };
 		8F76BB5C282CF22000E5339F /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F76BB5B282CF22000E5339F /* SF-Pro-Text-Regular.otf */; };
+		8FAD1D94283B7F2000B6A6D7 /* AddTokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAD1D93283B7F2000B6A6D7 /* AddTokenViewController.swift */; };
+		8FFE2ED0283C9AFF002E44EA /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFE2ECF283C9AFF002E44EA /* TokenManager.swift */; };
 		ECDE5F2206DF67B3CD0A8767 /* Pods_XDCPay_XDCPayUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 318E80B364AB4EDDBA8F16C7 /* Pods_XDCPay_XDCPayUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -358,6 +360,8 @@
 		8F76BB57282CF20300E5339F /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
 		8F76BB59282CF21000E5339F /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
 		8F76BB5B282CF22000E5339F /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
+		8FAD1D93283B7F2000B6A6D7 /* AddTokenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTokenViewController.swift; sourceTree = "<group>"; };
+		8FFE2ECF283C9AFF002E44EA /* TokenManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenManager.swift; sourceTree = "<group>"; };
 		981E7A6408BE28394FE30FD4 /* Pods_XDCPayTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XDCPayTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D64173F68F4DFCF442AB2A35 /* Pods-XDCPay-XDCPayUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XDCPay-XDCPayUITests.debug.xcconfig"; path = "Target Support Files/Pods-XDCPay-XDCPayUITests/Pods-XDCPay-XDCPayUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F9938CB9A665E9CDB80B528C /* Pods-XDCPay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XDCPay.debug.xcconfig"; path = "Target Support Files/Pods-XDCPay/Pods-XDCPay.debug.xcconfig"; sourceTree = "<group>"; };
@@ -482,6 +486,7 @@
 		7F62788027E8DCDC00782EE0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8FAD1D92283B7EDB00B6A6D7 /* Token */,
 				84756131281922D80082A50C /* Buy */,
 				846325F427F410AA00437028 /* Menu */,
 				8474BE6827F1C5120067AC62 /* Home */,
@@ -740,6 +745,7 @@
 				84665F8228168D680020C12F /* JsonDataBaseManager.swift */,
 				8402762E281FEB9D0006832C /* XdcClientManager.swift */,
 				8425F6312835F76F00552336 /* ScreenProtector.swift */,
+				8FFE2ECF283C9AFF002E44EA /* TokenManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -852,6 +858,14 @@
 				7F62789127E8E88B00782EE0 /* Inter.ttf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		8FAD1D92283B7EDB00B6A6D7 /* Token */ = {
+			isa = PBXGroup;
+			children = (
+				8FAD1D93283B7F2000B6A6D7 /* AddTokenViewController.swift */,
+			);
+			path = Token;
 			sourceTree = "<group>";
 		};
 		90921ABFF9292510E940AF45 /* Frameworks */ = {
@@ -1146,6 +1160,7 @@
 				8463260127F42AD500437028 /* Others.swift in Sources */,
 				849590C927F56DF800A234F1 /* IQKeyboardManagerConstantsInternal.swift in Sources */,
 				846325FD27F4276E00437028 /* GenralSettingsViewController.swift in Sources */,
+				8FFE2ED0283C9AFF002E44EA /* TokenManager.swift in Sources */,
 				848EC6A8280579AD00ED867F /* Double.swift in Sources */,
 				840ED2E82812CDC8001FC4A5 /* ConfirmRecoveryVC.swift in Sources */,
 				840ED2E628129DCB001FC4A5 /* TextViewWithPlaceholder.swift in Sources */,
@@ -1191,6 +1206,7 @@
 				7F6278A127E8FB6500782EE0 /* OnboardingViewController.swift in Sources */,
 				849590E427F56DF800A234F1 /* IQUIViewController+Additions.swift in Sources */,
 				8430963E27F477F90040BEB1 /* NetworkCell.swift in Sources */,
+				8FAD1D94283B7F2000B6A6D7 /* AddTokenViewController.swift in Sources */,
 				848E434C27F5B90100501109 /* PrivateKeyViewController.swift in Sources */,
 				84C02DC327F318DF007B0831 /* ViewPagerOptions.swift in Sources */,
 				84FD7EA12818044A00CEB47D /* Dialog.swift in Sources */,

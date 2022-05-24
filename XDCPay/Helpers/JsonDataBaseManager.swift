@@ -115,6 +115,49 @@ class DataBaseManager {
         
     }
     
+    func addTokens(data:[String:String]) {
+        
+        print(data)
+        
+        let savedTokens = getToken()
+
+        if(savedTokens.isEmpty) {
+            
+            let data = [
+                "tokenAddress": data["tokenAddress"],
+                "tokenSymbol": data["tokenSymbol"],
+                "tokenDecimal": data["tokenDecimal"]
+            ] as! [String:String]
+            
+            let jsonArray = ["response" : [data] ]
+            
+            print(jsonArray)
+            
+            let str = String(data: try! JSONEncoder().encode(jsonArray), encoding: .utf8)
+            print(str as Any)
+            
+            self.saveToken(data: (str)!)
+            
+            
+        }else {
+            
+            
+            let dataJson = savedTokens.data(using: .utf8)!
+
+            var tokens = try! JSONDecoder().decode(AllTokens.self, from: dataJson)
+         
+            tokens.responseData!.append(TokenDetails(tokenAddress: data["tokenAddress"]!, tokenSymbol: data["tokenSymbol"]!, tokenDecimal: data["tokenDecimal"]!))
+            
+            let str = String(data: try! JSONEncoder().encode(tokens), encoding: .utf8)
+            print(str as Any)
+            
+            self.saveToken(data: (str!))
+            
+        }
+        
+    }
+
+    
     func getTransactions() -> [Transaction] {
        
         let networkJsonString = geTransactions()
@@ -128,6 +171,23 @@ class DataBaseManager {
         let transacton = try! JSONDecoder().decode(AllTransactions.self, from: dataJson)
         
         return transacton.responseData!
+ 
+    }
+    
+    
+    func getTokens() -> [TokenDetails] {
+       
+        let getTokens = getToken()
+ 
+        if(getTokens.isEmpty){
+            return [TokenDetails]()
+        }
+        
+        let dataJson = getTokens.data(using: .utf8)!
+
+        let tokens = try! JSONDecoder().decode(AllTokens.self, from: dataJson)
+        
+        return tokens.responseData!
  
     }
     
@@ -231,6 +291,22 @@ extension DataBaseManager {
     
 }
 
+
+extension DataBaseManager {
+    
+    private func saveToken(data:String) {
+        
+        UserDefaults.standard.setValue(data, forKey: "token")
+       
+    }
+    
+    func getToken() ->String {
+        
+        UserDefaults.standard.value(forKey: "token") as? String ?? ""
+       
+    }
+    
+}
 
 extension DataBaseManager {
     

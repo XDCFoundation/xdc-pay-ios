@@ -9,6 +9,8 @@ import UIKit
 
 class TokenCell: UITableViewCell {
 
+    @IBOutlet weak var tokenImg: UIImageView!
+    @IBOutlet weak var tokenDetails: UILabel!
     
     
 }

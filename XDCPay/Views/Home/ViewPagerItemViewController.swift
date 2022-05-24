@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import XDC3Swift
 
 var viewPagerItemViewController : ViewPagerItemViewController?
 
@@ -15,6 +16,7 @@ class ViewPagerItemViewController: UIViewController, UITableViewDelegate, UITabl
     @IBOutlet weak var addTokenButton: UIButton!
     
     var transactions = [Transaction]()
+    var tokens = [TokenDetails]()
     
     
     var position = 0
@@ -31,7 +33,8 @@ class ViewPagerItemViewController: UIViewController, UITableViewDelegate, UITabl
         self.tableView.register(UINib(nibName: "TokenCell", bundle: nil), forCellReuseIdentifier: "TokenCell")
        
         self.transactions = DataBaseManager.shared.getTransactions().filter{$0.myAddress == UserDefaultsManager.shared.getCurrentAccoutWalletAddress()}
-     
+      
+        self.tokens = DataBaseManager.shared.getTokens()
         //Token or NFT
     }
     
@@ -40,7 +43,9 @@ class ViewPagerItemViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     @IBAction func addTokenBtnAction(_ sender: UIButton) {
-        MessageDisplayer.showMessage(message: "Under development")
+     //   MessageDisplayer.showMessage(message: "Under development")
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddTokenViewController") as! AddTokenViewController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     //MARK: - UITableview Delegates
@@ -48,7 +53,8 @@ class ViewPagerItemViewController: UIViewController, UITableViewDelegate, UITabl
         if(position == 0) {
             return transactions.count
         }
-        return 2
+        self.addTokenButton.isHidden = false
+        return tokens.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -74,8 +80,20 @@ class ViewPagerItemViewController: UIViewController, UITableViewDelegate, UITabl
            
             
         } else {
-            self.addTokenButton.isHidden = false
+            let tokenData = self.tokens[indexPath.item]
+
             let cell = self.tableView.dequeueReusableCell(withIdentifier: "TokenCell", for: indexPath) as! TokenCell
+            TokenManager.shared._balanceToken(_contractAddress: tokenData.tokenAddress.xdc3.noxdcPrefix.xdc3.withHexPrefix) { balance in
+                DispatchQueue.main.async {
+                    let mainBalance = Double(balance!)!/pow(10.0, Double(tokenData.tokenDecimal)!)
+                    cell.tokenDetails.text = "\(String(describing: Int(mainBalance))) \(tokenData.tokenSymbol)"
+                }
+            } onError: { error in
+                DispatchQueue.main.async {
+                    cell.tokenDetails.text = "0 \(tokenData.tokenSymbol)"
+                }
+            }
+           
             return cell
         }
          

@@ -35,6 +35,7 @@ class UserDefaultsManager  {
     }
     func resetAccount() {
          UserDefaults.standard.setValue("", forKey: "transaction")
+         UserDefaults.standard.setValue("", forKey: "token")
     }
     
     func getCurrentNetworkRpc() ->String {
