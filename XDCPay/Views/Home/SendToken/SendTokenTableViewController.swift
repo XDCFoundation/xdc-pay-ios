@@ -38,6 +38,7 @@ class SendTokenTableViewController: UITableViewController {
         self.setMyAddress(str: addressStr)
         self.getBalance()
         self.receiverAddress.text = globaReceiverAddress
+        self.amountToBeSend.keyboardType  = .decimalPad
         hideGasLimit()
     }
     
@@ -153,11 +154,11 @@ extension SendTokenTableViewController {
         self.client.eth_getBalance(address: XDCAddress(UserDefaultsManager.shared.getMainWalletAddress()), block: .Latest) { (error, balanceOf) in
                 
             if (balanceOf != nil){
-                let value = balanceOf!/1000000000000000000
+                let value = Double(balanceOf!)/1000000000000000000
                 print(value)
                 self.availableAmount = Double(value)
               DispatchQueue.main.async {
-                self.available.text =  "Available: \(value) XDC"
+                self.available.text =  "Available: \(value.getXDCValue())"
                  // self.getXdcPrice(xdcVal: value)
               }
             }
