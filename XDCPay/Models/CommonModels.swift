@@ -120,3 +120,23 @@ struct Transaction: Codable {
         }
 }
 
+
+struct AllTokens: Codable {
+        
+    var responseData: [TokenDetails]?
+
+        enum CodingKeys: String, CodingKey {
+            case responseData = "response"
+    }
+}
+
+struct TokenDetails: Codable {
+    var tokenAddress = ""
+    var tokenSymbol = ""
+    var tokenDecimal = ""
+    enum CodingKeys: String, CodingKey {
+        case tokenAddress = "tokenAddress"
+        case tokenSymbol = "tokenSymbol"
+        case tokenDecimal = "tokenDecimal"
+    }
+}
