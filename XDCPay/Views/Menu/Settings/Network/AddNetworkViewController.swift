@@ -45,11 +45,19 @@ class AddNetworkViewController: UIViewController {
             return
         }
         
-        if(self.currencySymbolTextField.text!.isEmpty) {
-            self.showAlert(message: "Please Enter Currency Symbol")
+     
+        if(!blockTextField.text!.isEmpty && !self.blockTextField.text!.isValidateURL()) {
+            self.showAlert(message: "Please Enter correct Block Url")
             return
         }
         
+        let db = DataBaseManager.shared.getNetworks().filter{$0.name == self.networkTextField.text!}
+        
+        if(db.count > 0) {
+            self.showAlert(message: "This Network Name is already used, Please use diffrent name")
+            return
+        }
+         
         var netwrokFound = false
         
         for netwrok in DataBaseManager.shared.getNetworks() {
@@ -66,7 +74,7 @@ class AddNetworkViewController: UIViewController {
         }
         
         
-        DataBaseManager.shared.addNetwork(name: self.networkTextField.text!, rpc: self.rpcTextField.text!, id: self.chainIDTextField.text!, symbol: self.currencySymbolTextField.text!, url: self.networkTextField.text ?? "", isEditable: "Yes")
+        DataBaseManager.shared.addNetwork(name: self.networkTextField.text!, rpc: self.rpcTextField.text!, id: self.chainIDTextField.text!, symbol: self.currencySymbolTextField.text!, url: self.blockTextField.text ?? "", isEditable: "Yes")
         
         self.navigationController?.popViewController(animated: true)
         

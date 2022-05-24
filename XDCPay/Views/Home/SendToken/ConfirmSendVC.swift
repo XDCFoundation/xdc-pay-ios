@@ -54,11 +54,18 @@ class ConfirmSendVC: UIViewController {
         let privateKeyWithHexPrefix = privateKeyWallet.xdc3.withHexPrefix
         let xdcAccount = try? XDCAccount(keyStorage: XDCPrivateKeyStore(privateKey: privateKeyWithHexPrefix))
     
+        let fee = self.fees.text!
+        let totalAmount = self.total.text!
+        let address = myAddress.text!
+        
         self.client.eth_gasPrice { error, gasPrice in
              
             print(gasPrice ?? 0)
             
-            let chainId = DataBaseManager.shared.getNetworks().first?.id ?? "0"
+           // let chainId = DataBaseManager.shared.getNetworks().first?.id ?? "0"
+            
+            let chainId = DataBaseManager.shared.getNetworks().filter{$0.name == UserDefaultsManager.shared.getCurrentNetworName()}.first!.id
+               
             
             let transcation = XDCTransaction(from: nil, to: XDCAddress(to), value: BigUInt(amount*1000000000000000000), data: nil, nonce: 3, gasPrice: BigUInt(gasPrice!), gasLimit: BigUInt(50005), chainId: Int(chainId))
           
@@ -67,9 +74,9 @@ class ConfirmSendVC: UIViewController {
                 if let hash = hash {
                     
                     self.data.updateValue(hash, forKey: "hash")
-                    self.data.updateValue(self.fees.text!, forKey: "fee")
-                    self.data.updateValue(self.total.text!, forKey: "total")
-                    self.data.updateValue(self.myAddress.text!, forKey: "myAddress")
+                    self.data.updateValue(fee, forKey: "fee")
+                    self.data.updateValue(totalAmount, forKey: "total")
+                    self.data.updateValue(address, forKey: "myAddress")
                    
                     DataBaseManager.shared.addTransaction(data:data)
                     

@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -575,7 +577,7 @@
             <objects>
                 <viewController storyboardIdentifier="ViewPagerTabContainer" id="Tdy-MJ-u8g" customClass="ViewPagerTabContainer" customModule="XDCPay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pl2-dn-OoJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="460"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="460.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="rOa-FM-cgm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -5176,8 +5178,18 @@ Related Links </string>
                                     <action selector="privacyPolicyBtnAction:" destination="0ef-vX-bfp" eventType="touchUpInside" id="clB-dC-mPr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQG-iV-xYc">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5S-RY-eDH">
                                 <rect key="frame" x="40" y="401.5" width="334" height="28"/>
+                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="13"/>
+                                <state key="normal" title="Support Center">
+                                    <color key="titleColor" red="0.12941176469999999" green="0.28627450980000002" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="supportCentreBtnAction:" destination="0ef-vX-bfp" eventType="touchUpInside" id="8hZ-sQ-0RA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQG-iV-xYc">
+                                <rect key="frame" x="40" y="437.5" width="334" height="28"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="13"/>
                                 <state key="normal" title="Visit Our Website">
                                     <color key="titleColor" red="0.12941176469999999" green="0.28627450980000002" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -5187,7 +5199,7 @@ Related Links </string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJR-L3-W8X">
-                                <rect key="frame" x="40" y="437.5" width="334" height="28"/>
+                                <rect key="frame" x="40" y="473.5" width="334" height="28"/>
                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="13"/>
                                 <state key="normal" title="Contact Us">
                                     <color key="titleColor" red="0.12941176469999999" green="0.28627450980000002" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -5203,7 +5215,9 @@ Related Links </string>
                             <constraint firstItem="1jj-FT-97K" firstAttribute="leading" secondItem="6fP-AS-61l" secondAttribute="leading" constant="40" id="2W0-kF-buM"/>
                             <constraint firstItem="dQG-iV-xYc" firstAttribute="leading" secondItem="X8w-ag-uo5" secondAttribute="leading" id="5Zd-dh-XDL"/>
                             <constraint firstItem="X8w-ag-uo5" firstAttribute="leading" secondItem="1jj-FT-97K" secondAttribute="leading" id="9Uw-o0-1Ed"/>
-                            <constraint firstItem="dQG-iV-xYc" firstAttribute="top" secondItem="X8w-ag-uo5" secondAttribute="bottom" constant="8" id="NCU-zA-mkc"/>
+                            <constraint firstItem="T5S-RY-eDH" firstAttribute="leading" secondItem="X8w-ag-uo5" secondAttribute="leading" id="D0o-P8-LlI"/>
+                            <constraint firstItem="T5S-RY-eDH" firstAttribute="trailing" secondItem="X8w-ag-uo5" secondAttribute="trailing" id="FD6-w5-Jxp"/>
+                            <constraint firstItem="T5S-RY-eDH" firstAttribute="top" secondItem="X8w-ag-uo5" secondAttribute="bottom" constant="8" id="MCq-os-M3D"/>
                             <constraint firstItem="dQG-iV-xYc" firstAttribute="trailing" secondItem="X8w-ag-uo5" secondAttribute="trailing" id="RcX-ze-q7T"/>
                             <constraint firstItem="KJR-L3-W8X" firstAttribute="trailing" secondItem="dQG-iV-xYc" secondAttribute="trailing" id="Saj-ji-W3K"/>
                             <constraint firstItem="6fP-AS-61l" firstAttribute="trailing" secondItem="1jj-FT-97K" secondAttribute="trailing" constant="40" id="aHQ-6F-dez"/>
@@ -5211,6 +5225,7 @@ Related Links </string>
                             <constraint firstItem="KJR-L3-W8X" firstAttribute="top" secondItem="dQG-iV-xYc" secondAttribute="bottom" constant="8" id="emg-9u-G1W"/>
                             <constraint firstItem="F63-JM-2it" firstAttribute="top" secondItem="1Rg-I1-E43" secondAttribute="top" id="gwY-13-2Ov"/>
                             <constraint firstItem="1jj-FT-97K" firstAttribute="top" secondItem="F63-JM-2it" secondAttribute="bottom" constant="40" id="hnL-dG-WdN"/>
+                            <constraint firstItem="dQG-iV-xYc" firstAttribute="top" secondItem="T5S-RY-eDH" secondAttribute="bottom" constant="8" id="kLy-jD-j3v"/>
                             <constraint firstItem="F63-JM-2it" firstAttribute="leading" secondItem="6fP-AS-61l" secondAttribute="leading" id="mFD-Or-9rG"/>
                             <constraint firstItem="X8w-ag-uo5" firstAttribute="trailing" secondItem="1jj-FT-97K" secondAttribute="trailing" id="oKS-RR-8p2"/>
                             <constraint firstItem="F63-JM-2it" firstAttribute="trailing" secondItem="6fP-AS-61l" secondAttribute="trailing" id="rH0-p6-AX3"/>

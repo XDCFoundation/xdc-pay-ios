@@ -17,19 +17,14 @@ class HomeViewController: UIViewController {
     var client : XDCClient?
     let AlamoObject = AlamoWebServices()
     var accountAddress = ""
-     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
         self.client = XDCClientManager.shared.getXDCClient()
-        
         self.mainBalance.text =  "0 XDC"
         self.usdBalance.text = "$0 USD"
         homeVc = self
         self.accountAddress = UserDefaultsManager.shared.getCurrentAccoutWalletAddress()
-        
         self.setMyAddress(str: self.accountAddress)
-        
         self.setupMenuDrawer()
         self.accountName.text = DataBaseManager.shared.getCurrentAccountName()
         self.networkName.text = UserDefaultsManager.shared.getCurrentNetworName()
@@ -44,8 +39,6 @@ class HomeViewController: UIViewController {
     @IBAction func onBuy(_ sender: Any) {
         self.pVC(viewConterlerId: "BuyVC")
     }
-    
-    
     @IBAction func onNetworkName(_ sender: Any) {
         let pickerViewClass = self.storyboard?.instantiateViewController(withIdentifier: "NetworkListPickerView") as! NetworkListPickerView
         self.present(pickerViewClass, animated: true, completion: nil)
@@ -53,25 +46,20 @@ class HomeViewController: UIViewController {
     
     @IBAction func onCopyAddress(_ sender: Any) {
         self.showCopyToast()
-      //  MessageDisplayer.showMessage(message: "Copy")
-      //  self.showToast(message: "Copied", font: .systemFont(ofSize: 14.0), view: addressView)
         UIPasteboard.general.string =  UserDefaultsManager.shared.getCurrentAccoutWalletAddress()
     }
-    
     func getBalance() {
-        
         self.client!.eth_getBalance(address: XDCAddress(UserDefaultsManager.shared.getMainWalletAddress()), block: .Latest) { (error, balanceOf) in
-            
-            if (balanceOf != nil){
-                let value = balanceOf!/1000000000000000000
+ 
+      if (balanceOf != nil){
+                let value =  Double(balanceOf!)/100000000000000000
                 print(value)
-                
+                let fourDegitValue =  value.roundToDecimal(4) // make it 4 degit
                 DispatchQueue.main.async {
-                    self.mainBalance.text =  "\(value) XDC"
-                    self.getXdcPrice(xdcVal: value)
+                    self.mainBalance.text =  "\(fourDegitValue) XDC"
+                    self.getXdcPrice(xdcVal: fourDegitValue)
                 }
             }
-            
         }
     }
     
@@ -218,11 +206,39 @@ extension HomeViewController:MenuDrawerProtocol {
             return
         }
         
-        let walletUrl = "https://observer.xdc.org/address-details/\(walletAddress)"
+       
+        let network = DataBaseManager.shared.getNetworks().filter{$0.name == UserDefaultsManager.shared.getCurrentNetworName()}.first!
+      
+        let networkURL = network.url
         
-        if let url = URL(string: walletUrl) {
-            UIApplication.shared.open(url)
+        if(networkURL.isEmpty) {
+            showAlert(message: "Network url is Empty")
+            return
         }
+        
+        
+        if(!networkURL.isValidateURL()) {
+            self.showAlert(message: "URL is Not Correct")
+            return
+        }
+        
+        
+        
+          if(network.url.contains("observer.xdc.org")) {
+              
+              let walletUrl = "https://observer.xdc.org/address-details/\(walletAddress)"
+              
+              if let url = URL(string: walletUrl) {
+                  UIApplication.shared.open(url)
+              }
+          }else {
+            
+            if let url = URL(string: networkURL) {
+                UIApplication.shared.open(url)
+            }
+            
+          }
+       
     }
     
 }
@@ -231,7 +247,7 @@ extension HomeViewController:MenuDrawerProtocol {
 
 extension HomeViewController {
     
-    func getXdcPrice(xdcVal: BigUInt) {
+    func getXdcPrice(xdcVal: Double) {
         
         let xdcValueInDouble = Double(xdcVal)
         
