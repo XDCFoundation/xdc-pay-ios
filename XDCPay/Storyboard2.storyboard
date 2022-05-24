@@ -575,7 +575,7 @@
             <objects>
                 <viewController storyboardIdentifier="ViewPagerTabContainer" id="Tdy-MJ-u8g" customClass="ViewPagerTabContainer" customModule="XDCPay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pl2-dn-OoJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="460"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="460.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="rOa-FM-cgm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

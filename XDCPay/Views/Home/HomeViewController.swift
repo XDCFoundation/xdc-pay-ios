@@ -50,12 +50,14 @@ class HomeViewController: UIViewController {
     }
     func getBalance() {
         self.client!.eth_getBalance(address: XDCAddress(UserDefaultsManager.shared.getMainWalletAddress()), block: .Latest) { (error, balanceOf) in
-            if (balanceOf != nil){
-                let value = balanceOf!/1000000000000000000
+ 
+      if (balanceOf != nil){
+                let value =  Double(balanceOf!)/100000000000000000
                 print(value)
+                let fourDegitValue =  value.roundToDecimal(4) // make it 4 degit
                 DispatchQueue.main.async {
-                    self.mainBalance.text =  "\(value) XDC"
-                    self.getXdcPrice(xdcVal: value)
+                    self.mainBalance.text =  "\(fourDegitValue) XDC"
+                    self.getXdcPrice(xdcVal: fourDegitValue)
                 }
             }
         }
@@ -204,11 +206,39 @@ extension HomeViewController:MenuDrawerProtocol {
             return
         }
         
-        let walletUrl = "https://observer.xdc.org/address-details/\(walletAddress)"
+       
+        let network = DataBaseManager.shared.getNetworks().filter{$0.name == UserDefaultsManager.shared.getCurrentNetworName()}.first!
+      
+        let networkURL = network.url
         
-        if let url = URL(string: walletUrl) {
-            UIApplication.shared.open(url)
+        if(networkURL.isEmpty) {
+            showAlert(message: "Network url is Empty")
+            return
         }
+        
+        
+        if(!networkURL.isValidateURL()) {
+            self.showAlert(message: "URL is Not Correct")
+            return
+        }
+        
+        
+        
+          if(network.url.contains("observer.xdc.org")) {
+              
+              let walletUrl = "https://observer.xdc.org/address-details/\(walletAddress)"
+              
+              if let url = URL(string: walletUrl) {
+                  UIApplication.shared.open(url)
+              }
+          }else {
+            
+            if let url = URL(string: networkURL) {
+                UIApplication.shared.open(url)
+            }
+            
+          }
+       
     }
     
 }
@@ -217,7 +247,7 @@ extension HomeViewController:MenuDrawerProtocol {
 
 extension HomeViewController {
     
-    func getXdcPrice(xdcVal: BigUInt) {
+    func getXdcPrice(xdcVal: Double) {
         
         let xdcValueInDouble = Double(xdcVal)
         
