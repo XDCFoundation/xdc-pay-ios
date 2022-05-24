@@ -55,88 +55,58 @@ class UserDefaultsManager  {
     func languageUpdateTime() ->String {
         return UserDefaults.standard.value(forKey: "LanguageUpdateTime") as! String
     }
-    
-    
     func setOrUpdateCurrentNetworkRpc(url:String) {
         UserDefaults.standard.setValue(url, forKey: "currentNetwork")
     }
-    
     func getCurrentNetworName() ->String {
-        
         return UserDefaults.standard.value(forKey: "currentNetworkName") as! String
-        
     }
-
-    
     func  updateWalletData(address:String,privateKey:String,rawPublicKey:String) {
-        
         var walletData = UserDefaults.standard.array(forKey: "WalletData") ?? []
-      
         walletData[0] = address
         walletData[1] = privateKey
         walletData[3] = rawPublicKey
-        
         UserDefaults.standard.setValue(walletData, forKey: "WalletData")
-
     }
-    
-     
     func clearUserDefaults() {
-        
         let defaults = UserDefaults.standard
         let dictionary = defaults.dictionaryRepresentation()
+
         for key in dictionary.keys {
             if key == "faceIdEnabled" {
                 continue
+
             }
             defaults.removeObject(forKey: key)
         }
         
     }
-    
     func getCurrentAccoutWalletAddress()->String {
-        
         let walletData = UserDefaults.standard.array(forKey: "WalletData") ?? []
-        
         if(walletData.count > 0) {
             guard var walletAddress = walletData[0] as? String else {
                 return ""
             }
-            
             walletAddress.removeFirst()
             walletAddress.removeFirst()
-            
-            
             return "xdc" + walletAddress
         }else {
             return ""
         }
-       
     }
-    
-    
-    
-    
     func isLoggedIn() -> Bool{
-        
         let walletData = UserDefaults.standard.array(forKey: "WalletData") ?? []
-        
         if(walletData.count > 0) {
             return true
         }else {
            return false
         }
-      
     }
-    
     func logOut() {
         UserDefaults.standard.setValue(true, forKey: "logOut")
     }
-    
     func getWalletAddress()->String {
-        
         let walletData = UserDefaults.standard.array(forKey: "WalletData") ?? []
-        
         if(walletData.count > 0) {
             guard let walletAddress = walletData[0] as? String else {
                 return ""
@@ -145,11 +115,9 @@ class UserDefaultsManager  {
         }else {
             return ""
         }
-        
 //        guard let privateKey = walletData![1] as? String else {
 //            return
 //        }
-       
     }
     
     

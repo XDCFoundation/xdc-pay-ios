@@ -4,9 +4,7 @@ import UIKit
 import XDC3Swift
 import PSMeter
 
-
 class ImportFromSeedViewController: UIViewController {
-    
     @IBOutlet var newPassword: UITextField!
     @IBOutlet weak var psMeter: PSMeter!
     @IBOutlet var confirmPassword: UITextField!
@@ -17,19 +15,15 @@ class ImportFromSeedViewController: UIViewController {
     @IBOutlet weak var secretTextView: UITextView!
     @IBOutlet weak var showBtn: UIButton!
     var showSelected = true
-    
-    
     var showSecret = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         overrideUserInterfaceStyle = .light
         importWalletBtn.layer.cornerRadius = 4
         secretTextView.text = ""
-        
     }
-    
     @IBAction func onShowPassword(_ sender: Any) {
-        
         if showSelected {
             self.newPassword.isSecureTextEntry = false
             self.confirmPassword.isSecureTextEntry = false
@@ -41,14 +35,11 @@ class ImportFromSeedViewController: UIViewController {
         }
         showSelected = !showSelected
     }
-    
     func hexStringToUIColor (hex:String) -> UIColor {
         var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
-        
         if (cString.hasPrefix("#")) {
             cString.remove(at: cString.startIndex)
         }
-        
         if ((cString.count) != 6) {
             return UIColor.gray
         }
@@ -121,35 +112,38 @@ class ImportFromSeedViewController: UIViewController {
             showAlert(message: "Password does not match")
             return
         }
-    
-        
-        if newPassword.text == confirmPassword.text &&  self.secretTextView.text!.count >= 24   {
-            let mnemonic = secretTextView!.text
-            let importFromMnemonic = try! XDCAccount.importAccountWithMnemonic(mnemonic: mnemonic!)
-            print(importFromMnemonic.address)
-            
-            let vc = UIStoryboard(name: "Storyboard2", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-            vc.modalPresentationStyle = .fullScreen
-            vc.modalTransitionStyle = .crossDissolve
-            vc.accountAddress = importFromMnemonic.address
-            
-            UserDefaultsManager.shared.clearUserDefaults()
-            
-            DataBaseManager.shared.addDefaultNetworks()
-            
-            UserDefaultsManager.shared.setCurrencyUpdateTime()
-            UserDefaultsManager.shared.setLanguageUpdateTime()
-            
-            
-            DataBaseManager.shared.saveDefaultAccount(address: importFromMnemonic.address, privateKey: importFromMnemonic.rawPrivateKey, publicKey: importFromMnemonic.rawPublicKey)
-            
-            let accountData = [importFromMnemonic.address,importFromMnemonic.rawPrivateKey, newPassword.text! , importFromMnemonic.rawPublicKey ]
-            
-            UserDefaults.standard.setValue(accountData, forKey: "WalletData")
-            UserDefaults.standard.setValue(mnemonic, forKey: "seed")
-            
-            self.present(vc, animated: true, completion: nil)
-            
+        if newPassword.text == confirmPassword.text {//&&  self.secretTextView.text!.count >= 24   {
+            let string = self.secretTextView.text!
+            let regex = try! NSRegularExpression(pattern: "\\s")
+            let numberOfWhitespaceCharacters = regex.numberOfMatches(in: string, range: NSRange(location: 0, length: string.utf16.count))
+            if numberOfWhitespaceCharacters == 11 {
+                let mnemonic = secretTextView!.text
+                let importFromMnemonic = try! XDCAccount.importAccountWithMnemonic(mnemonic: mnemonic!)
+                print(importFromMnemonic.address)
+                let vc = UIStoryboard(name: "Storyboard2", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+                vc.modalPresentationStyle = .fullScreen
+                vc.modalTransitionStyle = .crossDissolve
+                vc.accountAddress = importFromMnemonic.address
+                
+                UserDefaultsManager.shared.clearUserDefaults()
+                
+                DataBaseManager.shared.addDefaultNetworks()
+                
+                UserDefaultsManager.shared.setCurrencyUpdateTime()
+                UserDefaultsManager.shared.setLanguageUpdateTime()
+                
+                
+                DataBaseManager.shared.saveDefaultAccount(address: importFromMnemonic.address, privateKey: importFromMnemonic.rawPrivateKey, publicKey: importFromMnemonic.rawPublicKey)
+                
+                let accountData = [importFromMnemonic.address,importFromMnemonic.rawPrivateKey, newPassword.text! , importFromMnemonic.rawPublicKey ]
+                
+                UserDefaults.standard.setValue(accountData, forKey: "WalletData")
+                UserDefaults.standard.setValue(mnemonic, forKey: "seed")
+                
+                self.present(vc, animated: true, completion: nil)
+            }else{
+                showAlert(message: "Please enter correct Secret Phrase")
+            }
         }
     }
     
