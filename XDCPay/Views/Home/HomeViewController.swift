@@ -130,6 +130,7 @@ extension HomeViewController:MenuDrawerProtocol {
 
         alertController.addTextField { (textField : UITextField!) -> Void in
             textField.placeholder = "Enter Account Name"
+            textField.maxLength = 20
             textField.text = DataBaseManager.shared.getCurrentAccountName()
         }
 

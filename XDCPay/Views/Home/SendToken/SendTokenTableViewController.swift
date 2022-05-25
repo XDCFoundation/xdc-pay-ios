@@ -16,6 +16,7 @@ class SendTokenTableViewController: UITableViewController {
    
     var availableAmount = 0.0
     
+    @IBOutlet weak var topSpaceToGasLimit: NSLayoutConstraint!
     @IBOutlet weak var myAddressButton: UIButton!
     @IBOutlet weak var available: UILabel!
     @IBOutlet weak var errorMessage: UILabel!
@@ -47,9 +48,11 @@ class SendTokenTableViewController: UITableViewController {
         if(UserDefaultsManager.shared.getGas() == true) {
             self.gasLimit.isEnabled = true
             self.errorMessage.isHidden = false
+            self.topSpaceToGasLimit.constant = 40
         }else {
             self.gasLimit.isEnabled = false
             self.errorMessage.isHidden = true
+            self.topSpaceToGasLimit.constant = 21
         }
        
     }

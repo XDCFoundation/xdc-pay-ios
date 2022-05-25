@@ -27,19 +27,36 @@ class MenuDrawer: UIView , UITableViewDelegate , UITableViewDataSource {
     var items =  [String]()
     var images =  [String]()
     
+    
     override func awakeFromNib() {
-       self.setupViews()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tapFunction))
+        accountName.isUserInteractionEnabled = true
+        accountName.addGestureRecognizer(tap)
+        self.setupViews()
+    }
+    
+    @objc func tapFunction(sender:UITapGestureRecognizer) {
+        self.hideDrawer()
+        delegateMenuDrawer?.onAccount()
+        print("tap working")
+    }
+    
+    func getAttributedText(name:String) -> NSMutableAttributedString {
+        let attachment = NSTextAttachment()
+        let image =  UIImage(named: "Arrow")
+        attachment.image = image
+        let font = self.accountName.font!
+        let mid = font.descender + font.capHeight
+        attachment.bounds = CGRect(x: 0, y: font.descender - image!.size.height / 2 + mid + 2, width: image!.size.width, height: image!.size.height).integral
+        let attachmentString = NSAttributedString(attachment: attachment)
+        let myString = NSMutableAttributedString(string: name)
+        myString.append(attachmentString)
+        return myString
     }
     
     @IBAction func onEdit(_ sender: Any) {
-        
         self.hideDrawer()
         delegateMenuDrawer?.onEditAccountName()
-    }
-    
-    @IBAction func onAccount(_ sender: Any) {
-        self.hideDrawer()
-        delegateMenuDrawer?.onAccount()
     }
     
     
@@ -72,7 +89,7 @@ class MenuDrawer: UIView , UITableViewDelegate , UITableViewDataSource {
   
     func showHideDrawer() {
         
-        self.accountName.text = DataBaseManager.shared.getCurrentAccountName()
+        self.accountName.attributedText = getAttributedText(name: DataBaseManager.shared.getCurrentAccountName())
      
         
         if var topController = UIApplication.shared.keyWindow?.rootViewController {
@@ -147,6 +164,10 @@ extension MenuDrawer {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.items.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 52
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
