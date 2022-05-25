@@ -9,6 +9,7 @@ class AddAccountDialog: UIViewController {
     
     override func viewDidLoad() {
         self.account.delegate = self
+        self.account.maxLength = 20
     }
    
     @IBAction func onAdd(_ sender: Any) {

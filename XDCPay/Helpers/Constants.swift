@@ -142,22 +142,14 @@ func log(_ message: String,
          line: Int = #line) {
     
     print("Message \"\(message)")
-    //    print("Message \"\(message)\" (File: \(file), Function: \(function), Line: \(line))")
 }
 func getDateString(style:DateFormatter.Style = .short) ->String {
     
-    // Create Date
-    let date = Date()
-
-    // Create Date Formatter
     let dateFormatter = DateFormatter()
-
-    // Set Date/Time Style
     dateFormatter.dateStyle = style
     dateFormatter.timeStyle = style
 
-    // Convert Date to String
-    return dateFormatter.string(from: date) // September 9, 2020 at 12:24 PM
+    return getDayName() + " " + dateFormatter.string(from: Date())
     
 }
 
@@ -172,5 +164,13 @@ func getDateStringTest() ->String {
 
     // Convert Date to String
     return dateFormatter.string(from: date) // September 9, 2020 at 12:24 PM
+    
+}
+
+func getDayName()->String {
+
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "EE"
+    return dateFormatter.string(from: Date())
     
 }

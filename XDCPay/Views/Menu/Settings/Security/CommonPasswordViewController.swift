@@ -71,6 +71,6 @@ class CommonPasswordViewController: UIViewController {
         }
         
     }
-    //Secure123$$
+    
 
 }
