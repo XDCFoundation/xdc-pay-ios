@@ -105,7 +105,7 @@ class CreateNewWalletViewController: UIViewController {
         
         if(psMeter.passwordStrength == PasswordStrength.weak || psMeter.passwordStrength == PasswordStrength.veryWeak ) {
    
-            showAlert(message: "Password is \(psMeter.passwordStrength!)")
+            showAlert(message: "Password strength is poor")
             return
             
         }

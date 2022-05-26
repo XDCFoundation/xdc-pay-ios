@@ -73,7 +73,7 @@ class ViewPagerItemViewController: UIViewController, UITableViewDelegate, UITabl
             
             cell.transactionHash.text = transction.hash
             cell.symbol.text = "XDC"
-            cell.amount.text =  transction.amount
+            cell.amount.text =  transction.amount.toDouble()?.getXDCValueWithoutSymbol()
             cell.time.text = transction.time
 
             return cell

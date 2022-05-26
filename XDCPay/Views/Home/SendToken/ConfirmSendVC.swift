@@ -36,7 +36,7 @@ class ConfirmSendVC: UIViewController {
         
         let temp = (self.gasLimit.text!.toDouble()! * gwei.text!.toDouble()!)    / 1000000000
         self.fees.text = temp.toString() + " XDC"
-        self.total.text = String(data["amount"]!.toDouble()! + temp) + " XDC"
+        self.total.text = Double(data["amount"]!.toDouble()! + temp).getXDCValue()
     }
     
     

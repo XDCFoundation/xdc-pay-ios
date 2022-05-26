@@ -19,6 +19,10 @@ class LoginVC: UIViewController {
     
     @IBAction func onLogin(_ sender: Any) {
         
+        if(password.text!.isEmpty) {
+            showAlert(message: "Please enter password")
+            return
+        }
         if faceIdSwitch.isOn == true &&  UserDefaultsManager.shared.faceIdEnabled == true {
             authenticationWithFaceID()
         } else if faceIdSwitch.isOn == false {
