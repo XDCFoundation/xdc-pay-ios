@@ -184,6 +184,7 @@
 		84FD7EA12818044A00CEB47D /* Dialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FD7EA02818044A00CEB47D /* Dialog.swift */; };
 		8F142DC0281FEBD300A3663A /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F142DBF281FEBD300A3663A /* HelpViewController.swift */; };
 		8F1E0B85282E198400096CF9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8F1E0B84282E198400096CF9 /* GoogleService-Info.plist */; };
+		8F2BBE62283DFFA700A767A8 /* TokenOptionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F2BBE61283DFFA700A767A8 /* TokenOptionVC.swift */; };
 		8F4D00432823F716009AF24D /* TimeLimits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4D00402823F716009AF24D /* TimeLimits.swift */; };
 		8F4D00442823F716009AF24D /* FadeInOutAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4D00412823F716009AF24D /* FadeInOutAnimation.swift */; };
 		8F4D00452823F716009AF24D /* MessageDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4D00422823F716009AF24D /* MessageDisplayer.swift */; };
@@ -349,6 +350,7 @@
 		84FD7EA02818044A00CEB47D /* Dialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dialog.swift; sourceTree = "<group>"; };
 		8F142DBF281FEBD300A3663A /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		8F1E0B84282E198400096CF9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8F2BBE61283DFFA700A767A8 /* TokenOptionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenOptionVC.swift; sourceTree = "<group>"; };
 		8F4D00402823F716009AF24D /* TimeLimits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLimits.swift; sourceTree = "<group>"; };
 		8F4D00412823F716009AF24D /* FadeInOutAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeInOutAnimation.swift; sourceTree = "<group>"; };
 		8F4D00422823F716009AF24D /* MessageDisplayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageDisplayer.swift; sourceTree = "<group>"; };
@@ -864,6 +866,7 @@
 			isa = PBXGroup;
 			children = (
 				8FAD1D93283B7F2000B6A6D7 /* AddTokenViewController.swift */,
+				8F2BBE61283DFFA700A767A8 /* TokenOptionVC.swift */,
 			);
 			path = Token;
 			sourceTree = "<group>";
@@ -1248,6 +1251,7 @@
 				84C8F7F627F2C1BE00F6666C /* Animations.swift in Sources */,
 				7F62784F27E8DC7900782EE0 /* SceneDelegate.swift in Sources */,
 				84C8F7F527F2C1BE00F6666C /* MenuButton.swift in Sources */,
+				8F2BBE62283DFFA700A767A8 /* TokenOptionVC.swift in Sources */,
 				84C02DC227F318DF007B0831 /* ViewPager.swift in Sources */,
 				7F6278A727E8FBDA00782EE0 /* UIView+Extention.swift in Sources */,
 				846325FB27F4177300437028 /* SettingMenuCell.swift in Sources */,

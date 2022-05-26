@@ -30,8 +30,8 @@
                             <constraint firstAttribute="width" constant="52" id="NIR-il-Zjk"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000 Eurg" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiA-Ud-47u">
-                        <rect key="frame" x="97" y="24.5" width="197" height="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BiA-Ud-47u">
+                        <rect key="frame" x="97" y="33" width="197" height="0.0"/>
                         <fontDescription key="fontDescription" name="Inter-Regular_SemiBold" family="Inter" pointSize="14"/>
                         <nil key="textColor"/>
                         <color key="highlightedColor" red="0.1647058824" green="0.1647058824" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -48,6 +48,9 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wkp-gk-Lem">
                                 <rect key="frame" x="0.0" y="0.0" width="30" height="34"/>
+                                <connections>
+                                    <action selector="tokenOptions:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ldJ-zQ-ryY"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
