@@ -103,11 +103,6 @@ class ImportFromSeedViewController: UIViewController {
             return
         }
         
-        if(newPassword.text!.count < 8) {
-            showAlert(message: "Password length should be more then eight")
-            return
-        }
-        
         if(newPassword.text! != confirmPassword!.text ) {
             showAlert(message: "Password does not match")
             return

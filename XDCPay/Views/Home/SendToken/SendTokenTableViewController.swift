@@ -16,6 +16,7 @@ class SendTokenTableViewController: UITableViewController {
    
     var availableAmount = 0.0
     
+    @IBOutlet weak var topSpaceToGasLimit: NSLayoutConstraint!
     @IBOutlet weak var myAddressButton: UIButton!
     @IBOutlet weak var available: UILabel!
     @IBOutlet weak var errorMessage: UILabel!
@@ -38,6 +39,7 @@ class SendTokenTableViewController: UITableViewController {
         self.setMyAddress(str: addressStr)
         self.getBalance()
         self.receiverAddress.text = globaReceiverAddress
+        self.amountToBeSend.keyboardType  = .decimalPad
         hideGasLimit()
     }
     
@@ -46,9 +48,11 @@ class SendTokenTableViewController: UITableViewController {
         if(UserDefaultsManager.shared.getGas() == true) {
             self.gasLimit.isEnabled = true
             self.errorMessage.isHidden = false
+            self.topSpaceToGasLimit.constant = 40
         }else {
             self.gasLimit.isEnabled = false
             self.errorMessage.isHidden = true
+            self.topSpaceToGasLimit.constant = 21
         }
        
     }
@@ -153,11 +157,11 @@ extension SendTokenTableViewController {
         self.client.eth_getBalance(address: XDCAddress(UserDefaultsManager.shared.getMainWalletAddress()), block: .Latest) { (error, balanceOf) in
                 
             if (balanceOf != nil){
-                let value = balanceOf!/1000000000000000000
+                let value = Double(balanceOf!)/1000000000000000000
                 print(value)
                 self.availableAmount = Double(value)
               DispatchQueue.main.async {
-                self.available.text =  "Available: \(value) XDC"
+                self.available.text =  "Available: \(value.getXDCValue())"
                  // self.getXdcPrice(xdcVal: value)
               }
             }

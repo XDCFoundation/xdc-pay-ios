@@ -130,7 +130,16 @@ class ChangePasswordViewController: UIViewController {
             
             UserDefaults.standard.setValue(walletData, forKey: "WalletData")
            
-            self.navigationController?.popToRootViewController(animated: true)
+            UserDefaults.standard.setValue(true, forKey: "logOut")
+            
+            showCopyToast("Password Chaged")
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                SceneDelegate.shared?.checkLogin()
+            }
+            
+           
+           
             
         }
     }

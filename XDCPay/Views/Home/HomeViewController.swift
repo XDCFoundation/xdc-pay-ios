@@ -52,12 +52,13 @@ class HomeViewController: UIViewController {
         self.client!.eth_getBalance(address: XDCAddress(UserDefaultsManager.shared.getMainWalletAddress()), block: .Latest) { (error, balanceOf) in
  
       if (balanceOf != nil){
-                let value =  Double(balanceOf!)/100000000000000000
-                print(value)
-                let fourDegitValue =  value.roundToDecimal(4) // make it 4 degit
+                let value =  Double(balanceOf!)/1000000000000000000
+        
                 DispatchQueue.main.async {
-                    self.mainBalance.text =  "\(fourDegitValue) XDC"
-                    self.getXdcPrice(xdcVal: fourDegitValue)
+                    
+                    self.mainBalance.text = value.getXDCValue()
+                    self.getXdcPrice(xdcVal: value)
+                    
                 }
             }
         }
@@ -129,6 +130,7 @@ extension HomeViewController:MenuDrawerProtocol {
 
         alertController.addTextField { (textField : UITextField!) -> Void in
             textField.placeholder = "Enter Account Name"
+            textField.maxLength = 20
             textField.text = DataBaseManager.shared.getCurrentAccountName()
         }
 
@@ -257,7 +259,7 @@ extension HomeViewController {
             let price = xdcValueInDouble * price
             
             DispatchQueue.main.async {
-                self.usdBalance.text = "$\(price.rounded(toPlaces: 2)) USD"
+                self.usdBalance.text = "$\(price.rounded(toPlaces: 3)) USD"
             }
             
         }
@@ -266,3 +268,43 @@ extension HomeViewController {
     }
 }
 
+ 
+
+extension Int {
+
+    func formatUsingAbbrevation () -> String {
+        let numFormatter = NumberFormatter()
+
+        typealias Abbrevation = (threshold:Double, divisor:Double, suffix:String)
+        let abbreviations:[Abbrevation] = [(0, 1, ""),
+                                           (1000.0, 1000.0, "K"),
+                                           (100_000.0, 1_000_000.0, "M"),
+                                           (100_000_000.0, 1_000_000_000.0, "B")]
+                                           // you can add more !
+
+        let startValue = Double (abs(self))
+        let abbreviation:Abbrevation = {
+            var prevAbbreviation = abbreviations[0]
+            for tmpAbbreviation in abbreviations {
+                if (startValue < tmpAbbreviation.threshold) {
+                    break
+                }
+                prevAbbreviation = tmpAbbreviation
+            }
+            return prevAbbreviation
+        } ()
+
+        let value = Double(self) / abbreviation.divisor
+        numFormatter.positiveSuffix = abbreviation.suffix
+        numFormatter.negativeSuffix = abbreviation.suffix
+        numFormatter.allowsFloats = true
+        numFormatter.minimumIntegerDigits = 1
+        numFormatter.minimumFractionDigits = 0
+        numFormatter.maximumFractionDigits = 1
+
+        return numFormatter.string(from: NSNumber (value:value))!
+    }
+
+}
+ 
+ 

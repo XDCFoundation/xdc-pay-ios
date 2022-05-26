@@ -19,6 +19,10 @@ struct DefaultPasswordEstimator: PasswordEstimator {
         if password.isEmpty {
             return .empty
         } else {
+            
+            if (password.count < 8) {
+                        return .weak
+            }else {
             let strength = Navajo.strength(ofPassword: password)
             switch strength {
             case .veryWeak:
@@ -33,6 +37,7 @@ struct DefaultPasswordEstimator: PasswordEstimator {
                 return .veryStrong
             }
         }
+      }
     }
 
 }
