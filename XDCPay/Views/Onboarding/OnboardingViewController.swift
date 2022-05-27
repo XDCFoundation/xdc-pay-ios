@@ -21,7 +21,7 @@ class OnboardingViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        slides = [OnboardingSlide(title: "Welcome to XDC Pay", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod", logo: #imageLiteral(resourceName: "Logo"), image: #imageLiteral(resourceName: "Illustration1")), OnboardingSlide(title: "Manage your digital assets", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod", logo: #imageLiteral(resourceName: "Logo"), image: #imageLiteral(resourceName: "Illustration 2"))]
+        slides = [OnboardingSlide(title: "Welcome to XDC Pay", description: "A simple and secure wallet for your crypto tokens", logo: #imageLiteral(resourceName: "Logo"), image: #imageLiteral(resourceName: "Illustration1")), OnboardingSlide(title: "Manage your digital assets", description: "A safe place to buy, send, receive, store and swap tokens", logo: #imageLiteral(resourceName: "Logo"), image: #imageLiteral(resourceName: "Illustration 2"))]
         
         pageView.numberOfPages = slides.count
         pageView.currentPage = 0
