@@ -88,14 +88,15 @@ class ImportFromSeedViewController: UIViewController {
                 showAlert(message: "Seed words only have lowercase characters")
                 return
             }
-        }        
+        }
         
-        if(secretTextView.text!.count < 24) {
-            
+        let seeds = input.split(separator: " ")
+        
+        if(seeds.count != 12) {
             showAlert(message: "Please enter correct Secret Phrase")
             return
-            
         }
+        
         
         if(psMeter.passwordStrength == PasswordStrength.weak || psMeter.passwordStrength == PasswordStrength.veryWeak ) {
             

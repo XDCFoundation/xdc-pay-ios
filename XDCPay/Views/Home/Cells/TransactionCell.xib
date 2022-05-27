@@ -39,7 +39,7 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Xdc123tybitrsk" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="llf-IJ-NcE">
-                        <rect key="frame" x="76" y="15" width="93" height="17"/>
+                        <rect key="frame" x="76" y="15" width="60" height="17"/>
                         <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
                         <nil key="textColor"/>
                         <color key="highlightedColor" red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -60,7 +60,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBw-i5-Hay">
-                        <rect key="frame" x="178" y="12.5" width="9" height="22"/>
+                        <rect key="frame" x="145" y="12.5" width="9" height="22"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="9" id="Qch-5e-35I"/>
                             <constraint firstAttribute="height" constant="22" id="mSQ-B6-C1u"/>
@@ -68,9 +68,9 @@
                         <state key="normal" image="Copy2"/>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B98-bD-Ru1">
-                        <rect key="frame" x="194" y="22.5" width="67" height="17"/>
+                        <rect key="frame" x="161" y="22.5" width="100" height="17"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="67" id="gp8-3l-JUX"/>
+                            <constraint firstAttribute="width" constant="100" id="gp8-3l-JUX"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="Inter-Regular_SemiBold" family="Inter" pointSize="14"/>
                         <nil key="textColor"/>

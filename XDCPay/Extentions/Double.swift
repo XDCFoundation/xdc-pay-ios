@@ -50,5 +50,28 @@ extension Double {
         
     }
     
+    func getXDCValueWithoutSymbol() -> String {
+        
+        let value = self
+        
+        if(value > 999 && value < 10000){
+           return  "\(value.roundTo4())"
+         }else{
+             if (value >= 1000000 && value < 999999999) {
+                                         let x  = (value / 1000000)
+                                         return  "\(x)M"
+                                     }else if (value >= 10000 && value < 999999){
+                                         let x  = (value / 1000).roundTo4()
+                                        return  "\(x)K"
+                                     }else if ( value >= 1000000000000 && value < 9999999999999 ) {
+                                         let x  = (value / 1000000000000)
+                                        return "\(x)B"
+                                     }else {
+                                        return "\(value)"
+                                     }
+                                     
+         }
+        
+    }
 }
  
