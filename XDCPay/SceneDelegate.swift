@@ -89,6 +89,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
+        if(UIDevice.current.isJailBroken) {
+            exit(0)
+        }
        
         self.tempScene = scene
         self.checkLogin()
