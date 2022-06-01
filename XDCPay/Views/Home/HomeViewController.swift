@@ -20,7 +20,10 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.client = XDCClientManager.shared.getXDCClient()
-        self.mainBalance.text =  "0 XDC"
+        let network = DataBaseManager.shared.getNetworks().filter{$0.name == UserDefaultsManager.shared.getCurrentNetworName()}.first!
+        let symbol = network.symbol
+        self.mainBalance.text = "0 " + symbol
+      //  self.mainBalance.text =  "0 XDC"
         self.usdBalance.text = "$0 USD"
         homeVc = self
         self.accountAddress = UserDefaultsManager.shared.getCurrentAccoutWalletAddress()
