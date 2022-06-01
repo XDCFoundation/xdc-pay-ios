@@ -29,8 +29,10 @@ extension Double {
     func getXDCValue() -> String {
         
         let value = self
-        
-        if(value > 999 && value < 10000){
+        if (value > 1 && value < 999){
+            return "\(value.roundTo4())XDC"
+        }
+       else if(value > 999 && value < 10000){
            return  "\(value.roundTo4()) XDC"
          }else{
              if (value >= 1000000 && value < 999999999) {
