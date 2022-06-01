@@ -45,7 +45,7 @@ extension Double {
                                          let x  = (value / 1000000000000)
                                         return "\(x)B XDC"
                                      }else {
-                                        return "\(value) XDC"
+                                        return "\(value.rounded(toPlaces: 4)) XDC"
                                      }
                                      
          }
