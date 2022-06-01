@@ -549,7 +549,7 @@ func addDefaultNetworks () {
     
     if DataBaseManager.shared.getNetworks().isEmpty{
       
-              DataBaseManager.shared.addNetwork(name: "XDC Mainnet", rpc: "https://xdcpayrpc.blocksscan.io", id: "50", symbol: "XDC", url: "https://simplex.bringtotheblock.net", isEditable: "No")
+              DataBaseManager.shared.addNetwork(name: "XDC Mainnet", rpc: "https://xdcpayrpc.blocksscan.io", id: "50", symbol: "XDC", url: "https://observer.xdc.org", isEditable: "No")
   
       
               DataBaseManager.shared.addNetwork(name: "XDC Apothem Testnet", rpc: "https://apothemxdcpayrpc.blocksscan.io", id: "51", symbol: "XDC", url: "https://explorer.apothem.network", isEditable: "No")

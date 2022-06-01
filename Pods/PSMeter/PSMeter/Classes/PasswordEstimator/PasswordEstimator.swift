@@ -22,7 +22,10 @@ struct DefaultPasswordEstimator: PasswordEstimator {
             
             if (password.count < 8) {
                         return .weak
-            }else {
+            }else if(password.count > 7 && password.isValidPassword())   {
+                return .strong
+            }
+            else {
             let strength = Navajo.strength(ofPassword: password)
             switch strength {
             case .veryWeak:
@@ -40,4 +43,16 @@ struct DefaultPasswordEstimator: PasswordEstimator {
       }
     }
 
+}
+
+
+extension String {
+    
+    //At least 1 Uppercase, 1 Lowercase, 1 Special Characters, 1 Number, and Total 8 Characters or Long
+    func isValidPassword() -> Bool {
+        //let passwordRegex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[ !\"\\\\#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~])[A-Za-z\\d !\"\\\\#$%&'()*+,-./:;<=>?@\\[\\]^_`{|}~]{8,}"
+        //safe to escape all regex chars
+        let passwordRegex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[ !\"\\\\#$%&'\\(\\)\\*+,\\-\\./:;<=>?@\\[\\]^_`\\{|\\}~])[A-Za-z\\d !\"\\\\#$%&'\\(\\)\\*+,\\-\\./:;<=>?@\\[\\]^_`\\{|\\}~]{8,}"
+        return NSPredicate(format: "SELF MATCHES %@", passwordRegex).evaluate(with: self)
+    }
 }
