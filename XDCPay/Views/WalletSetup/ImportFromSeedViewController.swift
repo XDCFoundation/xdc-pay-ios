@@ -93,7 +93,7 @@ class ImportFromSeedViewController: UIViewController {
         let seeds = input.split(separator: " ")
         
         if(seeds.count != 12) {
-            showAlert(message: "Please enter correct Secret Phrase")
+            showAlert(message: "Please enter correct seed Phrase")
             return
         }
         

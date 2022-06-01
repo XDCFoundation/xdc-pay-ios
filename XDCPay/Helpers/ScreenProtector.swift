@@ -50,7 +50,7 @@ class ScreenProtector {
         let label = UILabel(frame: frame)
         label.numberOfLines = 0
         label.font = UIFont.boldSystemFont(ofSize: 40)
-        label.textColor = .white
+        label.textColor = .black
         label.textAlignment = .center
         label.text = message
 
@@ -76,7 +76,7 @@ class ScreenProtector {
         self.warningWindow = warningWindow
 
         UIView.animate(withDuration: 0.15) {
-            label.alpha = 1.0
+            label.alpha = 0.5
             label.transform = .identity
         }
         warningWindow.makeKeyAndVisible()

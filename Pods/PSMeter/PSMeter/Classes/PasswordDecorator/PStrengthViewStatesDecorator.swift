@@ -40,12 +40,12 @@ public struct PStrengthViewStatesDecorator {
 
     public static func defaultValues() -> PStrengthViewStatesDecorator {
         return PStrengthViewStatesDecorator(
-            emptyPasswordDecorator: StateDecorator(text: "--", textColor: .gray, progressColor: .gray),
-            veryWeakPasswordDecorator: StateDecorator(text: "poor".localized, textColor: weakColor, progressColor: weakColor),
-            weakPasswordDecorator: StateDecorator(text: "poor".localized, textColor: weakColor, progressColor: weakColor),
-            fairPasswordDecorator: StateDecorator(text: "moderate".localized, textColor: veryWeakColor, progressColor: veryWeakColor),
-            strongPasswordDecorator: StateDecorator(text: "strong".localized, textColor: strongColor, progressColor: strongColor),
-            veryStrongPasswordDecorator: StateDecorator(text: "strong".localized, textColor: veryStrongColor, progressColor: veryStrongColor))
+            emptyPasswordDecorator: StateDecorator(text: "", textColor: .gray, progressColor: .gray),
+            veryWeakPasswordDecorator: StateDecorator(text: "Poor".localized, textColor: weakColor, progressColor: weakColor),
+            weakPasswordDecorator: StateDecorator(text: "Poor".localized, textColor: weakColor, progressColor: weakColor),
+            fairPasswordDecorator: StateDecorator(text: "Moderate".localized, textColor: veryWeakColor, progressColor: veryWeakColor),
+            strongPasswordDecorator: StateDecorator(text: "Strong".localized, textColor: strongColor, progressColor: strongColor),
+            veryStrongPasswordDecorator: StateDecorator(text: "Strong".localized, textColor: veryStrongColor, progressColor: veryStrongColor))
     }
 
 }

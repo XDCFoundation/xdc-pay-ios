@@ -29,6 +29,12 @@ class ImportAccountViewController: UIViewController {
                 SceneDelegate.shared?.checkLogin()
             }
         }
+        else{
+            let alert = UIAlertController(title: "Alert", message: "Cannot import an empty key", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+        
     }
     
 }

@@ -44,10 +44,10 @@ class AdvanceSettingsViewController: UIViewController {
     }
     
     @IBAction func resetAccountBtnAction(_ sender: UIButton) {
-        
+       
         let dialogMessage = UIAlertController(title: "Reset account", message: "Resetting your account will clear your transaction history.", preferredStyle: .alert)
          
-        let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+        let ok = UIAlertAction(title: "Reset", style: .default, handler: { (action) -> Void in
             
             UserDefaultsManager.shared.resetAccount()
             

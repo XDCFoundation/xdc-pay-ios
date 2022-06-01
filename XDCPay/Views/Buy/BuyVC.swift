@@ -48,7 +48,7 @@ class BuyVC: UIViewController {
         
         let networks = DataBaseManager.shared.getNetworks()
         if let index = networks.firstIndex(where: { $0.name == selectedNetwork }) {
-            let url = networks[index].url
+            let url = "https://faucet.apothem.network/"
             if let url = URL(string: "\(url)") {
                 UIApplication.shared.open(url)
             }
